@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 
 namespace Datos
 {
+
+    //Clase exclusiva para leer base de conocimiento y sus funcionalidades
     class KbReader
     {
     }

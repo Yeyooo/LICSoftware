@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 
 namespace Datos
 {
+
+    //Clase exclusiva para trabajar con base de datos.
     public class Conexión
     {
     }
