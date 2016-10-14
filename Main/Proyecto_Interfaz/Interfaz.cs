@@ -17,6 +17,14 @@ namespace Proyecto_Interfaz
             InitializeComponent();
         }
 
- 
+        private void Interfaz_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

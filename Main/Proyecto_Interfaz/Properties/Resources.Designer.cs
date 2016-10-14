@@ -63,6 +63,56 @@ namespace Proyecto_Interfaz.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap boton_singlow_NB {
+            get {
+                object obj = ResourceManager.GetObject("boton_singlow_NB", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Division_NB {
+            get {
+                object obj = ResourceManager.GetObject("Division_NB", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Fondo {
+            get {
+                object obj = ResourceManager.GetObject("Fondo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap FRAME_OPCIONES {
+            get {
+                object obj = ResourceManager.GetObject("FRAME_OPCIONES", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap FRAME_OPCIONES1 {
+            get {
+                object obj = ResourceManager.GetObject("FRAME_OPCIONES1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Killrogg {
             get {
                 object obj = ResourceManager.GetObject("Killrogg", resourceCulture);
@@ -73,9 +123,79 @@ namespace Proyecto_Interfaz.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap LOWBracket_NB {
+            get {
+                object obj = ResourceManager.GetObject("LOWBracket_NB", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap LOWBracket_NB1 {
+            get {
+                object obj = ResourceManager.GetObject("LOWBracket_NB1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap SinClasificar_NB {
+            get {
+                object obj = ResourceManager.GetObject("SinClasificar_NB", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap SinLiga {
+            get {
+                object obj = ResourceManager.GetObject("SinLiga", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap TOP8 {
+            get {
+                object obj = ResourceManager.GetObject("TOP8", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap TOP81 {
+            get {
+                object obj = ResourceManager.GetObject("TOP81", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap UI_Perfil_NOLIGA {
             get {
                 object obj = ResourceManager.GetObject("UI_Perfil_NOLIGA", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap UI_Perfil_NOLIGA_NB {
+            get {
+                object obj = ResourceManager.GetObject("UI_Perfil_NOLIGA_NB", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

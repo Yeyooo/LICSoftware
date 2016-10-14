@@ -62,18 +62,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
@@ -84,7 +84,34 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Assets\Textures\UI_Perfil_NOLIGA.png" />
+    <None Include="Assets\Textures\UI_Perfil_NOLIGA_NB.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Textures\FRAME_OPCIONES.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Textures\LOWBracket_NB.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Textures\Division_NB.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Textures\boton_singlow_NB.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Textures\SinClasificar_NB.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Textures\SinLiga.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Textures\Fondo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TOP8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TOP81.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
