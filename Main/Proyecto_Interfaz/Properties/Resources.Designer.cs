@@ -73,6 +73,16 @@ namespace Proyecto_Interfaz.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Buton_SB {
+            get {
+                object obj = ResourceManager.GetObject("Buton_SB", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Division_NB {
             get {
                 object obj = ResourceManager.GetObject("Division_NB", resourceCulture);
@@ -183,6 +193,36 @@ namespace Proyecto_Interfaz.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap UI_Perfil_Bronce_fixed {
+            get {
+                object obj = ResourceManager.GetObject("UI_Perfil_Bronce_fixed", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap UI_Perfil_GM_fixed {
+            get {
+                object obj = ResourceManager.GetObject("UI_Perfil_GM_fixed", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap UI_Perfil_GM_sf {
+            get {
+                object obj = ResourceManager.GetObject("UI_Perfil_GM_sf", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap UI_Perfil_NOLIGA {
             get {
                 object obj = ResourceManager.GetObject("UI_Perfil_NOLIGA", resourceCulture);
@@ -196,6 +236,16 @@ namespace Proyecto_Interfaz.Properties {
         internal static System.Drawing.Bitmap UI_Perfil_NOLIGA_NB {
             get {
                 object obj = ResourceManager.GetObject("UI_Perfil_NOLIGA_NB", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap UI_Perfil_Platino_fixed {
+            get {
+                object obj = ResourceManager.GetObject("UI_Perfil_Platino_fixed", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

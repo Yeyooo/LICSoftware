@@ -113,6 +113,21 @@
   <ItemGroup>
     <None Include="Resources\TOP81.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Textures\Buton_SB.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Textures\UI_Perfil_GM_sf.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Textures\UI_Perfil_GM_fixed.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Textures\UI_Perfil_Platino_fixed.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Textures\UI_Perfil_Bronce_fixed.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

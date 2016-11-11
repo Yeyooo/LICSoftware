@@ -36,21 +36,21 @@
             this.contenidoPag = new System.Windows.Forms.TabPage();
             this.tabEvaluaciones = new System.Windows.Forms.TabPage();
             this.panelEstudios = new System.Windows.Forms.Panel();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.PerfilSlot = new System.Windows.Forms.PictureBox();
             this.fondoLiga = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.PerfilSlot = new System.Windows.Forms.PictureBox();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.tabOpciones.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PerfilSlot)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fondoLiga)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PerfilSlot)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.SuspendLayout();
             // 
             // imageList1
@@ -85,13 +85,13 @@
             resources.ApplyResources(this.panelEstudios, "panelEstudios");
             this.panelEstudios.Name = "panelEstudios";
             // 
-            // pictureBox2
+            // PerfilSlot
             // 
-            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox2.Image = global::Proyecto_Interfaz.Properties.Resources.TOP8;
-            resources.ApplyResources(this.pictureBox2, "pictureBox2");
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.TabStop = false;
+            this.PerfilSlot.BackColor = System.Drawing.Color.Transparent;
+            this.PerfilSlot.Image = global::Proyecto_Interfaz.Properties.Resources.UI_Perfil_GM_fixed;
+            resources.ApplyResources(this.PerfilSlot, "PerfilSlot");
+            this.PerfilSlot.Name = "PerfilSlot";
+            this.PerfilSlot.TabStop = false;
             // 
             // fondoLiga
             // 
@@ -107,21 +107,6 @@
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.TabStop = false;
             // 
-            // PerfilSlot
-            // 
-            this.PerfilSlot.BackColor = System.Drawing.Color.Transparent;
-            this.PerfilSlot.Image = global::Proyecto_Interfaz.Properties.Resources.UI_Perfil_NOLIGA_NB;
-            resources.ApplyResources(this.PerfilSlot, "PerfilSlot");
-            this.PerfilSlot.Name = "PerfilSlot";
-            this.PerfilSlot.TabStop = false;
-            // 
-            // pictureBox6
-            // 
-            this.pictureBox6.Image = global::Proyecto_Interfaz.Properties.Resources.SinClasificar_NB;
-            resources.ApplyResources(this.pictureBox6, "pictureBox6");
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.TabStop = false;
-            // 
             // pictureBox1
             // 
             resources.ApplyResources(this.pictureBox1, "pictureBox1");
@@ -136,15 +121,30 @@
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.TabStop = false;
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox2.Image = global::Proyecto_Interfaz.Properties.Resources.TOP8;
+            resources.ApplyResources(this.pictureBox2, "pictureBox2");
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.Image = global::Proyecto_Interfaz.Properties.Resources.SinClasificar_NB;
+            resources.ApplyResources(this.pictureBox6, "pictureBox6");
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.TabStop = false;
+            // 
             // Interfaz
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DimGray;
+            this.Controls.Add(this.PerfilSlot);
             this.Controls.Add(this.tabOpciones);
             this.Controls.Add(this.fondoLiga);
             this.Controls.Add(this.pictureBox3);
-            this.Controls.Add(this.PerfilSlot);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.panelEstudios);
@@ -159,13 +159,13 @@
             this.TopMost = true;
             this.Load += new System.EventHandler(this.Interfaz_Load);
             this.tabOpciones.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PerfilSlot)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fondoLiga)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PerfilSlot)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
