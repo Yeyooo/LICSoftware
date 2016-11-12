@@ -10,6 +10,7 @@ namespace CapaLógica
     //Clase exclusiva para funciones del motor de inferencia.
     public class MotorInferencia
     {
+        
 
 <<<<<<< HEAD
         función ENCADENAMIENTO-HACIA-DELANTE(KB, c)
