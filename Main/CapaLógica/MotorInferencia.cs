@@ -11,6 +11,7 @@ namespace CapaLógica
     public class MotorInferencia
     {
 
+<<<<<<< HEAD
         función ENCADENAMIENTO-HACIA-DELANTE(KB, c)
         devuelve T o F
             # Nº de símbolos en cada cláusula.
@@ -39,5 +40,8 @@ namespace CapaLógica
                             si cuenta[cláusula] = 0 entonces
                                 agenda.AGREGAR(cláusula.CONCLUSIÓN)
             devolver F
+=======
+>>>>>>> origin/master
     }
+
 }

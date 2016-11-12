@@ -1,6 +1,6 @@
 ﻿namespace Interfaz_Fixed
 {
-    partial class Form1
+    partial class LICGUI
     {
         /// <summary>
         /// Required designer variable.
@@ -30,16 +30,17 @@
         {
             this.SuspendLayout();
             // 
-            // Form1
+            // LICGUI
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Interfaz_Fixed.Properties.Resources.UI_licsoftware_fixed;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.ClientSize = new System.Drawing.Size(1282, 698);
-            this.Name = "Form1";
+            this.ClientSize = new System.Drawing.Size(1345, 669);
+            this.Margin = new System.Windows.Forms.Padding(4);
+            this.Name = "LICGUI";
             this.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.Text = "Form1";
+            this.Text = "L.I.C.";
             this.ResumeLayout(false);
 
         }
