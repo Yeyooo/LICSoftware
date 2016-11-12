@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Interfaz_Fixed
 {
-    public partial class Form1 : Form
+    public partial class LICGUI : Form
     {
-        public Form1()
+        public LICGUI()
         {
             InitializeComponent();
         }
