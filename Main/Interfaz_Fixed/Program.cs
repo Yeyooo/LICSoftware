@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CapaLógica;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -14,9 +15,11 @@ namespace Interfaz_Fixed
         [STAThread]
         static void Main()
         {
-            Application.EnableVisualStyles();
+            /*Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new LICGUI());
+            Application.Run(new LICGUI());*/
+            MotorInferencia x = new MotorInferencia();
+            x.EHD();
         }
     }
 }
