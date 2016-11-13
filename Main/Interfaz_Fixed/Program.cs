@@ -19,7 +19,7 @@ namespace Interfaz_Fixed
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new LICGUI());*/
             MotorInferencia x = new MotorInferencia();
-            x.EHD();
+            
         }
     }
 }
