@@ -92,6 +92,27 @@
       <Name>CapaLógica</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ui_battlenet_glues_bluebuttons_largeover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Panel_Habilidades.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\UI_licsoftware_fixed_2.0.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Liga_oro_ascenso1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Liga_oro_ascenso1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ui_glues_searchpanel_icon_initializing.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ui_glues_icons_invite.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

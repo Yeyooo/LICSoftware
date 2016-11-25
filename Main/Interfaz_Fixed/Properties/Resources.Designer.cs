@@ -63,6 +63,66 @@ namespace Interfaz_Fixed.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Liga_oro_ascenso1 {
+            get {
+                object obj = ResourceManager.GetObject("Liga_oro_ascenso1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Liga_oro_ascenso11 {
+            get {
+                object obj = ResourceManager.GetObject("Liga_oro_ascenso11", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Panel_Habilidades {
+            get {
+                object obj = ResourceManager.GetObject("Panel_Habilidades", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ui_battlenet_glues_bluebuttons_largeover {
+            get {
+                object obj = ResourceManager.GetObject("ui_battlenet_glues_bluebuttons_largeover", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ui_glues_icons_invite {
+            get {
+                object obj = ResourceManager.GetObject("ui_glues_icons_invite", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ui_glues_searchpanel_icon_initializing {
+            get {
+                object obj = ResourceManager.GetObject("ui_glues_searchpanel_icon_initializing", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap UI_licsoftware {
             get {
                 object obj = ResourceManager.GetObject("UI_licsoftware", resourceCulture);
@@ -76,6 +136,16 @@ namespace Interfaz_Fixed.Properties {
         internal static System.Drawing.Bitmap UI_licsoftware_fixed {
             get {
                 object obj = ResourceManager.GetObject("UI_licsoftware_fixed", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap UI_licsoftware_fixed_2_0 {
+            get {
+                object obj = ResourceManager.GetObject("UI_licsoftware_fixed_2.0", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
