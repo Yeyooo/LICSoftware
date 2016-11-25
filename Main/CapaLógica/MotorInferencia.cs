@@ -155,7 +155,7 @@ namespace CapaLógica
         {
             BaseDeHechos bh = new BaseDeHechos(Environment.CurrentDirectory + "/bh.csv");
             BaseDeConocimientos kb = new BaseDeConocimientos(Environment.CurrentDirectory + "/kb.csv", Environment.CurrentDirectory + "/kb_consec.csv");
-            if (EHD(kb, bh, "ana es una niña"))
+            if (EHD(kb, bh, "ana muere"))
             {
                 Console.WriteLine("TRUE");
             }

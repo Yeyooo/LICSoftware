@@ -1,4 +1,5 @@
 ﻿using CapaLógica;
+using Datos;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -19,6 +20,8 @@ namespace Interfaz_Fixed
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new LICGUI());
             MotorInferencia x = new MotorInferencia();
+            Conexión.obtenerConexion();
+
             
         }
     }
