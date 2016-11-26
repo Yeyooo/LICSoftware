@@ -18,6 +18,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Interfaz_Fixed", "Interfaz_
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EvaluacionGUI", "EvaluacionGUI\EvaluacionGUI.csproj", "{68D5508B-F43E-43E4-A3C1-409B8497089D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FormRegistro", "FormRegistro\FormRegistro.csproj", "{B338E485-1B83-4127-A882-1F4A6ED1C1C5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -44,6 +46,10 @@ Global
 		{68D5508B-F43E-43E4-A3C1-409B8497089D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{68D5508B-F43E-43E4-A3C1-409B8497089D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{68D5508B-F43E-43E4-A3C1-409B8497089D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B338E485-1B83-4127-A882-1F4A6ED1C1C5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B338E485-1B83-4127-A882-1F4A6ED1C1C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B338E485-1B83-4127-A882-1F4A6ED1C1C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B338E485-1B83-4127-A882-1F4A6ED1C1C5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

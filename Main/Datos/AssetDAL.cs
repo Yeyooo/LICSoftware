@@ -3,20 +3,33 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using MySql.Data.MySqlClient;
+using System.Data.SqlClient;
 namespace Datos
 {
     class AssetDAL
     {
-        public static int agregar (Asset asset)
-        {
-            int retorno = 0;
-            string insert = ""; // esto se borra, es para mayor claridad
 
-            MySqlCommand comando = new MySqlCommand(string.Format(insert), Conexión.obtenerConexion()); // en el insert va la consulta(inserción) sql.
-            retorno = comando.ExecuteNonQuery();
+        public static List<Asset> BuscarPorNivelHabilidad(string pNivelWriting, string pNivelReading, string pNivelListening) // queremos todos los assets disponibles para el usuario 
+        {                                                                                                                     // de acuerdo a sus habilidades
+            List<Asset> _lista = new List<Asset>();
+            string consulta = "";
 
-            return retorno;
+            SqlCommand _comando = new SqlCommand(String.Format(consulta), Conexión.obtenerConexion());
+            SqlDataReader _reader = _comando.ExecuteReader();
+
+            while (_reader.Read())
+            {
+                Asset pAsset = new Asset();
+                pAsset.Id = _reader.GetInt32(0);
+                pAsset.EnunciadoPregunta = _reader.GetString(1);
+                //pAsset.Alternativas = _reader.GetString(2); // debe ser un metodo aparte
+
+
+
+                _lista.Add(pAsset);
+            }
+
+            return _lista;
         }
     }
 }
