@@ -31,21 +31,26 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.Entrenamiento_Pane = new System.Windows.Forms.TabControl();
             this.Panel_habilidades = new System.Windows.Forms.TabPage();
+            this.Boton_Entrenar_Writing = new System.Windows.Forms.Button();
+            this.Boton_Entrenar_Reading = new System.Windows.Forms.Button();
             this.Boton_Entrenar_Listenning = new System.Windows.Forms.Button();
             this.Icono_Liga_Writing = new System.Windows.Forms.PictureBox();
             this.Icono_Liga_Reading = new System.Windows.Forms.PictureBox();
             this.Icono_Liga_Listening = new System.Windows.Forms.PictureBox();
             this.General_Panel = new System.Windows.Forms.TabPage();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.GeneralTrainningLabel = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.UsurioInfo_Panel = new System.Windows.Forms.Panel();
             this.Usuario_Label = new System.Windows.Forms.Label();
-            this.Boton_Entrenar_Reading = new System.Windows.Forms.Button();
-            this.Boton_Entrenar_Writing = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.Entrenamiento_Pane.SuspendLayout();
             this.Panel_habilidades.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Icono_Liga_Writing)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Icono_Liga_Reading)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Icono_Liga_Listening)).BeginInit();
+            this.General_Panel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.UsurioInfo_Panel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -87,6 +92,26 @@
             this.Panel_habilidades.TabIndex = 0;
             this.Panel_habilidades.Text = "Habilidades";
             // 
+            // Boton_Entrenar_Writing
+            // 
+            this.Boton_Entrenar_Writing.BackColor = System.Drawing.Color.Transparent;
+            this.Boton_Entrenar_Writing.Location = new System.Drawing.Point(366, 320);
+            this.Boton_Entrenar_Writing.Name = "Boton_Entrenar_Writing";
+            this.Boton_Entrenar_Writing.Size = new System.Drawing.Size(166, 54);
+            this.Boton_Entrenar_Writing.TabIndex = 5;
+            this.Boton_Entrenar_Writing.Text = "Entrenar !";
+            this.Boton_Entrenar_Writing.UseVisualStyleBackColor = false;
+            // 
+            // Boton_Entrenar_Reading
+            // 
+            this.Boton_Entrenar_Reading.BackColor = System.Drawing.Color.Transparent;
+            this.Boton_Entrenar_Reading.Location = new System.Drawing.Point(366, 199);
+            this.Boton_Entrenar_Reading.Name = "Boton_Entrenar_Reading";
+            this.Boton_Entrenar_Reading.Size = new System.Drawing.Size(166, 54);
+            this.Boton_Entrenar_Reading.TabIndex = 4;
+            this.Boton_Entrenar_Reading.Text = "Entrenar !";
+            this.Boton_Entrenar_Reading.UseVisualStyleBackColor = false;
+            // 
             // Boton_Entrenar_Listenning
             // 
             this.Boton_Entrenar_Listenning.BackColor = System.Drawing.Color.Transparent;
@@ -102,7 +127,7 @@
             // 
             this.Icono_Liga_Writing.BackColor = System.Drawing.Color.Transparent;
             this.Icono_Liga_Writing.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.Icono_Liga_Writing.Image = global::Interfaz_Fixed.Properties.Resources.Liga_oro_ascenso11;
+            this.Icono_Liga_Writing.Image = global::Interfaz_Fixed.Properties.Resources.NOLIGA_Warning1;
             this.Icono_Liga_Writing.Location = new System.Drawing.Point(613, 291);
             this.Icono_Liga_Writing.Name = "Icono_Liga_Writing";
             this.Icono_Liga_Writing.Size = new System.Drawing.Size(138, 143);
@@ -114,7 +139,7 @@
             // 
             this.Icono_Liga_Reading.BackColor = System.Drawing.Color.Transparent;
             this.Icono_Liga_Reading.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.Icono_Liga_Reading.Image = global::Interfaz_Fixed.Properties.Resources.Liga_oro_ascenso11;
+            this.Icono_Liga_Reading.Image = global::Interfaz_Fixed.Properties.Resources.NOLIGA_Warning1;
             this.Icono_Liga_Reading.Location = new System.Drawing.Point(613, 155);
             this.Icono_Liga_Reading.Name = "Icono_Liga_Reading";
             this.Icono_Liga_Reading.Size = new System.Drawing.Size(138, 143);
@@ -126,8 +151,8 @@
             // 
             this.Icono_Liga_Listening.BackColor = System.Drawing.Color.Transparent;
             this.Icono_Liga_Listening.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.Icono_Liga_Listening.Image = global::Interfaz_Fixed.Properties.Resources.Liga_oro_ascenso11;
-            this.Icono_Liga_Listening.Location = new System.Drawing.Point(613, 6);
+            this.Icono_Liga_Listening.Image = global::Interfaz_Fixed.Properties.Resources.NOLIGA_Warning1;
+            this.Icono_Liga_Listening.Location = new System.Drawing.Point(613, 18);
             this.Icono_Liga_Listening.Name = "Icono_Liga_Listening";
             this.Icono_Liga_Listening.Size = new System.Drawing.Size(138, 143);
             this.Icono_Liga_Listening.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -137,12 +162,48 @@
             // General_Panel
             // 
             this.General_Panel.BackColor = System.Drawing.Color.SteelBlue;
+            this.General_Panel.BackgroundImage = global::Interfaz_Fixed.Properties.Resources.HabilidadGeneral;
+            this.General_Panel.Controls.Add(this.pictureBox1);
+            this.General_Panel.Controls.Add(this.GeneralTrainningLabel);
+            this.General_Panel.Controls.Add(this.button1);
             this.General_Panel.Location = new System.Drawing.Point(4, 21);
             this.General_Panel.Name = "General_Panel";
             this.General_Panel.Padding = new System.Windows.Forms.Padding(3);
             this.General_Panel.Size = new System.Drawing.Size(819, 440);
             this.General_Panel.TabIndex = 1;
             this.General_Panel.Text = "General";
+            this.General_Panel.ToolTipText = "El tutor seleccionara los temas de las 3 habildiades disponibles para que entrene" +
+    "s !";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.Image = global::Interfaz_Fixed.Properties.Resources.NOLIGA_Warning;
+            this.pictureBox1.Location = new System.Drawing.Point(293, 190);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(205, 201);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 2;
+            this.pictureBox1.TabStop = false;
+            // 
+            // GeneralTrainningLabel
+            // 
+            this.GeneralTrainningLabel.BackColor = System.Drawing.Color.Transparent;
+            this.GeneralTrainningLabel.ForeColor = System.Drawing.SystemColors.InactiveCaption;
+            this.GeneralTrainningLabel.Location = new System.Drawing.Point(226, 83);
+            this.GeneralTrainningLabel.Name = "GeneralTrainningLabel";
+            this.GeneralTrainningLabel.Size = new System.Drawing.Size(384, 24);
+            this.GeneralTrainningLabel.TabIndex = 1;
+            this.GeneralTrainningLabel.Text = "Entrenamiento de las 3 Habilidades";
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(342, 121);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(127, 29);
+            this.button1.TabIndex = 0;
+            this.button1.Text = "Entrenar !";
+            this.button1.UseVisualStyleBackColor = true;
             // 
             // UsurioInfo_Panel
             // 
@@ -164,26 +225,6 @@
             this.Usuario_Label.Text = "Usuario:";
             this.Usuario_Label.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // Boton_Entrenar_Reading
-            // 
-            this.Boton_Entrenar_Reading.BackColor = System.Drawing.Color.Transparent;
-            this.Boton_Entrenar_Reading.Location = new System.Drawing.Point(366, 199);
-            this.Boton_Entrenar_Reading.Name = "Boton_Entrenar_Reading";
-            this.Boton_Entrenar_Reading.Size = new System.Drawing.Size(166, 54);
-            this.Boton_Entrenar_Reading.TabIndex = 4;
-            this.Boton_Entrenar_Reading.Text = "Entrenar !";
-            this.Boton_Entrenar_Reading.UseVisualStyleBackColor = false;
-            // 
-            // Boton_Entrenar_Writing
-            // 
-            this.Boton_Entrenar_Writing.BackColor = System.Drawing.Color.Transparent;
-            this.Boton_Entrenar_Writing.Location = new System.Drawing.Point(366, 320);
-            this.Boton_Entrenar_Writing.Name = "Boton_Entrenar_Writing";
-            this.Boton_Entrenar_Writing.Size = new System.Drawing.Size(166, 54);
-            this.Boton_Entrenar_Writing.TabIndex = 5;
-            this.Boton_Entrenar_Writing.Text = "Entrenar !";
-            this.Boton_Entrenar_Writing.UseVisualStyleBackColor = false;
-            // 
             // LICGUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -203,6 +244,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.Icono_Liga_Writing)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Icono_Liga_Reading)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Icono_Liga_Listening)).EndInit();
+            this.General_Panel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.UsurioInfo_Panel.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -222,6 +265,9 @@
         private System.Windows.Forms.Button Boton_Entrenar_Listenning;
         private System.Windows.Forms.Button Boton_Entrenar_Writing;
         private System.Windows.Forms.Button Boton_Entrenar_Reading;
+        private System.Windows.Forms.Label GeneralTrainningLabel;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 

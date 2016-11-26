@@ -63,6 +63,16 @@ namespace Interfaz_Fixed.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap HabilidadGeneral {
+            get {
+                object obj = ResourceManager.GetObject("HabilidadGeneral", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Liga_oro_ascenso1 {
             get {
                 object obj = ResourceManager.GetObject("Liga_oro_ascenso1", resourceCulture);
@@ -76,6 +86,26 @@ namespace Interfaz_Fixed.Properties {
         internal static System.Drawing.Bitmap Liga_oro_ascenso11 {
             get {
                 object obj = ResourceManager.GetObject("Liga_oro_ascenso11", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap NOLIGA_Warning {
+            get {
+                object obj = ResourceManager.GetObject("NOLIGA_Warning", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap NOLIGA_Warning1 {
+            get {
+                object obj = ResourceManager.GetObject("NOLIGA_Warning1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
