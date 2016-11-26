@@ -121,6 +121,15 @@
   <ItemGroup>
     <None Include="Resources\ui_glues_icons_invite.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HabilidadGeneral.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NOLIGA_Warning.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NOLIGA_Warning1.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
