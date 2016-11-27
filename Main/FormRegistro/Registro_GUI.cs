@@ -11,9 +11,9 @@ using Datos;
 
 namespace FormRegistro
 {
-    public partial class Form1 : Form
+    public partial class Registro_GUI : Form
     {
-        public Form1()
+        public Registro_GUI()
         {
             InitializeComponent();
         }

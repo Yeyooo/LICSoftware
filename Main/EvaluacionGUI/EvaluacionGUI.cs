@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace EvaluacionGUI
 {
-    public partial class EvaluacionFrame : Form
+    public partial class EvaluacionGUI : Form
     {
-        public EvaluacionFrame()
+        public EvaluacionGUI()
         {
             InitializeComponent();
         }
@@ -24,7 +24,7 @@ namespace EvaluacionGUI
 
         private void EvaluacionFrame_Load(object sender, EventArgs e)
         {
-
+            Console.Write("Cargando");
         }
 
         private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
@@ -40,6 +40,11 @@ namespace EvaluacionGUI
         private void groupBox1_Enter(object sender, EventArgs e)
         {
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Si funka");
         }
     }
 }

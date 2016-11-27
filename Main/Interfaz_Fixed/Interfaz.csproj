@@ -56,7 +56,7 @@
     <Compile Include="GUI_LIC.Designer.cs">
       <DependentUpon>GUI_LIC.cs</DependentUpon>
     </Compile>
-    <Compile Include="Program.cs" />
+    <Compile Include="Interfaz_Oficial.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="GUI_LIC.resx">
       <DependentUpon>GUI_LIC.cs</DependentUpon>
@@ -98,6 +98,10 @@
     <ProjectReference Include="..\Datos\Datos.csproj">
       <Project>{B1FC0CD7-0C8F-40BB-9688-5E09FB838193}</Project>
       <Name>Datos</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EvaluacionGUI\EvaluacionGUI.csproj">
+      <Project>{68D5508B-F43E-43E4-A3C1-409B8497089D}</Project>
+      <Name>EvaluacionGUI</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

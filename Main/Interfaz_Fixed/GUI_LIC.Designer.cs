@@ -121,13 +121,13 @@
             this.Boton_Entrenar_Listenning.TabIndex = 3;
             this.Boton_Entrenar_Listenning.Text = "Entrenar !";
             this.Boton_Entrenar_Listenning.UseVisualStyleBackColor = false;
-            this.Boton_Entrenar_Listenning.Click += new System.EventHandler(this.button1_Click);
+            this.Boton_Entrenar_Listenning.Click += new System.EventHandler(this.Entrenar_Click);
             // 
             // Icono_Liga_Writing
             // 
             this.Icono_Liga_Writing.BackColor = System.Drawing.Color.Transparent;
             this.Icono_Liga_Writing.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.Icono_Liga_Writing.Image = global::Interfaz_Fixed.Properties.Resources.NOLIGA_Warning1;
+            this.Icono_Liga_Writing.Image = global::Interfaz_Fixed.Properties.Resources.Liga_oro_ascenso11;
             this.Icono_Liga_Writing.Location = new System.Drawing.Point(613, 291);
             this.Icono_Liga_Writing.Name = "Icono_Liga_Writing";
             this.Icono_Liga_Writing.Size = new System.Drawing.Size(138, 143);
@@ -139,7 +139,7 @@
             // 
             this.Icono_Liga_Reading.BackColor = System.Drawing.Color.Transparent;
             this.Icono_Liga_Reading.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.Icono_Liga_Reading.Image = global::Interfaz_Fixed.Properties.Resources.NOLIGA_Warning1;
+            this.Icono_Liga_Reading.Image = global::Interfaz_Fixed.Properties.Resources.Liga_oro_ascenso11;
             this.Icono_Liga_Reading.Location = new System.Drawing.Point(613, 155);
             this.Icono_Liga_Reading.Name = "Icono_Liga_Reading";
             this.Icono_Liga_Reading.Size = new System.Drawing.Size(138, 143);
@@ -151,7 +151,7 @@
             // 
             this.Icono_Liga_Listening.BackColor = System.Drawing.Color.Transparent;
             this.Icono_Liga_Listening.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.Icono_Liga_Listening.Image = global::Interfaz_Fixed.Properties.Resources.NOLIGA_Warning1;
+            this.Icono_Liga_Listening.Image = global::Interfaz_Fixed.Properties.Resources.Liga_oro_ascenso11;
             this.Icono_Liga_Listening.Location = new System.Drawing.Point(613, 18);
             this.Icono_Liga_Listening.Name = "Icono_Liga_Listening";
             this.Icono_Liga_Listening.Size = new System.Drawing.Size(138, 143);

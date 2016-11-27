@@ -8,7 +8,7 @@ using System.Windows.Forms;
 
 namespace Interfaz_Fixed
 {
-    static class Program
+    static class Interfaz_Oficial
     {
         /// <summary>
         /// The main entry point for the application.
@@ -18,11 +18,7 @@ namespace Interfaz_Fixed
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new LICGUI());
-            MotorInferencia x = new MotorInferencia();
-            Conexión.obtenerConexion();
-
-            
+            Application.Run(new LICGUI());         
         }
     }
 }

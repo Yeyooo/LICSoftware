@@ -1,6 +1,6 @@
 ﻿namespace EvaluacionGUI
 {
-    partial class EvaluacionFrame
+    partial class EvaluacionGUI
     {
         /// <summary>
         /// Required designer variable.
@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EvaluacionFrame));
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EvaluacionGUI));
+            this.LayoutPanel_Evaluacion = new System.Windows.Forms.TableLayoutPanel();
             this.Pregunta1 = new System.Windows.Forms.GroupBox();
             this.Pregunta2 = new System.Windows.Forms.GroupBox();
             this.Pregunta7 = new System.Windows.Forms.GroupBox();
@@ -55,56 +55,59 @@
             this.Pregunta6 = new System.Windows.Forms.GroupBox();
             this.Pregunta24 = new System.Windows.Forms.GroupBox();
             this.Pregunta25 = new System.Windows.Forms.GroupBox();
-            this.groupBox26 = new System.Windows.Forms.GroupBox();
-            this.groupBox27 = new System.Windows.Forms.GroupBox();
-            this.groupBox28 = new System.Windows.Forms.GroupBox();
-            this.groupBox29 = new System.Windows.Forms.GroupBox();
-            this.groupBox30 = new System.Windows.Forms.GroupBox();
-            this.tableLayoutPanel1.SuspendLayout();
+            this.Pregunta26 = new System.Windows.Forms.GroupBox();
+            this.Pregunta27 = new System.Windows.Forms.GroupBox();
+            this.Pregunta28 = new System.Windows.Forms.GroupBox();
+            this.Pregunta29 = new System.Windows.Forms.GroupBox();
+            this.Pregunta30 = new System.Windows.Forms.GroupBox();
+            this.Enunciado1 = new System.Windows.Forms.Label();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.LayoutPanel_Evaluacion.SuspendLayout();
+            this.Pregunta1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // tableLayoutPanel1
+            // LayoutPanel_Evaluacion
             // 
-            resources.ApplyResources(this.tableLayoutPanel1, "tableLayoutPanel1");
-            this.tableLayoutPanel1.Controls.Add(this.Pregunta1, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.Pregunta2, 1, 0);
-            this.tableLayoutPanel1.Controls.Add(this.Pregunta7, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.Pregunta3, 2, 0);
-            this.tableLayoutPanel1.Controls.Add(this.Pregunta9, 2, 1);
-            this.tableLayoutPanel1.Controls.Add(this.Pregunta8, 1, 1);
-            this.tableLayoutPanel1.Controls.Add(this.Pregunta13, 0, 2);
-            this.tableLayoutPanel1.Controls.Add(this.Pregunta4, 3, 0);
-            this.tableLayoutPanel1.Controls.Add(this.Pregunta14, 1, 2);
-            this.tableLayoutPanel1.Controls.Add(this.Pregunta15, 2, 2);
-            this.tableLayoutPanel1.Controls.Add(this.Pregunta20, 1, 3);
-            this.tableLayoutPanel1.Controls.Add(this.Pregunta19, 0, 3);
-            this.tableLayoutPanel1.Controls.Add(this.Pregunta21, 2, 3);
-            this.tableLayoutPanel1.Controls.Add(this.Pregunta16, 3, 2);
-            this.tableLayoutPanel1.Controls.Add(this.Pregunta10, 3, 1);
-            this.tableLayoutPanel1.Controls.Add(this.Pregunta11, 4, 1);
-            this.tableLayoutPanel1.Controls.Add(this.Pregunta5, 4, 0);
-            this.tableLayoutPanel1.Controls.Add(this.Pregunta17, 4, 2);
-            this.tableLayoutPanel1.Controls.Add(this.Pregunta23, 4, 3);
-            this.tableLayoutPanel1.Controls.Add(this.Pregunta22, 3, 3);
-            this.tableLayoutPanel1.Controls.Add(this.Pregunta12, 5, 1);
-            this.tableLayoutPanel1.Controls.Add(this.Pregunta18, 5, 2);
-            this.tableLayoutPanel1.Controls.Add(this.Pregunta6, 5, 0);
-            this.tableLayoutPanel1.Controls.Add(this.Pregunta24, 5, 3);
-            this.tableLayoutPanel1.Controls.Add(this.Pregunta25, 0, 4);
-            this.tableLayoutPanel1.Controls.Add(this.groupBox26, 1, 4);
-            this.tableLayoutPanel1.Controls.Add(this.groupBox27, 2, 4);
-            this.tableLayoutPanel1.Controls.Add(this.groupBox28, 3, 4);
-            this.tableLayoutPanel1.Controls.Add(this.groupBox29, 4, 4);
-            this.tableLayoutPanel1.Controls.Add(this.groupBox30, 5, 4);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel1_Paint);
+            resources.ApplyResources(this.LayoutPanel_Evaluacion, "LayoutPanel_Evaluacion");
+            this.LayoutPanel_Evaluacion.Controls.Add(this.Pregunta1, 0, 0);
+            this.LayoutPanel_Evaluacion.Controls.Add(this.Pregunta2, 1, 0);
+            this.LayoutPanel_Evaluacion.Controls.Add(this.Pregunta7, 0, 1);
+            this.LayoutPanel_Evaluacion.Controls.Add(this.Pregunta3, 2, 0);
+            this.LayoutPanel_Evaluacion.Controls.Add(this.Pregunta9, 2, 1);
+            this.LayoutPanel_Evaluacion.Controls.Add(this.Pregunta8, 1, 1);
+            this.LayoutPanel_Evaluacion.Controls.Add(this.Pregunta13, 0, 2);
+            this.LayoutPanel_Evaluacion.Controls.Add(this.Pregunta4, 3, 0);
+            this.LayoutPanel_Evaluacion.Controls.Add(this.Pregunta14, 1, 2);
+            this.LayoutPanel_Evaluacion.Controls.Add(this.Pregunta15, 2, 2);
+            this.LayoutPanel_Evaluacion.Controls.Add(this.Pregunta20, 1, 3);
+            this.LayoutPanel_Evaluacion.Controls.Add(this.Pregunta19, 0, 3);
+            this.LayoutPanel_Evaluacion.Controls.Add(this.Pregunta21, 2, 3);
+            this.LayoutPanel_Evaluacion.Controls.Add(this.Pregunta16, 3, 2);
+            this.LayoutPanel_Evaluacion.Controls.Add(this.Pregunta10, 3, 1);
+            this.LayoutPanel_Evaluacion.Controls.Add(this.Pregunta11, 4, 1);
+            this.LayoutPanel_Evaluacion.Controls.Add(this.Pregunta5, 4, 0);
+            this.LayoutPanel_Evaluacion.Controls.Add(this.Pregunta17, 4, 2);
+            this.LayoutPanel_Evaluacion.Controls.Add(this.Pregunta23, 4, 3);
+            this.LayoutPanel_Evaluacion.Controls.Add(this.Pregunta22, 3, 3);
+            this.LayoutPanel_Evaluacion.Controls.Add(this.Pregunta12, 5, 1);
+            this.LayoutPanel_Evaluacion.Controls.Add(this.Pregunta18, 5, 2);
+            this.LayoutPanel_Evaluacion.Controls.Add(this.Pregunta6, 5, 0);
+            this.LayoutPanel_Evaluacion.Controls.Add(this.Pregunta24, 5, 3);
+            this.LayoutPanel_Evaluacion.Controls.Add(this.Pregunta25, 0, 4);
+            this.LayoutPanel_Evaluacion.Controls.Add(this.Pregunta26, 1, 4);
+            this.LayoutPanel_Evaluacion.Controls.Add(this.Pregunta27, 2, 4);
+            this.LayoutPanel_Evaluacion.Controls.Add(this.Pregunta28, 3, 4);
+            this.LayoutPanel_Evaluacion.Controls.Add(this.Pregunta29, 4, 4);
+            this.LayoutPanel_Evaluacion.Controls.Add(this.Pregunta30, 5, 4);
+            this.LayoutPanel_Evaluacion.Name = "LayoutPanel_Evaluacion";
             // 
             // Pregunta1
             // 
+            this.Pregunta1.Controls.Add(this.groupBox1);
+            this.Pregunta1.Controls.Add(this.Enunciado1);
             resources.ApplyResources(this.Pregunta1, "Pregunta1");
             this.Pregunta1.Name = "Pregunta1";
             this.Pregunta1.TabStop = false;
-            this.Pregunta1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // Pregunta2
             // 
@@ -117,7 +120,6 @@
             resources.ApplyResources(this.Pregunta7, "Pregunta7");
             this.Pregunta7.Name = "Pregunta7";
             this.Pregunta7.TabStop = false;
-            this.Pregunta7.Enter += new System.EventHandler(this.groupBox3_Enter);
             // 
             // Pregunta3
             // 
@@ -251,53 +253,65 @@
             this.Pregunta25.Name = "Pregunta25";
             this.Pregunta25.TabStop = false;
             // 
-            // groupBox26
+            // Pregunta26
             // 
-            resources.ApplyResources(this.groupBox26, "groupBox26");
-            this.groupBox26.Name = "groupBox26";
-            this.groupBox26.TabStop = false;
+            resources.ApplyResources(this.Pregunta26, "Pregunta26");
+            this.Pregunta26.Name = "Pregunta26";
+            this.Pregunta26.TabStop = false;
             // 
-            // groupBox27
+            // Pregunta27
             // 
-            resources.ApplyResources(this.groupBox27, "groupBox27");
-            this.groupBox27.Name = "groupBox27";
-            this.groupBox27.TabStop = false;
+            resources.ApplyResources(this.Pregunta27, "Pregunta27");
+            this.Pregunta27.Name = "Pregunta27";
+            this.Pregunta27.TabStop = false;
             // 
-            // groupBox28
+            // Pregunta28
             // 
-            resources.ApplyResources(this.groupBox28, "groupBox28");
-            this.groupBox28.Name = "groupBox28";
-            this.groupBox28.TabStop = false;
+            resources.ApplyResources(this.Pregunta28, "Pregunta28");
+            this.Pregunta28.Name = "Pregunta28";
+            this.Pregunta28.TabStop = false;
             // 
-            // groupBox29
+            // Pregunta29
             // 
-            resources.ApplyResources(this.groupBox29, "groupBox29");
-            this.groupBox29.Name = "groupBox29";
-            this.groupBox29.TabStop = false;
+            resources.ApplyResources(this.Pregunta29, "Pregunta29");
+            this.Pregunta29.Name = "Pregunta29";
+            this.Pregunta29.TabStop = false;
             // 
-            // groupBox30
+            // Pregunta30
             // 
-            resources.ApplyResources(this.groupBox30, "groupBox30");
-            this.groupBox30.Name = "groupBox30";
-            this.groupBox30.TabStop = false;
+            resources.ApplyResources(this.Pregunta30, "Pregunta30");
+            this.Pregunta30.Name = "Pregunta30";
+            this.Pregunta30.TabStop = false;
             // 
-            // EvaluacionFrame
+            // Enunciado1
+            // 
+            resources.ApplyResources(this.Enunciado1, "Enunciado1");
+            this.Enunciado1.Name = "Enunciado1";
+            // 
+            // groupBox1
+            // 
+            resources.ApplyResources(this.groupBox1, "groupBox1");
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.TabStop = false;
+            // 
+            // EvaluacionGUI
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.tableLayoutPanel1);
+            this.Controls.Add(this.LayoutPanel_Evaluacion);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
-            this.Name = "EvaluacionFrame";
+            this.Name = "EvaluacionGUI";
             this.Load += new System.EventHandler(this.EvaluacionFrame_Load);
-            this.tableLayoutPanel1.ResumeLayout(false);
+            this.LayoutPanel_Evaluacion.ResumeLayout(false);
+            this.Pregunta1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.TableLayoutPanel LayoutPanel_Evaluacion;
         private System.Windows.Forms.GroupBox Pregunta1;
         private System.Windows.Forms.GroupBox Pregunta2;
         private System.Windows.Forms.GroupBox Pregunta7;
@@ -323,11 +337,13 @@
         private System.Windows.Forms.GroupBox Pregunta6;
         private System.Windows.Forms.GroupBox Pregunta24;
         private System.Windows.Forms.GroupBox Pregunta25;
-        private System.Windows.Forms.GroupBox groupBox26;
-        private System.Windows.Forms.GroupBox groupBox27;
-        private System.Windows.Forms.GroupBox groupBox28;
-        private System.Windows.Forms.GroupBox groupBox29;
-        private System.Windows.Forms.GroupBox groupBox30;
+        private System.Windows.Forms.GroupBox Pregunta26;
+        private System.Windows.Forms.GroupBox Pregunta27;
+        private System.Windows.Forms.GroupBox Pregunta28;
+        private System.Windows.Forms.GroupBox Pregunta29;
+        private System.Windows.Forms.GroupBox Pregunta30;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Label Enunciado1;
     }
 }
 

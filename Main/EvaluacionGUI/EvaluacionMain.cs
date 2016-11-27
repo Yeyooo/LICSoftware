@@ -6,7 +6,7 @@ using System.Windows.Forms;
 
 namespace EvaluacionGUI
 {
-    static class Program
+    static class EvaluacionMain
     {
         /// <summary>
         /// The main entry point for the application.
@@ -16,7 +16,7 @@ namespace EvaluacionGUI
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new EvaluacionFrame());
+            Application.Run(new EvaluacionGUI());
         }
     }
 }
