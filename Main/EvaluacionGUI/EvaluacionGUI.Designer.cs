@@ -62,6 +62,8 @@
             this.Pregunta30 = new System.Windows.Forms.GroupBox();
             this.Enunciado1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.LayoutPanel_Evaluacion.SuspendLayout();
             this.Pregunta1.SuspendLayout();
             this.SuspendLayout();
@@ -103,6 +105,8 @@
             // 
             // Pregunta1
             // 
+            this.Pregunta1.Controls.Add(this.button2);
+            this.Pregunta1.Controls.Add(this.button1);
             this.Pregunta1.Controls.Add(this.groupBox1);
             this.Pregunta1.Controls.Add(this.Enunciado1);
             resources.ApplyResources(this.Pregunta1, "Pregunta1");
@@ -294,6 +298,18 @@
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.TabStop = false;
             // 
+            // button1
+            // 
+            resources.ApplyResources(this.button1, "button1");
+            this.button1.Name = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            resources.ApplyResources(this.button2, "button2");
+            this.button2.Name = "button2";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
             // EvaluacionGUI
             // 
             resources.ApplyResources(this, "$this");
@@ -344,6 +360,8 @@
         private System.Windows.Forms.GroupBox Pregunta30;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label Enunciado1;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button1;
     }
 }
 
