@@ -22,6 +22,30 @@ namespace Datos
             return retorno;
         }
 
+        public static string verificarPassword(string correoIngresado)
+        {
+            using (SqlConnection Conn = Conexión.obtenerConexion())
+            {
+                //cmd = new SqlCommand(string.Format("select password from usuarios where correo = '" + correoIngresado + "'"));
+                SqlCommand cmd = new SqlCommand(string.Format("select password from usuarios where correo = '" + correoIngresado + "'"), Conn);
+                SqlDataReader reader = cmd.ExecuteReader();
+
+                string pw = "";
+
+                while (reader.Read())
+                {
+                    pw = reader.GetString(0);
+
+                }
+                Conn.Close();
+                return pw;
+            }
+
+
+        }
+
 
     }
+
+
 }

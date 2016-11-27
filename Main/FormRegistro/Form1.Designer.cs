@@ -107,6 +107,7 @@
             this.textBoxPassword.Name = "textBoxPassword";
             this.textBoxPassword.Size = new System.Drawing.Size(117, 20);
             this.textBoxPassword.TabIndex = 7;
+            this.textBoxPassword.UseSystemPasswordChar = true;
             // 
             // textBoxConfirme
             // 
@@ -114,6 +115,7 @@
             this.textBoxConfirme.Name = "textBoxConfirme";
             this.textBoxConfirme.Size = new System.Drawing.Size(115, 20);
             this.textBoxConfirme.TabIndex = 8;
+            this.textBoxConfirme.UseSystemPasswordChar = true;
             // 
             // label6
             // 
