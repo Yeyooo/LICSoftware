@@ -6,8 +6,12 @@ using System.Threading.Tasks;
 using System.Data.SqlClient;
 namespace Datos
 {
-    class AssetDAL
+    public class AssetDAL
     {
+        public AssetDAL()
+        {
+
+        }
 
         public static List<Asset> BuscarPorNivelHabilidad(string pNivelWriting, string pNivelReading, string pNivelListening) // queremos todos los assets disponibles para el usuario 
         {                                                                                                                     // de acuerdo a sus habilidades
@@ -31,5 +35,24 @@ namespace Datos
 
             return _lista;
         }
+        #region Aca se llenan los diccionarios con la ID del asset, el asset de un determinado nivel y de retornan
+        public static Dictionary<int, Asset> getDiccionarioWriting()
+        {
+            Dictionary<int,Asset> DiccionarioWriting = new Dictionary<int, Asset>();
+            return DiccionarioWriting;
+        }
+
+        public static Dictionary<int, Asset> getDiccionarioListening()
+        {
+            Dictionary<int, Asset> DiccionarioListening = new Dictionary<int, Asset>();
+            return DiccionarioListening;
+        }
+
+        public static Dictionary<int, Asset> getDiccionarioReading()
+        {
+            Dictionary<int, Asset> DiccionarioReading = new Dictionary<int, Asset>();
+            return DiccionarioReading;
+        }
+        #endregion
     }
 }

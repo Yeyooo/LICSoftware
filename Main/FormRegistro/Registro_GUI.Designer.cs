@@ -1,6 +1,6 @@
 ﻿namespace FormRegistro
 {
-    partial class Form1
+    partial class Registro_GUI
     {
         /// <summary>
         /// Required designer variable.

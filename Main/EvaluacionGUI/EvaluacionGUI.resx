@@ -1,0 +1,1101 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="LayoutPanel_Evaluacion.AutoScroll" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="LayoutPanel_Evaluacion.ColumnCount" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="button2.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Bottom</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="button2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 318</value>
+  </data>
+  <data name="button2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>338, 23</value>
+  </data>
+  <data name="button2.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="button2.Text" xml:space="preserve">
+    <value>button2</value>
+  </data>
+  <data name="&gt;&gt;button2.Name" xml:space="preserve">
+    <value>button2</value>
+  </data>
+  <data name="&gt;&gt;button2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;button2.Parent" xml:space="preserve">
+    <value>Pregunta1</value>
+  </data>
+  <data name="&gt;&gt;button2.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="button1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="button1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 230</value>
+  </data>
+  <data name="button1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>338, 111</value>
+  </data>
+  <data name="button1.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="button1.Text" xml:space="preserve">
+    <value>button1</value>
+  </data>
+  <data name="&gt;&gt;button1.Name" xml:space="preserve">
+    <value>button1</value>
+  </data>
+  <data name="&gt;&gt;button1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;button1.Parent" xml:space="preserve">
+    <value>Pregunta1</value>
+  </data>
+  <data name="&gt;&gt;button1.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="groupBox1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="groupBox1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 40</value>
+  </data>
+  <data name="groupBox1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>338, 190</value>
+  </data>
+  <data name="groupBox1.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="groupBox1.Text" xml:space="preserve">
+    <value>Alternativas</value>
+  </data>
+  <data name="&gt;&gt;groupBox1.Name" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
+  <data name="&gt;&gt;groupBox1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;groupBox1.Parent" xml:space="preserve">
+    <value>Pregunta1</value>
+  </data>
+  <data name="&gt;&gt;groupBox1.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="Enunciado1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="Enunciado1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 16</value>
+  </data>
+  <data name="Enunciado1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>338, 24</value>
+  </data>
+  <data name="Enunciado1.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="Enunciado1.Text" xml:space="preserve">
+    <value>Enunciado</value>
+  </data>
+  <data name="&gt;&gt;Enunciado1.Name" xml:space="preserve">
+    <value>Enunciado1</value>
+  </data>
+  <data name="&gt;&gt;Enunciado1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Enunciado1.Parent" xml:space="preserve">
+    <value>Pregunta1</value>
+  </data>
+  <data name="&gt;&gt;Enunciado1.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="Pregunta1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="Pregunta1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 3</value>
+  </data>
+  <data name="Pregunta1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>344, 344</value>
+  </data>
+  <data name="Pregunta1.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="Pregunta1.Text" xml:space="preserve">
+    <value>Pregunta 1</value>
+  </data>
+  <data name="&gt;&gt;Pregunta1.Name" xml:space="preserve">
+    <value>Pregunta1</value>
+  </data>
+  <data name="&gt;&gt;Pregunta1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Pregunta1.Parent" xml:space="preserve">
+    <value>LayoutPanel_Evaluacion</value>
+  </data>
+  <data name="&gt;&gt;Pregunta1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="Pregunta2.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="Pregunta2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>353, 3</value>
+  </data>
+  <data name="Pregunta2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>344, 344</value>
+  </data>
+  <data name="Pregunta2.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="Pregunta2.Text" xml:space="preserve">
+    <value>Pregunta 2</value>
+  </data>
+  <data name="&gt;&gt;Pregunta2.Name" xml:space="preserve">
+    <value>Pregunta2</value>
+  </data>
+  <data name="&gt;&gt;Pregunta2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Pregunta2.Parent" xml:space="preserve">
+    <value>LayoutPanel_Evaluacion</value>
+  </data>
+  <data name="&gt;&gt;Pregunta2.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="Pregunta7.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="Pregunta7.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 353</value>
+  </data>
+  <data name="Pregunta7.Size" type="System.Drawing.Size, System.Drawing">
+    <value>344, 344</value>
+  </data>
+  <data name="Pregunta7.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="Pregunta7.Text" xml:space="preserve">
+    <value>Pregunta 7</value>
+  </data>
+  <data name="&gt;&gt;Pregunta7.Name" xml:space="preserve">
+    <value>Pregunta7</value>
+  </data>
+  <data name="&gt;&gt;Pregunta7.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Pregunta7.Parent" xml:space="preserve">
+    <value>LayoutPanel_Evaluacion</value>
+  </data>
+  <data name="&gt;&gt;Pregunta7.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="Pregunta3.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="Pregunta3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>703, 3</value>
+  </data>
+  <data name="Pregunta3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>344, 344</value>
+  </data>
+  <data name="Pregunta3.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="Pregunta3.Text" xml:space="preserve">
+    <value>Pregunta 3</value>
+  </data>
+  <data name="&gt;&gt;Pregunta3.Name" xml:space="preserve">
+    <value>Pregunta3</value>
+  </data>
+  <data name="&gt;&gt;Pregunta3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Pregunta3.Parent" xml:space="preserve">
+    <value>LayoutPanel_Evaluacion</value>
+  </data>
+  <data name="&gt;&gt;Pregunta3.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="Pregunta9.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="Pregunta9.Location" type="System.Drawing.Point, System.Drawing">
+    <value>703, 353</value>
+  </data>
+  <data name="Pregunta9.Size" type="System.Drawing.Size, System.Drawing">
+    <value>344, 344</value>
+  </data>
+  <data name="Pregunta9.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="Pregunta9.Text" xml:space="preserve">
+    <value>Pregunta 9</value>
+  </data>
+  <data name="&gt;&gt;Pregunta9.Name" xml:space="preserve">
+    <value>Pregunta9</value>
+  </data>
+  <data name="&gt;&gt;Pregunta9.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Pregunta9.Parent" xml:space="preserve">
+    <value>LayoutPanel_Evaluacion</value>
+  </data>
+  <data name="&gt;&gt;Pregunta9.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="Pregunta8.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="Pregunta8.Location" type="System.Drawing.Point, System.Drawing">
+    <value>353, 353</value>
+  </data>
+  <data name="Pregunta8.Size" type="System.Drawing.Size, System.Drawing">
+    <value>344, 344</value>
+  </data>
+  <data name="Pregunta8.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="Pregunta8.Text" xml:space="preserve">
+    <value>Pregunta 8</value>
+  </data>
+  <data name="&gt;&gt;Pregunta8.Name" xml:space="preserve">
+    <value>Pregunta8</value>
+  </data>
+  <data name="&gt;&gt;Pregunta8.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Pregunta8.Parent" xml:space="preserve">
+    <value>LayoutPanel_Evaluacion</value>
+  </data>
+  <data name="&gt;&gt;Pregunta8.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="Pregunta13.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="Pregunta13.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 703</value>
+  </data>
+  <data name="Pregunta13.Size" type="System.Drawing.Size, System.Drawing">
+    <value>344, 344</value>
+  </data>
+  <data name="Pregunta13.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="Pregunta13.Text" xml:space="preserve">
+    <value>Pregunta 13</value>
+  </data>
+  <data name="&gt;&gt;Pregunta13.Name" xml:space="preserve">
+    <value>Pregunta13</value>
+  </data>
+  <data name="&gt;&gt;Pregunta13.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Pregunta13.Parent" xml:space="preserve">
+    <value>LayoutPanel_Evaluacion</value>
+  </data>
+  <data name="&gt;&gt;Pregunta13.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="Pregunta4.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="Pregunta4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1053, 3</value>
+  </data>
+  <data name="Pregunta4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>344, 344</value>
+  </data>
+  <data name="Pregunta4.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="Pregunta4.Text" xml:space="preserve">
+    <value>Pregunta 4</value>
+  </data>
+  <data name="&gt;&gt;Pregunta4.Name" xml:space="preserve">
+    <value>Pregunta4</value>
+  </data>
+  <data name="&gt;&gt;Pregunta4.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Pregunta4.Parent" xml:space="preserve">
+    <value>LayoutPanel_Evaluacion</value>
+  </data>
+  <data name="&gt;&gt;Pregunta4.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="Pregunta14.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="Pregunta14.Location" type="System.Drawing.Point, System.Drawing">
+    <value>353, 703</value>
+  </data>
+  <data name="Pregunta14.Size" type="System.Drawing.Size, System.Drawing">
+    <value>344, 344</value>
+  </data>
+  <data name="Pregunta14.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="Pregunta14.Text" xml:space="preserve">
+    <value>Pregunta 14</value>
+  </data>
+  <data name="&gt;&gt;Pregunta14.Name" xml:space="preserve">
+    <value>Pregunta14</value>
+  </data>
+  <data name="&gt;&gt;Pregunta14.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Pregunta14.Parent" xml:space="preserve">
+    <value>LayoutPanel_Evaluacion</value>
+  </data>
+  <data name="&gt;&gt;Pregunta14.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="Pregunta15.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="Pregunta15.Location" type="System.Drawing.Point, System.Drawing">
+    <value>703, 703</value>
+  </data>
+  <data name="Pregunta15.Size" type="System.Drawing.Size, System.Drawing">
+    <value>344, 344</value>
+  </data>
+  <data name="Pregunta15.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="Pregunta15.Text" xml:space="preserve">
+    <value>Pregunta 15</value>
+  </data>
+  <data name="&gt;&gt;Pregunta15.Name" xml:space="preserve">
+    <value>Pregunta15</value>
+  </data>
+  <data name="&gt;&gt;Pregunta15.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Pregunta15.Parent" xml:space="preserve">
+    <value>LayoutPanel_Evaluacion</value>
+  </data>
+  <data name="&gt;&gt;Pregunta15.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="Pregunta20.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="Pregunta20.Location" type="System.Drawing.Point, System.Drawing">
+    <value>353, 1053</value>
+  </data>
+  <data name="Pregunta20.Size" type="System.Drawing.Size, System.Drawing">
+    <value>344, 344</value>
+  </data>
+  <data name="Pregunta20.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="Pregunta20.Text" xml:space="preserve">
+    <value>Pregunta 20</value>
+  </data>
+  <data name="&gt;&gt;Pregunta20.Name" xml:space="preserve">
+    <value>Pregunta20</value>
+  </data>
+  <data name="&gt;&gt;Pregunta20.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Pregunta20.Parent" xml:space="preserve">
+    <value>LayoutPanel_Evaluacion</value>
+  </data>
+  <data name="&gt;&gt;Pregunta20.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="Pregunta19.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="Pregunta19.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 1053</value>
+  </data>
+  <data name="Pregunta19.Size" type="System.Drawing.Size, System.Drawing">
+    <value>344, 344</value>
+  </data>
+  <data name="Pregunta19.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="Pregunta19.Text" xml:space="preserve">
+    <value>Pregunta 19</value>
+  </data>
+  <data name="&gt;&gt;Pregunta19.Name" xml:space="preserve">
+    <value>Pregunta19</value>
+  </data>
+  <data name="&gt;&gt;Pregunta19.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Pregunta19.Parent" xml:space="preserve">
+    <value>LayoutPanel_Evaluacion</value>
+  </data>
+  <data name="&gt;&gt;Pregunta19.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="Pregunta21.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="Pregunta21.Location" type="System.Drawing.Point, System.Drawing">
+    <value>703, 1053</value>
+  </data>
+  <data name="Pregunta21.Size" type="System.Drawing.Size, System.Drawing">
+    <value>344, 344</value>
+  </data>
+  <data name="Pregunta21.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="Pregunta21.Text" xml:space="preserve">
+    <value>Pregunta 21</value>
+  </data>
+  <data name="&gt;&gt;Pregunta21.Name" xml:space="preserve">
+    <value>Pregunta21</value>
+  </data>
+  <data name="&gt;&gt;Pregunta21.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Pregunta21.Parent" xml:space="preserve">
+    <value>LayoutPanel_Evaluacion</value>
+  </data>
+  <data name="&gt;&gt;Pregunta21.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="Pregunta16.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="Pregunta16.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1053, 703</value>
+  </data>
+  <data name="Pregunta16.Size" type="System.Drawing.Size, System.Drawing">
+    <value>344, 344</value>
+  </data>
+  <data name="Pregunta16.TabIndex" type="System.Int32, mscorlib">
+    <value>13</value>
+  </data>
+  <data name="Pregunta16.Text" xml:space="preserve">
+    <value>Pregunta 16</value>
+  </data>
+  <data name="&gt;&gt;Pregunta16.Name" xml:space="preserve">
+    <value>Pregunta16</value>
+  </data>
+  <data name="&gt;&gt;Pregunta16.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Pregunta16.Parent" xml:space="preserve">
+    <value>LayoutPanel_Evaluacion</value>
+  </data>
+  <data name="&gt;&gt;Pregunta16.ZOrder" xml:space="preserve">
+    <value>13</value>
+  </data>
+  <data name="Pregunta10.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="Pregunta10.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1053, 353</value>
+  </data>
+  <data name="Pregunta10.Size" type="System.Drawing.Size, System.Drawing">
+    <value>344, 344</value>
+  </data>
+  <data name="Pregunta10.TabIndex" type="System.Int32, mscorlib">
+    <value>14</value>
+  </data>
+  <data name="Pregunta10.Text" xml:space="preserve">
+    <value>Pregunta 10</value>
+  </data>
+  <data name="&gt;&gt;Pregunta10.Name" xml:space="preserve">
+    <value>Pregunta10</value>
+  </data>
+  <data name="&gt;&gt;Pregunta10.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Pregunta10.Parent" xml:space="preserve">
+    <value>LayoutPanel_Evaluacion</value>
+  </data>
+  <data name="&gt;&gt;Pregunta10.ZOrder" xml:space="preserve">
+    <value>14</value>
+  </data>
+  <data name="Pregunta11.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="Pregunta11.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1403, 353</value>
+  </data>
+  <data name="Pregunta11.Size" type="System.Drawing.Size, System.Drawing">
+    <value>344, 344</value>
+  </data>
+  <data name="Pregunta11.TabIndex" type="System.Int32, mscorlib">
+    <value>15</value>
+  </data>
+  <data name="Pregunta11.Text" xml:space="preserve">
+    <value>Pregunta 11</value>
+  </data>
+  <data name="&gt;&gt;Pregunta11.Name" xml:space="preserve">
+    <value>Pregunta11</value>
+  </data>
+  <data name="&gt;&gt;Pregunta11.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Pregunta11.Parent" xml:space="preserve">
+    <value>LayoutPanel_Evaluacion</value>
+  </data>
+  <data name="&gt;&gt;Pregunta11.ZOrder" xml:space="preserve">
+    <value>15</value>
+  </data>
+  <data name="Pregunta5.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="Pregunta5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1403, 3</value>
+  </data>
+  <data name="Pregunta5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>344, 344</value>
+  </data>
+  <data name="Pregunta5.TabIndex" type="System.Int32, mscorlib">
+    <value>16</value>
+  </data>
+  <data name="Pregunta5.Text" xml:space="preserve">
+    <value>Pregunta 5</value>
+  </data>
+  <data name="&gt;&gt;Pregunta5.Name" xml:space="preserve">
+    <value>Pregunta5</value>
+  </data>
+  <data name="&gt;&gt;Pregunta5.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Pregunta5.Parent" xml:space="preserve">
+    <value>LayoutPanel_Evaluacion</value>
+  </data>
+  <data name="&gt;&gt;Pregunta5.ZOrder" xml:space="preserve">
+    <value>16</value>
+  </data>
+  <data name="Pregunta17.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="Pregunta17.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1403, 703</value>
+  </data>
+  <data name="Pregunta17.Size" type="System.Drawing.Size, System.Drawing">
+    <value>344, 344</value>
+  </data>
+  <data name="Pregunta17.TabIndex" type="System.Int32, mscorlib">
+    <value>17</value>
+  </data>
+  <data name="Pregunta17.Text" xml:space="preserve">
+    <value>Pregunta 17</value>
+  </data>
+  <data name="&gt;&gt;Pregunta17.Name" xml:space="preserve">
+    <value>Pregunta17</value>
+  </data>
+  <data name="&gt;&gt;Pregunta17.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Pregunta17.Parent" xml:space="preserve">
+    <value>LayoutPanel_Evaluacion</value>
+  </data>
+  <data name="&gt;&gt;Pregunta17.ZOrder" xml:space="preserve">
+    <value>17</value>
+  </data>
+  <data name="Pregunta23.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="Pregunta23.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1403, 1053</value>
+  </data>
+  <data name="Pregunta23.Size" type="System.Drawing.Size, System.Drawing">
+    <value>344, 344</value>
+  </data>
+  <data name="Pregunta23.TabIndex" type="System.Int32, mscorlib">
+    <value>18</value>
+  </data>
+  <data name="Pregunta23.Text" xml:space="preserve">
+    <value>Pregunta 23</value>
+  </data>
+  <data name="&gt;&gt;Pregunta23.Name" xml:space="preserve">
+    <value>Pregunta23</value>
+  </data>
+  <data name="&gt;&gt;Pregunta23.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Pregunta23.Parent" xml:space="preserve">
+    <value>LayoutPanel_Evaluacion</value>
+  </data>
+  <data name="&gt;&gt;Pregunta23.ZOrder" xml:space="preserve">
+    <value>18</value>
+  </data>
+  <data name="Pregunta22.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="Pregunta22.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1053, 1053</value>
+  </data>
+  <data name="Pregunta22.Size" type="System.Drawing.Size, System.Drawing">
+    <value>344, 344</value>
+  </data>
+  <data name="Pregunta22.TabIndex" type="System.Int32, mscorlib">
+    <value>19</value>
+  </data>
+  <data name="Pregunta22.Text" xml:space="preserve">
+    <value>Pregunta 22</value>
+  </data>
+  <data name="&gt;&gt;Pregunta22.Name" xml:space="preserve">
+    <value>Pregunta22</value>
+  </data>
+  <data name="&gt;&gt;Pregunta22.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Pregunta22.Parent" xml:space="preserve">
+    <value>LayoutPanel_Evaluacion</value>
+  </data>
+  <data name="&gt;&gt;Pregunta22.ZOrder" xml:space="preserve">
+    <value>19</value>
+  </data>
+  <data name="Pregunta12.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="Pregunta12.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1753, 353</value>
+  </data>
+  <data name="Pregunta12.Size" type="System.Drawing.Size, System.Drawing">
+    <value>344, 344</value>
+  </data>
+  <data name="Pregunta12.TabIndex" type="System.Int32, mscorlib">
+    <value>20</value>
+  </data>
+  <data name="Pregunta12.Text" xml:space="preserve">
+    <value>Pregunta 12</value>
+  </data>
+  <data name="&gt;&gt;Pregunta12.Name" xml:space="preserve">
+    <value>Pregunta12</value>
+  </data>
+  <data name="&gt;&gt;Pregunta12.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Pregunta12.Parent" xml:space="preserve">
+    <value>LayoutPanel_Evaluacion</value>
+  </data>
+  <data name="&gt;&gt;Pregunta12.ZOrder" xml:space="preserve">
+    <value>20</value>
+  </data>
+  <data name="Pregunta18.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="Pregunta18.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1753, 703</value>
+  </data>
+  <data name="Pregunta18.Size" type="System.Drawing.Size, System.Drawing">
+    <value>344, 344</value>
+  </data>
+  <data name="Pregunta18.TabIndex" type="System.Int32, mscorlib">
+    <value>21</value>
+  </data>
+  <data name="Pregunta18.Text" xml:space="preserve">
+    <value>Pregunta 18</value>
+  </data>
+  <data name="&gt;&gt;Pregunta18.Name" xml:space="preserve">
+    <value>Pregunta18</value>
+  </data>
+  <data name="&gt;&gt;Pregunta18.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Pregunta18.Parent" xml:space="preserve">
+    <value>LayoutPanel_Evaluacion</value>
+  </data>
+  <data name="&gt;&gt;Pregunta18.ZOrder" xml:space="preserve">
+    <value>21</value>
+  </data>
+  <data name="Pregunta6.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="Pregunta6.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1753, 3</value>
+  </data>
+  <data name="Pregunta6.Size" type="System.Drawing.Size, System.Drawing">
+    <value>344, 344</value>
+  </data>
+  <data name="Pregunta6.TabIndex" type="System.Int32, mscorlib">
+    <value>22</value>
+  </data>
+  <data name="Pregunta6.Text" xml:space="preserve">
+    <value>Pregunta 6</value>
+  </data>
+  <data name="&gt;&gt;Pregunta6.Name" xml:space="preserve">
+    <value>Pregunta6</value>
+  </data>
+  <data name="&gt;&gt;Pregunta6.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Pregunta6.Parent" xml:space="preserve">
+    <value>LayoutPanel_Evaluacion</value>
+  </data>
+  <data name="&gt;&gt;Pregunta6.ZOrder" xml:space="preserve">
+    <value>22</value>
+  </data>
+  <data name="Pregunta24.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="Pregunta24.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1753, 1053</value>
+  </data>
+  <data name="Pregunta24.Size" type="System.Drawing.Size, System.Drawing">
+    <value>344, 344</value>
+  </data>
+  <data name="Pregunta24.TabIndex" type="System.Int32, mscorlib">
+    <value>23</value>
+  </data>
+  <data name="Pregunta24.Text" xml:space="preserve">
+    <value>Pregunta 24</value>
+  </data>
+  <data name="&gt;&gt;Pregunta24.Name" xml:space="preserve">
+    <value>Pregunta24</value>
+  </data>
+  <data name="&gt;&gt;Pregunta24.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Pregunta24.Parent" xml:space="preserve">
+    <value>LayoutPanel_Evaluacion</value>
+  </data>
+  <data name="&gt;&gt;Pregunta24.ZOrder" xml:space="preserve">
+    <value>23</value>
+  </data>
+  <data name="Pregunta25.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="Pregunta25.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 1403</value>
+  </data>
+  <data name="Pregunta25.Size" type="System.Drawing.Size, System.Drawing">
+    <value>344, 344</value>
+  </data>
+  <data name="Pregunta25.TabIndex" type="System.Int32, mscorlib">
+    <value>24</value>
+  </data>
+  <data name="Pregunta25.Text" xml:space="preserve">
+    <value>Pregunta 25</value>
+  </data>
+  <data name="&gt;&gt;Pregunta25.Name" xml:space="preserve">
+    <value>Pregunta25</value>
+  </data>
+  <data name="&gt;&gt;Pregunta25.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Pregunta25.Parent" xml:space="preserve">
+    <value>LayoutPanel_Evaluacion</value>
+  </data>
+  <data name="&gt;&gt;Pregunta25.ZOrder" xml:space="preserve">
+    <value>24</value>
+  </data>
+  <data name="Pregunta26.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="Pregunta26.Location" type="System.Drawing.Point, System.Drawing">
+    <value>353, 1403</value>
+  </data>
+  <data name="Pregunta26.Size" type="System.Drawing.Size, System.Drawing">
+    <value>344, 344</value>
+  </data>
+  <data name="Pregunta26.TabIndex" type="System.Int32, mscorlib">
+    <value>25</value>
+  </data>
+  <data name="Pregunta26.Text" xml:space="preserve">
+    <value>Pregunta 26</value>
+  </data>
+  <data name="&gt;&gt;Pregunta26.Name" xml:space="preserve">
+    <value>Pregunta26</value>
+  </data>
+  <data name="&gt;&gt;Pregunta26.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Pregunta26.Parent" xml:space="preserve">
+    <value>LayoutPanel_Evaluacion</value>
+  </data>
+  <data name="&gt;&gt;Pregunta26.ZOrder" xml:space="preserve">
+    <value>25</value>
+  </data>
+  <data name="Pregunta27.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="Pregunta27.Location" type="System.Drawing.Point, System.Drawing">
+    <value>703, 1403</value>
+  </data>
+  <data name="Pregunta27.Size" type="System.Drawing.Size, System.Drawing">
+    <value>344, 344</value>
+  </data>
+  <data name="Pregunta27.TabIndex" type="System.Int32, mscorlib">
+    <value>26</value>
+  </data>
+  <data name="Pregunta27.Text" xml:space="preserve">
+    <value>Pregunta 27</value>
+  </data>
+  <data name="&gt;&gt;Pregunta27.Name" xml:space="preserve">
+    <value>Pregunta27</value>
+  </data>
+  <data name="&gt;&gt;Pregunta27.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Pregunta27.Parent" xml:space="preserve">
+    <value>LayoutPanel_Evaluacion</value>
+  </data>
+  <data name="&gt;&gt;Pregunta27.ZOrder" xml:space="preserve">
+    <value>26</value>
+  </data>
+  <data name="Pregunta28.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="Pregunta28.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1053, 1403</value>
+  </data>
+  <data name="Pregunta28.Size" type="System.Drawing.Size, System.Drawing">
+    <value>344, 344</value>
+  </data>
+  <data name="Pregunta28.TabIndex" type="System.Int32, mscorlib">
+    <value>27</value>
+  </data>
+  <data name="Pregunta28.Text" xml:space="preserve">
+    <value>Pregunta 28</value>
+  </data>
+  <data name="&gt;&gt;Pregunta28.Name" xml:space="preserve">
+    <value>Pregunta28</value>
+  </data>
+  <data name="&gt;&gt;Pregunta28.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Pregunta28.Parent" xml:space="preserve">
+    <value>LayoutPanel_Evaluacion</value>
+  </data>
+  <data name="&gt;&gt;Pregunta28.ZOrder" xml:space="preserve">
+    <value>27</value>
+  </data>
+  <data name="Pregunta29.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="Pregunta29.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1403, 1403</value>
+  </data>
+  <data name="Pregunta29.Size" type="System.Drawing.Size, System.Drawing">
+    <value>344, 344</value>
+  </data>
+  <data name="Pregunta29.TabIndex" type="System.Int32, mscorlib">
+    <value>28</value>
+  </data>
+  <data name="Pregunta29.Text" xml:space="preserve">
+    <value>Pregunta 29</value>
+  </data>
+  <data name="&gt;&gt;Pregunta29.Name" xml:space="preserve">
+    <value>Pregunta29</value>
+  </data>
+  <data name="&gt;&gt;Pregunta29.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Pregunta29.Parent" xml:space="preserve">
+    <value>LayoutPanel_Evaluacion</value>
+  </data>
+  <data name="&gt;&gt;Pregunta29.ZOrder" xml:space="preserve">
+    <value>28</value>
+  </data>
+  <data name="Pregunta30.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="Pregunta30.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1753, 1403</value>
+  </data>
+  <data name="Pregunta30.Size" type="System.Drawing.Size, System.Drawing">
+    <value>344, 344</value>
+  </data>
+  <data name="Pregunta30.TabIndex" type="System.Int32, mscorlib">
+    <value>29</value>
+  </data>
+  <data name="Pregunta30.Text" xml:space="preserve">
+    <value>Pregunta 30</value>
+  </data>
+  <data name="&gt;&gt;Pregunta30.Name" xml:space="preserve">
+    <value>Pregunta30</value>
+  </data>
+  <data name="&gt;&gt;Pregunta30.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Pregunta30.Parent" xml:space="preserve">
+    <value>LayoutPanel_Evaluacion</value>
+  </data>
+  <data name="&gt;&gt;Pregunta30.ZOrder" xml:space="preserve">
+    <value>29</value>
+  </data>
+  <data name="LayoutPanel_Evaluacion.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="LayoutPanel_Evaluacion.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="LayoutPanel_Evaluacion.RowCount" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="LayoutPanel_Evaluacion.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1164, 694</value>
+  </data>
+  <data name="LayoutPanel_Evaluacion.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;LayoutPanel_Evaluacion.Name" xml:space="preserve">
+    <value>LayoutPanel_Evaluacion</value>
+  </data>
+  <data name="&gt;&gt;LayoutPanel_Evaluacion.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TableLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;LayoutPanel_Evaluacion.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;LayoutPanel_Evaluacion.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="LayoutPanel_Evaluacion.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
+    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="Pregunta1" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="Pregunta2" Row="0" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="Pregunta7" Row="1" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="Pregunta3" Row="0" RowSpan="1" Column="2" ColumnSpan="1" /&gt;&lt;Control Name="Pregunta9" Row="1" RowSpan="1" Column="2" ColumnSpan="1" /&gt;&lt;Control Name="Pregunta8" Row="1" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="Pregunta13" Row="2" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="Pregunta4" Row="0" RowSpan="1" Column="3" ColumnSpan="1" /&gt;&lt;Control Name="Pregunta14" Row="2" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="Pregunta15" Row="2" RowSpan="1" Column="2" ColumnSpan="1" /&gt;&lt;Control Name="Pregunta20" Row="3" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="Pregunta19" Row="3" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="Pregunta21" Row="3" RowSpan="1" Column="2" ColumnSpan="1" /&gt;&lt;Control Name="Pregunta16" Row="2" RowSpan="1" Column="3" ColumnSpan="1" /&gt;&lt;Control Name="Pregunta10" Row="1" RowSpan="1" Column="3" ColumnSpan="1" /&gt;&lt;Control Name="Pregunta11" Row="1" RowSpan="1" Column="4" ColumnSpan="1" /&gt;&lt;Control Name="Pregunta5" Row="0" RowSpan="1" Column="4" ColumnSpan="1" /&gt;&lt;Control Name="Pregunta17" Row="2" RowSpan="1" Column="4" ColumnSpan="1" /&gt;&lt;Control Name="Pregunta23" Row="3" RowSpan="1" Column="4" ColumnSpan="1" /&gt;&lt;Control Name="Pregunta22" Row="3" RowSpan="1" Column="3" ColumnSpan="1" /&gt;&lt;Control Name="Pregunta12" Row="1" RowSpan="1" Column="5" ColumnSpan="1" /&gt;&lt;Control Name="Pregunta18" Row="2" RowSpan="1" Column="5" ColumnSpan="1" /&gt;&lt;Control Name="Pregunta6" Row="0" RowSpan="1" Column="5" ColumnSpan="1" /&gt;&lt;Control Name="Pregunta24" Row="3" RowSpan="1" Column="5" ColumnSpan="1" /&gt;&lt;Control Name="Pregunta25" Row="4" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="Pregunta26" Row="4" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="Pregunta27" Row="4" RowSpan="1" Column="2" ColumnSpan="1" /&gt;&lt;Control Name="Pregunta28" Row="4" RowSpan="1" Column="3" ColumnSpan="1" /&gt;&lt;Control Name="Pregunta29" Row="4" RowSpan="1" Column="4" ColumnSpan="1" /&gt;&lt;Control Name="Pregunta30" Row="4" RowSpan="1" Column="5" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Absolute,350,Absolute,350,Absolute,350,Absolute,350,Absolute,350,Absolute,350,Absolute,20" /&gt;&lt;Rows Styles="Absolute,350,Absolute,350,Absolute,350,Absolute,350,Absolute,350" /&gt;&lt;/TableLayoutSettings&gt;</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>6, 13</value>
+  </data>
+  <data name="$this.AutoScroll" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="$this.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>1164, 694</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Evaluacion</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>EvaluacionGUI</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+</root>

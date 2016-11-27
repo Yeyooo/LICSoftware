@@ -46,16 +46,34 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="EvaluacionFrame.cs">
+    <Compile Include="EvaluacionGUI.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="EvaluacionFrame.Designer.cs">
-      <DependentUpon>EvaluacionFrame.cs</DependentUpon>
+    <Compile Include="EvaluacionGUI.Designer.cs">
+      <DependentUpon>EvaluacionGUI.cs</DependentUpon>
     </Compile>
-    <Compile Include="Program.cs" />
+    <Compile Include="EvaluacionMain.cs" />
+    <Compile Include="EvaluacionNewGUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EvaluacionNewGUI.Designer.cs">
+      <DependentUpon>EvaluacionNewGUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Timer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Timer.Designer.cs">
+      <DependentUpon>Timer.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="EvaluacionFrame.resx">
-      <DependentUpon>EvaluacionFrame.cs</DependentUpon>
+    <EmbeddedResource Include="EvaluacionGUI.resx">
+      <DependentUpon>EvaluacionGUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EvaluacionNewGUI.resx">
+      <DependentUpon>EvaluacionNewGUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Timer.resx">
+      <DependentUpon>Timer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -78,6 +96,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Datos\Datos.csproj">
+      <Project>{B1FC0CD7-0C8F-40BB-9688-5E09FB838193}</Project>
+      <Name>Datos</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
