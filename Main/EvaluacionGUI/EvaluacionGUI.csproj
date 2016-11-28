@@ -46,12 +46,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="EvaluacionGUI.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="EvaluacionGUI.Designer.cs">
-      <DependentUpon>EvaluacionGUI.cs</DependentUpon>
-    </Compile>
     <Compile Include="EvaluacionMain.cs" />
     <Compile Include="EvaluacionNewGUI.cs">
       <SubType>Form</SubType>
@@ -66,9 +60,6 @@
       <DependentUpon>Timer.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="EvaluacionGUI.resx">
-      <DependentUpon>EvaluacionGUI.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="EvaluacionNewGUI.resx">
       <DependentUpon>EvaluacionNewGUI.cs</DependentUpon>
     </EmbeddedResource>

@@ -16,7 +16,7 @@ namespace EvaluacionGUI
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new EvaluacionGUI());
+            Application.Run(new EvaluacionNewGUI());
         }
     }
 }
