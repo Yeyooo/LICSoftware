@@ -13,12 +13,12 @@ namespace Datos
 
         }
 
-        public static List<Asset> BuscarPorNivelHabilidad(string pNivelWriting, string pNivelReading, string pNivelListening) // queremos todos los assets disponibles para el usuario 
+        public static List<Asset> BuscarPorNivelHabilidad(string pNivelHabilidad, string pHabilidadAsociada) // queremos todos los assets disponibles para el usuario 
         {                                                                                                                     // de acuerdo a sus habilidades
             List<Asset> _lista = new List<Asset>();
-            string consulta = "";
-
-            SqlCommand _comando = new SqlCommand(String.Format(consulta), Conexión.obtenerConexion());
+            string consulta = "SELECT idpregunta, enunciado, alt_correcta, habilidad, nivel, metodologia, teoria FROM pregunta, alternativas, alternativa_correcta WHERE alternativa_correcta.idpregunta = pregunta.idpregunta and alternativas.idpregunta = pregunta.idpregunta and habilidad = ' "+pHabilidadAsociada+" ' and nivel = ' "+pNivelHabilidad+" '";
+            // metodologia tiene que ir en la pregunta...BD
+            SqlCommand _comando = new SqlCommand(String.Format(consulta), Conexión.obtenerConexion("contenido"));
             SqlDataReader _reader = _comando.ExecuteReader();
 
             while (_reader.Read())

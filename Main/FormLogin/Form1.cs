@@ -23,12 +23,14 @@ namespace FormLogin
 
             if( textBoxPw.Text != "" && textBoxCorreo.Text != "")
             {
-                if(textBoxPw.Text == UsuarioDAL.verificarPassword(textBoxCorreo.Text))
-                {
-                    MessageBox.Show("Has iniciado sesión!", "Inicio Succesful", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }else
-                {
-                    MessageBox.Show("La contraseña no es la correcta", "Inicio Unsuccesful", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                if (UsuarioDAL.verificarPassword(textBoxCorreo.Text) != null) {
+                    if (textBoxPw.Text == UsuarioDAL.verificarPassword(textBoxCorreo.Text))
+                    {
+                        MessageBox.Show("Has iniciado sesión!", "Inicio Succesful", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    } else
+                    {
+                        MessageBox.Show("La contraseña no es la correcta", "Inicio Unsuccesful", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    }
                 }
             }
             
