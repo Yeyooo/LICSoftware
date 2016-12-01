@@ -16,6 +16,7 @@ namespace Datos
         public string NivelHabilidad { get; set; }
         public string EstrategiaEnseñanza { get; set; }
         public string Teoria { get; set; }
+        public int CantidadAlternativas { get; set; } //Cantidad de alternativas que hay
 
         public Asset() { }
 
@@ -30,6 +31,7 @@ namespace Datos
             this.NivelHabilidad = pNivelHabilidad;
             this.EstrategiaEnseñanza = pEstrategia;
             this.Teoria = pTeoria;
+            this.CantidadAlternativas = Alternativas.Count();
         }
 
     }

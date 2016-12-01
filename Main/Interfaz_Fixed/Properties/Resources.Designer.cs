@@ -63,6 +63,16 @@ namespace Interfaz_Fixed.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap botonNormall {
+            get {
+                object obj = ResourceManager.GetObject("botonNormall", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap HabilidadGeneral {
             get {
                 object obj = ResourceManager.GetObject("HabilidadGeneral", resourceCulture);

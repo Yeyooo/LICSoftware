@@ -50,6 +50,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Evaluacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Evaluacion.Designer.cs">
+      <DependentUpon>Evaluacion.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI_LIC.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -58,6 +64,9 @@
     </Compile>
     <Compile Include="Interfaz_Oficial.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Evaluacion.resx">
+      <DependentUpon>Evaluacion.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI_LIC.resx">
       <DependentUpon>GUI_LIC.cs</DependentUpon>
     </EmbeddedResource>
@@ -133,6 +142,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\NOLIGA_Warning1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\botonNormall.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

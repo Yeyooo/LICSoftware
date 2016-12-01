@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LICGUI));
             this.panel1 = new System.Windows.Forms.Panel();
             this.Entrenamiento_Pane = new System.Windows.Forms.TabControl();
             this.Panel_habilidades = new System.Windows.Forms.TabPage();
@@ -152,7 +153,7 @@
             this.Icono_Liga_Listening.BackColor = System.Drawing.Color.Transparent;
             this.Icono_Liga_Listening.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.Icono_Liga_Listening.Image = global::Interfaz_Fixed.Properties.Resources.Liga_oro_ascenso11;
-            this.Icono_Liga_Listening.Location = new System.Drawing.Point(613, 18);
+            this.Icono_Liga_Listening.Location = new System.Drawing.Point(613, 6);
             this.Icono_Liga_Listening.Name = "Icono_Liga_Listening";
             this.Icono_Liga_Listening.Size = new System.Drawing.Size(138, 143);
             this.Icono_Liga_Listening.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -235,6 +236,7 @@
             this.Controls.Add(this.UsurioInfo_Panel);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "LICGUI";
             this.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.Text = " ";
