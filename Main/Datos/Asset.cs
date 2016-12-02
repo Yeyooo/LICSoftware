@@ -16,6 +16,8 @@ namespace Datos
         public int NivelHabilidad;
         public string EstrategiaEnseñanza;
         public string Teoria;
+        public string UrlArchivo = null; // url inicializada en null, el asset puede tener audio o imagen
+
 
         public Asset() { }
 
@@ -30,6 +32,20 @@ namespace Datos
             this.NivelHabilidad = pNivelHabilidad;
             this.EstrategiaEnseñanza = pEstrategia;
             this.Teoria = pTeoria;
+        }
+
+        public Asset(int pId, string pEnunciado, string pRespuesta, List<string> pAlternativas, string pHabilidad, int pNivelHabilidad, string pEstrategia, string pTeoria, string pUrlArchivo)
+
+        {
+            this.Id = pId;
+            this.EnunciadoPregunta = pEnunciado;
+            this.RespuestaCorrecta = pRespuesta;
+            this.Alternativas = pAlternativas;
+            this.HabilidadAsociada = pHabilidad;
+            this.NivelHabilidad = pNivelHabilidad;
+            this.EstrategiaEnseñanza = pEstrategia;
+            this.Teoria = pTeoria;
+            this.UrlArchivo = pUrlArchivo;
         }
 
         public int getId()
