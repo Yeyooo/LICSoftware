@@ -8,19 +8,18 @@ namespace Datos
 {
     public class Asset
     {
-        public int Id { get; set; }
-        public string EnunciadoPregunta { get; set; }
-        public string RespuestaCorrecta { get; set; }
-        public List<string> Alternativas { get; set; } // siempre sera de tipo string, ya que si bien pueden ser imagenes, estas son urls
-        public string HabilidadAsociada { get; set; }
-        public string NivelHabilidad { get; set; }
-        public string EstrategiaEnseñanza { get; set; }
-        public string Teoria { get; set; }
-        public int CantidadAlternativas { get; set; } //Cantidad de alternativas que hay
+        public int Id;
+        public string EnunciadoPregunta;
+        public string RespuestaCorrecta;
+        public List<string> Alternativas; // siempre sera de tipo string, ya que si bien pueden ser imagenes, estas son urls
+        public string HabilidadAsociada;
+        public int NivelHabilidad;
+        public string EstrategiaEnseñanza;
+        public string Teoria;
 
         public Asset() { }
 
-        public Asset(int pId, string pEnunciado, string pRespuesta, List<string> pAlternativas, string pHabilidad, string pNivelHabilidad, string pEstrategia, string pTeoria)
+        public Asset(int pId, string pEnunciado, string pRespuesta, List<string> pAlternativas, string pHabilidad, int pNivelHabilidad, string pEstrategia, string pTeoria)
 
         {
             this.Id = pId;
@@ -31,7 +30,51 @@ namespace Datos
             this.NivelHabilidad = pNivelHabilidad;
             this.EstrategiaEnseñanza = pEstrategia;
             this.Teoria = pTeoria;
-            this.CantidadAlternativas = Alternativas.Count();
+        }
+
+        public int getId()
+        {
+            return this.Id;
+        }
+
+        public string getEnunciadoPregunta()
+        {
+            return this.EnunciadoPregunta;
+        }
+
+        public string getRespuestaCorrecta()
+        {
+            return this.RespuestaCorrecta;
+        }
+
+        public List<string> getAlternativas()
+        {
+            return this.Alternativas;
+        }
+
+        public int getNroAlternativas()
+        {
+            return this.Alternativas.Count;
+        }
+
+        public string getHabilidadAsociada()
+        {
+            return this.HabilidadAsociada;
+        }
+
+        public int getNivelHabilidad()
+        {
+            return this.NivelHabilidad;
+        }
+
+        public string getEstrategiaEnseñanza()
+        {
+            return this.EstrategiaEnseñanza;
+        }
+
+        public string getTeoria()
+        {
+            return this.Teoria;
         }
 
     }

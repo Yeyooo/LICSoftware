@@ -8,9 +8,9 @@ namespace Datos
 {
     class PlanDeEstudio
     {
-        Dictionary<int, Asset> dicWriting { get; set; }
-        Dictionary<int, Asset> dicReading { get; set; }
-        Dictionary<int, Asset> dicListening { get; set; }
+        Dictionary<int, Asset> DicWriting;
+        Dictionary<int, Asset> DicReading;
+        Dictionary<int, Asset> DicListening;
 
         public PlanDeEstudio() {  }
 
@@ -19,16 +19,31 @@ namespace Datos
         {
             foreach (Asset tmpA in resultadoConsultaWriting)
             {
-                this.dicWriting[tmpA.Id] = tmpA;
+                this.DicWriting[tmpA.Id] = tmpA;
             }
             foreach (Asset tmpA in resultadoConsultaReading)
             {
-                this.dicReading[tmpA.Id] = tmpA;
+                this.DicReading[tmpA.Id] = tmpA;
             }
             foreach (Asset tmpA in resultadoConsultaListening)
             {
-                this.dicListening[tmpA.Id] = tmpA;
+                this.DicListening[tmpA.Id] = tmpA;
             }
+        }
+
+        public Dictionary<int, Asset> getDicWriting()
+        {
+            return this.DicWriting;
+        }
+
+        public Dictionary<int, Asset> getDicReading()
+        {
+            return this.DicReading;
+        }
+
+        public Dictionary<int, Asset> getDicListening()
+        {
+            return this.DicListening;
         }
 
     }
