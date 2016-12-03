@@ -27,32 +27,30 @@ namespace Datos
                 pAsset.Id = _reader.GetInt32(0);
                 pAsset.EnunciadoPregunta = _reader.GetString(1);
                 //pAsset.Alternativas = _reader.GetString(2); // debe ser un metodo aparte
-
-
-
                 _lista.Add(pAsset);
             }
 
             return _lista;
         }
         #region Aca se llenan los diccionarios con la ID del asset, el asset de un determinado nivel y de retornan
-        public static Dictionary<int, Asset> getDiccionarioWriting()
+        public Dictionary<int, Asset> getDiccionarioWriting()
         {
             Dictionary<int,Asset> DiccionarioWriting = new Dictionary<int, Asset>();
             return DiccionarioWriting;
         }
 
-        public static Dictionary<int, Asset> getDiccionarioListening()
+        public Dictionary<int, Asset> getDiccionarioListening()
         {
             Dictionary<int, Asset> DiccionarioListening = new Dictionary<int, Asset>();
             return DiccionarioListening;
         }
 
-        public static Dictionary<int, Asset> getDiccionarioReading()
+        public Dictionary<int, Asset> getDiccionarioReading()
         {
             Dictionary<int, Asset> DiccionarioReading = new Dictionary<int, Asset>();
             return DiccionarioReading;
         }
         #endregion
+
     }
 }

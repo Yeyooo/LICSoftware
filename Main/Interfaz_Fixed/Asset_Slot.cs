@@ -8,29 +8,20 @@ using System.Windows.Forms;
 
 namespace Interfaz_Fixed
 {
-    public class Asset_Slot : Control
+    
+    public class Enunciado_Assets : Control
     {
-        private TableLayoutPanel tabla_Alternativas;
         private Label enunciado;
-        private Button Imagen;
-        private Button Sonido;
 
-        public Asset_Slot(Asset asset)
+        public Enunciado_Assets(Asset asset)
         {
-            /*CREAR LA TABLA CON 1 COLUMNA Y 3 ALTERNATIVAS
-            AUTOSCROLL VERDADERO Y LA TABLA DEBE TENER LOS SIGUIENTES ATRIBUTOS
-            71F para el enunciado
-            270F para las alternativas
-            10F para los 2 botones si es necesario imagen y sonido
-            this.tableLayout_Evaluacion.Controls.Add(this.tableLayout_pregunta1, 0, 1);
-            @param Control, columna, fila            
-             */
-
+            enunciado.Text = asset.getEnunciadoPregunta();
         }
 
     }
 
     public class Alternativas_Slots : Control{
+
         private TableLayoutPanel panelAlternativas { get; set; }
         private List<String> alternativasAux;
         private List<RadioButton> BotonesAlternativas { get; set; }

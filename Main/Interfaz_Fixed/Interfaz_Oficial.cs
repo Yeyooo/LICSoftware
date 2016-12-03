@@ -21,9 +21,9 @@ namespace Interfaz_Fixed
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            //Application.Run(new LICGUI());
+            Application.Run(new LICGUI());
             //Application.Run(new Registro_GUI());
-            Application.Run(new FormInicioSesion());
+           // Application.Run(new FormInicioSesion());
 
             //Vista x = new Interfaz_Fixed.Vista();
 
