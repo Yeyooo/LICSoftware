@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Datos;
+using Interfaz_Fixed;
 
 namespace FormRegistro
 {
@@ -40,7 +41,8 @@ namespace FormRegistro
                 {
                     MessageBox.Show("No se pudieron guardar los datos!", "Error al guardar los datos", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 }
-
+                LICGUI FormPrincipal = new LICGUI();
+                FormPrincipal.Show();
             }
         }
     }

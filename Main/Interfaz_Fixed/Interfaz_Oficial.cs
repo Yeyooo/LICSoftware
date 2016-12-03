@@ -19,8 +19,8 @@ namespace Interfaz_Fixed
         [STAThread]
         static void Main()
         {
-            //Application.EnableVisualStyles();
-            //Application.SetCompatibleTextRenderingDefault(false);
+            Application.EnableVisualStyles();
+            Application.SetCompatibleTextRenderingDefault(false);
             //Application.Run(new LICGUI());
             //Application.Run(new Registro_GUI());
             Application.Run(new FormInicioSesion());
