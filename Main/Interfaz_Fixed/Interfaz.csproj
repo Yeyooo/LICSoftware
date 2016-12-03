@@ -129,10 +129,6 @@
       <Project>{B1FC0CD7-0C8F-40BB-9688-5E09FB838193}</Project>
       <Name>Datos</Name>
     </ProjectReference>
-    <ProjectReference Include="..\EvaluacionGUI\EvaluacionGUI.csproj">
-      <Project>{68D5508B-F43E-43E4-A3C1-409B8497089D}</Project>
-      <Name>EvaluacionGUI</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\ui_battlenet_glues_bluebuttons_largeover.png" />
