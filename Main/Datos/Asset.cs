@@ -10,7 +10,7 @@ namespace Datos
     {
         public int Id;
         public string EnunciadoPregunta;
-        public string RespuestaCorrecta;
+        public int RespuestaCorrecta;
         public List<string> Alternativas; // siempre sera de tipo string, ya que si bien pueden ser imagenes, estas son urls
         public string HabilidadAsociada;
         public int NivelHabilidad;
@@ -21,7 +21,7 @@ namespace Datos
 
         public Asset() { }
 
-        public Asset(int pId, string pEnunciado, string pRespuesta, List<string> pAlternativas, string pHabilidad, int pNivelHabilidad, string pEstrategia, string pTeoria)
+        public Asset(int pId, string pEnunciado, int pRespuesta, List<string> pAlternativas, string pHabilidad, int pNivelHabilidad, string pEstrategia, string pTeoria)
 
         {
             this.Id = pId;
@@ -34,7 +34,7 @@ namespace Datos
             this.Teoria = pTeoria;
         }
 
-        public Asset(int pId, string pEnunciado, string pRespuesta, List<string> pAlternativas, string pHabilidad, int pNivelHabilidad, string pEstrategia, string pTeoria, string pUrlArchivo)
+        public Asset(int pId, string pEnunciado, int pRespuesta, List<string> pAlternativas, string pHabilidad, int pNivelHabilidad, string pEstrategia, string pTeoria, string pUrlArchivo)
 
         {
             this.Id = pId;
@@ -58,7 +58,7 @@ namespace Datos
             return this.EnunciadoPregunta;
         }
 
-        public string getRespuestaCorrecta()
+        public int getRespuestaCorrecta()
         {
             return this.RespuestaCorrecta;
         }
