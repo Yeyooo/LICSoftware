@@ -16,7 +16,7 @@ namespace Datos
         {
             try
             {
-                SqlConnection conectar = new SqlConnection("Data source=YEYO-PC; Initial Catalog="+bdAcceso+"; User Id=sa; Password=abcd123456;");
+                SqlConnection conectar = new SqlConnection("Data source=SQLEXPRESS_NOTE; Initial Catalog=" + bdAcceso+"; User Id=sa; Password=abcd123456;");
 
                 conectar.Open();
 

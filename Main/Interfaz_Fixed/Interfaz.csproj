@@ -50,6 +50,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Asset_Slot.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Evaluacion.cs">
       <SubType>Form</SubType>
     </Compile>
