@@ -79,6 +79,7 @@
     <Compile Include="Registro_GUI.Designer.cs">
       <DependentUpon>Registro_GUI.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vista.cs" />
     <EmbeddedResource Include="Evaluacion.resx">
       <DependentUpon>Evaluacion.cs</DependentUpon>
     </EmbeddedResource>
