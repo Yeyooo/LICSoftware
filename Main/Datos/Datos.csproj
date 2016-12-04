@@ -45,6 +45,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Alternativa.cs" />
     <Compile Include="Asset.cs" />
     <Compile Include="AssetDAL.cs" />
     <Compile Include="Conexión.cs" />

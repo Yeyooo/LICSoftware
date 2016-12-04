@@ -11,7 +11,7 @@ namespace Datos
         public int Id;
         public string EnunciadoPregunta;
         public int RespuestaCorrecta;
-        public List<string> Alternativas; // siempre sera de tipo string, ya que si bien pueden ser imagenes, estas son urls
+        public List<Alternativa> Alternativas;
         public string HabilidadAsociada;
         public int NivelHabilidad;
         public string EstrategiaEnseñanza;
@@ -21,7 +21,7 @@ namespace Datos
 
         public Asset() { }
 
-        public Asset(int pId, string pEnunciado, int pRespuesta, List<string> pAlternativas, string pHabilidad, int pNivelHabilidad, string pEstrategia, string pTeoria)
+        public Asset(int pId, string pEnunciado, int pRespuesta, List<Alternativa> pAlternativas, string pHabilidad, int pNivelHabilidad, string pEstrategia, string pTeoria)
 
         {
             this.Id = pId;
@@ -34,7 +34,7 @@ namespace Datos
             this.Teoria = pTeoria;
         }
 
-        public Asset(int pId, string pEnunciado, int pRespuesta, List<string> pAlternativas, string pHabilidad, int pNivelHabilidad, string pEstrategia, string pTeoria, string pUrlArchivo)
+        public Asset(int pId, string pEnunciado, int pRespuesta, List<Alternativa> pAlternativas, string pHabilidad, int pNivelHabilidad, string pEstrategia, string pTeoria, string pUrlArchivo)
 
         {
             this.Id = pId;
@@ -58,12 +58,21 @@ namespace Datos
             return this.EnunciadoPregunta;
         }
 
-        public int getRespuestaCorrecta()
+        public int getRespuestaCorrecta() // devuelve el indice de la alternativa correcta de la lista de alternativas
         {
-            return this.RespuestaCorrecta;
+            int contador = 0;
+            foreach(Alternativa tmp in this.Alternativas)
+            {
+                if (this.RespuestaCorrecta == tmp.IdAlternativa)
+                {
+                    return contador;
+                }
+                contador++;
+            }
+            return -1;
         }
 
-        public List<string> getAlternativas()
+        public List<Alternativa> getAlternativas()
         {
             return this.Alternativas;
         }

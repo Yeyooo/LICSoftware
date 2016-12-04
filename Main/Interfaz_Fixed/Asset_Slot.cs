@@ -23,7 +23,7 @@ namespace Interfaz_Fixed
     public class Alternativas_Slots : Control{
 
         private TableLayoutPanel panelAlternativas { get; set; }
-        private List<String> alternativasAux;
+        private List<Alternativa> alternativasAux;
         private List<RadioButton> BotonesAlternativas { get; set; }
 
         public Alternativas_Slots(Asset asset)
@@ -47,7 +47,7 @@ namespace Interfaz_Fixed
             panelAlternativas.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute));
             //--Fin personalziacion Columnas
             panelAlternativas.AutoScroll = true;
-            foreach (String alternativa in alternativasAux)
+            foreach (Alternativa alternativa in alternativasAux)
             {
                 RadioButton alternativaButton = new RadioButton();
                 BotonesAlternativas.Add(alternativaButton);

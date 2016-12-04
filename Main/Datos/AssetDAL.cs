@@ -14,16 +14,16 @@ namespace Datos
         }
 
         // el metodo funciona correctamente. 100% comprobado
-        public static List<string> BuscarTodasLasAlternativasDeUnAsset(int pIdPregunta) // todas las alternativas asociada a una pregunta
+        public static List<Alternativa> BuscarTodasLasAlternativasDeUnAsset(int pIdPregunta) // todas las alternativas asociada a una pregunta
         {
-            SqlCommand _comando = new SqlCommand(String.Format("SELECT alternativa from alternativas, pregunta where alternativas.idpregunta = pregunta.idpregunta and pregunta.idpregunta = "+pIdPregunta+";"), Conexión.obtenerConexion("contenido"));
+            SqlCommand _comando = new SqlCommand(String.Format("SELECT alternativa, idalternativa from alternativas, pregunta where alternativas.idpregunta = pregunta.idpregunta and pregunta.idpregunta = "+pIdPregunta+";"), Conexión.obtenerConexion("contenido"));
             SqlDataReader _reader = _comando.ExecuteReader();
 
-            List<string> tmp = new List<string>();
+            List<Alternativa> tmp = new List<Alternativa>();
 
             while ( _reader.Read() )
             {
-                tmp.Add(_reader.GetString(0));
+                tmp.Add( new Alternativa( _reader.GetInt32(1), _reader.GetString(0)));
             }
 
             return tmp;

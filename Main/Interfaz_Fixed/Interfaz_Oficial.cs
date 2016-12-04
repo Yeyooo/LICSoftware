@@ -38,20 +38,18 @@ namespace Interfaz_Fixed
 
             foreach ( Asset x in tmp )
             {
-                Console.WriteLine(x.getEnunciadoPregunta());
-                Console.WriteLine(x.getEstrategiaEnseñanza());
-                Console.WriteLine(x.getHabilidadAsociada());
-                Console.WriteLine(x.getNivelHabilidad());
-                Console.WriteLine(x.getTeoria());
-                Console.WriteLine(x.getRespuestaCorrecta());
-                List<string> alts = x.getAlternativas();
-                Console.WriteLine("Las alternativa correcta es:"+ alts[x.getRespuestaCorrecta()/alts.Count]);
-                int contador = 0;
-                foreach ( string read in alts )
+                Console.WriteLine("Enunciad: "+x.getEnunciadoPregunta());
+                Console.WriteLine("Metodologia: "+x.getEstrategiaEnseñanza());
+                Console.WriteLine("Habilidad: "+x.getHabilidadAsociada());
+                Console.WriteLine("Nivel: "+x.getNivelHabilidad());
+                Console.WriteLine("Teoria: "+x.getTeoria());
+                Console.WriteLine("Indice de la respuesta correcta en la alternativas: "+x.getRespuestaCorrecta());
+                List<Alternativa> alts = x.getAlternativas();
+                Console.WriteLine("Las alternativa correcta es:"+ x.Alternativas[x.getRespuestaCorrecta()].getTxtAlternativa());
+                foreach ( Alternativa read in alts )
                 {
-                    Console.WriteLine(read);
+                    Console.WriteLine("id alt: "+read.getIdAlternativa()+"  ,  alternativa: "+read.getTxtAlternativa());
                     Console.WriteLine();
-                    contador++;
                 }
             }
 
