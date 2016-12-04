@@ -75,6 +75,37 @@ namespace Datos
 
             return _lista;
         }
+
+        public static void BuscarPorNivelHabilidadOpt(Dictionary<int, Asset> dicACargar, int pNivelHabilidad, string pHabilidadAsociada) // queremos todos los assets disponibles para el usuario 
+        {                                                                                                    // de acuerdo a sus habilidades
+            string consulta = "SELECT DISTINCT pregunta.idpregunta, enunciado, habilidad, nivel, metodologia, alternativa_correcta.idalternativa FROM pregunta, alternativas, alternativa_correcta WHERE alternativa_correcta.idalternativa = alternativas.idalternativa and alternativas.idpregunta = pregunta.idpregunta and habilidad = '" + pHabilidadAsociada + "' and nivel = " + pNivelHabilidad + ";";
+            // metodologia tiene que ir en la pregunta...BD
+            SqlCommand _comando = new SqlCommand(String.Format(consulta), Conexión.obtenerConexion("contenido"));
+            SqlDataReader _reader = _comando.ExecuteReader();
+
+            int indice = 1;
+            while (_reader.Read())
+            {
+                Asset pAsset = new Asset();
+                pAsset.Id = _reader.GetInt32(0);
+                pAsset.EnunciadoPregunta = _reader.GetString(1);
+                pAsset.Alternativas = AssetDAL.BuscarTodasLasAlternativasDeUnAsset(_reader.GetInt32(0));
+                pAsset.HabilidadAsociada = _reader.GetString(2);
+                pAsset.NivelHabilidad = _reader.GetInt32(3);
+                pAsset.EstrategiaEnseñanza = _reader.GetString(4);
+                pAsset.RespuestaCorrecta = _reader.GetInt32(5);
+                pAsset.Teoria = AssetDAL.getTeoriaAssetBD(_reader.GetInt32(5));
+
+                
+                dicACargar[indice] = pAsset;
+                indice++;
+                //_lista.Add(pAsset);
+            }
+
+        }
+
+
+
         #region Aca se llenan los diccionarios con la ID del asset, el asset de un determinado nivel y de retornan
         public static Dictionary<int, Asset> getDiccionarioWriting()
         {

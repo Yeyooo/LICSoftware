@@ -38,6 +38,7 @@ namespace Interfaz_Fixed
 
             foreach ( Asset x in tmp )
             {
+                Console.WriteLine("Id: "+x.getId());
                 Console.WriteLine("Enunciad: "+x.getEnunciadoPregunta());
                 Console.WriteLine("Metodologia: "+x.getEstrategiaEnseñanza());
                 Console.WriteLine("Habilidad: "+x.getHabilidadAsociada());
@@ -49,6 +50,31 @@ namespace Interfaz_Fixed
                 foreach ( Alternativa read in alts )
                 {
                     Console.WriteLine("id alt: "+read.getIdAlternativa()+"  ,  alternativa: "+read.getTxtAlternativa());
+                    Console.WriteLine();
+                }
+            }
+
+            PlanDeEstudio PE = new Datos.PlanDeEstudio(3,3,2);
+
+            Dictionary<int, Asset> dic = new Dictionary<int, Asset>();
+            dic = PE.getDicListening(); // aqui haz el get del diccionario que querai
+
+            Console.WriteLine("!!!!!!!!!!! AHORA DIC WRITING:");
+
+            foreach(KeyValuePair<int, Asset> tmpr in dic)
+            {
+                Console.WriteLine("Id: " + tmpr.Value.getId());
+                Console.WriteLine("Enunciad: " + tmpr.Value.getEnunciadoPregunta());
+                Console.WriteLine("Metodologia: " + tmpr.Value.getEstrategiaEnseñanza());
+                Console.WriteLine("Habilidad: " + tmpr.Value.getHabilidadAsociada());
+                Console.WriteLine("Nivel: " + tmpr.Value.getNivelHabilidad());
+                Console.WriteLine("Teoria: " + tmpr.Value.getTeoria());
+                Console.WriteLine("Indice de la respuesta correcta en la alternativas: " + tmpr.Value.getRespuestaCorrecta());
+                List<Alternativa> alts = tmpr.Value.getAlternativas();
+                Console.WriteLine("Las alternativa correcta es:" + tmpr.Value.Alternativas[tmpr.Value.getRespuestaCorrecta()].getTxtAlternativa());
+                foreach (Alternativa read in alts)
+                {
+                    Console.WriteLine("id alt: " + read.getIdAlternativa() + "  ,  alternativa: " + read.getTxtAlternativa());
                     Console.WriteLine();
                 }
             }
