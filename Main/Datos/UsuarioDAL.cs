@@ -16,9 +16,16 @@ namespace Datos
             int retorno = 0;
             using (SqlConnection Conn = Conexión.obtenerConexion("registro"))
             {
-                SqlCommand comando = new SqlCommand(string.Format("INSERT INTO usuarios (correo, nombre, password) values ('" + usuario.Correo + "', '" + usuario.Nombre + "', '" + usuario.Password + "')"), Conexión.obtenerConexion("registro")); // en el insert va la consulta(inserción) sql.
-                retorno = comando.ExecuteNonQuery();
-                Conn.Close();
+                try
+                {
+                    SqlCommand comando = new SqlCommand(string.Format("INSERT INTO usuarios (correo, nombre, password) values ('" + usuario.Correo + "', '" + usuario.Nombre + "', '" + usuario.Password + "')"), Conexión.obtenerConexion("registro")); // en el insert va la consulta(inserción) sql.
+                    retorno = comando.ExecuteNonQuery();
+                    Conn.Close();
+                }
+                catch (InvalidOperationException e)
+                {
+                    MessageBox.Show("Problema con el registro del usuario", "El registro ha fallado", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                }
             }
 
             return retorno;

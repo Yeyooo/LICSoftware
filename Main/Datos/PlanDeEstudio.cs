@@ -6,13 +6,21 @@ using System.Threading.Tasks;
 
 namespace Datos
 {
-    class PlanDeEstudio
+    public class PlanDeEstudio
     {
-        Dictionary<int, Asset> DicWriting;
-        Dictionary<int, Asset> DicReading;
-        Dictionary<int, Asset> DicListening;
+        Dictionary<int, Asset> DicWriting = new Dictionary<int, Asset>();
+        Dictionary<int, Asset> DicReading = new Dictionary<int, Asset>();
+        Dictionary<int, Asset> DicListening = new Dictionary<int, Asset>();
 
         public PlanDeEstudio() {  }
+
+        public PlanDeEstudio(int pNivelHabilidadWriting, int pNivelHabilidadReading, int pNivelHabilidadListening)
+        {
+            AssetDAL.BuscarPorNivelHabilidadOpt(this.DicWriting, pNivelHabilidadWriting, "writing");
+            AssetDAL.BuscarPorNivelHabilidadOpt(this.DicReading, pNivelHabilidadReading, "reading");
+            AssetDAL.BuscarPorNivelHabilidadOpt(this.DicListening, pNivelHabilidadListening, "listening");
+            Console.WriteLine("Cargado exitosamente...");
+        }
 
         public PlanDeEstudio(List<Asset> resultadoConsultaWriting, List<Asset> resultadoConsultaReading, List<Asset> resultadoConsultaListening) // ineficiente, mejor tirar directamente a la función que hace la consulta
                                                                                                                                       // para ahorrar el coste de recorrer denuevo.

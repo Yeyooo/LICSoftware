@@ -102,6 +102,7 @@
             this.Boton_Entrenar_Writing.TabIndex = 5;
             this.Boton_Entrenar_Writing.Text = "Entrenar !";
             this.Boton_Entrenar_Writing.UseVisualStyleBackColor = false;
+            this.Boton_Entrenar_Writing.Click += new System.EventHandler(this.EntrenarWriting_Click);
             // 
             // Boton_Entrenar_Reading
             // 
@@ -112,6 +113,7 @@
             this.Boton_Entrenar_Reading.TabIndex = 4;
             this.Boton_Entrenar_Reading.Text = "Entrenar !";
             this.Boton_Entrenar_Reading.UseVisualStyleBackColor = false;
+            this.Boton_Entrenar_Reading.Click += new System.EventHandler(this.EntrenarReading_Click);
             // 
             // Boton_Entrenar_Listenning
             // 
@@ -122,7 +124,7 @@
             this.Boton_Entrenar_Listenning.TabIndex = 3;
             this.Boton_Entrenar_Listenning.Text = "Entrenar !";
             this.Boton_Entrenar_Listenning.UseVisualStyleBackColor = false;
-            this.Boton_Entrenar_Listenning.Click += new System.EventHandler(this.Entrenar_Click);
+            this.Boton_Entrenar_Listenning.Click += new System.EventHandler(this.EntrenarListening_Click);
             // 
             // Icono_Liga_Writing
             // 
@@ -205,6 +207,7 @@
             this.button1.TabIndex = 0;
             this.button1.Text = "Entrenar !";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.EntrenamientoGeneral_Click);
             // 
             // UsurioInfo_Panel
             // 

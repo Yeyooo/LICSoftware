@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Datos;
 using FormRegistro;
+using Interfaz_Fixed;
 
 namespace FormLogin
 {
@@ -21,13 +22,15 @@ namespace FormLogin
 
         private void button1_Click(object sender, EventArgs e)
         {
-
-            if( textBoxPw.Text != "" && textBoxCorreo.Text != "")
+            if ( textBoxPw.Text != "" && textBoxCorreo.Text != "")
             {
                 if (UsuarioDAL.verificarPassword(textBoxCorreo.Text) != null) {
                     if (textBoxPw.Text == UsuarioDAL.verificarPassword(textBoxCorreo.Text))
                     {
                         MessageBox.Show("Has iniciado sesión!", "Inicio Succesful", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        //LICGUI FormPrincipal = new LICGUI();
+                        //FormPrincipal.Show();
+
                     } else
                     {
                         MessageBox.Show("La contraseña no es la correcta", "Inicio Unsuccesful", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);

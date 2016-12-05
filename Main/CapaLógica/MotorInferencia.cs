@@ -108,7 +108,7 @@ namespace CapaLógica
     public class BaseDeHechos
     {
         LinkedList<String> hechos;
-
+       
         public BaseDeHechos(String path)
         {
             hechos = new LinkedList<String>();
