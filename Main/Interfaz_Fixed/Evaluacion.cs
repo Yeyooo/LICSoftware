@@ -17,11 +17,14 @@ namespace Interfaz_Fixed
         private int TiempoRestante = 1800;
         private int MinutosRestante = 0;
         private int SegundosRestantes = 60;
-
-        public Evaluacion(string tipoEvaluacion)
+       
+        public Evaluacion(string EvaluacionNombre,PlanDeEstudio PDE)
         {
             InitializeComponent();
+            Asignar_Labels(EvaluacionNombre);
+            Asignar_Loop(PDE);
         }
+
         /*
         public Evaluacion(string tipoEvaluacion, AssetDAL asset, int i)
         {
@@ -85,6 +88,13 @@ namespace Interfaz_Fixed
         {
             this.Dispose();
         }
+
+        private void tableLayout_Pregunta20_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+        
+        
     }
 
 }

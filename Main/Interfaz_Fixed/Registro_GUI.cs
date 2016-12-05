@@ -41,8 +41,8 @@ namespace FormRegistro
                 {
                     MessageBox.Show("No se pudieron guardar los datos!", "Error al guardar los datos", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 }
-                LICGUI FormPrincipal = new LICGUI();
-                FormPrincipal.Show();
+                //LICGUI FormPrincipal = new LICGUI();
+                //FormPrincipal.Show();
             }
         }
     }

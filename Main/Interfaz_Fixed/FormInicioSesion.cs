@@ -28,8 +28,8 @@ namespace FormLogin
                     if (textBoxPw.Text == UsuarioDAL.verificarPassword(textBoxCorreo.Text))
                     {
                         MessageBox.Show("Has iniciado sesión!", "Inicio Succesful", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        LICGUI FormPrincipal = new LICGUI();
-                        FormPrincipal.Show();
+                        //LICGUI FormPrincipal = new LICGUI();
+                        //FormPrincipal.Show();
 
                     } else
                     {

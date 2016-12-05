@@ -19,7 +19,7 @@ namespace Datos
             AssetDAL.BuscarPorNivelHabilidadOpt(this.DicWriting, pNivelHabilidadWriting, "writing");
             AssetDAL.BuscarPorNivelHabilidadOpt(this.DicReading, pNivelHabilidadReading, "reading");
             AssetDAL.BuscarPorNivelHabilidadOpt(this.DicListening, pNivelHabilidadListening, "listening");
-            Console.WriteLine("cargado exitosamente...");
+            Console.WriteLine("Cargado exitosamente...");
         }
 
         public PlanDeEstudio(List<Asset> resultadoConsultaWriting, List<Asset> resultadoConsultaReading, List<Asset> resultadoConsultaListening) // ineficiente, mejor tirar directamente a la función que hace la consulta

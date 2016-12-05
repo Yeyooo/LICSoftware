@@ -15,7 +15,9 @@ namespace Datos
         public int NivelReading;
         public int NivelListening;
 
-        public Usuario() { }
+        public Usuario() {
+
+        }
 
         public Usuario( string pNombre, string pCorreo, string pPassword ) // inicializamos con los 3 niveles en 0(sin nivel) 
                                                                             // el usuario ingresa por primera vez

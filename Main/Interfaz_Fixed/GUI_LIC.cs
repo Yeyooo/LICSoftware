@@ -13,10 +13,13 @@ namespace Interfaz_Fixed
 {
     public partial class LICGUI : Form
     {
-        //AssetDAL diccionarios; //Aqui llenar todo los diccionarios
-        public LICGUI()
+        private PlanDeEstudio PDE;
+
+        public LICGUI(PlanDeEstudio planEstudio)
         {
+            PDE = planEstudio;
             InitializeComponent();
+
         }
 
         private void EntrenarListening_Click(object sender, EventArgs e)
@@ -32,7 +35,7 @@ namespace Interfaz_Fixed
                 MessageBox.Show("No se pudo Crear la Evaluacion, favor enviar un reporte","Error Fatal", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
             */
-            Evaluacion evaluacionListening = new Evaluacion("Listening");
+            Evaluacion evaluacionListening = new Evaluacion("Listening",PDE);
             evaluacionListening.Show();
         }
 
@@ -48,7 +51,7 @@ namespace Interfaz_Fixed
             {
                 MessageBox.Show("No se pudo Crear la Evaluacion, favor enviar un reporte","ERROR FATAL", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }*/
-            Evaluacion evaluacionReading = new Evaluacion("Reading");
+            Evaluacion evaluacionReading = new Evaluacion("Reading",PDE);
             evaluacionReading.Show();
         }
 
@@ -63,7 +66,7 @@ namespace Interfaz_Fixed
             {
                 MessageBox.Show("No se pudo Crear la Evaluacion, favor enviar un reporte", "ERROR FATAL", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }*/
-            Evaluacion evaluacionWriting = new Evaluacion("Writing");
+            Evaluacion evaluacionWriting = new Evaluacion("Writing",PDE);
             evaluacionWriting.Show();
         }
         private void EntrenamientoGeneral_Click(object sender, EventArgs e)
@@ -78,7 +81,7 @@ namespace Interfaz_Fixed
                 MessageBox.Show("No se pudo Crear la Evaluacion, favor enviar un reporte", "ERROR FATAL", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
             */
-            Evaluacion evaluacionGeneral = new Evaluacion("Contenidos Generales");
+            Evaluacion evaluacionGeneral = new Evaluacion("Contenidos Generales",PDE);
             evaluacionGeneral.Show();
         }
     }

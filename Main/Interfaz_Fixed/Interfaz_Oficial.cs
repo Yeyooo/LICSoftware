@@ -19,9 +19,12 @@ namespace Interfaz_Fixed
         [STAThread]
         static void Main()
         {
-            //Application.EnableVisualStyles();
-            //Application.SetCompatibleTextRenderingDefault(false);
-            //Application.Run(new LICGUI());
+            PlanDeEstudio PE = new Datos.PlanDeEstudio(3, 3, 2);
+            Dictionary<int, Asset> dic = PE.getDicReading();
+
+            Application.EnableVisualStyles();
+            Application.SetCompatibleTextRenderingDefault(false);
+            Application.Run(new LICGUI(PE));
             //Application.Run(new Registro_GUI());
             //Application.Run(new FormInicioSesion());
 
@@ -34,7 +37,7 @@ namespace Interfaz_Fixed
 
             //System.Console.WriteLine(AssetDAL.getTeoriaAssetBD(6));
 
-            List<Asset> tmp = AssetDAL.BuscarPorNivelHabilidad(2, "listening");
+            /*List<Asset> tmp = AssetDAL.BuscarPorNivelHabilidad(2, "listening");
 
             foreach ( Asset x in tmp )
             {
@@ -52,14 +55,9 @@ namespace Interfaz_Fixed
                     Console.WriteLine("id alt: "+read.getIdAlternativa()+"  ,  alternativa: "+read.getTxtAlternativa());
                     Console.WriteLine();
                 }
-            }
+            }*/
 
-            PlanDeEstudio PE = new Datos.PlanDeEstudio(3,3,2);
-
-            Dictionary<int, Asset> dic = new Dictionary<int, Asset>();
-            dic = PE.getDicListening(); // aqui haz el get del diccionario que querai
-
-            Console.WriteLine("!!!!!!!!!!! AHORA DIC WRITING:");
+            //Console.WriteLine("!!!!!!!!!!! AHORA DIC WRITING:");
 
             foreach(KeyValuePair<int, Asset> tmpr in dic)
             {
@@ -78,9 +76,6 @@ namespace Interfaz_Fixed
                     Console.WriteLine();
                 }
             }
-
-
-
 
         }
     }

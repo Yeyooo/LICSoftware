@@ -11,7 +11,6 @@ namespace Datos
         public int IdAlternativa;
         public string TxtAlternativa;
 
-
         public Alternativa() { }
 
         public Alternativa(int pIdAlternativa, string pTxtAlternativa)
