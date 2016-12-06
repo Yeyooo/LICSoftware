@@ -94,6 +94,10 @@ namespace Interfaz_Fixed
 
         }
         
+        private void EventoClick_Asset(object sender, EventArgs e, Asset asset)
+        {
+            MessageBox.Show(asset.getTeoria());
+        }
         
     }
 

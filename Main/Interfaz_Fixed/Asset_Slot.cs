@@ -20,7 +20,7 @@ namespace Interfaz_Fixed
 
     }
 
-    public class Alternativas_Slots : Control{
+    public class Alternativas_Slots {
         
         private List<Alternativa> alternativasAux;
     
