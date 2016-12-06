@@ -11,30 +11,31 @@ namespace CapaLógica
 
     public class Clausula
     {
-        LinkedList<String> premisa;
-        String consecuente;
+        List<string> premisa;
+        string consecuente;
 
         public Clausula()
         {
-            this.premisa = new LinkedList<String>();
+            this.premisa = new List<string>();
         }
 
-        public LinkedList<String> getPremisas()
+
+        public List<string> getPremisas()
         {
             return this.premisa;
         }
 
-        public String getConsecuente()
+        public string getConsecuente()
         {
             return this.consecuente;
         }
 
-        public void añadirPremisa(String premisa)
+        public void añadirPremisa(string premisa)
         {
-            this.premisa.AddLast(premisa);
+            this.premisa.Add(premisa);
         }
 
-        public void setConsecuente(String consecuente)
+        public void setConsecuente(string consecuente)
         {
             this.consecuente = consecuente;
         }
@@ -43,11 +44,11 @@ namespace CapaLógica
 
     public class BaseDeConocimientos
     {
-        LinkedList<Clausula> KB; // Lista de reglas
+        List<Clausula> KB; // Lista de reglas
 
-        public BaseDeConocimientos(String pathPre, String pathCon)
+        public BaseDeConocimientos(string pathPre, string pathCon)
         {
-            KB = new LinkedList<Clausula>();
+            KB = new List<Clausula>();
             // Cargar desde Archivo
 
             try
@@ -59,18 +60,18 @@ namespace CapaLógica
                     StreamReader readerConsecuentes = new StreamReader(pathCon);
                     while (!readerPremisas.EndOfStream && !readerConsecuentes.EndOfStream)
                     {
-                        String tmpPre = readerPremisas.ReadLine();
+                        string tmpPre = readerPremisas.ReadLine();
 
-                        String[] spliteado = tmpPre.Split('-');
+                        string[] spliteado = tmpPre.Split('-');
 
                         Clausula clausula = new Clausula();
-                        foreach ( String simbolo in spliteado )
+                        foreach ( string simbolo in spliteado )
                         {
                             clausula.añadirPremisa(simbolo);
                         }
                         clausula.setConsecuente(readerConsecuentes.ReadLine());
 
-                        KB.AddLast(clausula);
+                        KB.Add(clausula);
 
                     }
 
@@ -79,7 +80,7 @@ namespace CapaLógica
 
                     foreach ( Clausula clausula in KB )
                     {
-                        foreach (String simbolo in clausula.getPremisas())
+                        foreach (string simbolo in clausula.getPremisas())
                         {
                             Console.Write(" "+simbolo);
                         }
@@ -97,7 +98,7 @@ namespace CapaLógica
 
         }
 
-        public LinkedList<Clausula> getLista()
+        public List<Clausula> getLista()
         {
             return this.KB;
         }
@@ -107,11 +108,13 @@ namespace CapaLógica
 
     public class BaseDeHechos
     {
-        LinkedList<String> hechos;
+        public List<string> hechos;
+
+        public BaseDeHechos() { this.hechos = new List<string>(); }
        
-        public BaseDeHechos(String path)
+        public BaseDeHechos(string path)
         {
-            hechos = new LinkedList<String>();
+            hechos = new List<string>();
             // Cargar hechos, en nuestro caso, rendimiento del estudiante
 
             try
@@ -121,10 +124,10 @@ namespace CapaLógica
                     StreamReader reader = new StreamReader(path);
                     while (!reader.EndOfStream)
                     {
-                        hechos.AddLast( reader.ReadLine() );
+                        hechos.Add( reader.ReadLine() );
                     }
 
-                    foreach(String hecho in hechos)
+                    foreach(string hecho in hechos)
                     {
                         Console.WriteLine(hecho);
                     }
@@ -141,7 +144,7 @@ namespace CapaLógica
 
         }
 
-        public LinkedList<String> getListaDeHechos()
+        public List<string> getListaDeHechos()
         {
             return this.hechos;
         }
@@ -155,27 +158,27 @@ namespace CapaLógica
         {
             BaseDeHechos bh = new BaseDeHechos(Environment.CurrentDirectory + "/bh.csv");
             BaseDeConocimientos kb = new BaseDeConocimientos(Environment.CurrentDirectory + "/kb.csv", Environment.CurrentDirectory + "/kb_consec.csv");
-            if (EHD(kb, bh, "ana muere"))
+            if (EHD(kb, bh, "h"))
             {
                 Console.WriteLine("TRUE");
             }
             else { Console.WriteLine("FALSE"); }
         }
 
-        public bool EHD(BaseDeConocimientos KB, BaseDeHechos BH, String hecho_a_probar) {
+        public static bool EHD(BaseDeConocimientos KB, BaseDeHechos BH, string hecho_a_probar) {
 
             Dictionary<int, int> cuenta = new Dictionary<int, int>(); //archivo con clausula y cantidad de hechos
-            Dictionary<String, bool> inferido = new Dictionary<String, bool>(); //hechos a demostrar
-            Queue<String> agenda = new Queue<string>(); //Cola de hechos //Base de hechos si simbolo = T entocnes agenda.agrega
+            Dictionary<string, bool> inferido = new Dictionary<string, bool>(); //hechos a demostrar
+            Queue<string> agenda = new Queue<string>(); //Cola de hechos //Base de hechos si simbolo = T entocnes agenda.agrega
 
-            LinkedList<Clausula> x = KB.getLista();
+            List<Clausula> x = KB.getLista();
 
             int nroClausula = 1;
             foreach(Clausula clausula in x)
             {
                 int cantidad = 0;
                 
-                foreach(String simbolo in clausula.getPremisas())
+                foreach(string simbolo in clausula.getPremisas())
                 {
                     cantidad++;
                     inferido[simbolo] = false;
@@ -193,7 +196,7 @@ namespace CapaLógica
 
             while (agenda.Count() != 0)
             {
-                String premisa = agenda.Dequeue();
+                string premisa = agenda.Dequeue();
                 if( premisa.CompareTo( hecho_a_probar ) == 0)
                 {
                     return true;
@@ -205,7 +208,7 @@ namespace CapaLógica
                     int nro_Clausula = 1;
                     foreach ( Clausula clausula in x )
                     {
-                        foreach (String simbolo in clausula.getPremisas()) {
+                        foreach (string simbolo in clausula.getPremisas()) {
                             if (premisa.CompareTo(simbolo) == 0)
                             {
                                 cuenta[nro_Clausula] = cuenta[nro_Clausula] - 1;
