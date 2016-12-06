@@ -1,4 +1,5 @@
 ﻿using Datos;
+using Microsoft.CSharp.RuntimeBinder;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -133,6 +134,10 @@ namespace Interfaz_Fixed
             this.label21 = new System.Windows.Forms.Label();
             this.Tiempo_RestanteLabel = new System.Windows.Forms.Label();
             this.Tiempo_RestanteTimer = new System.Windows.Forms.Timer(this.components);
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayout_Evaluacion.SuspendLayout();
             this.tableLayout_Pregunta1.SuspendLayout();
             this.tableLayout_Pregunta2.SuspendLayout();
@@ -229,7 +234,7 @@ namespace Interfaz_Fixed
             this.tableLayout_Evaluacion.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 431F));
             this.tableLayout_Evaluacion.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 431F));
             this.tableLayout_Evaluacion.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 98F));
-            this.tableLayout_Evaluacion.Size = new System.Drawing.Size(1012, 810);
+            this.tableLayout_Evaluacion.Size = new System.Drawing.Size(1092, 835);
             this.tableLayout_Evaluacion.TabIndex = 0;
             // 
             // EvaluacionDe_Label
@@ -239,7 +244,7 @@ namespace Interfaz_Fixed
             this.EvaluacionDe_Label.Location = new System.Drawing.Point(4, 0);
             this.EvaluacionDe_Label.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.EvaluacionDe_Label.Name = "EvaluacionDe_Label";
-            this.EvaluacionDe_Label.Size = new System.Drawing.Size(498, 55);
+            this.EvaluacionDe_Label.Size = new System.Drawing.Size(538, 55);
             this.EvaluacionDe_Label.TabIndex = 0;
             this.EvaluacionDe_Label.Text = "Evaluacion de ";
             this.EvaluacionDe_Label.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -251,7 +256,7 @@ namespace Interfaz_Fixed
             this.Cancelar_boton.Location = new System.Drawing.Point(4, 6524);
             this.Cancelar_boton.Margin = new System.Windows.Forms.Padding(4);
             this.Cancelar_boton.Name = "Cancelar_boton";
-            this.Cancelar_boton.Size = new System.Drawing.Size(498, 90);
+            this.Cancelar_boton.Size = new System.Drawing.Size(538, 90);
             this.Cancelar_boton.TabIndex = 2;
             this.Cancelar_boton.Text = "Cancelar Evaluacion";
             this.Cancelar_boton.UseVisualStyleBackColor = true;
@@ -261,10 +266,10 @@ namespace Interfaz_Fixed
             // 
             this.Entregar_Boton.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Entregar_Boton.Font = new System.Drawing.Font("Starcraft", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Entregar_Boton.Location = new System.Drawing.Point(510, 6524);
+            this.Entregar_Boton.Location = new System.Drawing.Point(550, 6524);
             this.Entregar_Boton.Margin = new System.Windows.Forms.Padding(4);
             this.Entregar_Boton.Name = "Entregar_Boton";
-            this.Entregar_Boton.Size = new System.Drawing.Size(498, 90);
+            this.Entregar_Boton.Size = new System.Drawing.Size(538, 90);
             this.Entregar_Boton.TabIndex = 3;
             this.Entregar_Boton.Text = "Entregar";
             this.Entregar_Boton.UseVisualStyleBackColor = true;
@@ -286,7 +291,7 @@ namespace Interfaz_Fixed
             this.tableLayout_Pregunta1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 71F));
             this.tableLayout_Pregunta1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 279F));
             this.tableLayout_Pregunta1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 10F));
-            this.tableLayout_Pregunta1.Size = new System.Drawing.Size(498, 423);
+            this.tableLayout_Pregunta1.Size = new System.Drawing.Size(538, 423);
             this.tableLayout_Pregunta1.TabIndex = 4;
             // 
             // Enunciado_Pregunta1
@@ -297,7 +302,7 @@ namespace Interfaz_Fixed
             this.Enunciado_Pregunta1.Location = new System.Drawing.Point(4, 0);
             this.Enunciado_Pregunta1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Enunciado_Pregunta1.Name = "Enunciado_Pregunta1";
-            this.Enunciado_Pregunta1.Size = new System.Drawing.Size(490, 71);
+            this.Enunciado_Pregunta1.Size = new System.Drawing.Size(530, 71);
             this.Enunciado_Pregunta1.TabIndex = 0;
             this.Enunciado_Pregunta1.Text = "Enunciado";
             this.Enunciado_Pregunta1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -308,22 +313,26 @@ namespace Interfaz_Fixed
             this.Boton_Pregunta1.Location = new System.Drawing.Point(4, 354);
             this.Boton_Pregunta1.Margin = new System.Windows.Forms.Padding(4);
             this.Boton_Pregunta1.Name = "Boton_Pregunta1";
-            this.Boton_Pregunta1.Size = new System.Drawing.Size(490, 65);
+            this.Boton_Pregunta1.Size = new System.Drawing.Size(530, 65);
             this.Boton_Pregunta1.TabIndex = 1;
             this.Boton_Pregunta1.Text = "Material";
             this.Boton_Pregunta1.UseVisualStyleBackColor = true;
             // 
             // layout_Alternativas1
             // 
+            this.layout_Alternativas1.AutoScroll = true;
             this.layout_Alternativas1.ColumnCount = 1;
             this.layout_Alternativas1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.layout_Alternativas1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.layout_Alternativas1.Location = new System.Drawing.Point(3, 74);
             this.layout_Alternativas1.Name = "layout_Alternativas1";
-            this.layout_Alternativas1.RowCount = 2;
-            this.layout_Alternativas1.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.layout_Alternativas1.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.layout_Alternativas1.Size = new System.Drawing.Size(492, 273);
+            this.layout_Alternativas1.RowCount = 4;
+            this.layout_Alternativas1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.layout_Alternativas1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.layout_Alternativas1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.layout_Alternativas1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.layout_Alternativas1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.layout_Alternativas1.Size = new System.Drawing.Size(532, 273);
             this.layout_Alternativas1.TabIndex = 2;
             // 
             // tableLayout_Pregunta2
@@ -335,14 +344,14 @@ namespace Interfaz_Fixed
             this.tableLayout_Pregunta2.Controls.Add(this.Boton_Pregunta2, 0, 2);
             this.tableLayout_Pregunta2.Controls.Add(this.layout_Alternativas2, 0, 1);
             this.tableLayout_Pregunta2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayout_Pregunta2.Location = new System.Drawing.Point(509, 57);
+            this.tableLayout_Pregunta2.Location = new System.Drawing.Point(549, 57);
             this.tableLayout_Pregunta2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tableLayout_Pregunta2.Name = "tableLayout_Pregunta2";
             this.tableLayout_Pregunta2.RowCount = 3;
             this.tableLayout_Pregunta2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 73F));
             this.tableLayout_Pregunta2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 281F));
             this.tableLayout_Pregunta2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 10F));
-            this.tableLayout_Pregunta2.Size = new System.Drawing.Size(500, 427);
+            this.tableLayout_Pregunta2.Size = new System.Drawing.Size(540, 427);
             this.tableLayout_Pregunta2.TabIndex = 5;
             // 
             // Enunciado_Pregunta2
@@ -351,7 +360,7 @@ namespace Interfaz_Fixed
             this.Enunciado_Pregunta2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Enunciado_Pregunta2.Location = new System.Drawing.Point(3, 0);
             this.Enunciado_Pregunta2.Name = "Enunciado_Pregunta2";
-            this.Enunciado_Pregunta2.Size = new System.Drawing.Size(494, 73);
+            this.Enunciado_Pregunta2.Size = new System.Drawing.Size(534, 73);
             this.Enunciado_Pregunta2.TabIndex = 0;
             this.Enunciado_Pregunta2.Text = "Enunciado";
             this.Enunciado_Pregunta2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -362,7 +371,7 @@ namespace Interfaz_Fixed
             this.Boton_Pregunta2.Location = new System.Drawing.Point(4, 358);
             this.Boton_Pregunta2.Margin = new System.Windows.Forms.Padding(4);
             this.Boton_Pregunta2.Name = "Boton_Pregunta2";
-            this.Boton_Pregunta2.Size = new System.Drawing.Size(492, 65);
+            this.Boton_Pregunta2.Size = new System.Drawing.Size(532, 65);
             this.Boton_Pregunta2.TabIndex = 1;
             this.Boton_Pregunta2.Text = "Material";
             this.Boton_Pregunta2.UseVisualStyleBackColor = true;
@@ -374,10 +383,12 @@ namespace Interfaz_Fixed
             this.layout_Alternativas2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.layout_Alternativas2.Location = new System.Drawing.Point(3, 76);
             this.layout_Alternativas2.Name = "layout_Alternativas2";
-            this.layout_Alternativas2.RowCount = 2;
-            this.layout_Alternativas2.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.layout_Alternativas2.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.layout_Alternativas2.Size = new System.Drawing.Size(494, 275);
+            this.layout_Alternativas2.RowCount = 4;
+            this.layout_Alternativas2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.layout_Alternativas2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.layout_Alternativas2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.layout_Alternativas2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.layout_Alternativas2.Size = new System.Drawing.Size(534, 275);
             this.layout_Alternativas2.TabIndex = 2;
             // 
             // tableLayout_Pregunta3
@@ -397,7 +408,7 @@ namespace Interfaz_Fixed
             this.tableLayout_Pregunta3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.18497F));
             this.tableLayout_Pregunta3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 66.18497F));
             this.tableLayout_Pregunta3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 17.91908F));
-            this.tableLayout_Pregunta3.Size = new System.Drawing.Size(500, 427);
+            this.tableLayout_Pregunta3.Size = new System.Drawing.Size(540, 427);
             this.tableLayout_Pregunta3.TabIndex = 6;
             // 
             // Enunciado_Pregunta3
@@ -406,7 +417,7 @@ namespace Interfaz_Fixed
             this.Enunciado_Pregunta3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Enunciado_Pregunta3.Location = new System.Drawing.Point(3, 0);
             this.Enunciado_Pregunta3.Name = "Enunciado_Pregunta3";
-            this.Enunciado_Pregunta3.Size = new System.Drawing.Size(494, 68);
+            this.Enunciado_Pregunta3.Size = new System.Drawing.Size(534, 68);
             this.Enunciado_Pregunta3.TabIndex = 0;
             this.Enunciado_Pregunta3.Text = "Enunciado";
             this.Enunciado_Pregunta3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -417,7 +428,7 @@ namespace Interfaz_Fixed
             this.button1.Location = new System.Drawing.Point(4, 353);
             this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(492, 70);
+            this.button1.Size = new System.Drawing.Size(532, 70);
             this.button1.TabIndex = 1;
             this.button1.Text = "button1";
             this.button1.UseVisualStyleBackColor = true;
@@ -429,10 +440,12 @@ namespace Interfaz_Fixed
             this.layout_Alternativas3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.layout_Alternativas3.Location = new System.Drawing.Point(3, 71);
             this.layout_Alternativas3.Name = "layout_Alternativas3";
-            this.layout_Alternativas3.RowCount = 2;
-            this.layout_Alternativas3.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.layout_Alternativas3.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.layout_Alternativas3.Size = new System.Drawing.Size(494, 275);
+            this.layout_Alternativas3.RowCount = 4;
+            this.layout_Alternativas3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.layout_Alternativas3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.layout_Alternativas3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.layout_Alternativas3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.layout_Alternativas3.Size = new System.Drawing.Size(534, 275);
             this.layout_Alternativas3.TabIndex = 2;
             // 
             // tableLayout_Pregunta4
@@ -443,14 +456,14 @@ namespace Interfaz_Fixed
             this.tableLayout_Pregunta4.Controls.Add(this.button2, 0, 2);
             this.tableLayout_Pregunta4.Controls.Add(this.tableLayoutPanel4, 0, 1);
             this.tableLayout_Pregunta4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayout_Pregunta4.Location = new System.Drawing.Point(509, 488);
+            this.tableLayout_Pregunta4.Location = new System.Drawing.Point(549, 488);
             this.tableLayout_Pregunta4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tableLayout_Pregunta4.Name = "tableLayout_Pregunta4";
             this.tableLayout_Pregunta4.RowCount = 3;
             this.tableLayout_Pregunta4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15.60694F));
             this.tableLayout_Pregunta4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 66.76301F));
             this.tableLayout_Pregunta4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 17.63006F));
-            this.tableLayout_Pregunta4.Size = new System.Drawing.Size(500, 427);
+            this.tableLayout_Pregunta4.Size = new System.Drawing.Size(540, 427);
             this.tableLayout_Pregunta4.TabIndex = 7;
             this.tableLayout_Pregunta4.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel1_Paint_1);
             // 
@@ -461,7 +474,7 @@ namespace Interfaz_Fixed
             this.label4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label4.Location = new System.Drawing.Point(3, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(494, 66);
+            this.label4.Size = new System.Drawing.Size(534, 66);
             this.label4.TabIndex = 0;
             this.label4.Text = "Enunciado";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -472,7 +485,7 @@ namespace Interfaz_Fixed
             this.button2.Location = new System.Drawing.Point(4, 355);
             this.button2.Margin = new System.Windows.Forms.Padding(4);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(492, 68);
+            this.button2.Size = new System.Drawing.Size(532, 68);
             this.button2.TabIndex = 1;
             this.button2.Text = "button2";
             this.button2.UseVisualStyleBackColor = true;
@@ -480,14 +493,16 @@ namespace Interfaz_Fixed
             // tableLayoutPanel4
             // 
             this.tableLayoutPanel4.ColumnCount = 1;
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel4.Location = new System.Drawing.Point(3, 69);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
-            this.tableLayoutPanel4.RowCount = 2;
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(494, 279);
+            this.tableLayoutPanel4.RowCount = 4;
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(534, 279);
             this.tableLayoutPanel4.TabIndex = 2;
             // 
             // tableLayout_Pregunta5
@@ -496,6 +511,7 @@ namespace Interfaz_Fixed
             this.tableLayout_Pregunta5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayout_Pregunta5.Controls.Add(this.Enunciado_Pregunta5, 0, 0);
             this.tableLayout_Pregunta5.Controls.Add(this.button3, 0, 2);
+            this.tableLayout_Pregunta5.Controls.Add(this.tableLayoutPanel1, 0, 1);
             this.tableLayout_Pregunta5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayout_Pregunta5.Location = new System.Drawing.Point(3, 919);
             this.tableLayout_Pregunta5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -504,7 +520,7 @@ namespace Interfaz_Fixed
             this.tableLayout_Pregunta5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 22.22222F));
             this.tableLayout_Pregunta5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 77.77778F));
             this.tableLayout_Pregunta5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 59F));
-            this.tableLayout_Pregunta5.Size = new System.Drawing.Size(500, 427);
+            this.tableLayout_Pregunta5.Size = new System.Drawing.Size(540, 427);
             this.tableLayout_Pregunta5.TabIndex = 8;
             // 
             // Enunciado_Pregunta5
@@ -514,7 +530,7 @@ namespace Interfaz_Fixed
             this.Enunciado_Pregunta5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Enunciado_Pregunta5.Location = new System.Drawing.Point(3, 0);
             this.Enunciado_Pregunta5.Name = "Enunciado_Pregunta5";
-            this.Enunciado_Pregunta5.Size = new System.Drawing.Size(494, 81);
+            this.Enunciado_Pregunta5.Size = new System.Drawing.Size(534, 81);
             this.Enunciado_Pregunta5.TabIndex = 0;
             this.Enunciado_Pregunta5.Text = "Enunciado";
             this.Enunciado_Pregunta5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -525,7 +541,7 @@ namespace Interfaz_Fixed
             this.button3.Location = new System.Drawing.Point(4, 371);
             this.button3.Margin = new System.Windows.Forms.Padding(4);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(492, 52);
+            this.button3.Size = new System.Drawing.Size(532, 52);
             this.button3.TabIndex = 1;
             this.button3.Text = "button3";
             this.button3.UseVisualStyleBackColor = true;
@@ -536,15 +552,16 @@ namespace Interfaz_Fixed
             this.tableLayout_Pregunta6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayout_Pregunta6.Controls.Add(this.Enunciado_Pregunta6, 0, 0);
             this.tableLayout_Pregunta6.Controls.Add(this.button4, 0, 2);
+            this.tableLayout_Pregunta6.Controls.Add(this.tableLayoutPanel2, 0, 1);
             this.tableLayout_Pregunta6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayout_Pregunta6.Location = new System.Drawing.Point(509, 919);
+            this.tableLayout_Pregunta6.Location = new System.Drawing.Point(549, 919);
             this.tableLayout_Pregunta6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tableLayout_Pregunta6.Name = "tableLayout_Pregunta6";
             this.tableLayout_Pregunta6.RowCount = 3;
             this.tableLayout_Pregunta6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 22.89562F));
             this.tableLayout_Pregunta6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 77.10438F));
             this.tableLayout_Pregunta6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 59F));
-            this.tableLayout_Pregunta6.Size = new System.Drawing.Size(500, 427);
+            this.tableLayout_Pregunta6.Size = new System.Drawing.Size(540, 427);
             this.tableLayout_Pregunta6.TabIndex = 9;
             // 
             // Enunciado_Pregunta6
@@ -554,7 +571,7 @@ namespace Interfaz_Fixed
             this.Enunciado_Pregunta6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Enunciado_Pregunta6.Location = new System.Drawing.Point(3, 0);
             this.Enunciado_Pregunta6.Name = "Enunciado_Pregunta6";
-            this.Enunciado_Pregunta6.Size = new System.Drawing.Size(494, 84);
+            this.Enunciado_Pregunta6.Size = new System.Drawing.Size(534, 84);
             this.Enunciado_Pregunta6.TabIndex = 0;
             this.Enunciado_Pregunta6.Text = "Enunciado";
             this.Enunciado_Pregunta6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -565,7 +582,7 @@ namespace Interfaz_Fixed
             this.button4.Location = new System.Drawing.Point(4, 371);
             this.button4.Margin = new System.Windows.Forms.Padding(4);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(492, 52);
+            this.button4.Size = new System.Drawing.Size(532, 52);
             this.button4.TabIndex = 1;
             this.button4.Text = "button4";
             this.button4.UseVisualStyleBackColor = true;
@@ -576,6 +593,7 @@ namespace Interfaz_Fixed
             this.tableLayout_Pregunta7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayout_Pregunta7.Controls.Add(this.Enunciado_Pregunta7, 0, 0);
             this.tableLayout_Pregunta7.Controls.Add(this.button5, 0, 2);
+            this.tableLayout_Pregunta7.Controls.Add(this.tableLayoutPanel3, 0, 1);
             this.tableLayout_Pregunta7.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayout_Pregunta7.Location = new System.Drawing.Point(3, 1350);
             this.tableLayout_Pregunta7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -584,7 +602,7 @@ namespace Interfaz_Fixed
             this.tableLayout_Pregunta7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 31.79191F));
             this.tableLayout_Pregunta7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 68.20809F));
             this.tableLayout_Pregunta7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 78F));
-            this.tableLayout_Pregunta7.Size = new System.Drawing.Size(500, 427);
+            this.tableLayout_Pregunta7.Size = new System.Drawing.Size(540, 427);
             this.tableLayout_Pregunta7.TabIndex = 10;
             // 
             // Enunciado_Pregunta7
@@ -594,7 +612,7 @@ namespace Interfaz_Fixed
             this.Enunciado_Pregunta7.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Enunciado_Pregunta7.Location = new System.Drawing.Point(3, 0);
             this.Enunciado_Pregunta7.Name = "Enunciado_Pregunta7";
-            this.Enunciado_Pregunta7.Size = new System.Drawing.Size(494, 110);
+            this.Enunciado_Pregunta7.Size = new System.Drawing.Size(534, 110);
             this.Enunciado_Pregunta7.TabIndex = 0;
             this.Enunciado_Pregunta7.Text = "Enunciado";
             this.Enunciado_Pregunta7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -605,7 +623,7 @@ namespace Interfaz_Fixed
             this.button5.Location = new System.Drawing.Point(4, 352);
             this.button5.Margin = new System.Windows.Forms.Padding(4);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(492, 71);
+            this.button5.Size = new System.Drawing.Size(532, 71);
             this.button5.TabIndex = 1;
             this.button5.Text = "button5";
             this.button5.UseVisualStyleBackColor = true;
@@ -617,15 +635,16 @@ namespace Interfaz_Fixed
             this.tableLayout_Pregunta8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayout_Pregunta8.Controls.Add(this.Enunciado_Pregunta12, 0, 0);
             this.tableLayout_Pregunta8.Controls.Add(this.button6, 0, 2);
+            this.tableLayout_Pregunta8.Controls.Add(this.tableLayoutPanel5, 0, 1);
             this.tableLayout_Pregunta8.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayout_Pregunta8.Location = new System.Drawing.Point(509, 1350);
+            this.tableLayout_Pregunta8.Location = new System.Drawing.Point(549, 1350);
             this.tableLayout_Pregunta8.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tableLayout_Pregunta8.Name = "tableLayout_Pregunta8";
             this.tableLayout_Pregunta8.RowCount = 3;
             this.tableLayout_Pregunta8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 31.79191F));
             this.tableLayout_Pregunta8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 68.20809F));
             this.tableLayout_Pregunta8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 78F));
-            this.tableLayout_Pregunta8.Size = new System.Drawing.Size(500, 427);
+            this.tableLayout_Pregunta8.Size = new System.Drawing.Size(540, 427);
             this.tableLayout_Pregunta8.TabIndex = 11;
             // 
             // Enunciado_Pregunta12
@@ -635,7 +654,7 @@ namespace Interfaz_Fixed
             this.Enunciado_Pregunta12.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Enunciado_Pregunta12.Location = new System.Drawing.Point(3, 0);
             this.Enunciado_Pregunta12.Name = "Enunciado_Pregunta12";
-            this.Enunciado_Pregunta12.Size = new System.Drawing.Size(494, 110);
+            this.Enunciado_Pregunta12.Size = new System.Drawing.Size(534, 110);
             this.Enunciado_Pregunta12.TabIndex = 0;
             this.Enunciado_Pregunta12.Text = "Enunciado";
             this.Enunciado_Pregunta12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -646,7 +665,7 @@ namespace Interfaz_Fixed
             this.button6.Location = new System.Drawing.Point(4, 352);
             this.button6.Margin = new System.Windows.Forms.Padding(4);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(492, 71);
+            this.button6.Size = new System.Drawing.Size(532, 71);
             this.button6.TabIndex = 1;
             this.button6.Text = "button6";
             this.button6.UseVisualStyleBackColor = true;
@@ -666,7 +685,7 @@ namespace Interfaz_Fixed
             this.tableLayout_Pregunta9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 21.78218F));
             this.tableLayout_Pregunta9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 78.21782F));
             this.tableLayout_Pregunta9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 64F));
-            this.tableLayout_Pregunta9.Size = new System.Drawing.Size(500, 427);
+            this.tableLayout_Pregunta9.Size = new System.Drawing.Size(540, 427);
             this.tableLayout_Pregunta9.TabIndex = 12;
             // 
             // Enunciado_Pregunta9
@@ -676,7 +695,7 @@ namespace Interfaz_Fixed
             this.Enunciado_Pregunta9.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Enunciado_Pregunta9.Location = new System.Drawing.Point(3, 0);
             this.Enunciado_Pregunta9.Name = "Enunciado_Pregunta9";
-            this.Enunciado_Pregunta9.Size = new System.Drawing.Size(494, 79);
+            this.Enunciado_Pregunta9.Size = new System.Drawing.Size(534, 79);
             this.Enunciado_Pregunta9.TabIndex = 0;
             this.Enunciado_Pregunta9.Text = "Enunciado";
             this.Enunciado_Pregunta9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -687,7 +706,7 @@ namespace Interfaz_Fixed
             this.button7.Location = new System.Drawing.Point(4, 366);
             this.button7.Margin = new System.Windows.Forms.Padding(4);
             this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(492, 57);
+            this.button7.Size = new System.Drawing.Size(532, 57);
             this.button7.TabIndex = 1;
             this.button7.Text = "button7";
             this.button7.UseVisualStyleBackColor = true;
@@ -700,14 +719,14 @@ namespace Interfaz_Fixed
             this.tableLayout_Pregunta10.Controls.Add(this.Enunciado_Pregunta10, 0, 0);
             this.tableLayout_Pregunta10.Controls.Add(this.button8, 0, 2);
             this.tableLayout_Pregunta10.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayout_Pregunta10.Location = new System.Drawing.Point(509, 1781);
+            this.tableLayout_Pregunta10.Location = new System.Drawing.Point(549, 1781);
             this.tableLayout_Pregunta10.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tableLayout_Pregunta10.Name = "tableLayout_Pregunta10";
             this.tableLayout_Pregunta10.RowCount = 3;
             this.tableLayout_Pregunta10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 21.32964F));
             this.tableLayout_Pregunta10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 78.67036F));
             this.tableLayout_Pregunta10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 65F));
-            this.tableLayout_Pregunta10.Size = new System.Drawing.Size(500, 427);
+            this.tableLayout_Pregunta10.Size = new System.Drawing.Size(540, 427);
             this.tableLayout_Pregunta10.TabIndex = 13;
             // 
             // Enunciado_Pregunta10
@@ -717,7 +736,7 @@ namespace Interfaz_Fixed
             this.Enunciado_Pregunta10.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Enunciado_Pregunta10.Location = new System.Drawing.Point(3, 0);
             this.Enunciado_Pregunta10.Name = "Enunciado_Pregunta10";
-            this.Enunciado_Pregunta10.Size = new System.Drawing.Size(494, 77);
+            this.Enunciado_Pregunta10.Size = new System.Drawing.Size(534, 77);
             this.Enunciado_Pregunta10.TabIndex = 0;
             this.Enunciado_Pregunta10.Text = "Enunciado";
             this.Enunciado_Pregunta10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -728,7 +747,7 @@ namespace Interfaz_Fixed
             this.button8.Location = new System.Drawing.Point(4, 365);
             this.button8.Margin = new System.Windows.Forms.Padding(4);
             this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(492, 58);
+            this.button8.Size = new System.Drawing.Size(532, 58);
             this.button8.TabIndex = 1;
             this.button8.Text = "button8";
             this.button8.UseVisualStyleBackColor = true;
@@ -747,7 +766,7 @@ namespace Interfaz_Fixed
             this.tableLayout_Pregunta11.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 17.34104F));
             this.tableLayout_Pregunta11.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 62.71676F));
             this.tableLayout_Pregunta11.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20.23121F));
-            this.tableLayout_Pregunta11.Size = new System.Drawing.Size(500, 427);
+            this.tableLayout_Pregunta11.Size = new System.Drawing.Size(540, 427);
             this.tableLayout_Pregunta11.TabIndex = 14;
             // 
             // button9
@@ -756,7 +775,7 @@ namespace Interfaz_Fixed
             this.button9.Location = new System.Drawing.Point(4, 344);
             this.button9.Margin = new System.Windows.Forms.Padding(4);
             this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(492, 79);
+            this.button9.Size = new System.Drawing.Size(532, 79);
             this.button9.TabIndex = 0;
             this.button9.Text = "button9";
             this.button9.UseVisualStyleBackColor = true;
@@ -769,7 +788,7 @@ namespace Interfaz_Fixed
             this.label1.Location = new System.Drawing.Point(4, 0);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(492, 73);
+            this.label1.Size = new System.Drawing.Size(532, 73);
             this.label1.TabIndex = 1;
             this.label1.Text = "label1";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -781,14 +800,14 @@ namespace Interfaz_Fixed
             this.tableLayout_Pregunta12.Controls.Add(this.button10, 0, 2);
             this.tableLayout_Pregunta12.Controls.Add(this.label2, 0, 0);
             this.tableLayout_Pregunta12.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayout_Pregunta12.Location = new System.Drawing.Point(509, 2212);
+            this.tableLayout_Pregunta12.Location = new System.Drawing.Point(549, 2212);
             this.tableLayout_Pregunta12.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tableLayout_Pregunta12.Name = "tableLayout_Pregunta12";
             this.tableLayout_Pregunta12.RowCount = 3;
             this.tableLayout_Pregunta12.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 21.73913F));
             this.tableLayout_Pregunta12.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 78.26087F));
             this.tableLayout_Pregunta12.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 85F));
-            this.tableLayout_Pregunta12.Size = new System.Drawing.Size(500, 427);
+            this.tableLayout_Pregunta12.Size = new System.Drawing.Size(540, 427);
             this.tableLayout_Pregunta12.TabIndex = 15;
             // 
             // button10
@@ -797,7 +816,7 @@ namespace Interfaz_Fixed
             this.button10.Location = new System.Drawing.Point(4, 345);
             this.button10.Margin = new System.Windows.Forms.Padding(4);
             this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(492, 78);
+            this.button10.Size = new System.Drawing.Size(532, 78);
             this.button10.TabIndex = 0;
             this.button10.Text = "button10";
             this.button10.UseVisualStyleBackColor = true;
@@ -810,7 +829,7 @@ namespace Interfaz_Fixed
             this.label2.Location = new System.Drawing.Point(4, 0);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(492, 74);
+            this.label2.Size = new System.Drawing.Size(532, 74);
             this.label2.TabIndex = 1;
             this.label2.Text = "label2";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -829,7 +848,7 @@ namespace Interfaz_Fixed
             this.tableLayout_Pregunta13.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 28.9604F));
             this.tableLayout_Pregunta13.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 71.0396F));
             this.tableLayout_Pregunta13.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 74F));
-            this.tableLayout_Pregunta13.Size = new System.Drawing.Size(500, 427);
+            this.tableLayout_Pregunta13.Size = new System.Drawing.Size(540, 427);
             this.tableLayout_Pregunta13.TabIndex = 16;
             // 
             // label3
@@ -839,7 +858,7 @@ namespace Interfaz_Fixed
             this.label3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label3.Location = new System.Drawing.Point(3, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(494, 102);
+            this.label3.Size = new System.Drawing.Size(534, 102);
             this.label3.TabIndex = 0;
             this.label3.Text = "label3";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -849,7 +868,7 @@ namespace Interfaz_Fixed
             this.button11.Dock = System.Windows.Forms.DockStyle.Fill;
             this.button11.Location = new System.Drawing.Point(3, 355);
             this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(494, 69);
+            this.button11.Size = new System.Drawing.Size(534, 69);
             this.button11.TabIndex = 1;
             this.button11.Text = "button11";
             this.button11.UseVisualStyleBackColor = true;
@@ -861,14 +880,14 @@ namespace Interfaz_Fixed
             this.tableLayout_Pregunta14.Controls.Add(this.label5, 0, 0);
             this.tableLayout_Pregunta14.Controls.Add(this.button12, 0, 2);
             this.tableLayout_Pregunta14.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayout_Pregunta14.Location = new System.Drawing.Point(509, 2643);
+            this.tableLayout_Pregunta14.Location = new System.Drawing.Point(549, 2643);
             this.tableLayout_Pregunta14.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tableLayout_Pregunta14.Name = "tableLayout_Pregunta14";
             this.tableLayout_Pregunta14.RowCount = 3;
             this.tableLayout_Pregunta14.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 29.45545F));
             this.tableLayout_Pregunta14.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 70.54456F));
             this.tableLayout_Pregunta14.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 74F));
-            this.tableLayout_Pregunta14.Size = new System.Drawing.Size(500, 427);
+            this.tableLayout_Pregunta14.Size = new System.Drawing.Size(540, 427);
             this.tableLayout_Pregunta14.TabIndex = 17;
             // 
             // label5
@@ -878,7 +897,7 @@ namespace Interfaz_Fixed
             this.label5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label5.Location = new System.Drawing.Point(3, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(494, 103);
+            this.label5.Size = new System.Drawing.Size(534, 103);
             this.label5.TabIndex = 0;
             this.label5.Text = "label5";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -888,7 +907,7 @@ namespace Interfaz_Fixed
             this.button12.Dock = System.Windows.Forms.DockStyle.Fill;
             this.button12.Location = new System.Drawing.Point(3, 355);
             this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(494, 69);
+            this.button12.Size = new System.Drawing.Size(534, 69);
             this.button12.TabIndex = 1;
             this.button12.Text = "button12";
             this.button12.UseVisualStyleBackColor = true;
@@ -908,7 +927,7 @@ namespace Interfaz_Fixed
             this.tableLayout_Pregunta19.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 24.38424F));
             this.tableLayout_Pregunta19.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 75.61576F));
             this.tableLayout_Pregunta19.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 86F));
-            this.tableLayout_Pregunta19.Size = new System.Drawing.Size(500, 427);
+            this.tableLayout_Pregunta19.Size = new System.Drawing.Size(540, 427);
             this.tableLayout_Pregunta19.TabIndex = 18;
             // 
             // button15
@@ -916,7 +935,7 @@ namespace Interfaz_Fixed
             this.button15.Dock = System.Windows.Forms.DockStyle.Fill;
             this.button15.Location = new System.Drawing.Point(3, 343);
             this.button15.Name = "button15";
-            this.button15.Size = new System.Drawing.Size(494, 81);
+            this.button15.Size = new System.Drawing.Size(534, 81);
             this.button15.TabIndex = 0;
             this.button15.Text = "button15";
             this.button15.UseVisualStyleBackColor = true;
@@ -928,7 +947,7 @@ namespace Interfaz_Fixed
             this.label8.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label8.Location = new System.Drawing.Point(3, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(494, 83);
+            this.label8.Size = new System.Drawing.Size(534, 83);
             this.label8.TabIndex = 1;
             this.label8.Text = "label8";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -940,14 +959,14 @@ namespace Interfaz_Fixed
             this.tableLayout_Pregunta18.Controls.Add(this.button16, 0, 2);
             this.tableLayout_Pregunta18.Controls.Add(this.label9, 0, 0);
             this.tableLayout_Pregunta18.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayout_Pregunta18.Location = new System.Drawing.Point(509, 3505);
+            this.tableLayout_Pregunta18.Location = new System.Drawing.Point(549, 3505);
             this.tableLayout_Pregunta18.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tableLayout_Pregunta18.Name = "tableLayout_Pregunta18";
             this.tableLayout_Pregunta18.RowCount = 3;
             this.tableLayout_Pregunta18.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 24.63054F));
             this.tableLayout_Pregunta18.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 75.36946F));
             this.tableLayout_Pregunta18.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 86F));
-            this.tableLayout_Pregunta18.Size = new System.Drawing.Size(500, 427);
+            this.tableLayout_Pregunta18.Size = new System.Drawing.Size(540, 427);
             this.tableLayout_Pregunta18.TabIndex = 19;
             // 
             // button16
@@ -955,7 +974,7 @@ namespace Interfaz_Fixed
             this.button16.Dock = System.Windows.Forms.DockStyle.Fill;
             this.button16.Location = new System.Drawing.Point(3, 343);
             this.button16.Name = "button16";
-            this.button16.Size = new System.Drawing.Size(494, 81);
+            this.button16.Size = new System.Drawing.Size(534, 81);
             this.button16.TabIndex = 0;
             this.button16.Text = "button16";
             this.button16.UseVisualStyleBackColor = true;
@@ -967,7 +986,7 @@ namespace Interfaz_Fixed
             this.label9.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label9.Location = new System.Drawing.Point(3, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(494, 83);
+            this.label9.Size = new System.Drawing.Size(534, 83);
             this.label9.TabIndex = 1;
             this.label9.Text = "label9";
             this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -986,7 +1005,7 @@ namespace Interfaz_Fixed
             this.tableLayout_Pregunta17.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 21.92118F));
             this.tableLayout_Pregunta17.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 78.07882F));
             this.tableLayout_Pregunta17.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 90F));
-            this.tableLayout_Pregunta17.Size = new System.Drawing.Size(500, 427);
+            this.tableLayout_Pregunta17.Size = new System.Drawing.Size(540, 427);
             this.tableLayout_Pregunta17.TabIndex = 20;
             // 
             // button17
@@ -994,7 +1013,7 @@ namespace Interfaz_Fixed
             this.button17.Dock = System.Windows.Forms.DockStyle.Fill;
             this.button17.Location = new System.Drawing.Point(3, 339);
             this.button17.Name = "button17";
-            this.button17.Size = new System.Drawing.Size(494, 85);
+            this.button17.Size = new System.Drawing.Size(534, 85);
             this.button17.TabIndex = 0;
             this.button17.Text = "button17";
             this.button17.UseVisualStyleBackColor = true;
@@ -1006,7 +1025,7 @@ namespace Interfaz_Fixed
             this.label10.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label10.Location = new System.Drawing.Point(3, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(494, 73);
+            this.label10.Size = new System.Drawing.Size(534, 73);
             this.label10.TabIndex = 1;
             this.label10.Text = "label10";
             this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1018,14 +1037,14 @@ namespace Interfaz_Fixed
             this.tableLayout_Pregunta20.Controls.Add(this.button18, 0, 2);
             this.tableLayout_Pregunta20.Controls.Add(this.label11, 0, 0);
             this.tableLayout_Pregunta20.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayout_Pregunta20.Location = new System.Drawing.Point(509, 3936);
+            this.tableLayout_Pregunta20.Location = new System.Drawing.Point(549, 3936);
             this.tableLayout_Pregunta20.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tableLayout_Pregunta20.Name = "tableLayout_Pregunta20";
             this.tableLayout_Pregunta20.RowCount = 3;
             this.tableLayout_Pregunta20.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 21.92118F));
             this.tableLayout_Pregunta20.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 78.07882F));
             this.tableLayout_Pregunta20.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 89F));
-            this.tableLayout_Pregunta20.Size = new System.Drawing.Size(500, 427);
+            this.tableLayout_Pregunta20.Size = new System.Drawing.Size(540, 427);
             this.tableLayout_Pregunta20.TabIndex = 21;
             this.tableLayout_Pregunta20.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayout_Pregunta20_Paint);
             // 
@@ -1034,7 +1053,7 @@ namespace Interfaz_Fixed
             this.button18.Dock = System.Windows.Forms.DockStyle.Fill;
             this.button18.Location = new System.Drawing.Point(3, 340);
             this.button18.Name = "button18";
-            this.button18.Size = new System.Drawing.Size(494, 84);
+            this.button18.Size = new System.Drawing.Size(534, 84);
             this.button18.TabIndex = 0;
             this.button18.Text = "button18";
             this.button18.UseVisualStyleBackColor = true;
@@ -1046,7 +1065,7 @@ namespace Interfaz_Fixed
             this.label11.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label11.Location = new System.Drawing.Point(3, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(494, 74);
+            this.label11.Size = new System.Drawing.Size(534, 74);
             this.label11.TabIndex = 1;
             this.label11.Text = "label11";
             this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1065,7 +1084,7 @@ namespace Interfaz_Fixed
             this.tableLayout_Pregunta21.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 26.10837F));
             this.tableLayout_Pregunta21.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 73.89162F));
             this.tableLayout_Pregunta21.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 81F));
-            this.tableLayout_Pregunta21.Size = new System.Drawing.Size(500, 427);
+            this.tableLayout_Pregunta21.Size = new System.Drawing.Size(540, 427);
             this.tableLayout_Pregunta21.TabIndex = 22;
             // 
             // button19
@@ -1073,7 +1092,7 @@ namespace Interfaz_Fixed
             this.button19.Dock = System.Windows.Forms.DockStyle.Fill;
             this.button19.Location = new System.Drawing.Point(3, 348);
             this.button19.Name = "button19";
-            this.button19.Size = new System.Drawing.Size(494, 76);
+            this.button19.Size = new System.Drawing.Size(534, 76);
             this.button19.TabIndex = 0;
             this.button19.Text = "button19";
             this.button19.UseVisualStyleBackColor = true;
@@ -1085,7 +1104,7 @@ namespace Interfaz_Fixed
             this.label12.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label12.Location = new System.Drawing.Point(3, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(494, 90);
+            this.label12.Size = new System.Drawing.Size(534, 90);
             this.label12.TabIndex = 1;
             this.label12.Text = "label12";
             this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1097,14 +1116,14 @@ namespace Interfaz_Fixed
             this.tableLayout_Pregunta22.Controls.Add(this.button20, 0, 2);
             this.tableLayout_Pregunta22.Controls.Add(this.label13, 0, 0);
             this.tableLayout_Pregunta22.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayout_Pregunta22.Location = new System.Drawing.Point(509, 4367);
+            this.tableLayout_Pregunta22.Location = new System.Drawing.Point(549, 4367);
             this.tableLayout_Pregunta22.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tableLayout_Pregunta22.Name = "tableLayout_Pregunta22";
             this.tableLayout_Pregunta22.RowCount = 3;
             this.tableLayout_Pregunta22.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 26.35468F));
             this.tableLayout_Pregunta22.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 73.64532F));
             this.tableLayout_Pregunta22.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 78F));
-            this.tableLayout_Pregunta22.Size = new System.Drawing.Size(500, 427);
+            this.tableLayout_Pregunta22.Size = new System.Drawing.Size(540, 427);
             this.tableLayout_Pregunta22.TabIndex = 23;
             // 
             // button20
@@ -1112,7 +1131,7 @@ namespace Interfaz_Fixed
             this.button20.Dock = System.Windows.Forms.DockStyle.Fill;
             this.button20.Location = new System.Drawing.Point(3, 351);
             this.button20.Name = "button20";
-            this.button20.Size = new System.Drawing.Size(494, 73);
+            this.button20.Size = new System.Drawing.Size(534, 73);
             this.button20.TabIndex = 0;
             this.button20.Text = "button20";
             this.button20.UseVisualStyleBackColor = true;
@@ -1124,7 +1143,7 @@ namespace Interfaz_Fixed
             this.label13.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label13.Location = new System.Drawing.Point(3, 0);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(494, 91);
+            this.label13.Size = new System.Drawing.Size(534, 91);
             this.label13.TabIndex = 1;
             this.label13.Text = "label13";
             this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1143,7 +1162,7 @@ namespace Interfaz_Fixed
             this.tableLayout_Pregunta23.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 23.64532F));
             this.tableLayout_Pregunta23.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 76.35468F));
             this.tableLayout_Pregunta23.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 91F));
-            this.tableLayout_Pregunta23.Size = new System.Drawing.Size(500, 427);
+            this.tableLayout_Pregunta23.Size = new System.Drawing.Size(540, 427);
             this.tableLayout_Pregunta23.TabIndex = 24;
             // 
             // button21
@@ -1151,7 +1170,7 @@ namespace Interfaz_Fixed
             this.button21.Dock = System.Windows.Forms.DockStyle.Fill;
             this.button21.Location = new System.Drawing.Point(3, 338);
             this.button21.Name = "button21";
-            this.button21.Size = new System.Drawing.Size(494, 86);
+            this.button21.Size = new System.Drawing.Size(534, 86);
             this.button21.TabIndex = 0;
             this.button21.Text = "button21";
             this.button21.UseVisualStyleBackColor = true;
@@ -1163,7 +1182,7 @@ namespace Interfaz_Fixed
             this.label14.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label14.Location = new System.Drawing.Point(3, 0);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(494, 79);
+            this.label14.Size = new System.Drawing.Size(534, 79);
             this.label14.TabIndex = 1;
             this.label14.Text = "label14";
             this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1182,7 +1201,7 @@ namespace Interfaz_Fixed
             this.tableLayout_Pregunta15.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 21.92118F));
             this.tableLayout_Pregunta15.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 78.07882F));
             this.tableLayout_Pregunta15.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 85F));
-            this.tableLayout_Pregunta15.Size = new System.Drawing.Size(500, 427);
+            this.tableLayout_Pregunta15.Size = new System.Drawing.Size(540, 427);
             this.tableLayout_Pregunta15.TabIndex = 25;
             // 
             // button13
@@ -1190,7 +1209,7 @@ namespace Interfaz_Fixed
             this.button13.Dock = System.Windows.Forms.DockStyle.Fill;
             this.button13.Location = new System.Drawing.Point(3, 344);
             this.button13.Name = "button13";
-            this.button13.Size = new System.Drawing.Size(494, 80);
+            this.button13.Size = new System.Drawing.Size(534, 80);
             this.button13.TabIndex = 0;
             this.button13.Text = "button13";
             this.button13.UseVisualStyleBackColor = true;
@@ -1202,7 +1221,7 @@ namespace Interfaz_Fixed
             this.label6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label6.Location = new System.Drawing.Point(3, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(494, 74);
+            this.label6.Size = new System.Drawing.Size(534, 74);
             this.label6.TabIndex = 1;
             this.label6.Text = "label6";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1214,14 +1233,14 @@ namespace Interfaz_Fixed
             this.tableLayout_Pregunta16.Controls.Add(this.button14, 0, 2);
             this.tableLayout_Pregunta16.Controls.Add(this.label7, 0, 0);
             this.tableLayout_Pregunta16.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayout_Pregunta16.Location = new System.Drawing.Point(509, 3074);
+            this.tableLayout_Pregunta16.Location = new System.Drawing.Point(549, 3074);
             this.tableLayout_Pregunta16.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tableLayout_Pregunta16.Name = "tableLayout_Pregunta16";
             this.tableLayout_Pregunta16.RowCount = 3;
             this.tableLayout_Pregunta16.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 21.92118F));
             this.tableLayout_Pregunta16.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 78.07882F));
             this.tableLayout_Pregunta16.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 84F));
-            this.tableLayout_Pregunta16.Size = new System.Drawing.Size(500, 427);
+            this.tableLayout_Pregunta16.Size = new System.Drawing.Size(540, 427);
             this.tableLayout_Pregunta16.TabIndex = 26;
             // 
             // button14
@@ -1229,7 +1248,7 @@ namespace Interfaz_Fixed
             this.button14.Dock = System.Windows.Forms.DockStyle.Fill;
             this.button14.Location = new System.Drawing.Point(3, 345);
             this.button14.Name = "button14";
-            this.button14.Size = new System.Drawing.Size(494, 79);
+            this.button14.Size = new System.Drawing.Size(534, 79);
             this.button14.TabIndex = 0;
             this.button14.Text = "button14";
             this.button14.UseVisualStyleBackColor = true;
@@ -1241,7 +1260,7 @@ namespace Interfaz_Fixed
             this.label7.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label7.Location = new System.Drawing.Point(3, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(494, 75);
+            this.label7.Size = new System.Drawing.Size(534, 75);
             this.label7.TabIndex = 1;
             this.label7.Text = "label7";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1254,14 +1273,14 @@ namespace Interfaz_Fixed
             this.tableLayout_Pregunta24.Controls.Add(this.button22, 0, 2);
             this.tableLayout_Pregunta24.Controls.Add(this.label15, 0, 0);
             this.tableLayout_Pregunta24.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayout_Pregunta24.Location = new System.Drawing.Point(510, 4800);
+            this.tableLayout_Pregunta24.Location = new System.Drawing.Point(550, 4800);
             this.tableLayout_Pregunta24.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayout_Pregunta24.Name = "tableLayout_Pregunta24";
             this.tableLayout_Pregunta24.RowCount = 3;
             this.tableLayout_Pregunta24.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 24.18136F));
             this.tableLayout_Pregunta24.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 75.81864F));
             this.tableLayout_Pregunta24.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 88F));
-            this.tableLayout_Pregunta24.Size = new System.Drawing.Size(498, 423);
+            this.tableLayout_Pregunta24.Size = new System.Drawing.Size(538, 423);
             this.tableLayout_Pregunta24.TabIndex = 27;
             // 
             // button22
@@ -1269,7 +1288,7 @@ namespace Interfaz_Fixed
             this.button22.Dock = System.Windows.Forms.DockStyle.Fill;
             this.button22.Location = new System.Drawing.Point(3, 337);
             this.button22.Name = "button22";
-            this.button22.Size = new System.Drawing.Size(492, 83);
+            this.button22.Size = new System.Drawing.Size(532, 83);
             this.button22.TabIndex = 0;
             this.button22.Text = "button22";
             this.button22.UseVisualStyleBackColor = true;
@@ -1281,7 +1300,7 @@ namespace Interfaz_Fixed
             this.label15.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label15.Location = new System.Drawing.Point(3, 0);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(492, 81);
+            this.label15.Size = new System.Drawing.Size(532, 81);
             this.label15.TabIndex = 1;
             this.label15.Text = "label15";
             this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1301,7 +1320,7 @@ namespace Interfaz_Fixed
             this.tableLayout_Pregunta25.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 26.19647F));
             this.tableLayout_Pregunta25.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 73.80353F));
             this.tableLayout_Pregunta25.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 82F));
-            this.tableLayout_Pregunta25.Size = new System.Drawing.Size(498, 423);
+            this.tableLayout_Pregunta25.Size = new System.Drawing.Size(538, 423);
             this.tableLayout_Pregunta25.TabIndex = 28;
             // 
             // button23
@@ -1309,7 +1328,7 @@ namespace Interfaz_Fixed
             this.button23.Dock = System.Windows.Forms.DockStyle.Fill;
             this.button23.Location = new System.Drawing.Point(3, 343);
             this.button23.Name = "button23";
-            this.button23.Size = new System.Drawing.Size(492, 77);
+            this.button23.Size = new System.Drawing.Size(532, 77);
             this.button23.TabIndex = 0;
             this.button23.Text = "button23";
             this.button23.UseVisualStyleBackColor = true;
@@ -1321,7 +1340,7 @@ namespace Interfaz_Fixed
             this.label16.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label16.Location = new System.Drawing.Point(3, 0);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(492, 89);
+            this.label16.Size = new System.Drawing.Size(532, 89);
             this.label16.TabIndex = 1;
             this.label16.Text = "label16";
             this.label16.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1334,14 +1353,14 @@ namespace Interfaz_Fixed
             this.tableLayout_Pregunta26.Controls.Add(this.button24, 0, 2);
             this.tableLayout_Pregunta26.Controls.Add(this.label17, 0, 0);
             this.tableLayout_Pregunta26.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayout_Pregunta26.Location = new System.Drawing.Point(510, 5231);
+            this.tableLayout_Pregunta26.Location = new System.Drawing.Point(550, 5231);
             this.tableLayout_Pregunta26.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayout_Pregunta26.Name = "tableLayout_Pregunta26";
             this.tableLayout_Pregunta26.RowCount = 3;
             this.tableLayout_Pregunta26.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 26.19647F));
             this.tableLayout_Pregunta26.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 73.80353F));
             this.tableLayout_Pregunta26.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 81F));
-            this.tableLayout_Pregunta26.Size = new System.Drawing.Size(498, 423);
+            this.tableLayout_Pregunta26.Size = new System.Drawing.Size(538, 423);
             this.tableLayout_Pregunta26.TabIndex = 29;
             // 
             // button24
@@ -1349,7 +1368,7 @@ namespace Interfaz_Fixed
             this.button24.Dock = System.Windows.Forms.DockStyle.Fill;
             this.button24.Location = new System.Drawing.Point(3, 344);
             this.button24.Name = "button24";
-            this.button24.Size = new System.Drawing.Size(492, 76);
+            this.button24.Size = new System.Drawing.Size(532, 76);
             this.button24.TabIndex = 0;
             this.button24.Text = "button24";
             this.button24.UseVisualStyleBackColor = true;
@@ -1361,7 +1380,7 @@ namespace Interfaz_Fixed
             this.label17.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label17.Location = new System.Drawing.Point(3, 0);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(492, 89);
+            this.label17.Size = new System.Drawing.Size(532, 89);
             this.label17.TabIndex = 1;
             this.label17.Text = "label17";
             this.label17.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1380,7 +1399,7 @@ namespace Interfaz_Fixed
             this.tableLayout_Pregunta27.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 22.16625F));
             this.tableLayout_Pregunta27.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 77.83376F));
             this.tableLayout_Pregunta27.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 95F));
-            this.tableLayout_Pregunta27.Size = new System.Drawing.Size(498, 423);
+            this.tableLayout_Pregunta27.Size = new System.Drawing.Size(538, 423);
             this.tableLayout_Pregunta27.TabIndex = 30;
             // 
             // button25
@@ -1388,7 +1407,7 @@ namespace Interfaz_Fixed
             this.button25.Dock = System.Windows.Forms.DockStyle.Fill;
             this.button25.Location = new System.Drawing.Point(3, 330);
             this.button25.Name = "button25";
-            this.button25.Size = new System.Drawing.Size(492, 90);
+            this.button25.Size = new System.Drawing.Size(532, 90);
             this.button25.TabIndex = 0;
             this.button25.Text = "button25";
             this.button25.UseVisualStyleBackColor = true;
@@ -1400,7 +1419,7 @@ namespace Interfaz_Fixed
             this.label18.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label18.Location = new System.Drawing.Point(3, 0);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(492, 72);
+            this.label18.Size = new System.Drawing.Size(532, 72);
             this.label18.TabIndex = 1;
             this.label18.Text = "label18";
             this.label18.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1413,14 +1432,14 @@ namespace Interfaz_Fixed
             this.tableLayout_Pregunta28.Controls.Add(this.button26, 0, 2);
             this.tableLayout_Pregunta28.Controls.Add(this.label19, 0, 0);
             this.tableLayout_Pregunta28.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayout_Pregunta28.Location = new System.Drawing.Point(510, 5662);
+            this.tableLayout_Pregunta28.Location = new System.Drawing.Point(550, 5662);
             this.tableLayout_Pregunta28.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayout_Pregunta28.Name = "tableLayout_Pregunta28";
             this.tableLayout_Pregunta28.RowCount = 3;
             this.tableLayout_Pregunta28.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20.9068F));
             this.tableLayout_Pregunta28.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 79.0932F));
             this.tableLayout_Pregunta28.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 89F));
-            this.tableLayout_Pregunta28.Size = new System.Drawing.Size(498, 423);
+            this.tableLayout_Pregunta28.Size = new System.Drawing.Size(538, 423);
             this.tableLayout_Pregunta28.TabIndex = 31;
             // 
             // button26
@@ -1428,7 +1447,7 @@ namespace Interfaz_Fixed
             this.button26.Dock = System.Windows.Forms.DockStyle.Fill;
             this.button26.Location = new System.Drawing.Point(3, 336);
             this.button26.Name = "button26";
-            this.button26.Size = new System.Drawing.Size(492, 84);
+            this.button26.Size = new System.Drawing.Size(532, 84);
             this.button26.TabIndex = 0;
             this.button26.Text = "button26";
             this.button26.UseVisualStyleBackColor = true;
@@ -1440,7 +1459,7 @@ namespace Interfaz_Fixed
             this.label19.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label19.Location = new System.Drawing.Point(3, 0);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(492, 69);
+            this.label19.Size = new System.Drawing.Size(532, 69);
             this.label19.TabIndex = 1;
             this.label19.Text = "label19";
             this.label19.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1460,7 +1479,7 @@ namespace Interfaz_Fixed
             this.tableLayout_Pregunta29.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 21.41058F));
             this.tableLayout_Pregunta29.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 78.58942F));
             this.tableLayout_Pregunta29.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 85F));
-            this.tableLayout_Pregunta29.Size = new System.Drawing.Size(498, 423);
+            this.tableLayout_Pregunta29.Size = new System.Drawing.Size(538, 423);
             this.tableLayout_Pregunta29.TabIndex = 32;
             // 
             // button27
@@ -1468,7 +1487,7 @@ namespace Interfaz_Fixed
             this.button27.Dock = System.Windows.Forms.DockStyle.Fill;
             this.button27.Location = new System.Drawing.Point(3, 340);
             this.button27.Name = "button27";
-            this.button27.Size = new System.Drawing.Size(492, 80);
+            this.button27.Size = new System.Drawing.Size(532, 80);
             this.button27.TabIndex = 0;
             this.button27.Text = "button27";
             this.button27.UseVisualStyleBackColor = true;
@@ -1480,7 +1499,7 @@ namespace Interfaz_Fixed
             this.label20.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label20.Location = new System.Drawing.Point(3, 0);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(492, 72);
+            this.label20.Size = new System.Drawing.Size(532, 72);
             this.label20.TabIndex = 1;
             this.label20.Text = "label20";
             this.label20.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1493,14 +1512,14 @@ namespace Interfaz_Fixed
             this.tableLayout_Pregunta30.Controls.Add(this.button28, 0, 2);
             this.tableLayout_Pregunta30.Controls.Add(this.label21, 0, 0);
             this.tableLayout_Pregunta30.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayout_Pregunta30.Location = new System.Drawing.Point(510, 6093);
+            this.tableLayout_Pregunta30.Location = new System.Drawing.Point(550, 6093);
             this.tableLayout_Pregunta30.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayout_Pregunta30.Name = "tableLayout_Pregunta30";
             this.tableLayout_Pregunta30.RowCount = 3;
             this.tableLayout_Pregunta30.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20.65491F));
             this.tableLayout_Pregunta30.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 79.34509F));
             this.tableLayout_Pregunta30.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 83F));
-            this.tableLayout_Pregunta30.Size = new System.Drawing.Size(498, 423);
+            this.tableLayout_Pregunta30.Size = new System.Drawing.Size(538, 423);
             this.tableLayout_Pregunta30.TabIndex = 33;
             // 
             // button28
@@ -1508,15 +1527,10 @@ namespace Interfaz_Fixed
             this.button28.Dock = System.Windows.Forms.DockStyle.Fill;
             this.button28.Location = new System.Drawing.Point(3, 342);
             this.button28.Name = "button28";
-            this.button28.Size = new System.Drawing.Size(492, 78);
+            this.button28.Size = new System.Drawing.Size(532, 78);
             this.button28.TabIndex = 0;
             this.button28.Text = "button28";
             this.button28.UseVisualStyleBackColor = true;
-            /*this.button28.Click    += (s, e) =>
-            {
-                MessageBox.Show("Me apretaste culiao");
-            };*/
-
             // 
             // label21
             // 
@@ -1525,7 +1539,7 @@ namespace Interfaz_Fixed
             this.label21.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label21.Location = new System.Drawing.Point(3, 0);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(492, 70);
+            this.label21.Size = new System.Drawing.Size(532, 70);
             this.label21.TabIndex = 1;
             this.label21.Text = "label21";
             this.label21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1535,10 +1549,10 @@ namespace Interfaz_Fixed
             this.Tiempo_RestanteLabel.AutoSize = true;
             this.Tiempo_RestanteLabel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Tiempo_RestanteLabel.Font = new System.Drawing.Font("Starcraft", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Tiempo_RestanteLabel.Location = new System.Drawing.Point(510, 0);
+            this.Tiempo_RestanteLabel.Location = new System.Drawing.Point(550, 0);
             this.Tiempo_RestanteLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Tiempo_RestanteLabel.Name = "Tiempo_RestanteLabel";
-            this.Tiempo_RestanteLabel.Size = new System.Drawing.Size(498, 55);
+            this.Tiempo_RestanteLabel.Size = new System.Drawing.Size(538, 55);
             this.Tiempo_RestanteLabel.TabIndex = 34;
             this.Tiempo_RestanteLabel.Text = "-";
             this.Tiempo_RestanteLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1549,12 +1563,72 @@ namespace Interfaz_Fixed
             this.Tiempo_RestanteTimer.Interval = 1800;
             this.Tiempo_RestanteTimer.Tick += new System.EventHandler(this.tiempoRestante_tick);
             // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.ColumnCount = 1;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(3, 84);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 4;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(534, 280);
+            this.tableLayoutPanel1.TabIndex = 2;
+            // 
+            // tableLayoutPanel2
+            // 
+            this.tableLayoutPanel2.ColumnCount = 1;
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 87);
+            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
+            this.tableLayoutPanel2.RowCount = 4;
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(534, 277);
+            this.tableLayoutPanel2.TabIndex = 2;
+            // 
+            // tableLayoutPanel3
+            // 
+            this.tableLayoutPanel3.ColumnCount = 1;
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(3, 113);
+            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
+            this.tableLayoutPanel3.RowCount = 4;
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(534, 232);
+            this.tableLayoutPanel3.TabIndex = 2;
+            // 
+            // tableLayoutPanel5
+            // 
+            this.tableLayoutPanel5.ColumnCount = 1;
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel5.Location = new System.Drawing.Point(3, 113);
+            this.tableLayoutPanel5.Name = "tableLayoutPanel5";
+            this.tableLayoutPanel5.RowCount = 4;
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(534, 232);
+            this.tableLayoutPanel5.TabIndex = 2;
+            // 
             // Evaluacion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(1012, 810);
+            this.ClientSize = new System.Drawing.Size(1092, 835);
             this.Controls.Add(this.tableLayout_Evaluacion);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Evaluacion";
@@ -1820,21 +1894,21 @@ namespace Interfaz_Fixed
             {
                 if (i == 0)
                 {
-                    Control control = layoutPanel.GetControlFromPosition(0,i) ;
+                    Label control = layoutPanel.GetControlFromPosition(0,i) as Label;
                     control.Text = asset.getEnunciadoPregunta();
-                }
-                if (i == 1)
-                {
-                    //Alternativas
-                    Control control = new Alternativas_Slots(asset, panelAlternativas );
-                    layoutPanel.Controls.Add(control,0,i);
                 }
                 if (i == 2)
                 {
                     //preguntar si tiene material
-                    Control control = layoutPanel.GetControlFromPosition(0,i) ;
-                    control.Text = "Boton prueba";
-
+                   Button control = layoutPanel.GetControlFromPosition(0, i) as Button;
+                   control.Text = "Boton pruebad";
+                    control.Click += (s, e) => EventoClick_Asset(s,e,asset);
+                }
+                if (i == 1)
+                {
+                    //Alternativas
+                    //layoutPanel.Controls.Add(new Alternativas_Slots(asset,panelAlternativas),0,i);
+                    new Alternativas_Slots(asset,panelAlternativas);
                 }
             }
         }
@@ -1946,5 +2020,9 @@ namespace Interfaz_Fixed
         private TableLayoutPanel layout_Alternativas2;
         private TableLayoutPanel layout_Alternativas3;
         private TableLayoutPanel tableLayoutPanel4;
+        private TableLayoutPanel tableLayoutPanel1;
+        private TableLayoutPanel tableLayoutPanel2;
+        private TableLayoutPanel tableLayoutPanel3;
+        private TableLayoutPanel tableLayoutPanel5;
     }
 }
