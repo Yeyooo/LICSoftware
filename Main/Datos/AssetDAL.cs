@@ -13,6 +13,22 @@ namespace Datos
 
         }
 
+        public static string BuscarUrlDeUnAsset(int pIdPregunta) // Devuelve la URL de un Asset
+        {
+            SqlCommand _comando = new SqlCommand(String.Format("SELECT url from urls, pregunta WHERE urls.idpregunta = pregunta.idpregunta and pregunta.idpregunta = " + pIdPregunta + ";"), Conexión.obtenerConexion("contenido"));
+            SqlDataReader _reader = _comando.ExecuteReader();
+
+            //string UrlTmp = "";
+
+            while (_reader.Read())
+            {
+                return _reader.GetString(0); // retorna la URL asociada al Asset
+            }
+
+            return null;
+
+        }
+
         // el metodo funciona correctamente. 100% comprobado
         public static List<Alternativa> BuscarTodasLasAlternativasDeUnAsset(int pIdPregunta) // todas las alternativas asociada a una pregunta
         {
@@ -95,7 +111,7 @@ namespace Datos
                 pAsset.EstrategiaEnseñanza = _reader.GetString(4);
                 pAsset.RespuestaCorrecta = _reader.GetInt32(5);
                 pAsset.Teoria = AssetDAL.getTeoriaAssetBD(_reader.GetInt32(5));
-
+                pAsset.UrlArchivo = AssetDAL.BuscarUrlDeUnAsset(pAsset.Id);
                 
                 dicACargar[indice] = pAsset;
                 indice++;
