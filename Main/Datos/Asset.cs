@@ -102,5 +102,36 @@ namespace Datos
             return this.Teoria;
         }
 
+        public string getUrlArchivo()
+        {
+            return this.UrlArchivo;
+        }
+
+        public bool isListening()
+        {
+            if (this.HabilidadAsociada == "listening")
+                return true;
+            else
+                return false;
+        }
+
+        public bool isWriting()
+        {
+            if (this.HabilidadAsociada == "writing")
+                return true;
+            else
+                return false;
+        }
+
+        public bool isReading()
+        {
+            if (this.HabilidadAsociada == "reading")
+                return true;
+            else
+                return false;
+        }
+
+
+
     }
 }
