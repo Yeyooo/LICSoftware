@@ -19,13 +19,13 @@ namespace Interfaz_Fixed
         [STAThread]
         static void Main()
         {
-            if (AssetDAL.BuscarUrlDeUnAsset(1) == null)
+            /*if (AssetDAL.BuscarUrlDeUnAsset(1) == null)
             {
                 System.Console.WriteLine("null "+AssetDAL.BuscarUrlDeUnAsset(1));
             }
             System.Console.WriteLine(AssetDAL.BuscarUrlDeUnAsset(2));
             System.Console.WriteLine(AssetDAL.BuscarUrlDeUnAsset(3));
-
+            */
             //List<string> comportamiento = new List<string>();
             //comportamiento.Add("a");
             //comportamiento.Add("b");
@@ -48,10 +48,10 @@ namespace Interfaz_Fixed
             PlanDeEstudio PE = new Datos.PlanDeEstudio(3, 3, 2);
             Dictionary<int, Asset> dic = PE.getDicWriting();
 
-            //Application.EnableVisualStyles();
-            //Application.SetCompatibleTextRenderingDefault(false);
+            Application.EnableVisualStyles();
+            Application.SetCompatibleTextRenderingDefault(false);
             //Application.Run(new LICGUI(PE));
-
+            Application.Run(new AutoEvaluacion());
             //Application.Run(new Registro_GUI());
             //Application.Run(new FormInicioSesion());
 
