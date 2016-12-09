@@ -412,6 +412,7 @@ namespace Interfaz_Fixed
             this.Evaluar_AutoButton.Tag = "Boton";
             this.Evaluar_AutoButton.Text = "Evaluar";
             this.Evaluar_AutoButton.UseVisualStyleBackColor = true;
+            this.Evaluar_AutoButton.Click += new System.EventHandler(this.Enviando_Al_Tutor);
             // 
             // Cancelar_Button
             // 
@@ -600,17 +601,20 @@ namespace Interfaz_Fixed
             //
             //Asignamiento de Eventos Dinamico
             //
-            this.ReadingBronze_check.Click += (s, e) => valorCambiado_checkbox(s, e, ReadingSilver_chk);
-            this.ReadingSilver_chk.Click += (s, e) => valorCambiado_checkbox(s, e, ReadingGold_chk);
-            this.ReadingGold_chk.Click += (s, e) => bloquearValores(s,e,ReadingGold_chk,ReadingSilver_chk,ReadingBronze_check);
+            this.ReadingBronze_check.Click += (s, e) => valorCambiado_checkbox(s, e, ReadingSilver_chk,ReadingBronze_check);
+            this.ReadingSilver_chk.Click += (s, e) => valorCambiado_checkbox(s, e, ReadingGold_chk, ReadingBronze_check);
+            this.ReadingGold_chk.Click += (s, e) => bloquearValores(s,e,ReadingGold_chk,ReadingSilver_chk, ReadingSilver_chk,ReadingSilver_chk);
             //Reading END
-            this.ListeningBronze_chk.Click += (s,e) => valorCambiado_checkbox(s,e,ListeningSilver_Chk);
-            this.ListeningSilver_Chk.Click += (s, e) => valorCambiado_checkbox(s, e, ListeningGold_chk);
-            this.ListeningGold_chk.Click += (s, e) => bloquearValores(s,e,ListeningGold_chk,ListeningSilver_Chk,ListeningBronze_chk);
+            this.ListeningBronze_chk.Click += (s,e) => valorCambiado_checkbox(s,e,ListeningSilver_Chk, ListeningBronze_chk);
+            this.ListeningSilver_Chk.Click += (s, e) => valorCambiado_checkbox(s, e, ListeningGold_chk, ListeningBronze_chk);
+            this.ListeningGold_chk.Click += (s, e) => bloquearValores(s,e,ListeningGold_chk,ListeningSilver_Chk,ListeningBronze_chk,ListeningSilver_Chk);
             //Listening END
-            this.WritingBronze_chk.Click += (s, e) => valorCambiado_checkbox(s,e,WritingSilver_Chk);
-            this.WritingSilver_Chk.Click += (s, e) => valorCambiado_checkbox(s,e,WritingGold_Chk);
-            this.WritingGold_Chk.Click += (s, e) => bloquearValores(s,e,WritingGold_Chk,WritingSilver_Chk,WritingBronze_chk);
+            this.WritingBronze_chk.Click += (s, e) => valorCambiado_checkbox(s,e,WritingSilver_Chk, WritingBronze_chk);
+            this.WritingSilver_Chk.Click += (s, e) => valorCambiado_checkbox(s,e,WritingGold_Chk, WritingBronze_chk);
+            this.WritingGold_Chk.Click += (s, e) => bloquearValores(s,e,WritingGold_Chk,WritingSilver_Chk,WritingBronze_chk,WritingSilver_Chk);
+
+
+            this.ReadingSilver_chk.Click += (s, e) => valorCambiado_checkbox(s, e, ReadingGold_chk, ReadingBronze_check);
         }
 
 

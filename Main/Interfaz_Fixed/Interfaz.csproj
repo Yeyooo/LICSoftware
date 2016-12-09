@@ -66,6 +66,7 @@
     <Compile Include="Evaluacion.Designer.cs">
       <DependentUpon>Evaluacion.cs</DependentUpon>
     </Compile>
+    <Compile Include="Evaluador.cs" />
     <Compile Include="FormInicioSesion.cs">
       <SubType>Form</SubType>
     </Compile>
