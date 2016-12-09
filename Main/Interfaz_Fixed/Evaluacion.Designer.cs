@@ -1911,6 +1911,7 @@ namespace Interfaz_Fixed
         #endregion
         
 
+
         #region Funcion De Prueba
         void AsignarTexto(TableLayoutPanel layoutPanel,Asset asset,TableLayoutPanel panelAlternativas)
         {

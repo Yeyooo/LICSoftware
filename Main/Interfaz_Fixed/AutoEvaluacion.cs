@@ -22,12 +22,37 @@ namespace Interfaz_Fixed
         private string Reading = "Reading";
         private string Writing = "Writing";
 
+        private List<CheckBox> listaCheckBox_Reading = new List<CheckBox>();
+        private List<CheckBox> listaCheckBox_Listening = new List<CheckBox>();
+        private List<CheckBox> listaCheckBox_Writing = new List<CheckBox>();
+
         public AutoEvaluacion()
         {
             InitializeComponent();
             Eventos();
+            LlenarLista();
         }
 
+        private void LlenarLista (){
+            foreach (Control control in this.Controls.OfType<CheckBox>() )
+            {
+                CheckBox controlAux = control as CheckBox;
+                if (Writing.CompareTo(control.Tag) == 0)
+                {
+                    listaCheckBox_Writing.Add(controlAux);
+                }
+                if (Listening.CompareTo(control.Tag) == 0)
+                {
+                    listaCheckBox_Listening.Add(controlAux);
+                }
+                if (Reading.CompareTo(control.Tag) == 0)
+                {
+                    listaCheckBox_Reading.Add(controlAux);
+                }
+            }
+
+        }
+            
         private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
         {
 
@@ -42,15 +67,19 @@ namespace Interfaz_Fixed
         {
 
         }
-        private void valorCambiado_checkbox(object sender, EventArgs e, CheckBox checkBox_desbloqueado)
+
+        //ARREGLAR BUG DONDE NO SE PUEDE DESCLICKEAR LOS CHECKBOX, 1 PREDETERMINADO NO OLVIDAR.
+
+        private void valorCambiado_checkbox(object sender, EventArgs e, CheckBox checkBox_desbloqueado,CheckBox checkbox_Anterior)
         {
             CheckBox cajaChequeo = sender as CheckBox;
-            cajaChequeo.Checked = true;
             if (!Evaluar_AutoButton.Enabled ) {
                 Evaluar_AutoButton.Enabled = true;
             }
-            if (cajaChequeo.Checked)
+            if (!cajaChequeo.Checked)
             {
+                cajaChequeo.Checked = true;
+                checkbox_Anterior.Enabled = false;
                 if (Writing.CompareTo(cajaChequeo.Tag) == 0)
                 {
                     NivelWriting++;
@@ -63,16 +92,32 @@ namespace Interfaz_Fixed
                 {
                     NivelReading++;
                 }
-
                 checkBox_desbloqueado.Enabled = true;
             }
             else
-            {
+            {                
+                cajaChequeo.Checked = false;
+                cajaChequeo.Enabled = true;
+                checkbox_Anterior.Enabled = true;
                 checkBox_desbloqueado.Enabled = false;
+                checkBox_desbloqueado.Checked = false;
+                if (Writing.CompareTo(cajaChequeo.Tag) == 0)
+                {
+                        NivelWriting--;
+                }
+                if (Listening.CompareTo(cajaChequeo.Tag) == 0)
+                { 
+                        NivelListening--;
+                }
+                if (Reading.CompareTo(cajaChequeo.Tag) == 0)
+                {
+                        NivelReading--;
+                }
+                
             }
         }
 
-        private void bloquearValores(object sender, EventArgs e, CheckBox GoldCheck, CheckBox SilverCheck, CheckBox BronzeCheck)
+        private void bloquearValores(object sender, EventArgs e, CheckBox GoldCheck, CheckBox SilverCheck, CheckBox BronzeCheck, CheckBox Silver_Anterior)
         {
             CheckBox cajaChequeada = sender as CheckBox;
             cajaChequeada.Checked = true;
@@ -81,7 +126,6 @@ namespace Interfaz_Fixed
                 if (BronzeCheck.Checked && SilverCheck.Checked) {
                     BronzeCheck.Enabled = false;
                     SilverCheck.Enabled = false;
-                    GoldCheck.Enabled = false;
                     if (Writing.CompareTo(cajaChequeada.Tag) == 0)
                     {
                         NivelWriting++;
@@ -120,9 +164,12 @@ namespace Interfaz_Fixed
 
         }
 
-        private void Enviando_Al_Tutor(object sender, EventArgs e, Agente tutor)
+        private void Enviando_Al_Tutor(object sender, EventArgs e)
         {
+            MessageBox.Show("Tu nivel en Listening es "+NivelListening+" y en Reading "+NivelReading+"y en Writing "+NivelWriting);
             //funcion para que acepte el tutor
         }
+
     }
+
 }
