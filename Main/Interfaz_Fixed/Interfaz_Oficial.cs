@@ -21,7 +21,10 @@ namespace Interfaz_Fixed
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormInicioSesion());
+            //Application.Run(new FormInicioSesion());
+            PlanDeEstudio PE = new PlanDeEstudio(3,3,2);
+            Application.Run(new LICGUI(PE));
+            //Application.Run(new AutoEvaluacion());
         }
     }
 }

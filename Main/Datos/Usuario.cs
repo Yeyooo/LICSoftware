@@ -16,8 +16,7 @@ namespace Datos
         public int NivelListening;
         public bool HizoAutoevaluacion;
 
-        public Usuario(string nombre) {
-            this.Nombre = nombre;
+        public Usuario() {
         }
 
         public Usuario( string pNombre, string pCorreo, string pPassword ) // inicializamos con los 3 niveles en 0(sin nivel) 
