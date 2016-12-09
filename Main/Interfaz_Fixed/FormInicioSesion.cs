@@ -28,23 +28,22 @@ namespace FormLogin
                     if (textBoxPw.Text == UsuarioDAL.verificarPassword(textBoxCorreo.Text))
                     {
                         MessageBox.Show("Has iniciado sesión!", "Inicio Succesful", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        //LICGUI FormPrincipal = new LICGUI();
-                        //FormPrincipal.Show();
-
-                    } else
+                        Usuario user = new Usuario(textBoxCorreo.Text);
+                        PlanDeEstudio PE = new PlanDeEstudio(user.getNivelWriting(), user.getNivelReading(), user.getNivelListening());
+                        Application.Run(new LICGUI(user));
+                    }
+                    else
                     {
                         MessageBox.Show("La contraseña no es la correcta", "Inicio Unsuccesful", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                     }
                 }
             }
-            
 
 
         }
 
         private void buttonParaRegistro_Click(object sender, EventArgs e)
         {
-            Console.WriteLine("me apretaste");
             new Registro_GUI().Show();
             
         }

@@ -10,7 +10,6 @@ namespace Datos
 {
     public class UsuarioDAL
     {
-
         public static int agregar(Usuario usuario) // insertar a BD para registrarse
         {
             int retorno = 0;
@@ -54,14 +53,9 @@ namespace Datos
                 {
                     MessageBox.Show("Problema con la contraseña de usuario", "Inicio de sesión fallado", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                     return null;
-                }
-
-                
+                }   
             }
-
-
         }
-
 
     }
 

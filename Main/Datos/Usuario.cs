@@ -14,9 +14,10 @@ namespace Datos
         public int NivelWriting;
         public int NivelReading;
         public int NivelListening;
+        public bool HizoAutoevaluacion;
 
-        public Usuario() {
-
+        public Usuario(string nombre) {
+            this.Nombre = nombre;
         }
 
         public Usuario( string pNombre, string pCorreo, string pPassword ) // inicializamos con los 3 niveles en 0(sin nivel) 
@@ -70,6 +71,17 @@ namespace Datos
             return this.Password;
         }
 
+        public bool realizo_Autoevaluacion()
+        {
+            if (HizoAutoevaluacion)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
 
     }
 }

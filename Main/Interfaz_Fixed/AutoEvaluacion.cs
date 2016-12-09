@@ -44,13 +44,14 @@ namespace Interfaz_Fixed
         }
         private void valorCambiado_checkbox(object sender, EventArgs e, CheckBox checkBox_desbloqueado)
         {
+            //BLOQUEAR EL ANTERIOR PARA QUE SIEMPRE SEA EN CASCADA TAMBIEN EL DESCENSO
             CheckBox cajaChequeo = sender as CheckBox;
-            cajaChequeo.Checked = true;
             if (!Evaluar_AutoButton.Enabled ) {
                 Evaluar_AutoButton.Enabled = true;
             }
-            if (cajaChequeo.Checked)
+            if (!cajaChequeo.Checked)
             {
+                cajaChequeo.Checked = true;
                 if (Writing.CompareTo(cajaChequeo.Tag) == 0)
                 {
                     NivelWriting++;
@@ -68,9 +69,26 @@ namespace Interfaz_Fixed
             }
             else
             {
+                cajaChequeo.Checked = false;
+                cajaChequeo.Enabled = true;
                 checkBox_desbloqueado.Enabled = false;
+                if (Writing.CompareTo(cajaChequeo.Tag) == 0)
+                {
+                    NivelWriting--;
+                }
+                if (Listening.CompareTo(cajaChequeo.Tag) == 0)
+                {
+                    NivelListening--;
+                }
+                if (Reading.CompareTo(cajaChequeo.Tag) == 0)
+                {
+                    NivelReading--;
+                }
             }
         }
+
+
+
 
         private void bloquearValores(object sender, EventArgs e, CheckBox GoldCheck, CheckBox SilverCheck, CheckBox BronzeCheck)
         {
@@ -88,11 +106,11 @@ namespace Interfaz_Fixed
                     }
                     if (Listening.CompareTo(cajaChequeada.Tag) == 0)
                     {
-                        NivelListening++;
+                        NivelListening--;
                     }
                     if (Reading.CompareTo(cajaChequeada.Tag) == 0)
                     {
-                        NivelReading++;
+                        NivelReading--;
                     }
                 }
             }
