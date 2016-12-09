@@ -1,9 +1,5 @@
 ﻿using Datos;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Interfaz_Fixed
@@ -12,7 +8,6 @@ namespace Interfaz_Fixed
     public class Enunciado_Assets : Control
     {
         private Label enunciado;
-
         public Enunciado_Assets(Asset asset)
         {
             enunciado.Text = asset.getEnunciadoPregunta();
@@ -38,12 +33,23 @@ namespace Interfaz_Fixed
 
     public class NuevoRadio_Button : RadioButton
     {
-        int id;
+        private int id;
+        private string RespuestaCorrecta { get; set; }
         public NuevoRadio_Button(string alternativa, Asset asset)
         {
             this.Text = alternativa;
             this.id = asset.getId();
             this.Dock = DockStyle.Fill;
+        }
+        bool esCorrecta()
+        {
+            if (RespuestaCorrecta.CompareTo(this.Text)==0)
+            {
+                return true;
+            }
+            else{
+                return false;
+            }
         }
 
 

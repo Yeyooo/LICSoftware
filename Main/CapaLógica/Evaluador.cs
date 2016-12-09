@@ -1,29 +1,29 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
+using System.Windows.Forms;
 
 namespace CapaLógica
 {
-
-    //ESTA CLASE SOLO EVALUA Y ENVIA AL AGENTE
     class Evaluador
     {
-        private int Correctas;
-        private int Incorrectas;
-
+        private List<RadioButton> listaButton;
+        
         public Evaluador()
         {
-
+            listaButton = new List<RadioButton>();
         }
-        
-        //ENVIAR AL AGENTE
-        private void EnviarInforme_Agente(Agente Tutor)
+
+        public void recorrerPreguntas(TableLayoutPanel panel)
         {
+            for (int i = 0; i < 4; i++)
+            {
+                RadioButton radioButton = panel.GetControlFromPosition(0, i) as RadioButton;
+                listaButton.Add(radioButton);
+            }
+            foreach (RadioButton radioButton)
+            {
 
+            }
         }
-        
+
     }
-    
 }
