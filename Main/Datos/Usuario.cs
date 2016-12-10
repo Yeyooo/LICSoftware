@@ -14,9 +14,22 @@ namespace Datos
         public int NivelWriting;
         public int NivelReading;
         public int NivelListening;
+        public bool HizoAutoevaluacion;
 
-        public Usuario() {
+        public Usuario( string pCorreoIngresado )
+        {
+            List<string> tmp = UsuarioDAL.datosUsuario(pCorreoIngresado);
 
+            this.Nombre = tmp[0];
+            this.Correo = tmp[1];
+            this.Password = tmp[2];
+
+            List<int> tmpInt = UsuarioDAL.nivelesUsuario(pCorreoIngresado);
+
+            this.NivelWriting = tmpInt[0];
+            this.NivelReading = tmpInt[1];
+            this.NivelListening = tmpInt[2];
+             
         }
 
         public Usuario( string pNombre, string pCorreo, string pPassword ) // inicializamos con los 3 niveles en 0(sin nivel) 
@@ -70,6 +83,17 @@ namespace Datos
             return this.Password;
         }
 
+        public bool realizo_Autoevaluacion()
+        {
+            if (HizoAutoevaluacion)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
 
     }
 }

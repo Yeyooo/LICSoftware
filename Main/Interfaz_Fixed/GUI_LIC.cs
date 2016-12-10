@@ -15,11 +15,17 @@ namespace Interfaz_Fixed
     {
         private PlanDeEstudio PDE;
 
+        public LICGUI(Usuario user,PlanDeEstudio planEstudio)
+        {
+            PDE = planEstudio;
+            InitializeComponent();
+            this.Usuario_Label.Text = this.Usuario_Label.Text + ""+user.getNombre();
+        }
+
         public LICGUI(PlanDeEstudio planEstudio)
         {
             PDE = planEstudio;
             InitializeComponent();
-
         }
 
         private void EntrenarListening_Click(object sender, EventArgs e)

@@ -13,6 +13,33 @@ namespace Datos
 
         }
 
+        // metodo para cargar desde disco duro evaluaciones
+        public static Asset BuscarAssetPorID(int idAsset) // retorna Asset dado un ID
+        {
+            string consulta = "SELECT DISTINCT pregunta.idpregunta, enunciado, habilidad, nivel, metodologia, alternativa_correcta.idalternativa FROM pregunta, alternativas, alternativa_correcta WHERE alternativa_correcta.idalternativa = alternativas.idalternativa and alternativas.idpregunta = pregunta.idpregunta and pregunta.idpregunta = "+idAsset+" ;";
+            // metodologia tiene que ir en la pregunta...BD
+            SqlCommand _comando = new SqlCommand(String.Format(consulta), Conexión.obtenerConexion("contenido"));
+            SqlDataReader _reader = _comando.ExecuteReader();
+
+            while (_reader.Read())
+            {
+                Asset pAsset = new Asset();
+                pAsset.Id = _reader.GetInt32(0);
+                pAsset.EnunciadoPregunta = _reader.GetString(1);
+                pAsset.Alternativas = AssetDAL.BuscarTodasLasAlternativasDeUnAsset(_reader.GetInt32(0));
+                pAsset.HabilidadAsociada = _reader.GetString(2);
+                pAsset.NivelHabilidad = _reader.GetInt32(3);
+                pAsset.EstrategiaEnseñanza = _reader.GetString(4);
+                pAsset.RespuestaCorrecta = _reader.GetInt32(5);
+                pAsset.Teoria = AssetDAL.getTeoriaAssetBD(_reader.GetInt32(5));
+
+                return pAsset;
+            }
+
+            return null;
+        }
+
+
         public static string BuscarUrlDeUnAsset(int pIdPregunta) // Devuelve la URL de un Asset
         {
             SqlCommand _comando = new SqlCommand(String.Format("SELECT url from urls, pregunta WHERE urls.idpregunta = pregunta.idpregunta and pregunta.idpregunta = " + pIdPregunta + ";"), Conexión.obtenerConexion("contenido"));

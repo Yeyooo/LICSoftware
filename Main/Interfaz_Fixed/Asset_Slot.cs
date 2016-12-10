@@ -30,12 +30,22 @@ namespace Interfaz_Fixed
             alternativasAux = asset.getAlternativas();
             foreach (Alternativa alternativa in alternativasAux)
             {
-                RadioButton alternativaButton = new RadioButton();
-                alternativaButton.Text =  alternativa.getTxtAlternativa();
-                alternativaButton.Dock = DockStyle.Fill;
-                panel.Controls.Add(alternativaButton);
+                panel.Controls.Add(new NuevoRadio_Button(alternativa.getTxtAlternativa(), asset));
             }
         }
+
+    }
+
+    public class NuevoRadio_Button : RadioButton
+    {
+        int id;
+        public NuevoRadio_Button(string alternativa, Asset asset)
+        {
+            this.Text = alternativa;
+            this.id = asset.getId();
+            this.Dock = DockStyle.Fill;
+        }
+
 
     }
 }

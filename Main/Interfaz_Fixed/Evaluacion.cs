@@ -46,21 +46,6 @@ namespace Interfaz_Fixed
             Close();
         }*/
 
-        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void tableLayoutPanel1_Paint_1(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void tiempoRestante_tick(object sender, EventArgs e)
         {
             TiempoRestante--; //Segundos para los minutos
@@ -88,15 +73,17 @@ namespace Interfaz_Fixed
         {
             this.Dispose();
         }
-
-        private void tableLayout_Pregunta20_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
+        
         
         private void EventoClick_Asset(object sender, EventArgs e, Asset asset)
         {
-            MessageBox.Show(asset.getTeoria());
+            Form material_Apoyo = new Material_Apoyo(asset);
+            material_Apoyo.Show();
+        }
+
+        private void SinMaterial_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("La pregunta se realiza sin ningun material","Material", MessageBoxButtons.OK,MessageBoxIcon.Stop);
         }
         
     }
