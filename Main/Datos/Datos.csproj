@@ -52,6 +52,9 @@
     <Compile Include="KbReader.cs" />
     <Compile Include="PlanDeEstudio.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Slots_Alternativas.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Usuario.cs" />
     <Compile Include="UsuarioDAL.cs" />
   </ItemGroup>

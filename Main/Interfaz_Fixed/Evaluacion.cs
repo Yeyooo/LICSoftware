@@ -1,4 +1,5 @@
-﻿using Datos;
+﻿using CapaLógica;
+using Datos;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -85,7 +86,16 @@ namespace Interfaz_Fixed
         {
             MessageBox.Show("La pregunta se realiza sin ningun material","Material", MessageBoxButtons.OK,MessageBoxIcon.Stop);
         }
-        
+
+        private void Entregar_Boton_Click(object sender, EventArgs e)
+        {
+            EvaluadorPruebasEspecificas evaluador = new EvaluadorPruebasEspecificas();
+            evaluador.recorrerPreguntas(this.layout_Alternativas1);
+            evaluador.recorrerPreguntas(this.layout_Alternativas2);
+            evaluador.recorrerPreguntas(this.layout_Alternativas3);
+            evaluador.Evaluar();
+            //evaluador.MostrarResultados();
+        }
     }
 
 }

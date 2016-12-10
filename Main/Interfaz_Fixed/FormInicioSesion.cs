@@ -28,7 +28,7 @@ namespace FormLogin
                     if (textBoxPw.Text == UsuarioDAL.verificarPassword(textBoxCorreo.Text))
                     {
                         MessageBox.Show("Has iniciado sesión!", "Inicio Succesful", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        Usuario user = new Usuario();
+                        Usuario user = new Usuario(textBoxCorreo.Text);
                         PlanDeEstudio PE = new PlanDeEstudio(user.getNivelWriting(), user.getNivelReading(), user.getNivelListening());
                         Application.Run(new LICGUI(user, PE));
                     }
