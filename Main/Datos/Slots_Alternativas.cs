@@ -10,25 +10,23 @@ namespace Datos
     public class Slots_Alternativas : RadioButton
     {
         private int id;
-        private int IdAlternativa;
-        private int RespuestaCorrecta;
         private int NivelDificultad;
+        private string RespuestaCorrecta_Escritura;
         private string Habilidad;
 
-        public Slots_Alternativas(string Alternativa, Asset asset,int IDAlternativa)
+        public Slots_Alternativas(string Alternativa, Asset asset, List<Alternativa> alternativasAux)
         {
             this.Text = Alternativa;
             this.id = asset.getId();
             this.Habilidad = asset.getHabilidadAsociada();
             this.NivelDificultad = asset.getNivelHabilidad();
-            this.IdAlternativa = IDAlternativa;
             this.Dock = DockStyle.Fill;
-            this.RespuestaCorrecta = asset.getRespuestaCorrecta();
+            this.RespuestaCorrecta_Escritura = alternativasAux[asset.getRespuestaCorrecta()].getTxtAlternativa();
         }
 
         public bool esCorrecta()
         {
-            if (this.IdAlternativa == this.RespuestaCorrecta)
+            if (this.Text == RespuestaCorrecta_Escritura)
             {
                 return true;
             }
@@ -40,9 +38,9 @@ namespace Datos
 
     }
 
+
     public class Alternativas_Slots
     {
-
         private List<Alternativa> alternativasAux;
 
         public Alternativas_Slots(Asset asset, TableLayoutPanel panel)
@@ -51,7 +49,7 @@ namespace Datos
             alternativasAux = asset.getAlternativas();
             foreach (Alternativa alternativa in alternativasAux)
             {
-                panel.Controls.Add(new Slots_Alternativas(alternativa.getTxtAlternativa(), asset,alternativa.getIdAlternativa()));
+                panel.Controls.Add(new Slots_Alternativas(alternativa.getTxtAlternativa(), asset,alternativasAux));
             }
         }
 

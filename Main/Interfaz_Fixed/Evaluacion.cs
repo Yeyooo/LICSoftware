@@ -89,12 +89,12 @@ namespace Interfaz_Fixed
 
         private void Entregar_Boton_Click(object sender, EventArgs e)
         {
-            EvaluadorPruebasEspecificas evaluador = new EvaluadorPruebasEspecificas();
-            evaluador.recorrerPreguntas(this.layout_Alternativas1);
+           EvaluadorPruebasEspecificas evaluador = new EvaluadorPruebasEspecificas();
+            evaluador.recorrerPreguntas(this.Layout_Alternativas1);
             evaluador.recorrerPreguntas(this.layout_Alternativas2);
             evaluador.recorrerPreguntas(this.layout_Alternativas3);
             evaluador.Evaluar();
-            //evaluador.MostrarResultados();
+            evaluador.MostrarResultados();
         }
     }
 

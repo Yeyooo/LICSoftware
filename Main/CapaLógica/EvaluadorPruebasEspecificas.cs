@@ -25,8 +25,7 @@ namespace CapaLógica
                 Slots_Alternativas radioButton = panel.GetControlFromPosition(0, i) as Slots_Alternativas;
                 listaButton.Add(radioButton);
             }
-            //MessageBox.Show("Tiene  " + panel.RowCount+" Lineas y la lista tiene "+listaButton.Count);
-           
+            
         }
 
         public void Evaluar()
@@ -46,7 +45,7 @@ namespace CapaLógica
 
         public void MostrarResultados()
         {
-            MessageBox.Show(""+RespuestasCorrectas+" y tiene "+RespuestasIncorrectas+" respuestas incorrectas");
+            MessageBox.Show("Respuestas correctas :"+RespuestasCorrectas+" y tiene "+RespuestasIncorrectas+" respuestas incorrectas");
         }
     }
     

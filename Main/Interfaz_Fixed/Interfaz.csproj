@@ -63,6 +63,12 @@
     <Compile Include="Evaluacion.Designer.cs">
       <DependentUpon>Evaluacion.cs</DependentUpon>
     </Compile>
+    <Compile Include="EvaluacionEnfocada.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EvaluacionEnfocada.Designer.cs">
+      <DependentUpon>EvaluacionEnfocada.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormInicioSesion.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -94,6 +100,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Evaluacion.resx">
       <DependentUpon>Evaluacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EvaluacionEnfocada.resx">
+      <DependentUpon>EvaluacionEnfocada.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormInicioSesion.resx">
       <DependentUpon>FormInicioSesion.cs</DependentUpon>
