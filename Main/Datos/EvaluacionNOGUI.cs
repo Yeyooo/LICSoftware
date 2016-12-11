@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Datos
 {
-    class EvaluacionNOGUI
+    public class EvaluacionNOGUI
     {
         public List<Asset> PreguntasWriting;
         public List<Asset> PreguntasReading;
@@ -14,6 +14,7 @@ namespace Datos
 
         public EvaluacionNOGUI(PlanDeEstudio PDE) // por defecto carga 10, 10 y 10
         {
+
             bool flag = false;
             while (flag == false) {
                 this.PreguntasWriting = EvaluacionPorHabilidad(PDE.getDicWriting());
