@@ -15,6 +15,7 @@ namespace Datos
         public int NivelReading;
         public int NivelListening;
         public bool HizoAutoevaluacion;
+        public PlanDeEstudio PDE;
 
         public Usuario() { }
 
@@ -31,7 +32,8 @@ namespace Datos
             this.NivelWriting = tmpInt[0];
             this.NivelReading = tmpInt[1];
             this.NivelListening = tmpInt[2];
-             
+
+            this.PDE = new PlanDeEstudio(this.NivelWriting, this.NivelReading, this.NivelListening); 
         }
 
         public Usuario( string pNombre, string pCorreo, string pPassword ) // inicializamos con los 3 niveles en 0(sin nivel) 
@@ -95,6 +97,11 @@ namespace Datos
             {
                 return false;
             }
+        }
+
+        public PlanDeEstudio getPlanDeEstudio()
+        {
+            return this.PDE;
         }
 
     }

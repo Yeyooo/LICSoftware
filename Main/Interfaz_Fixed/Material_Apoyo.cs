@@ -21,7 +21,7 @@ namespace Interfaz_Fixed
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Hablador("Soy la voz de la muñeca system, ahora ven y toca mi teclado retroiluminado pequeño hijo de la perra");
+            Hablador("Soy el Alvarez culiao maraco hijo de la marciana conchatumadre hedionda a hoyo y me gusta el Deus");
         }
     }
 }
