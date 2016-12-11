@@ -88,7 +88,7 @@
             this.Panel_habilidades.Controls.Add(this.Icono_Liga_Listening);
             this.Panel_habilidades.Location = new System.Drawing.Point(4, 26);
             this.Panel_habilidades.Name = "Panel_habilidades";
-            this.Panel_habilidades.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.Panel_habilidades.Padding = new System.Windows.Forms.Padding(3);
             this.Panel_habilidades.Size = new System.Drawing.Size(819, 435);
             this.Panel_habilidades.TabIndex = 0;
             this.Panel_habilidades.Text = "Habilidades";
@@ -171,7 +171,7 @@
             this.General_Panel.Controls.Add(this.button1);
             this.General_Panel.Location = new System.Drawing.Point(4, 26);
             this.General_Panel.Name = "General_Panel";
-            this.General_Panel.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.General_Panel.Padding = new System.Windows.Forms.Padding(3);
             this.General_Panel.Size = new System.Drawing.Size(819, 435);
             this.General_Panel.TabIndex = 1;
             this.General_Panel.Text = "General";
@@ -224,10 +224,10 @@
             this.Usuario_Label.ForeColor = System.Drawing.SystemColors.Window;
             this.Usuario_Label.Location = new System.Drawing.Point(13, 16);
             this.Usuario_Label.Name = "Usuario_Label";
-            this.Usuario_Label.Size = new System.Drawing.Size(159, 29);
+            this.Usuario_Label.Size = new System.Drawing.Size(362, 35);
             this.Usuario_Label.TabIndex = 0;
             this.Usuario_Label.Text = "Usuario:";
-            this.Usuario_Label.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.Usuario_Label.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // LICGUI
             // 
@@ -246,6 +246,7 @@
             this.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = " ";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Cerrando_GUI);
             this.panel1.ResumeLayout(false);
             this.Entrenamiento_Pane.ResumeLayout(false);
             this.Panel_habilidades.ResumeLayout(false);

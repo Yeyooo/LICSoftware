@@ -19,11 +19,11 @@ namespace Interfaz_Fixed
         private int MinutosRestante = 0;
         private int SegundosRestantes = 60;
        
-        public Evaluacion(string EvaluacionNombre,PlanDeEstudio PDE)
+        public Evaluacion(string EvaluacionNombre,EvaluacionNOGUI Assets)
         {
             InitializeComponent();
             Asignar_Labels(EvaluacionNombre);
-            //Asignar_Loop(PDE);
+            Asignar_Loop(Assets.getPreguntasReading(),Assets.getPreguntasWriting(),Assets.getPreguntasListening());
         }
 
         /*
@@ -89,12 +89,11 @@ namespace Interfaz_Fixed
 
         private void Entregar_Boton_Click(object sender, EventArgs e)
         {
-           EvaluadorPruebasEspecificas evaluador = new EvaluadorPruebasEspecificas();
+           /* EvaluadorPruebasEspecificas evaluador = new EvaluadorPruebasEspecificas();
             evaluador.recorrerPreguntas(this.Layout_Alternativas1);
             evaluador.recorrerPreguntas(this.layout_Alternativas2);
             evaluador.recorrerPreguntas(this.layout_Alternativas3);
-            evaluador.Evaluar();
-            evaluador.MostrarResultados();
+            evaluador.Evaluar();*/
         }
     }
 

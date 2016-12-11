@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Datos
 {
-    class EvaluacionNOGUI
+    public class EvaluacionNOGUI
     {
         public List<Asset> PreguntasWriting;
         public List<Asset> PreguntasReading;

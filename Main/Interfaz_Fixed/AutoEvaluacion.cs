@@ -79,12 +79,8 @@ namespace Interfaz_Fixed
             int NivelWriting = determinarNivel(WritingBronze_chk,WritingSilver_Chk,WritingGold_Chk);
             int NivelReading = determinarNivel(ReadingBronze_check, ReadingSilver_chk, ReadingGold_chk);
             int NivelListening = determinarNivel(ListeningBronze_chk, ListeningSilver_Chk, ListeningGold_chk);
-            MessageBox.Show(""+NivelWriting+"en Writing y "+NivelReading+" en reading y "+NivelListening+" en listening");
             UsuarioDAL.setNivelesUsuarioEnBD(NivelWriting,NivelReading,NivelListening,Correo);
-
-            // aqui se debe mandar el sus niveles a la BD
-            // con el siguiente metodo actualizas la BD con los niveles que te arroje la autoevaluacion para el correo que se registro
-            //public static void setNivelesUsuarioEnBD(int NivelWriting, int NivelReading, int NivelListening, string Correo)
+            
     }
 
         private void Cerrando(object sender, FormClosedEventArgs e)
