@@ -2152,21 +2152,23 @@ namespace Interfaz_Fixed
                     if (asset.getUrlArchivo() != null) {
                         //SI EL ARCHIVO ES UNA IMAGEN
                         if (asset.getUrlArchivo().EndsWith(".jpg")) {
-                                    
+                            Button control = layoutPanel.GetControlFromPosition(0, i) as Button;
+                            control.Text = "Material de Apoyo";
+                            control.Click += (s, e) => Evento_MaterialImagen(s, e, asset);
                         }
                         //SI EL ARCHIVO ES UN AUDIO
                         else
                         {
                             Button control = layoutPanel.GetControlFromPosition(0, i) as Button;
                             control.Text = "Material de Apoyo";
-                            control.Click += (s, e) => EventoClick_Asset(s, e, asset);
+                            control.Click += (s, e) => Evento_MaterialAudio(s, e, asset);
                         }
                     }
                     else
                     {
                         Button control = layoutPanel.GetControlFromPosition(0, i) as Button;
                         control.Text = "Material de Apoyo";
-                        control.Click += (s, e) => EventoClick_Asset(s,e,asset);
+                        control.Click += (s, e) => Evento_SinMaterial(s,e);
                     }
                 }
                 if (i == 1)

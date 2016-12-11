@@ -31,7 +31,7 @@ namespace FormLogin
                         Usuario user = new Usuario(textBoxCorreo.Text);
                         System.Console.WriteLine("nivel writing {0}, nivel reading {1}, nivel listening {2}", user.getNivelWriting(), user.getNivelReading(), user.getNivelListening());
                         //PlanDeEstudio PE = new PlanDeEstudio(user.getNivelWriting(), user.getNivelReading(), user.getNivelListening());
-                        new LICGUI(user, user.getPlanDeEstudio()).Show();
+                        new LICGUI(user).Show();
                         this.Hide();
                     }
                     else
@@ -47,8 +47,7 @@ namespace FormLogin
         private void buttonParaRegistro_Click(object sender, EventArgs e)
         {
             new Registro_GUI().Show();
-            this.Hide();
-            
+            this.Hide();    
         }
     }
 }
