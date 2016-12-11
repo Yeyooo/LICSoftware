@@ -13,67 +13,52 @@ namespace Interfaz_Fixed
 {
     public partial class LICGUI : Form
     {
-        private PlanDeEstudio PDE;
+        private Usuario userInternal;
+        private EvaluacionNOGUI listaInternal;
 
-        public LICGUI(Usuario user,PlanDeEstudio planEstudio)
+        public LICGUI(Usuario user)
         {
-            PDE = planEstudio;
+            userInternal = user;
             InitializeComponent();
             this.Usuario_Label.Text = this.Usuario_Label.Text + ""+user.getNombre();
         }
 
-        public LICGUI(PlanDeEstudio planEstudio)
-        {
-            PDE = planEstudio;
-            InitializeComponent();
-        }
-
         private void EntrenarListening_Click(object sender, EventArgs e)
         {
-            /*
             try
             {
-                Evaluacion evaluacionListening = new Evaluacion("Listening", diccionarios, 3);
+                EvaluacionEnfocada evaluacionListening = new EvaluacionEnfocada("Listening",listaInternal.getPreguntasListening());
                 evaluacionListening.Show();
             }
             catch (Exception)
             {
                 MessageBox.Show("No se pudo Crear la Evaluacion, favor enviar un reporte","Error Fatal", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
-            */
-            /*Evaluacion evaluacionListening = new EvaluacionEnfocada("Listening",PDE);
-            evaluacionListening.Show();*/
         }
 
         private void EntrenarReading_Click(object sender, EventArgs e)
         {
-            /*
             try
             {
-                Evaluacion evaluacionReading = new Evaluacion("Reading", diccionarios, 2);
+                EvaluacionEnfocada evaluacionReading = new EvaluacionEnfocada("Reading", listaInternal.getPreguntasReading());
                 evaluacionReading.Show();
             }
             catch (Exception)
             {
                 MessageBox.Show("No se pudo Crear la Evaluacion, favor enviar un reporte","ERROR FATAL", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-            }*/
-            Evaluacion evaluacionReading = new Evaluacion("Reading",PDE);
-            evaluacionReading.Show();
+            }
         }
 
         private void EntrenarWriting_Click(object sender, EventArgs e)
         {
-            /*
             try {
-                Evaluacion evaluacionWriting = new Evaluacion("Writing", diccionarios, 4);
+                EvaluacionEnfocada evaluacionWriting = new EvaluacionEnfocada("Writing", listaInternal.getPreguntasWriting());
                 evaluacionWriting.Show();
             }
             catch (Exception)
             {
                 MessageBox.Show("No se pudo Crear la Evaluacion, favor enviar un reporte", "ERROR FATAL", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-            }*/
-            Evaluacion evaluacionWriting = new Evaluacion("Writing",PDE);
-            evaluacionWriting.Show();
+            }
         }
         private void EntrenamientoGeneral_Click(object sender, EventArgs e)
         {
