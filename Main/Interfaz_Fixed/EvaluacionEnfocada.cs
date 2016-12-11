@@ -18,22 +18,21 @@ namespace Interfaz_Fixed
         private int MinutosRestante = 0;
         private int SegundosRestantes = 60;
 
-        public EvaluacionEnfocada(string nombre,List<Asset> Assets)
+        public EvaluacionEnfocada(string Nombre,List<Asset> Assets)
         {
             InitializeComponent();
             Asignar_Loop(Assets);
-            tipoEvaluacion_Label.Text = tipoEvaluacion_Label + nombre;
+            tipoEvaluacion_Label.Text = tipoEvaluacion_Label+Nombre;
         }
 
         private void Evento_MaterialAudio(object sender, EventArgs e, Asset asset)
         {
-            string path = Environment.CurrentDirectory +"/Recursos/Audios/"+asset.getUrlArchivo()+".mp3";
-            new Material_ApoyoAudio(path).Show();
+            string path = Environment.CurrentDirectory +"/Recursos/Audios/"+asset.getUrlArchivo();
         }
 
         private void Evento_MaterialImagen(object sender, EventArgs e, Asset asset)
         {
-            string path = Environment.CurrentDirectory + "/Recursos/Imagen/"+asset.getUrlArchivo()+".jpg";
+            string path = Environment.CurrentDirectory + "/Recursos/Imagen/" + asset.getUrlArchivo();
             new Material_ApoyoImagen(path).Show();
         }
         
