@@ -23,7 +23,7 @@ namespace FormRegistro
         {
             if (textBoxPassword.Text == textBoxConfirme.Text)
             {
-                Usuario usuario = new Usuario(textBoxCorreo.Text);
+                Usuario usuario = new Usuario();
                 usuario.Nombre = textBoxNombre.Text;
                 usuario.Correo = textBoxCorreo.Text;
                 usuario.Password = textBoxPassword.Text;
