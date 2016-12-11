@@ -51,8 +51,6 @@ namespace Datos
                     }
 
                 }
-
->>>>>>> refs/remotes/origin/master
             }
 
             return null;

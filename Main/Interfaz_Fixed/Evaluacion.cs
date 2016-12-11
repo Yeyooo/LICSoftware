@@ -23,7 +23,7 @@ namespace Interfaz_Fixed
         {
             InitializeComponent();
             Asignar_Labels(EvaluacionNombre);
-            Asignar_Loop(PDE);
+            //Asignar_Loop(PDE);
         }
 
         /*
