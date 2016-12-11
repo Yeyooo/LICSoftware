@@ -34,9 +34,7 @@ namespace Interfaz_Fixed
                     Console.WriteLine("IdPregunta: " + IdPreguntasConjunto[i]);
                 }
             }
-
-            // prueba de que el metodo que te nombre en la clase autoevaluacion funciona
-            //UsuarioDAL.setNivelesUsuarioEnBD(1, 1, 1, "gay@test.cl");
+            
 
         }
     }
