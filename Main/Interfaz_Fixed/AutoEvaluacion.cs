@@ -1,4 +1,5 @@
 ﻿using CapaLógica;
+using Datos;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,34 +15,12 @@ namespace Interfaz_Fixed
     public partial class AutoEvaluacion : Form
     {
 
-        private int NivelWriting = 0;
-        private int NivelListening = 0;
-        private int NivelReading = 0;
-
-        private string Listening = "Listening";
-        private string Reading = "Reading";
-        private string Writing = "Writing";
-
-        public AutoEvaluacion()
+        public AutoEvaluacion(string Correo)
         {
             InitializeComponent();
-            Eventos();
+            Eventos(Correo);
         }
 
-        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void Evaluar_Click(object sender, EventArgs e, TableLayoutPanel panel)
-        {
-            //Aqui va la evaluacion al Agente con 3 String distintos 
-        }
-
-        private void CheckBox_Changed(object sender, EventArgs e)
-        {
-
-        }
         private void valorCambiado_checkbox(object sender, EventArgs e, CheckBox checkBox_desbloqueado)
         {
             //BLOQUEAR EL ANTERIOR PARA QUE SIEMPRE SEA EN CASCADA TAMBIEN EL DESCENSO
@@ -52,19 +31,6 @@ namespace Interfaz_Fixed
             if (!cajaChequeo.Checked)
             {
                 cajaChequeo.Checked = true;
-                if (Writing.CompareTo(cajaChequeo.Tag) == 0)
-                {
-                    NivelWriting++;
-                }
-                if (Listening.CompareTo(cajaChequeo.Tag) == 0)
-                {
-                    NivelListening++;
-                }
-                if (Reading.CompareTo(cajaChequeo.Tag) == 0)
-                {
-                    NivelReading++;
-                }
-
                 checkBox_desbloqueado.Enabled = true;
             }
             else
@@ -72,51 +38,6 @@ namespace Interfaz_Fixed
                 cajaChequeo.Checked = false;
                 cajaChequeo.Enabled = true;
                 checkBox_desbloqueado.Enabled = false;
-                if (Writing.CompareTo(cajaChequeo.Tag) == 0)
-                {
-                    NivelWriting--;
-                }
-                if (Listening.CompareTo(cajaChequeo.Tag) == 0)
-                {
-                    NivelListening--;
-                }
-                if (Reading.CompareTo(cajaChequeo.Tag) == 0)
-                {
-                    NivelReading--;
-                }
-            }
-        }
-
-
-
-
-        private void bloquearValores(object sender, EventArgs e, CheckBox GoldCheck, CheckBox SilverCheck, CheckBox BronzeCheck)
-        {
-            CheckBox cajaChequeada = sender as CheckBox;
-            cajaChequeada.Checked = true;
-            if (cajaChequeada.Checked)
-            {
-                if (BronzeCheck.Checked && SilverCheck.Checked) {
-                    BronzeCheck.Enabled = false;
-                    SilverCheck.Enabled = false;
-                    GoldCheck.Enabled = false;
-                    if (Writing.CompareTo(cajaChequeada.Tag) == 0)
-                    {
-                        NivelWriting++;
-                    }
-                    if (Listening.CompareTo(cajaChequeada.Tag) == 0)
-                    {
-                        NivelListening--;
-                    }
-                    if (Reading.CompareTo(cajaChequeada.Tag) == 0)
-                    {
-                        NivelReading--;
-                    }
-                }
-            }
-            else
-            {
-                cajaChequeada.Checked = false;
             }
         }
 
@@ -138,16 +59,33 @@ namespace Interfaz_Fixed
 
         }
 
-        private void Enviando_Al_Tutor(object sender, EventArgs e, Agente tutor)
+        private void checkBox_Gold(object sender, EventArgs e, CheckBox anterior)
         {
-            //funcion para que acepte el tutor
+            CheckBox caja = sender as CheckBox;
+            if (!caja.Checked)
+            {
+                caja.Checked = true;
+                anterior.Enabled = false;
+            }
+            else
+            {
+                caja.Checked = false;
+                anterior.Enabled = true;
+            }
         }
 
-        private void Evaluar_AutoButton_Click(object sender, EventArgs e)
+        private void Evaluar_AutoButton_Click(object sender, EventArgs e, string Correo)
         {
-            // aqui se debe mandar el sus niveles a la BD
-            // con el siguiente metodo actualizas la BD con los niveles que te arroje la autoevaluacion para el correo que se registro
-            //public static void setNivelesUsuarioEnBD(int NivelWriting, int NivelReading, int NivelListening, string Correo)
+            int NivelWriting = determinarNivel(WritingBronze_chk,WritingSilver_Chk,WritingGold_Chk);
+            int NivelReading = determinarNivel(ReadingBronze_check, ReadingSilver_chk, ReadingGold_chk);
+            int NivelListening = determinarNivel(ListeningBronze_chk, ListeningSilver_Chk, ListeningGold_chk);
+            UsuarioDAL.setNivelesUsuarioEnBD(NivelWriting,NivelReading,NivelListening,Correo);
+            
+    }
+
+        private void Cerrando(object sender, FormClosedEventArgs e)
+        {
+            System.Environment.Exit(1);
         }
     }
 }

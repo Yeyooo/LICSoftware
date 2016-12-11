@@ -1,5 +1,4 @@
-﻿using Datos;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -11,17 +10,18 @@ using System.Windows.Forms;
 
 namespace Interfaz_Fixed
 {
-    public partial class Material_Apoyo : Form
+    public partial class Material_ApoyoImagen : Form
     {
-        public Material_Apoyo(Asset asset)
+        private string path;
+
+        public Material_ApoyoImagen()
         {
             InitializeComponent();
-            
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        public Material_ApoyoImagen(string path)
         {
-            Hablador("Allahu");
+            this.pictureBox.Image = Image.FromFile(@path);
         }
     }
 }

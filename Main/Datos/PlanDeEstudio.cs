@@ -39,6 +39,48 @@ namespace Datos
             }
         }
 
+        public void setDiccionarioCompletoFalse(Dictionary<int, Asset> dic)
+        {
+            foreach (KeyValuePair<int, Asset> tmp in dic)
+            {
+                tmp.Value.setSalio(false);
+            }
+        }
+
+        public static bool sePuedenGenerarParaUnaHabilidad10Preguntas(Dictionary<int, Asset> dic)
+        {
+            int contador = 0;
+            foreach (KeyValuePair<int, Asset> tmpw in dic)
+            {
+                if (tmpw.Value.salio() == false)
+                {
+                    contador++;
+                }
+            }
+            if (contador >= 10)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+
+        }
+
+        public static bool sePuedenGenerarParaTodasLasHabilidades10Preguntas(PlanDeEstudio PDE)
+        {
+
+            if ( sePuedenGenerarParaUnaHabilidad10Preguntas(PDE.getDicWriting()) == true && sePuedenGenerarParaUnaHabilidad10Preguntas(PDE.getDicReading()) == true && sePuedenGenerarParaUnaHabilidad10Preguntas(PDE.getDicListening()) == true )
+            {
+                return true;
+            }else
+            {
+                return false;
+            }
+
+        }
+
         public Dictionary<int, Asset> getDicWriting()
         {
             return this.DicWriting;

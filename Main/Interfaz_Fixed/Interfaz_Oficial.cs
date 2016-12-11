@@ -23,8 +23,6 @@ namespace Interfaz_Fixed
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new FormInicioSesion());
             PlanDeEstudio PE = new PlanDeEstudio(3, 3, 2);
-            //Application.Run(new LICGUI(PE));
-            //Application.Run(new AutoEvaluacion());
 
             Dictionary<int, Asset> dic = PE.getDicReading();
             List<int> IdPreguntasConjunto;
@@ -39,12 +37,6 @@ namespace Interfaz_Fixed
 
             // prueba de que el metodo que te nombre en la clase autoevaluacion funciona
             //UsuarioDAL.setNivelesUsuarioEnBD(1, 1, 1, "gay@test.cl");
-
-
-
-
-            
-
 
         }
     }

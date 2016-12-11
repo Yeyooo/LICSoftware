@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Datos;
+using System;
+using System.Collections.Generic;
 using System.Windows.Forms;
 
 namespace Interfaz_Fixed
@@ -81,6 +83,7 @@ namespace Interfaz_Fixed
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.AutoScroll = true;
+            this.tableLayoutPanel1.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.InsetDouble;
             this.tableLayoutPanel1.ColumnCount = 3;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33334F));
@@ -111,7 +114,6 @@ namespace Interfaz_Fixed
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 51F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(839, 648);
             this.tableLayoutPanel1.TabIndex = 0;
-            this.tableLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel1_Paint);
             // 
             // tableLayoutPanel10
             // 
@@ -120,13 +122,13 @@ namespace Interfaz_Fixed
             this.tableLayoutPanel10.Controls.Add(this.ListeningGold_label, 0, 0);
             this.tableLayoutPanel10.Controls.Add(this.ListeningGold_chk, 0, 1);
             this.tableLayoutPanel10.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel10.Location = new System.Drawing.Point(561, 427);
+            this.tableLayoutPanel10.Location = new System.Drawing.Point(562, 427);
             this.tableLayoutPanel10.Name = "tableLayoutPanel10";
             this.tableLayoutPanel10.RowCount = 2;
             this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 38F));
             this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel10.Size = new System.Drawing.Size(275, 166);
+            this.tableLayoutPanel10.Size = new System.Drawing.Size(271, 160);
             this.tableLayoutPanel10.TabIndex = 15;
             // 
             // ListeningGold_label
@@ -136,7 +138,7 @@ namespace Interfaz_Fixed
             this.ListeningGold_label.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.ListeningGold_label.Location = new System.Drawing.Point(3, 0);
             this.ListeningGold_label.Name = "ListeningGold_label";
-            this.ListeningGold_label.Size = new System.Drawing.Size(267, 128);
+            this.ListeningGold_label.Size = new System.Drawing.Size(265, 122);
             this.ListeningGold_label.TabIndex = 5;
             this.ListeningGold_label.Text = resources.GetString("ListeningGold_label.Text");
             this.ListeningGold_label.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -147,9 +149,9 @@ namespace Interfaz_Fixed
             this.ListeningGold_chk.AutoSize = true;
             this.ListeningGold_chk.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ListeningGold_chk.Enabled = false;
-            this.ListeningGold_chk.Location = new System.Drawing.Point(3, 131);
+            this.ListeningGold_chk.Location = new System.Drawing.Point(3, 125);
             this.ListeningGold_chk.Name = "ListeningGold_chk";
-            this.ListeningGold_chk.Size = new System.Drawing.Size(269, 32);
+            this.ListeningGold_chk.Size = new System.Drawing.Size(265, 32);
             this.ListeningGold_chk.TabIndex = 6;
             this.ListeningGold_chk.Tag = "Listening";
             this.ListeningGold_chk.Text = "Si comprendo";
@@ -162,13 +164,13 @@ namespace Interfaz_Fixed
             this.tableLayoutPanel9.Controls.Add(this.WritingGold_Label, 0, 0);
             this.tableLayoutPanel9.Controls.Add(this.WritingGold_Chk, 0, 1);
             this.tableLayoutPanel9.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel9.Location = new System.Drawing.Point(282, 427);
+            this.tableLayoutPanel9.Location = new System.Drawing.Point(284, 427);
             this.tableLayoutPanel9.Name = "tableLayoutPanel9";
             this.tableLayoutPanel9.RowCount = 2;
             this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 38F));
             this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel9.Size = new System.Drawing.Size(273, 166);
+            this.tableLayoutPanel9.Size = new System.Drawing.Size(269, 160);
             this.tableLayoutPanel9.TabIndex = 14;
             // 
             // WritingGold_Label
@@ -178,7 +180,7 @@ namespace Interfaz_Fixed
             this.WritingGold_Label.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.WritingGold_Label.Location = new System.Drawing.Point(3, 0);
             this.WritingGold_Label.Name = "WritingGold_Label";
-            this.WritingGold_Label.Size = new System.Drawing.Size(267, 128);
+            this.WritingGold_Label.Size = new System.Drawing.Size(263, 122);
             this.WritingGold_Label.TabIndex = 5;
             this.WritingGold_Label.Text = "Soy capaz de escribir textos sencillos y bien enlazados sobre temas que me son co" +
     "nocidos o de interés personal. Puedo escribir cartas personales que describen ex" +
@@ -190,9 +192,9 @@ namespace Interfaz_Fixed
             this.WritingGold_Chk.AutoSize = true;
             this.WritingGold_Chk.Dock = System.Windows.Forms.DockStyle.Fill;
             this.WritingGold_Chk.Enabled = false;
-            this.WritingGold_Chk.Location = new System.Drawing.Point(3, 131);
+            this.WritingGold_Chk.Location = new System.Drawing.Point(3, 125);
             this.WritingGold_Chk.Name = "WritingGold_Chk";
-            this.WritingGold_Chk.Size = new System.Drawing.Size(267, 32);
+            this.WritingGold_Chk.Size = new System.Drawing.Size(263, 32);
             this.WritingGold_Chk.TabIndex = 6;
             this.WritingGold_Chk.Tag = "Writing";
             this.WritingGold_Chk.Text = "Si soy Capaz";
@@ -205,13 +207,13 @@ namespace Interfaz_Fixed
             this.tableLayoutPanel8.Controls.Add(this.ListeningSilver_label, 0, 0);
             this.tableLayoutPanel8.Controls.Add(this.ListeningSilver_Chk, 0, 1);
             this.tableLayoutPanel8.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel8.Location = new System.Drawing.Point(561, 223);
+            this.tableLayoutPanel8.Location = new System.Drawing.Point(562, 227);
             this.tableLayoutPanel8.Name = "tableLayoutPanel8";
             this.tableLayoutPanel8.RowCount = 2;
             this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 38F));
             this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel8.Size = new System.Drawing.Size(275, 198);
+            this.tableLayoutPanel8.Size = new System.Drawing.Size(271, 191);
             this.tableLayoutPanel8.TabIndex = 13;
             // 
             // ListeningSilver_label
@@ -221,7 +223,7 @@ namespace Interfaz_Fixed
             this.ListeningSilver_label.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.ListeningSilver_label.Location = new System.Drawing.Point(3, 0);
             this.ListeningSilver_label.Name = "ListeningSilver_label";
-            this.ListeningSilver_label.Size = new System.Drawing.Size(267, 155);
+            this.ListeningSilver_label.Size = new System.Drawing.Size(265, 153);
             this.ListeningSilver_label.TabIndex = 5;
             this.ListeningSilver_label.Text = resources.GetString("ListeningSilver_label.Text");
             // 
@@ -230,10 +232,9 @@ namespace Interfaz_Fixed
             this.ListeningSilver_Chk.AutoCheck = false;
             this.ListeningSilver_Chk.AutoSize = true;
             this.ListeningSilver_Chk.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ListeningSilver_Chk.Enabled = false;
-            this.ListeningSilver_Chk.Location = new System.Drawing.Point(3, 163);
+            this.ListeningSilver_Chk.Location = new System.Drawing.Point(3, 156);
             this.ListeningSilver_Chk.Name = "ListeningSilver_Chk";
-            this.ListeningSilver_Chk.Size = new System.Drawing.Size(269, 32);
+            this.ListeningSilver_Chk.Size = new System.Drawing.Size(265, 32);
             this.ListeningSilver_Chk.TabIndex = 6;
             this.ListeningSilver_Chk.Tag = "Listening";
             this.ListeningSilver_Chk.Text = "Si comprendo";
@@ -246,13 +247,13 @@ namespace Interfaz_Fixed
             this.tableLayoutPanel7.Controls.Add(this.label4, 0, 0);
             this.tableLayoutPanel7.Controls.Add(this.WritingSilver_Chk, 0, 1);
             this.tableLayoutPanel7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel7.Location = new System.Drawing.Point(282, 223);
+            this.tableLayoutPanel7.Location = new System.Drawing.Point(284, 227);
             this.tableLayoutPanel7.Name = "tableLayoutPanel7";
             this.tableLayoutPanel7.RowCount = 2;
             this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 38F));
             this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel7.Size = new System.Drawing.Size(273, 198);
+            this.tableLayoutPanel7.Size = new System.Drawing.Size(269, 191);
             this.tableLayoutPanel7.TabIndex = 12;
             // 
             // label4
@@ -262,7 +263,7 @@ namespace Interfaz_Fixed
             this.label4.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.label4.Location = new System.Drawing.Point(3, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(267, 155);
+            this.label4.Size = new System.Drawing.Size(263, 153);
             this.label4.TabIndex = 5;
             this.label4.Text = "Soy capaz de escribir notas y mensajes breves y sencillos relativos a mis necesid" +
     "ades inmediatas. Puedo escribir cartas personales muy sencillas, por ejemplo agr" +
@@ -273,10 +274,9 @@ namespace Interfaz_Fixed
             this.WritingSilver_Chk.AutoCheck = false;
             this.WritingSilver_Chk.AutoSize = true;
             this.WritingSilver_Chk.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.WritingSilver_Chk.Enabled = false;
-            this.WritingSilver_Chk.Location = new System.Drawing.Point(3, 163);
+            this.WritingSilver_Chk.Location = new System.Drawing.Point(3, 156);
             this.WritingSilver_Chk.Name = "WritingSilver_Chk";
-            this.WritingSilver_Chk.Size = new System.Drawing.Size(267, 32);
+            this.WritingSilver_Chk.Size = new System.Drawing.Size(263, 32);
             this.WritingSilver_Chk.TabIndex = 6;
             this.WritingSilver_Chk.Tag = "Writing";
             this.WritingSilver_Chk.Text = "Si soy capaz";
@@ -289,13 +289,13 @@ namespace Interfaz_Fixed
             this.tableLayoutPanel6.Controls.Add(this.ListeningBronze_Label, 0, 0);
             this.tableLayoutPanel6.Controls.Add(this.ListeningBronze_chk, 0, 1);
             this.tableLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel6.Location = new System.Drawing.Point(561, 83);
+            this.tableLayoutPanel6.Location = new System.Drawing.Point(562, 89);
             this.tableLayoutPanel6.Name = "tableLayoutPanel6";
             this.tableLayoutPanel6.RowCount = 2;
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 38F));
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel6.Size = new System.Drawing.Size(275, 134);
+            this.tableLayoutPanel6.Size = new System.Drawing.Size(271, 129);
             this.tableLayoutPanel6.TabIndex = 11;
             // 
             // ListeningBronze_Label
@@ -305,7 +305,7 @@ namespace Interfaz_Fixed
             this.ListeningBronze_Label.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.ListeningBronze_Label.Location = new System.Drawing.Point(3, 0);
             this.ListeningBronze_Label.Name = "ListeningBronze_Label";
-            this.ListeningBronze_Label.Size = new System.Drawing.Size(267, 96);
+            this.ListeningBronze_Label.Size = new System.Drawing.Size(265, 91);
             this.ListeningBronze_Label.TabIndex = 5;
             this.ListeningBronze_Label.Text = "Reconozco palabras y expresiones muy básicas que se usan habitualmente, relativas" +
     " a mí mismo, a mi familia y a mi entorno inmediato cuando se habla despacio y co" +
@@ -319,9 +319,9 @@ namespace Interfaz_Fixed
             this.ListeningBronze_chk.CheckState = System.Windows.Forms.CheckState.Checked;
             this.ListeningBronze_chk.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ListeningBronze_chk.Enabled = false;
-            this.ListeningBronze_chk.Location = new System.Drawing.Point(3, 99);
+            this.ListeningBronze_chk.Location = new System.Drawing.Point(3, 94);
             this.ListeningBronze_chk.Name = "ListeningBronze_chk";
-            this.ListeningBronze_chk.Size = new System.Drawing.Size(269, 32);
+            this.ListeningBronze_chk.Size = new System.Drawing.Size(265, 32);
             this.ListeningBronze_chk.TabIndex = 6;
             this.ListeningBronze_chk.Tag = "Listening";
             this.ListeningBronze_chk.Text = "Si Reconozco";
@@ -334,13 +334,13 @@ namespace Interfaz_Fixed
             this.tableLayoutPanel5.Controls.Add(this.label1, 0, 0);
             this.tableLayoutPanel5.Controls.Add(this.WritingBronze_chk, 0, 1);
             this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel5.Location = new System.Drawing.Point(282, 83);
+            this.tableLayoutPanel5.Location = new System.Drawing.Point(284, 89);
             this.tableLayoutPanel5.Name = "tableLayoutPanel5";
             this.tableLayoutPanel5.RowCount = 2;
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 38F));
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel5.Size = new System.Drawing.Size(273, 134);
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(269, 129);
             this.tableLayoutPanel5.TabIndex = 10;
             // 
             // label1
@@ -350,7 +350,7 @@ namespace Interfaz_Fixed
             this.label1.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.label1.Location = new System.Drawing.Point(3, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(267, 96);
+            this.label1.Size = new System.Drawing.Size(263, 91);
             this.label1.TabIndex = 5;
             this.label1.Text = "Comprendo palabras y nombres conocidos y frases muy sencillas, por ejemplo las qu" +
     "e hay en letreros, carteles y catálogos.";
@@ -363,9 +363,9 @@ namespace Interfaz_Fixed
             this.WritingBronze_chk.CheckState = System.Windows.Forms.CheckState.Checked;
             this.WritingBronze_chk.Dock = System.Windows.Forms.DockStyle.Fill;
             this.WritingBronze_chk.Enabled = false;
-            this.WritingBronze_chk.Location = new System.Drawing.Point(3, 99);
+            this.WritingBronze_chk.Location = new System.Drawing.Point(3, 94);
             this.WritingBronze_chk.Name = "WritingBronze_chk";
-            this.WritingBronze_chk.Size = new System.Drawing.Size(267, 32);
+            this.WritingBronze_chk.Size = new System.Drawing.Size(263, 32);
             this.WritingBronze_chk.TabIndex = 6;
             this.WritingBronze_chk.Tag = "Writing";
             this.WritingBronze_chk.Text = "Si comprendo";
@@ -376,9 +376,9 @@ namespace Interfaz_Fixed
             this.reading_Label.AutoSize = true;
             this.reading_Label.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.reading_Label.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.reading_Label.Location = new System.Drawing.Point(3, 0);
+            this.reading_Label.Location = new System.Drawing.Point(6, 3);
             this.reading_Label.Name = "reading_Label";
-            this.reading_Label.Size = new System.Drawing.Size(273, 80);
+            this.reading_Label.Size = new System.Drawing.Size(269, 80);
             this.reading_Label.TabIndex = 0;
             this.reading_Label.Text = "Lectura";
             this.reading_Label.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -388,9 +388,9 @@ namespace Interfaz_Fixed
             this.Escrita_Label.AutoSize = true;
             this.Escrita_Label.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Escrita_Label.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Escrita_Label.Location = new System.Drawing.Point(282, 0);
+            this.Escrita_Label.Location = new System.Drawing.Point(284, 3);
             this.Escrita_Label.Name = "Escrita_Label";
-            this.Escrita_Label.Size = new System.Drawing.Size(273, 80);
+            this.Escrita_Label.Size = new System.Drawing.Size(269, 80);
             this.Escrita_Label.TabIndex = 1;
             this.Escrita_Label.Text = "Writing";
             this.Escrita_Label.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -400,9 +400,9 @@ namespace Interfaz_Fixed
             this.label2.AutoSize = true;
             this.label2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label2.Location = new System.Drawing.Point(561, 0);
+            this.label2.Location = new System.Drawing.Point(562, 3);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(275, 80);
+            this.label2.Size = new System.Drawing.Size(271, 80);
             this.label2.TabIndex = 2;
             this.label2.Text = "Comprensión Auditiva";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -411,21 +411,20 @@ namespace Interfaz_Fixed
             // 
             this.Evaluar_AutoButton.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Evaluar_AutoButton.Enabled = false;
-            this.Evaluar_AutoButton.Location = new System.Drawing.Point(561, 599);
+            this.Evaluar_AutoButton.Location = new System.Drawing.Point(562, 596);
             this.Evaluar_AutoButton.Name = "Evaluar_AutoButton";
-            this.Evaluar_AutoButton.Size = new System.Drawing.Size(275, 46);
+            this.Evaluar_AutoButton.Size = new System.Drawing.Size(271, 46);
             this.Evaluar_AutoButton.TabIndex = 3;
             this.Evaluar_AutoButton.Tag = "Boton";
             this.Evaluar_AutoButton.Text = "Evaluar";
             this.Evaluar_AutoButton.UseVisualStyleBackColor = true;
-            this.Evaluar_AutoButton.Click += new System.EventHandler(this.Evaluar_AutoButton_Click);
             // 
             // Cancelar_Button
             // 
             this.Cancelar_Button.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Cancelar_Button.Location = new System.Drawing.Point(3, 599);
+            this.Cancelar_Button.Location = new System.Drawing.Point(6, 596);
             this.Cancelar_Button.Name = "Cancelar_Button";
-            this.Cancelar_Button.Size = new System.Drawing.Size(273, 46);
+            this.Cancelar_Button.Size = new System.Drawing.Size(269, 46);
             this.Cancelar_Button.TabIndex = 4;
             this.Cancelar_Button.Tag = "Boton";
             this.Cancelar_Button.Text = "Cancelar";
@@ -438,13 +437,13 @@ namespace Interfaz_Fixed
             this.tableLayoutPanel2.Controls.Add(this.LecturaBronze_Label, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.ReadingBronze_check, 0, 1);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 83);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(6, 89);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 2;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 38F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(273, 134);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(269, 129);
             this.tableLayoutPanel2.TabIndex = 7;
             // 
             // LecturaBronze_Label
@@ -454,7 +453,7 @@ namespace Interfaz_Fixed
             this.LecturaBronze_Label.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.LecturaBronze_Label.Location = new System.Drawing.Point(3, 0);
             this.LecturaBronze_Label.Name = "LecturaBronze_Label";
-            this.LecturaBronze_Label.Size = new System.Drawing.Size(267, 96);
+            this.LecturaBronze_Label.Size = new System.Drawing.Size(263, 91);
             this.LecturaBronze_Label.TabIndex = 5;
             this.LecturaBronze_Label.Text = "Comprendo palabras y nombres conocidos y frases muy sencillas, por ejemplo las qu" +
     "e hay en letreros, carteles y catálogos.";
@@ -467,9 +466,9 @@ namespace Interfaz_Fixed
             this.ReadingBronze_check.CheckState = System.Windows.Forms.CheckState.Checked;
             this.ReadingBronze_check.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ReadingBronze_check.Enabled = false;
-            this.ReadingBronze_check.Location = new System.Drawing.Point(3, 99);
+            this.ReadingBronze_check.Location = new System.Drawing.Point(3, 94);
             this.ReadingBronze_check.Name = "ReadingBronze_check";
-            this.ReadingBronze_check.Size = new System.Drawing.Size(267, 32);
+            this.ReadingBronze_check.Size = new System.Drawing.Size(263, 32);
             this.ReadingBronze_check.TabIndex = 6;
             this.ReadingBronze_check.Tag = "Reading";
             this.ReadingBronze_check.Text = "Si comprendo";
@@ -483,12 +482,12 @@ namespace Interfaz_Fixed
             this.tableLayoutPanel3.Controls.Add(this.LecturaSilver_Label, 0, 0);
             this.tableLayoutPanel3.Controls.Add(this.ReadingSilver_chk, 0, 1);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(3, 223);
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(6, 227);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 2;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 80.80808F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 19.19192F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(273, 198);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(269, 191);
             this.tableLayoutPanel3.TabIndex = 8;
             // 
             // LecturaSilver_Label
@@ -498,7 +497,7 @@ namespace Interfaz_Fixed
             this.LecturaSilver_Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LecturaSilver_Label.Location = new System.Drawing.Point(3, 0);
             this.LecturaSilver_Label.Name = "LecturaSilver_Label";
-            this.LecturaSilver_Label.Size = new System.Drawing.Size(267, 160);
+            this.LecturaSilver_Label.Size = new System.Drawing.Size(263, 154);
             this.LecturaSilver_Label.TabIndex = 0;
             this.LecturaSilver_Label.Text = resources.GetString("LecturaSilver_Label.Text");
             this.LecturaSilver_Label.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -507,10 +506,9 @@ namespace Interfaz_Fixed
             // 
             this.ReadingSilver_chk.AutoSize = true;
             this.ReadingSilver_chk.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ReadingSilver_chk.Enabled = false;
-            this.ReadingSilver_chk.Location = new System.Drawing.Point(3, 163);
+            this.ReadingSilver_chk.Location = new System.Drawing.Point(3, 157);
             this.ReadingSilver_chk.Name = "ReadingSilver_chk";
-            this.ReadingSilver_chk.Size = new System.Drawing.Size(267, 32);
+            this.ReadingSilver_chk.Size = new System.Drawing.Size(263, 31);
             this.ReadingSilver_chk.TabIndex = 1;
             this.ReadingSilver_chk.Tag = "Reading";
             this.ReadingSilver_chk.Text = "Si soy Capaz";
@@ -524,12 +522,12 @@ namespace Interfaz_Fixed
             this.tableLayoutPanel4.Controls.Add(this.LecturaGold_Label, 0, 0);
             this.tableLayoutPanel4.Controls.Add(this.ReadingGold_chk, 0, 1);
             this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel4.Location = new System.Drawing.Point(3, 427);
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(6, 427);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RowCount = 2;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 37F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(273, 166);
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(269, 160);
             this.tableLayoutPanel4.TabIndex = 9;
             // 
             // LecturaGold_Label
@@ -539,7 +537,7 @@ namespace Interfaz_Fixed
             this.LecturaGold_Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LecturaGold_Label.Location = new System.Drawing.Point(3, 0);
             this.LecturaGold_Label.Name = "LecturaGold_Label";
-            this.LecturaGold_Label.Size = new System.Drawing.Size(267, 129);
+            this.LecturaGold_Label.Size = new System.Drawing.Size(263, 123);
             this.LecturaGold_Label.TabIndex = 0;
             this.LecturaGold_Label.Text = "Comprendo textos redactados en una lengua de uso habitual y cotidiano o relaciona" +
     "da con el trabajo. Comprendo la descripción de acontecimientos, sentimientos y d" +
@@ -551,9 +549,9 @@ namespace Interfaz_Fixed
             this.ReadingGold_chk.AutoSize = true;
             this.ReadingGold_chk.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ReadingGold_chk.Enabled = false;
-            this.ReadingGold_chk.Location = new System.Drawing.Point(3, 132);
+            this.ReadingGold_chk.Location = new System.Drawing.Point(3, 126);
             this.ReadingGold_chk.Name = "ReadingGold_chk";
-            this.ReadingGold_chk.Size = new System.Drawing.Size(267, 31);
+            this.ReadingGold_chk.Size = new System.Drawing.Size(263, 31);
             this.ReadingGold_chk.TabIndex = 1;
             this.ReadingGold_chk.Tag = "Reading";
             this.ReadingGold_chk.Text = "Si comprendo";
@@ -562,9 +560,9 @@ namespace Interfaz_Fixed
             // Help_Button
             // 
             this.Help_Button.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Help_Button.Location = new System.Drawing.Point(282, 599);
+            this.Help_Button.Location = new System.Drawing.Point(284, 596);
             this.Help_Button.Name = "Help_Button";
-            this.Help_Button.Size = new System.Drawing.Size(273, 46);
+            this.Help_Button.Size = new System.Drawing.Size(269, 46);
             this.Help_Button.TabIndex = 16;
             this.Help_Button.Text = "Ayuda";
             this.Help_Button.UseVisualStyleBackColor = true;
@@ -579,6 +577,7 @@ namespace Interfaz_Fixed
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "AutoEvaluacion";
             this.Text = "AutoEvaluacion";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Cerrando);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.tableLayoutPanel10.ResumeLayout(false);
@@ -605,30 +604,44 @@ namespace Interfaz_Fixed
 
         #region Asignamiento de Eventos Dinamicos
 
-        void Eventos()
+        void Eventos(string Correo)
         {
             //
             //Asignamiento de Eventos Dinamico
             //
-            this.ReadingBronze_check.Click += (s, e) => valorCambiado_checkbox(s, e, ReadingSilver_chk);
             this.ReadingSilver_chk.Click += (s, e) => valorCambiado_checkbox(s, e, ReadingGold_chk);
-            this.ReadingGold_chk.Click += (s, e) => bloquearValores(s,e,ReadingGold_chk,ReadingSilver_chk, ReadingSilver_chk);
-            //Reading END
-            this.ListeningBronze_chk.Click += (s,e) => valorCambiado_checkbox(s,e,ListeningSilver_Chk);
+            this.ReadingGold_chk.Click += (s, e) => checkBox_Gold(s,e, ReadingSilver_chk);
             this.ListeningSilver_Chk.Click += (s, e) => valorCambiado_checkbox(s, e, ListeningGold_chk);
-            this.ListeningGold_chk.Click += (s, e) => bloquearValores(s,e,ListeningGold_chk,ListeningSilver_Chk,ListeningBronze_chk);
-            //Listening END
-            this.WritingBronze_chk.Click += (s, e) => valorCambiado_checkbox(s,e,WritingSilver_Chk);
+            this.ListeningGold_chk.Click += (s, e) => checkBox_Gold(s,e,ListeningSilver_Chk);
             this.WritingSilver_Chk.Click += (s, e) => valorCambiado_checkbox(s,e,WritingGold_Chk);
-            this.WritingGold_Chk.Click += (s, e) => bloquearValores(s,e,WritingGold_Chk,WritingSilver_Chk,WritingBronze_chk);
-            
+            this.WritingGold_Chk.Click += (s, e) => checkBox_Gold(s,e, WritingSilver_Chk);
             this.ReadingSilver_chk.Click += (s, e) => valorCambiado_checkbox(s, e, ReadingGold_chk);
+            this.ReadingGold_chk.Click += (s, e) => checkBox_Gold(s, e, ReadingSilver_chk);
+
+            this.Evaluar_AutoButton.Click += (s, e) => Evaluar_AutoButton_Click(s,e, Correo);
         }
 
         #endregion
 
 
         #endregion
+
+        private int determinarNivel(CheckBox checkBronze, CheckBox checkPlata, CheckBox checkGold)
+        {
+            List<CheckBox> Lista = new List<CheckBox>();
+            Lista.Add(checkBronze);
+            Lista.Add(checkPlata);
+            Lista.Add(checkGold);
+            int contador = 0;
+            foreach (CheckBox caja in Lista)
+            {
+                if (caja.Checked)
+                {
+                    contador++;
+                }
+            }
+            return contador;
+        }
 
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Label reading_Label;
