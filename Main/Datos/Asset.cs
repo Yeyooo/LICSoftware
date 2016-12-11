@@ -17,6 +17,7 @@ namespace Datos
         public string EstrategiaEnseñanza;
         public string Teoria;
         public string UrlArchivo = null; // url inicializada en null, el asset puede tener audio o imagen
+        public bool Salio = false;
 
 
         public Asset() { }
@@ -129,6 +130,16 @@ namespace Datos
                 return true;
             else
                 return false;
+        }
+
+        public bool salio()
+        {
+            return this.Salio;
+        }
+
+        public void setSalio(bool salio)
+        {
+            this.Salio = true;
         }
 
 

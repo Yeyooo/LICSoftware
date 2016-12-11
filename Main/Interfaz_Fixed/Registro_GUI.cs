@@ -27,6 +27,7 @@ namespace FormRegistro
                 usuario.Nombre = textBoxNombre.Text;
                 usuario.Correo = textBoxCorreo.Text;
                 usuario.Password = textBoxPassword.Text;
+                usuario.NivelWriting = usuario.NivelReading = usuario.NivelListening = 0;
 
                 Console.WriteLine("nombre: "+usuario.Nombre);
                 Console.WriteLine("nombre: " + usuario.Correo);
