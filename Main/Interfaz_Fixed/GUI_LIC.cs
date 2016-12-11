@@ -41,8 +41,8 @@ namespace Interfaz_Fixed
                 MessageBox.Show("No se pudo Crear la Evaluacion, favor enviar un reporte","Error Fatal", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
             */
-            Evaluacion evaluacionListening = new Evaluacion("Listening",PDE);
-            evaluacionListening.Show();
+            /*Evaluacion evaluacionListening = new EvaluacionEnfocada("Listening",PDE);
+            evaluacionListening.Show();*/
         }
 
         private void EntrenarReading_Click(object sender, EventArgs e)
@@ -77,18 +77,19 @@ namespace Interfaz_Fixed
         }
         private void EntrenamientoGeneral_Click(object sender, EventArgs e)
         {
-            /*
             try
             {
-                Evaluacion evaluacionGeneral = new Evaluacion("Contenidos Generales", diccionarios, 1);
-                evaluacionGeneral.Show();
+                /*Evaluacion evaluacionGeneral = new Evaluacion("Contenidos Generales", diccionarios, 1);
+                evaluacionGeneral.Show();*/
             }
             catch (Exception){
                 MessageBox.Show("No se pudo Crear la Evaluacion, favor enviar un reporte", "ERROR FATAL", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
-            */
-            Evaluacion evaluacionGeneral = new Evaluacion("Contenidos Generales",PDE);
-            evaluacionGeneral.Show();
+        }
+
+        private void Cerrando_GUI(object sender, FormClosedEventArgs e)
+        {
+            System.Environment.Exit(1);
         }
     }
 }

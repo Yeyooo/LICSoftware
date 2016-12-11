@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Datos
 {
-    class EvaluacionNOGUI
+    public class EvaluacionNOGUI
     {
         public List<Asset> PreguntasWriting;
         public List<Asset> PreguntasReading;
@@ -14,11 +14,16 @@ namespace Datos
 
         public EvaluacionNOGUI(PlanDeEstudio PDE) // por defecto carga 10, 10 y 10
         {
-
-            this.PreguntasWriting = EvaluacionPorHabilidad(PDE.getDicWriting());
-            this.PreguntasReading = EvaluacionPorHabilidad(PDE.getDicReading());
-            this.PreguntasListening = EvaluacionPorHabilidad(PDE.getDicListening());
-
+            int contador = 1;
+            while (contador <= 30) // 30 es el limite
+            {
+                this.PreguntasWriting.Add(PDE.getDicWriting()[contador]);
+                this.PreguntasReading.Add(PDE.getDicReading()[contador]);
+                this.PreguntasListening.Add(PDE.getDicListening()[contador]);
+                this.PreguntasWriting = EvaluacionPorHabilidad(PDE.getDicWriting());
+                this.PreguntasReading = EvaluacionPorHabilidad(PDE.getDicReading());
+                this.PreguntasListening = EvaluacionPorHabilidad(PDE.getDicListening());
+            }
         }
 
         public static List<Asset> EvaluacionPorHabilidad( Dictionary<int, Asset> diccionarioHabilidad ) // 10 solamente, de una habilidad
@@ -46,7 +51,6 @@ namespace Datos
                     }
 
                 }
-
             }
 
             return null;

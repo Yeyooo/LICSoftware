@@ -1,4 +1,6 @@
-﻿namespace FormLogin
+﻿using System.Windows.Forms;
+
+namespace FormLogin
 {
     partial class FormInicioSesion
     {
