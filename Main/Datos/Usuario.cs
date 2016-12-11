@@ -16,6 +16,8 @@ namespace Datos
         public int NivelListening;
         public bool HizoAutoevaluacion;
 
+        public Usuario() { }
+
         public Usuario( string pCorreoIngresado )
         {
             List<string> tmp = UsuarioDAL.datosUsuario(pCorreoIngresado);
