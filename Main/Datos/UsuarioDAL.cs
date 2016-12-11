@@ -13,6 +13,25 @@ namespace Datos
     public class UsuarioDAL
     {
 
+        public static void setNivelesUsuarioEnBD(int NivelWriting, int NivelReading, int NivelListening, string Correo)
+        {
+            using (SqlConnection Conn = Conexión.obtenerConexion("registro"))
+            {
+                SqlCommand cmd = new SqlCommand(string.Format("UPDATE usuarios SET nivelwriting = "+NivelWriting+", nivelreading = "+NivelReading+", nivellistening = "+NivelListening+" WHERE correo = '"+Correo+"';"), Conn);
+                try
+                {
+                    int retorno = cmd.ExecuteNonQuery();
+                    Conn.Close();
+     
+                }
+                catch (System.InvalidOperationException e)
+                {
+                    MessageBox.Show("Problema con la contraseña de usuario", "Inicio de sesión fallado", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                }
+
+            }
+        }
+
         public static List<string> datosUsuario(string correoIngresado) // sin niveles
         {
 

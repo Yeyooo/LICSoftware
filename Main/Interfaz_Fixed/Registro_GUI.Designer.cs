@@ -38,7 +38,7 @@
             this.textBoxPassword = new System.Windows.Forms.TextBox();
             this.textBoxConfirme = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.buttonIniciar = new System.Windows.Forms.Button();
+            this.buttonRegistrar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -126,22 +126,22 @@
             this.label6.TabIndex = 9;
             this.label6.Text = "Confirme contraseña:";
             // 
-            // buttonIniciar
+            // buttonRegistrar
             // 
-            this.buttonIniciar.Location = new System.Drawing.Point(175, 379);
-            this.buttonIniciar.Name = "buttonIniciar";
-            this.buttonIniciar.Size = new System.Drawing.Size(116, 29);
-            this.buttonIniciar.TabIndex = 10;
-            this.buttonIniciar.Text = "Iniciar!";
-            this.buttonIniciar.UseVisualStyleBackColor = true;
-            this.buttonIniciar.Click += new System.EventHandler(this.button1_Click);
+            this.buttonRegistrar.Location = new System.Drawing.Point(175, 379);
+            this.buttonRegistrar.Name = "buttonRegistrar";
+            this.buttonRegistrar.Size = new System.Drawing.Size(116, 29);
+            this.buttonRegistrar.TabIndex = 10;
+            this.buttonRegistrar.Text = "Registrar!";
+            this.buttonRegistrar.UseVisualStyleBackColor = true;
+            this.buttonRegistrar.Click += new System.EventHandler(this.button1_Click);
             // 
-            // Form1
+            // Registro_GUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(357, 462);
-            this.Controls.Add(this.buttonIniciar);
+            this.Controls.Add(this.buttonRegistrar);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.textBoxConfirme);
             this.Controls.Add(this.textBoxPassword);
@@ -152,7 +152,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Name = "Form1";
+            this.Name = "Registro_GUI";
             this.Text = "Form1";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -171,7 +171,7 @@
         private System.Windows.Forms.TextBox textBoxPassword;
         private System.Windows.Forms.TextBox textBoxConfirme;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Button buttonIniciar;
+        private System.Windows.Forms.Button buttonRegistrar;
     }
 }
 

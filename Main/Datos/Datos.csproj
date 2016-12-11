@@ -49,6 +49,7 @@
     <Compile Include="Asset.cs" />
     <Compile Include="AssetDAL.cs" />
     <Compile Include="Conexión.cs" />
+    <Compile Include="EvaluacionNOGUI.cs" />
     <Compile Include="KbReader.cs" />
     <Compile Include="PlanDeEstudio.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
