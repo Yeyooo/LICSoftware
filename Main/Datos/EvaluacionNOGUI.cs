@@ -14,8 +14,6 @@ namespace Datos
 
         public EvaluacionNOGUI(PlanDeEstudio PDE) // por defecto carga 10, 10 y 10
         {
-
-
             int contador = 1;
             while (contador <= 30) // 30 es el limite
             {

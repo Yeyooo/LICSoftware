@@ -1,4 +1,5 @@
 ﻿using CapaLógica;
+using Datos;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,27 +15,10 @@ namespace Interfaz_Fixed
     public partial class AutoEvaluacion : Form
     {
 
-        private int NivelWriting = 0;
-        private int NivelListening = 0;
-        private int NivelReading = 0;
-
-        private string Listening = "Listening";
-        private string Reading = "Reading";
-        private string Writing = "Writing";
-
-        public AutoEvaluacion()
+        public AutoEvaluacion(string Correo)
         {
             InitializeComponent();
-            Eventos();
-            NivelListening = 1;
-            NivelWriting = 1;
-            NivelReading = 1;
-        }
-
-        private void Evaluar_Click(object sender, EventArgs e)
-        {
-           
-            MessageBox.Show("El nivel en Listening es "+NivelListening+" y en Reading "+NivelReading+" y en Writing "+NivelWriting);
+            Eventos(Correo);
         }
 
         private void valorCambiado_checkbox(object sender, EventArgs e, CheckBox checkBox_desbloqueado)
@@ -75,11 +59,6 @@ namespace Interfaz_Fixed
 
         }
 
-        private void Enviando_Al_Tutor(object sender, EventArgs e, Agente tutor)
-        {
-            //funcion para que acepte el tutor
-        }
-
         private void checkBox_Gold(object sender, EventArgs e, CheckBox anterior)
         {
             CheckBox caja = sender as CheckBox;
@@ -95,11 +74,22 @@ namespace Interfaz_Fixed
             }
         }
 
-        private void Evaluar_AutoButton_Click(object sender, EventArgs e)
+        private void Evaluar_AutoButton_Click(object sender, EventArgs e, string Correo)
         {
+            int NivelWriting = determinarNivel(WritingBronze_chk,WritingSilver_Chk,WritingGold_Chk);
+            int NivelReading = determinarNivel(ReadingBronze_check, ReadingSilver_chk, ReadingGold_chk);
+            int NivelListening = determinarNivel(ListeningBronze_chk, ListeningSilver_Chk, ListeningGold_chk);
+            MessageBox.Show(""+NivelWriting+"en Writing y "+NivelReading+" en reading y "+NivelListening+" en listening");
+            UsuarioDAL.setNivelesUsuarioEnBD(NivelWriting,NivelReading,NivelListening,Correo);
+
             // aqui se debe mandar el sus niveles a la BD
             // con el siguiente metodo actualizas la BD con los niveles que te arroje la autoevaluacion para el correo que se registro
             //public static void setNivelesUsuarioEnBD(int NivelWriting, int NivelReading, int NivelListening, string Correo)
+    }
+
+        private void Cerrando(object sender, FormClosedEventArgs e)
+        {
+            System.Environment.Exit(1);
         }
     }
 }

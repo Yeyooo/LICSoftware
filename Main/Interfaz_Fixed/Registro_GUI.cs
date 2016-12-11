@@ -43,7 +43,7 @@ namespace FormRegistro
                 }
                 //LICGUI FormPrincipal = new LICGUI();
                 //FormPrincipal.Show();
-                new AutoEvaluacion().Show();
+                new AutoEvaluacion(usuario.Correo).Show();
                 this.Hide();
             }
         }
