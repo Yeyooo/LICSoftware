@@ -13,6 +13,32 @@ namespace Datos
 
         }
 
+        // dada una pregunta, podemos obtener todas las preguntas que esten relacionadas a ella(Conjunto de Assets)
+        public static List<int> TodosLosIdDeLasPreguntasDeUnConjunto(int idpregunta) // por ejemplo, un audio que tiene 10 preguntas
+        {
+
+            SqlCommand _comandoC = new SqlCommand(String.Format("SELECT conjunto FROM pregunta WHERE idpregunta = " + idpregunta + ";"), Conexión.obtenerConexion("contenido"));
+            SqlDataReader _readerC = _comandoC.ExecuteReader();
+            int conjunto = 0;
+            while (_readerC.Read())
+            {
+                conjunto = _readerC.GetInt32(0);
+            }
+
+            SqlCommand _comando = new SqlCommand(String.Format("SELECT idpregunta FROM pregunta WHERE conjunto = "+conjunto+";"), Conexión.obtenerConexion("contenido"));
+            SqlDataReader _reader = _comando.ExecuteReader();
+
+            List<int> IdsPreguntas = new List<int>();
+
+            while( _reader.Read() )
+            {
+                IdsPreguntas.Add(_reader.GetInt32(0));
+            }
+
+            return IdsPreguntas;
+
+        }
+
         // metodo para cargar desde disco duro evaluaciones
         public static Asset BuscarAssetPorID(int idAsset) // retorna Asset dado un ID
         {

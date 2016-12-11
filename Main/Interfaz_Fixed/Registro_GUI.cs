@@ -43,6 +43,8 @@ namespace FormRegistro
                 }
                 //LICGUI FormPrincipal = new LICGUI();
                 //FormPrincipal.Show();
+                new AutoEvaluacion().Show();
+                this.Hide();
             }
         }
     }

@@ -142,5 +142,12 @@ namespace Interfaz_Fixed
         {
             //funcion para que acepte el tutor
         }
+
+        private void Evaluar_AutoButton_Click(object sender, EventArgs e)
+        {
+            // aqui se debe mandar el sus niveles a la BD
+            // con el siguiente metodo actualizas la BD con los niveles que te arroje la autoevaluacion para el correo que se registro
+            //public static void setNivelesUsuarioEnBD(int NivelWriting, int NivelReading, int NivelListening, string Correo)
+        }
     }
 }
