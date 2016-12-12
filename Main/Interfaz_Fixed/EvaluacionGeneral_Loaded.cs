@@ -18,10 +18,12 @@ namespace Interfaz_Fixed
         private string arregloID;
         private string[] IDS;
 
-        public EvaluacionGeneral_Loaded()
+        public EvaluacionGeneral_Loaded(string path)
         {
             InitializeComponent();
+            CargarAssets(recuperarAssets(recuperarIDs(path)));
         }
+
         private List<int> recuperarIDs(string path)
         {
             List<int> idsRecuperadas = new List<int>();

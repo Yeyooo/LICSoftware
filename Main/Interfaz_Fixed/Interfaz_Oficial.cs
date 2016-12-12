@@ -34,7 +34,6 @@ namespace Interfaz_Fixed
                     Console.WriteLine("IdPregunta: " + IdPreguntasConjunto[i]);
                 }
             }
-            
 
         }
     }

@@ -73,6 +73,26 @@ namespace Interfaz_Fixed.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Bronze_Leage {
+            get {
+                object obj = ResourceManager.GetObject("Bronze_Leage", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Gold_Leage {
+            get {
+                object obj = ResourceManager.GetObject("Gold_Leage", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap HabilidadGeneral {
             get {
                 object obj = ResourceManager.GetObject("HabilidadGeneral", resourceCulture);
@@ -126,6 +146,26 @@ namespace Interfaz_Fixed.Properties {
         internal static System.Drawing.Bitmap Panel_Habilidades {
             get {
                 object obj = ResourceManager.GetObject("Panel_Habilidades", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Silver_leage {
+            get {
+                object obj = ResourceManager.GetObject("Silver_leage", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Silver_leage_NB {
+            get {
+                object obj = ResourceManager.GetObject("Silver_leage_NB", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

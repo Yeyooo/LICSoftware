@@ -32,12 +32,12 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.Entrenamiento_Pane = new System.Windows.Forms.TabControl();
             this.Panel_habilidades = new System.Windows.Forms.TabPage();
+            this.picture_WritingLiga = new System.Windows.Forms.PictureBox();
+            this.picture_ReadingLiga = new System.Windows.Forms.PictureBox();
             this.Boton_Entrenar_Writing = new System.Windows.Forms.Button();
             this.Boton_Entrenar_Reading = new System.Windows.Forms.Button();
             this.Boton_Entrenar_Listenning = new System.Windows.Forms.Button();
-            this.Icono_Liga_Writing = new System.Windows.Forms.PictureBox();
-            this.Icono_Liga_Reading = new System.Windows.Forms.PictureBox();
-            this.Icono_Liga_Listening = new System.Windows.Forms.PictureBox();
+            this.picture_ListeningLiga = new System.Windows.Forms.PictureBox();
             this.General_Panel = new System.Windows.Forms.TabPage();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.GeneralTrainningLabel = new System.Windows.Forms.Label();
@@ -45,12 +45,13 @@
             this.UsurioInfo_Panel = new System.Windows.Forms.Panel();
             this.Usuario_Label = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.CargarEvaluaciones_Label = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.Entrenamiento_Pane.SuspendLayout();
             this.Panel_habilidades.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Icono_Liga_Writing)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Icono_Liga_Reading)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Icono_Liga_Listening)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picture_WritingLiga)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picture_ReadingLiga)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picture_ListeningLiga)).BeginInit();
             this.General_Panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.UsurioInfo_Panel.SuspendLayout();
@@ -81,18 +82,42 @@
             // 
             this.Panel_habilidades.BackColor = System.Drawing.Color.LightSlateGray;
             this.Panel_habilidades.BackgroundImage = global::Interfaz_Fixed.Properties.Resources.Panel_Habilidades;
+            this.Panel_habilidades.Controls.Add(this.picture_WritingLiga);
+            this.Panel_habilidades.Controls.Add(this.picture_ReadingLiga);
             this.Panel_habilidades.Controls.Add(this.Boton_Entrenar_Writing);
             this.Panel_habilidades.Controls.Add(this.Boton_Entrenar_Reading);
             this.Panel_habilidades.Controls.Add(this.Boton_Entrenar_Listenning);
-            this.Panel_habilidades.Controls.Add(this.Icono_Liga_Writing);
-            this.Panel_habilidades.Controls.Add(this.Icono_Liga_Reading);
-            this.Panel_habilidades.Controls.Add(this.Icono_Liga_Listening);
+            this.Panel_habilidades.Controls.Add(this.picture_ListeningLiga);
             this.Panel_habilidades.Location = new System.Drawing.Point(4, 26);
             this.Panel_habilidades.Name = "Panel_habilidades";
             this.Panel_habilidades.Padding = new System.Windows.Forms.Padding(3);
             this.Panel_habilidades.Size = new System.Drawing.Size(819, 435);
             this.Panel_habilidades.TabIndex = 0;
             this.Panel_habilidades.Text = "Habilidades";
+            // 
+            // picture_WritingLiga
+            // 
+            this.picture_WritingLiga.BackColor = System.Drawing.Color.Transparent;
+            this.picture_WritingLiga.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.picture_WritingLiga.Image = global::Interfaz_Fixed.Properties.Resources.Bronze_Leage;
+            this.picture_WritingLiga.Location = new System.Drawing.Point(613, 300);
+            this.picture_WritingLiga.Name = "picture_WritingLiga";
+            this.picture_WritingLiga.Size = new System.Drawing.Size(138, 129);
+            this.picture_WritingLiga.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picture_WritingLiga.TabIndex = 7;
+            this.picture_WritingLiga.TabStop = false;
+            // 
+            // picture_ReadingLiga
+            // 
+            this.picture_ReadingLiga.BackColor = System.Drawing.Color.Transparent;
+            this.picture_ReadingLiga.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.picture_ReadingLiga.Image = global::Interfaz_Fixed.Properties.Resources.Gold_Leage;
+            this.picture_ReadingLiga.Location = new System.Drawing.Point(613, 155);
+            this.picture_ReadingLiga.Name = "picture_ReadingLiga";
+            this.picture_ReadingLiga.Size = new System.Drawing.Size(138, 129);
+            this.picture_ReadingLiga.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picture_ReadingLiga.TabIndex = 6;
+            this.picture_ReadingLiga.TabStop = false;
             // 
             // Boton_Entrenar_Writing
             // 
@@ -127,41 +152,17 @@
             this.Boton_Entrenar_Listenning.UseVisualStyleBackColor = false;
             this.Boton_Entrenar_Listenning.Click += new System.EventHandler(this.EntrenarListening_Click);
             // 
-            // Icono_Liga_Writing
+            // picture_ListeningLiga
             // 
-            this.Icono_Liga_Writing.BackColor = System.Drawing.Color.Transparent;
-            this.Icono_Liga_Writing.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.Icono_Liga_Writing.Image = global::Interfaz_Fixed.Properties.Resources.Liga_oro_ascenso11;
-            this.Icono_Liga_Writing.Location = new System.Drawing.Point(613, 291);
-            this.Icono_Liga_Writing.Name = "Icono_Liga_Writing";
-            this.Icono_Liga_Writing.Size = new System.Drawing.Size(138, 143);
-            this.Icono_Liga_Writing.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.Icono_Liga_Writing.TabIndex = 2;
-            this.Icono_Liga_Writing.TabStop = false;
-            // 
-            // Icono_Liga_Reading
-            // 
-            this.Icono_Liga_Reading.BackColor = System.Drawing.Color.Transparent;
-            this.Icono_Liga_Reading.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.Icono_Liga_Reading.Image = global::Interfaz_Fixed.Properties.Resources.Liga_oro_ascenso11;
-            this.Icono_Liga_Reading.Location = new System.Drawing.Point(613, 155);
-            this.Icono_Liga_Reading.Name = "Icono_Liga_Reading";
-            this.Icono_Liga_Reading.Size = new System.Drawing.Size(138, 143);
-            this.Icono_Liga_Reading.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.Icono_Liga_Reading.TabIndex = 1;
-            this.Icono_Liga_Reading.TabStop = false;
-            // 
-            // Icono_Liga_Listening
-            // 
-            this.Icono_Liga_Listening.BackColor = System.Drawing.Color.Transparent;
-            this.Icono_Liga_Listening.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.Icono_Liga_Listening.Image = global::Interfaz_Fixed.Properties.Resources.Liga_oro_ascenso11;
-            this.Icono_Liga_Listening.Location = new System.Drawing.Point(613, 6);
-            this.Icono_Liga_Listening.Name = "Icono_Liga_Listening";
-            this.Icono_Liga_Listening.Size = new System.Drawing.Size(138, 143);
-            this.Icono_Liga_Listening.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.Icono_Liga_Listening.TabIndex = 0;
-            this.Icono_Liga_Listening.TabStop = false;
+            this.picture_ListeningLiga.BackColor = System.Drawing.Color.Transparent;
+            this.picture_ListeningLiga.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.picture_ListeningLiga.Image = global::Interfaz_Fixed.Properties.Resources.Silver_leage_NB;
+            this.picture_ListeningLiga.Location = new System.Drawing.Point(613, 20);
+            this.picture_ListeningLiga.Name = "picture_ListeningLiga";
+            this.picture_ListeningLiga.Size = new System.Drawing.Size(138, 129);
+            this.picture_ListeningLiga.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picture_ListeningLiga.TabIndex = 0;
+            this.picture_ListeningLiga.TabStop = false;
             // 
             // General_Panel
             // 
@@ -239,6 +240,16 @@
             this.label1.TabIndex = 2;
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
+            // CargarEvaluaciones_Label
+            // 
+            this.CargarEvaluaciones_Label.BackColor = System.Drawing.Color.Transparent;
+            this.CargarEvaluaciones_Label.Location = new System.Drawing.Point(1187, 20);
+            this.CargarEvaluaciones_Label.Name = "CargarEvaluaciones_Label";
+            this.CargarEvaluaciones_Label.Size = new System.Drawing.Size(44, 36);
+            this.CargarEvaluaciones_Label.TabIndex = 3;
+            this.CargarEvaluaciones_Label.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.CargarEvaluaciones_Label.Click += new System.EventHandler(this.CargarEvaluaciones_Label_Click);
+            // 
             // LICGUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -246,6 +257,7 @@
             this.BackgroundImage = global::Interfaz_Fixed.Properties.Resources.UI_licsoftware_fixed_2_0;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(1283, 686);
+            this.Controls.Add(this.CargarEvaluaciones_Label);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.UsurioInfo_Panel);
             this.Controls.Add(this.panel1);
@@ -262,9 +274,9 @@
             this.panel1.ResumeLayout(false);
             this.Entrenamiento_Pane.ResumeLayout(false);
             this.Panel_habilidades.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.Icono_Liga_Writing)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Icono_Liga_Reading)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Icono_Liga_Listening)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picture_WritingLiga)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picture_ReadingLiga)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picture_ListeningLiga)).EndInit();
             this.General_Panel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.UsurioInfo_Panel.ResumeLayout(false);
@@ -280,9 +292,7 @@
         private System.Windows.Forms.TabPage General_Panel;
         private System.Windows.Forms.Panel UsurioInfo_Panel;
         private System.Windows.Forms.Label Usuario_Label;
-        private System.Windows.Forms.PictureBox Icono_Liga_Listening;
-        private System.Windows.Forms.PictureBox Icono_Liga_Writing;
-        private System.Windows.Forms.PictureBox Icono_Liga_Reading;
+        private System.Windows.Forms.PictureBox picture_ListeningLiga;
         private System.Windows.Forms.Button Boton_Entrenar_Listenning;
         private System.Windows.Forms.Button Boton_Entrenar_Writing;
         private System.Windows.Forms.Button Boton_Entrenar_Reading;
@@ -290,6 +300,9 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.PictureBox picture_WritingLiga;
+        private System.Windows.Forms.PictureBox picture_ReadingLiga;
+        private System.Windows.Forms.Label CargarEvaluaciones_Label;
     }
 }
 

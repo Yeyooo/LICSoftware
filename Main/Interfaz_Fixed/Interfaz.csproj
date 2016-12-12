@@ -270,6 +270,18 @@
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </COMReference>
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Silver_leage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Silver_leage_NB.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Gold_Leage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Bronze_Leage.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

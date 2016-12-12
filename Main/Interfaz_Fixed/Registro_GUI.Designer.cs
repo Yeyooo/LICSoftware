@@ -155,6 +155,7 @@
             this.Name = "Registro_GUI";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form_Cerrado);
             this.ResumeLayout(false);
             this.PerformLayout();
 
