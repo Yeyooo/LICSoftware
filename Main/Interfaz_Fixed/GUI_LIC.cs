@@ -76,5 +76,15 @@ namespace Interfaz_Fixed
         {
             System.Environment.Exit(1);
         }
+
+        private void GUILIC_Loading(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+            new Error_Report().Show();
+        }
     }
 }

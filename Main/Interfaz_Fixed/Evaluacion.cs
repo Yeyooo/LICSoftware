@@ -128,6 +128,7 @@ namespace Interfaz_Fixed
         private void Evento_MaterialAudio(object sender, EventArgs e, Asset asset)
         {
             string path = Environment.CurrentDirectory + "/Recursos/Audios/" + asset.getUrlArchivo();
+            new Material_ApoyoAudio(path).Show();
         }
 
         private void Evento_MaterialImagen(object sender, EventArgs e, Asset asset)
