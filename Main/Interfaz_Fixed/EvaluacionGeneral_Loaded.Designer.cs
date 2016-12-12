@@ -40,7 +40,7 @@
             this.layout_Pregunta7 = new System.Windows.Forms.TableLayoutPanel();
             this.layout_Pregunta8 = new System.Windows.Forms.TableLayoutPanel();
             this.layout_Pregunta9 = new System.Windows.Forms.TableLayoutPanel();
-            this.layout_Pregunt10 = new System.Windows.Forms.TableLayoutPanel();
+            this.layout_Pregunta10 = new System.Windows.Forms.TableLayoutPanel();
             this.layout_Pregunta11 = new System.Windows.Forms.TableLayoutPanel();
             this.layout_Pregunta12 = new System.Windows.Forms.TableLayoutPanel();
             this.layout_Pregunta13 = new System.Windows.Forms.TableLayoutPanel();
@@ -57,7 +57,7 @@
             this.layout_Pregunta24 = new System.Windows.Forms.TableLayoutPanel();
             this.layout_Pregunta25 = new System.Windows.Forms.TableLayoutPanel();
             this.layout_Pregunta26 = new System.Windows.Forms.TableLayoutPanel();
-            this.tableLayoutPanel27 = new System.Windows.Forms.TableLayoutPanel();
+            this.layout_Pregunta27 = new System.Windows.Forms.TableLayoutPanel();
             this.layout_Pregunta28 = new System.Windows.Forms.TableLayoutPanel();
             this.layout_Pregunta29 = new System.Windows.Forms.TableLayoutPanel();
             this.layout_Pregunta30 = new System.Windows.Forms.TableLayoutPanel();
@@ -161,7 +161,7 @@
             this.layout_Pregunta7.SuspendLayout();
             this.layout_Pregunta8.SuspendLayout();
             this.layout_Pregunta9.SuspendLayout();
-            this.layout_Pregunt10.SuspendLayout();
+            this.layout_Pregunta10.SuspendLayout();
             this.layout_Pregunta11.SuspendLayout();
             this.layout_Pregunta12.SuspendLayout();
             this.layout_Pregunta13.SuspendLayout();
@@ -178,7 +178,7 @@
             this.layout_Pregunta24.SuspendLayout();
             this.layout_Pregunta25.SuspendLayout();
             this.layout_Pregunta26.SuspendLayout();
-            this.tableLayoutPanel27.SuspendLayout();
+            this.layout_Pregunta27.SuspendLayout();
             this.layout_Pregunta28.SuspendLayout();
             this.layout_Pregunta29.SuspendLayout();
             this.layout_Pregunta30.SuspendLayout();
@@ -201,7 +201,7 @@
             this.layout_EvaluacionGeneralLoaded.Controls.Add(this.layout_Pregunta7, 0, 4);
             this.layout_EvaluacionGeneralLoaded.Controls.Add(this.layout_Pregunta8, 1, 4);
             this.layout_EvaluacionGeneralLoaded.Controls.Add(this.layout_Pregunta9, 0, 5);
-            this.layout_EvaluacionGeneralLoaded.Controls.Add(this.layout_Pregunt10, 1, 5);
+            this.layout_EvaluacionGeneralLoaded.Controls.Add(this.layout_Pregunta10, 1, 5);
             this.layout_EvaluacionGeneralLoaded.Controls.Add(this.layout_Pregunta11, 0, 6);
             this.layout_EvaluacionGeneralLoaded.Controls.Add(this.layout_Pregunta12, 1, 6);
             this.layout_EvaluacionGeneralLoaded.Controls.Add(this.layout_Pregunta13, 0, 7);
@@ -218,7 +218,7 @@
             this.layout_EvaluacionGeneralLoaded.Controls.Add(this.layout_Pregunta24, 1, 12);
             this.layout_EvaluacionGeneralLoaded.Controls.Add(this.layout_Pregunta25, 0, 13);
             this.layout_EvaluacionGeneralLoaded.Controls.Add(this.layout_Pregunta26, 1, 13);
-            this.layout_EvaluacionGeneralLoaded.Controls.Add(this.tableLayoutPanel27, 0, 14);
+            this.layout_EvaluacionGeneralLoaded.Controls.Add(this.layout_Pregunta27, 0, 14);
             this.layout_EvaluacionGeneralLoaded.Controls.Add(this.layout_Pregunta28, 1, 14);
             this.layout_EvaluacionGeneralLoaded.Controls.Add(this.layout_Pregunta29, 0, 15);
             this.layout_EvaluacionGeneralLoaded.Controls.Add(this.layout_Pregunta30, 1, 15);
@@ -435,23 +435,23 @@
             this.layout_Pregunta9.Size = new System.Drawing.Size(389, 144);
             this.layout_Pregunta9.TabIndex = 10;
             // 
-            // layout_Pregunt10
+            // layout_Pregunta10
             // 
-            this.layout_Pregunt10.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
-            this.layout_Pregunt10.ColumnCount = 1;
-            this.layout_Pregunt10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.layout_Pregunt10.Controls.Add(this.button10, 0, 2);
-            this.layout_Pregunt10.Controls.Add(this.label10, 0, 0);
-            this.layout_Pregunt10.Controls.Add(this.radioButton10, 0, 1);
-            this.layout_Pregunt10.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.layout_Pregunt10.Location = new System.Drawing.Point(398, 683);
-            this.layout_Pregunt10.Name = "layout_Pregunt10";
-            this.layout_Pregunt10.RowCount = 3;
-            this.layout_Pregunt10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.layout_Pregunt10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.layout_Pregunt10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.layout_Pregunt10.Size = new System.Drawing.Size(390, 144);
-            this.layout_Pregunt10.TabIndex = 11;
+            this.layout_Pregunta10.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
+            this.layout_Pregunta10.ColumnCount = 1;
+            this.layout_Pregunta10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.layout_Pregunta10.Controls.Add(this.button10, 0, 2);
+            this.layout_Pregunta10.Controls.Add(this.label10, 0, 0);
+            this.layout_Pregunta10.Controls.Add(this.radioButton10, 0, 1);
+            this.layout_Pregunta10.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.layout_Pregunta10.Location = new System.Drawing.Point(398, 683);
+            this.layout_Pregunta10.Name = "layout_Pregunta10";
+            this.layout_Pregunta10.RowCount = 3;
+            this.layout_Pregunta10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.layout_Pregunta10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.layout_Pregunta10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.layout_Pregunta10.Size = new System.Drawing.Size(390, 144);
+            this.layout_Pregunta10.TabIndex = 11;
             // 
             // layout_Pregunta11
             // 
@@ -741,23 +741,23 @@
             this.layout_Pregunta26.Size = new System.Drawing.Size(390, 144);
             this.layout_Pregunta26.TabIndex = 27;
             // 
-            // tableLayoutPanel27
+            // layout_Pregunta27
             // 
-            this.tableLayoutPanel27.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
-            this.tableLayoutPanel27.ColumnCount = 1;
-            this.tableLayoutPanel27.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel27.Controls.Add(this.button27, 0, 2);
-            this.tableLayoutPanel27.Controls.Add(this.label27, 0, 0);
-            this.tableLayoutPanel27.Controls.Add(this.radioButton27, 0, 1);
-            this.tableLayoutPanel27.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel27.Location = new System.Drawing.Point(3, 2033);
-            this.tableLayoutPanel27.Name = "tableLayoutPanel27";
-            this.tableLayoutPanel27.RowCount = 3;
-            this.tableLayoutPanel27.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel27.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel27.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel27.Size = new System.Drawing.Size(389, 144);
-            this.tableLayoutPanel27.TabIndex = 28;
+            this.layout_Pregunta27.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
+            this.layout_Pregunta27.ColumnCount = 1;
+            this.layout_Pregunta27.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.layout_Pregunta27.Controls.Add(this.button27, 0, 2);
+            this.layout_Pregunta27.Controls.Add(this.label27, 0, 0);
+            this.layout_Pregunta27.Controls.Add(this.radioButton27, 0, 1);
+            this.layout_Pregunta27.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.layout_Pregunta27.Location = new System.Drawing.Point(3, 2033);
+            this.layout_Pregunta27.Name = "layout_Pregunta27";
+            this.layout_Pregunta27.RowCount = 3;
+            this.layout_Pregunta27.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.layout_Pregunta27.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.layout_Pregunta27.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.layout_Pregunta27.Size = new System.Drawing.Size(389, 144);
+            this.layout_Pregunta27.TabIndex = 28;
             // 
             // layout_Pregunta28
             // 
@@ -1943,8 +1943,8 @@
             this.layout_Pregunta8.PerformLayout();
             this.layout_Pregunta9.ResumeLayout(false);
             this.layout_Pregunta9.PerformLayout();
-            this.layout_Pregunt10.ResumeLayout(false);
-            this.layout_Pregunt10.PerformLayout();
+            this.layout_Pregunta10.ResumeLayout(false);
+            this.layout_Pregunta10.PerformLayout();
             this.layout_Pregunta11.ResumeLayout(false);
             this.layout_Pregunta11.PerformLayout();
             this.layout_Pregunta12.ResumeLayout(false);
@@ -1977,8 +1977,8 @@
             this.layout_Pregunta25.PerformLayout();
             this.layout_Pregunta26.ResumeLayout(false);
             this.layout_Pregunta26.PerformLayout();
-            this.tableLayoutPanel27.ResumeLayout(false);
-            this.tableLayoutPanel27.PerformLayout();
+            this.layout_Pregunta27.ResumeLayout(false);
+            this.layout_Pregunta27.PerformLayout();
             this.layout_Pregunta28.ResumeLayout(false);
             this.layout_Pregunta28.PerformLayout();
             this.layout_Pregunta29.ResumeLayout(false);
@@ -2003,7 +2003,7 @@
         private System.Windows.Forms.TableLayoutPanel layout_Pregunta7;
         private System.Windows.Forms.TableLayoutPanel layout_Pregunta8;
         private System.Windows.Forms.TableLayoutPanel layout_Pregunta9;
-        private System.Windows.Forms.TableLayoutPanel layout_Pregunt10;
+        private System.Windows.Forms.TableLayoutPanel layout_Pregunta10;
         private System.Windows.Forms.TableLayoutPanel layout_Pregunta11;
         private System.Windows.Forms.TableLayoutPanel layout_Pregunta12;
         private System.Windows.Forms.TableLayoutPanel layout_Pregunta13;
@@ -2020,7 +2020,7 @@
         private System.Windows.Forms.TableLayoutPanel layout_Pregunta24;
         private System.Windows.Forms.TableLayoutPanel layout_Pregunta25;
         private System.Windows.Forms.TableLayoutPanel layout_Pregunta26;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel27;
+        private System.Windows.Forms.TableLayoutPanel layout_Pregunta27;
         private System.Windows.Forms.TableLayoutPanel layout_Pregunta28;
         private System.Windows.Forms.TableLayoutPanel layout_Pregunta29;
         private System.Windows.Forms.TableLayoutPanel layout_Pregunta30;
