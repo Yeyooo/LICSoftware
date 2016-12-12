@@ -17,6 +17,11 @@ namespace Interfaz_Fixed
         private Usuario userInternal;
         private EvaluacionNOGUI listaInternal;
 
+        private string nombreEvaluacion;
+        private string arregloID;
+        private string[] IDS;
+
+
         public LICGUI(Usuario user)
         {
             userInternal = user;
@@ -159,7 +164,7 @@ namespace Interfaz_Fixed
         {
             //Aqui se abirar el open dialog
             OpenFileDialog fileChooser = new OpenFileDialog();
-            fileChooser.Filter = "Archivos SAV(*.sav)|(*.SAV)";
+            //fileChooser.Filter = "Archivos SAVLIC(*.savlic)|(*.SAVLIC)";
             fileChooser.Title = "Archivos de Pruebas Corregidas";
             string currentPath = Environment.CurrentDirectory + "\\Recursos\\Usuarios\\"+userInternal.getNombre();
             if (Directory.Exists(currentPath))
@@ -168,6 +173,20 @@ namespace Interfaz_Fixed
                 if (fileChooser.ShowDialog() == DialogResult.OK)
                 {
                     //abrir la prueba
+                    StreamReader lector = new StreamReader(File.OpenRead(fileChooser.FileName));
+
+                    string auxiliar = lector.ReadLine();
+                    if (auxiliar == "Contenidos Generales")
+                    {
+                        lector.Close();
+                        new EvaluacionGeneral_Loaded(fileChooser.FileName).Show();
+                        //new EvaluacionGeneral_Loaded(currentPath + FileNameInternal).Show();
+                    }
+                    else if (auxiliar == "Reading" || auxiliar == "Listening" || auxiliar == "Writing")
+                    {
+                        lector.Close();
+                        new EvaluacionCustom_Loaded(fileChooser.FileName).Show();
+                    }
                 }
             }
             else

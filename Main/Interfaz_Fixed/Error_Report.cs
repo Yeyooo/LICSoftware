@@ -73,5 +73,10 @@ namespace Interfaz_Fixed
             }
 
         }
+
+        private void Cancelar_Reporte_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

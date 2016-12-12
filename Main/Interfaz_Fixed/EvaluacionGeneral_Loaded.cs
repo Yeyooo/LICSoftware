@@ -91,7 +91,6 @@ namespace Interfaz_Fixed
 
         private void AsignarTexto(TableLayoutPanel panel, Asset asset, RadioButton buttonAlternativas)
         {
-
             for (int i = 0; i < panel.RowCount; i++)
             {
                 if (i == 0)

@@ -69,6 +69,7 @@
             this.Cancelar_Reporte.TabIndex = 3;
             this.Cancelar_Reporte.Text = "Cancelar";
             this.Cancelar_Reporte.UseVisualStyleBackColor = true;
+            this.Cancelar_Reporte.Click += new System.EventHandler(this.Cancelar_Reporte_Click);
             // 
             // Enviar_Reporte
             // 

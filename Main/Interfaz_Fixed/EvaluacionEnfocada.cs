@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -18,10 +19,15 @@ namespace Interfaz_Fixed
         private int MinutosRestante = 0;
         private int SegundosRestantes = 60;
 
+        private List<Asset> AssetsEscogidos;
+
+        private Usuario userInternal;
+
         public EvaluacionEnfocada(string Nombre,List<Asset> Assets)
         {
             InitializeComponent();
-            Asignar_Loop(Assets);
+            AssetsEscogidos = Assets;
+            Asignar_Loop(AssetsEscogidos);
             tipoEvaluacion_Label.Text = tipoEvaluacion_Label+Nombre;
         }
 
@@ -78,7 +84,49 @@ namespace Interfaz_Fixed
             evaluador.recorrerPreguntas(this.layout_Alternativas9);
             evaluador.recorrerPreguntas(this.layout_Alternativas10);
             evaluador.Evaluar();
+            //ANTES DE ENVIAR AL TUTOR PREGUNTAR SI DESEA GUARDAR LA EVALUACION
+
+            DialogResult resultado = MessageBox.Show("¿Desea guardar esta evaluacion corregida para su posterior revisión?", "Guardar Evaluación", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (resultado == DialogResult.Yes)
+            {
+                //Escribir en Memoria secundaria
+                EscribirEnDisco(userInternal.getNombre(), AssetsEscogidos, tipoEvaluacion_Label.Text);
+                //Enviar al Tutor
+                DialogResult dialog =MessageBox.Show("Guardado Correctamente","Exito",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                if (dialog == DialogResult.OK)
+                {
+                    this.Close();
+                }
+            }
+            else if (resultado == DialogResult.No)
+            {
+                //Enviar al Tutor
+            }
         }
 
+        private void EscribirEnDisco(string usuarioName, List<Asset> listaAuxiliar, string TipoEvaluacion)
+        {
+            string currentPath = Environment.CurrentDirectory + "\\Recursos\\Usuarios\\" + usuarioName;
+            if (Directory.Exists(currentPath))
+            {
+                SaveFileDialog saver = new SaveFileDialog();
+                saver.InitialDirectory = currentPath;
+                if (saver.ShowDialog() == DialogResult.OK)
+                {
+                    StreamWriter escritor = new StreamWriter(File.Create(saver.FileName + ".sav"));
+                    escritor.WriteLine(TipoEvaluacion);
+                    foreach (Asset asset in listaAuxiliar)
+                    {
+                        escritor.Write(asset.getId() + ", ");
+                    }
+                    escritor.Close();
+                }
+            }
+            else
+            {
+                MessageBox.Show("Directorio del usuario no existe", "ERROR FATAL", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+    
     }
 }

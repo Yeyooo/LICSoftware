@@ -18,31 +18,47 @@ namespace Interfaz_Fixed
         private string arregloID;
         private string[] IDS;
 
-        public EvaluacionCustom_Loaded()
+        public EvaluacionCustom_Loaded(string path)
         {
             InitializeComponent();
-            CargarAssets(recuperarAssets(recuperarIDs("")));
+            try
+            {
+                CargarAssets(recuperarAssets(recuperarIDs(path)));
+            }
+            catch (NullReferenceException)
+            {
+                MessageBox.Show("Problema al cargar la Evaluacion","Error fatal", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
         }
 
         private List<int> recuperarIDs(string path)
         {
-            List<int> idsRecuperadas = new List<int>();
-            if (File.Exists(path) && path.EndsWith(".sav"))
+            try
             {
-                StreamReader readerArchivo = new StreamReader(path);
-                while (!readerArchivo.EndOfStream)
+                List<int> idsRecuperadas = new List<int>();
+                if (File.Exists(path) && path.EndsWith(".sav"))
                 {
-                    nombreEvaluacion = readerArchivo.ReadLine();
-                    arregloID = readerArchivo.ReadLine();
-                    IDS = arregloID.Split(',');
-                    foreach (string indice in IDS)
+                    StreamReader readerArchivo = new StreamReader(path);
+                    while (!readerArchivo.EndOfStream)
                     {
-                        idsRecuperadas.Add(int.Parse(indice));
+                        nombreEvaluacion = readerArchivo.ReadLine();
+                        MessageBox.Show(nombreEvaluacion);
+                        arregloID = readerArchivo.ReadLine();
+                        IDS = arregloID.Split(',');
+                        foreach (string indice in IDS)
+                        {
+                            idsRecuperadas.Add(int.Parse(indice));
+                        }
                     }
+                    readerArchivo.Close();
                 }
-                readerArchivo.Close();
+                return idsRecuperadas;
             }
-            return idsRecuperadas;
+            catch (Exception)
+            {
+                MessageBox.Show("Problema al cargar Assets","Assets Invalidos",MessageBoxButtons.OK,MessageBoxIcon.Stop);
+                return null;
+            }
         }
 
         private List<Asset> recuperarAssets(List<int> id_Assets)

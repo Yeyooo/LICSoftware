@@ -84,7 +84,6 @@ namespace Datos
                         TmpNiveles.Add(reader.GetInt32(0)); // agrega el writing
                         TmpNiveles.Add(reader.GetInt32(1)); // agrega el reading
                         TmpNiveles.Add(reader.GetInt32(2)); // agrega el listening
-
                     }
                     Conn.Close();
                     return TmpNiveles;
