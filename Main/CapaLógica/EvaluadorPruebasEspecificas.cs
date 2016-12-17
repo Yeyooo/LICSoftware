@@ -27,7 +27,13 @@ namespace CapaLógica
                 for (int i = 0; i < panel.RowCount; i++)
                 {
                     Slots_Alternativas radioButton = panel.GetControlFromPosition(0, i) as Slots_Alternativas;
-                    listaButton.Add(radioButton);
+                    if (radioButton != null) {
+                        listaButton.Add(radioButton);
+                    }
+                    else
+                    {
+                        
+                    }
                 }
 
             }

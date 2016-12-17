@@ -21,11 +21,10 @@ namespace Interfaz_Fixed
         private string arregloID;
         private string[] IDS;
 
-
         public LICGUI(Usuario user)
         {
             userInternal = user;
-            listaInternal = new EvaluacionNOGUI(user.getPlanDeEstudio());
+            //listaInternal = new EvaluacionNOGUI(user.getPlanDeEstudio());
             InitializeComponent();
             this.Usuario_Label.Text = this.Usuario_Label.Text + " "+user.getNombre().ToUpper();
             Cargar_Ligas(userInternal);
@@ -88,26 +87,18 @@ namespace Interfaz_Fixed
         {
             try
             {
-
-
                 //EvaluacionEnfocada evaluacionListening = new EvaluacionEnfocada("Listening",listaInternal.getPreguntasListening());
 
                 PlanDeEstudio x = userInternal.getPlanDeEstudio();
 
                 Dictionary<int, Asset> dicc = x.getDicListening();
-                Console.WriteLine("count: " + dicc.Count);
-                foreach (KeyValuePair<int, Asset> asd in dicc)
-                {
-                    Console.WriteLine("valor id : "+asd.Value.getId());
-                }
                 List<Asset> tmp = EvaluacionNOGUI.EvaluacionPorHabilidadTEST(dicc);
-                
-                Console.WriteLine("count: "+tmp.Count);
-                EvaluacionEnfocada evaluacionListening = new EvaluacionEnfocada("Listening", tmp);
+
+                EvaluacionEnfocada evaluacionListening = new EvaluacionEnfocada("Listening", tmp, userInternal.getNombre());
 
                 evaluacionListening.Show();
             }
-            catch (Exception)
+            catch (NullReferenceException)
             {
                 MessageBox.Show("No se pudo Crear la Evaluacion, favor enviar un reporte","Error Fatal", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
@@ -118,7 +109,7 @@ namespace Interfaz_Fixed
             try
             {
                 //EvaluacionEnfocada evaluacionReading = new EvaluacionEnfocada("Reading", listaInternal.getPreguntasReading());
-                EvaluacionEnfocada evaluacionReading = new EvaluacionEnfocada("Reading", EvaluacionNOGUI.EvaluacionPorHabilidadTEST(userInternal.getPlanDeEstudio().getDicReading()));
+                EvaluacionEnfocada evaluacionReading = new EvaluacionEnfocada("Reading", EvaluacionNOGUI.EvaluacionPorHabilidadTEST(userInternal.getPlanDeEstudio().getDicReading()),userInternal.getNombre());
                 evaluacionReading.Show();
             }
             catch (Exception)
@@ -131,7 +122,7 @@ namespace Interfaz_Fixed
         {
             try {
                 // EvaluacionEnfocada evaluacionWriting = new EvaluacionEnfocada("Writing", listaInternal.getPreguntasWriting());
-                EvaluacionEnfocada evaluacionWriting = new EvaluacionEnfocada("Writing", EvaluacionNOGUI.EvaluacionPorHabilidadTEST(userInternal.getPlanDeEstudio().getDicWriting()));
+                EvaluacionEnfocada evaluacionWriting = new EvaluacionEnfocada("Writing", EvaluacionNOGUI.EvaluacionPorHabilidadTEST(userInternal.getPlanDeEstudio().getDicWriting()), userInternal.getNombre());
                 evaluacionWriting.Show();
             }
             catch (Exception)
@@ -201,7 +192,7 @@ namespace Interfaz_Fixed
                         new EvaluacionGeneral_Loaded(fileChooser.FileName).Show();
                         //new EvaluacionGeneral_Loaded(currentPath + FileNameInternal).Show();
                     }
-                    else if (auxiliar == "Reading" || auxiliar == "Listening" || auxiliar == "Writing")
+                    if (auxiliar == "Evaluacion de Listening" || auxiliar == "Evaluacion de Reading" || auxiliar == "Evaluacion de Writing")
                     {
                         lector.Close();
                         new EvaluacionCustom_Loaded(fileChooser.FileName).Show();

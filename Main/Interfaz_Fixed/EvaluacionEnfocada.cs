@@ -21,24 +21,28 @@ namespace Interfaz_Fixed
 
         private List<Asset> AssetsEscogidos;
 
+        private string nombreUsuario;
+
         //private Usuario userInternal;
 
-        public EvaluacionEnfocada(string Nombre,List<Asset> Assets)
+        public EvaluacionEnfocada(string Nombre,List<Asset> Assets,string nombreUser)
         {
             InitializeComponent();
+            nombreUsuario = nombreUser;
             AssetsEscogidos = Assets;
             Asignar_Loop(AssetsEscogidos);
-            tipoEvaluacion_Label.Text = tipoEvaluacion_Label+Nombre;
+            tipoEvaluacion_Label.Text = tipoEvaluacion_Label.Text +" "+ Nombre;
         }
 
         private void Evento_MaterialAudio(object sender, EventArgs e, Asset asset)
         {
-            string path = Environment.CurrentDirectory +"/Recursos/Audios/"+asset.getUrlArchivo();
+            string path = Environment.CurrentDirectory +"\\Recursos\\Audio\\"+asset.getUrlArchivo();
+            new Material_ApoyoAudio(path).Show();
         }
 
         private void Evento_MaterialImagen(object sender, EventArgs e, Asset asset)
         {
-            string path = Environment.CurrentDirectory + "/Recursos/Imagen/" + asset.getUrlArchivo();
+            string path = Environment.CurrentDirectory + "\\Recursos\\Imagen\\" + asset.getUrlArchivo();
             new Material_ApoyoImagen(path).Show();
         }
         
@@ -91,9 +95,7 @@ namespace Interfaz_Fixed
             {
                 //Escribir en Memoria secundaria
 
-
-
-                //EscribirEnDisco(userInternal.getNombre(), AssetsEscogidos, tipoEvaluacion_Label.Text);
+                EscribirEnDisco(nombreUsuario, AssetsEscogidos, tipoEvaluacion_Label.Text);
                 //Enviar al Tutor
                 DialogResult dialog =MessageBox.Show("Guardado Correctamente","Exito",MessageBoxButtons.OK,MessageBoxIcon.Information);
                 if (dialog == DialogResult.OK)

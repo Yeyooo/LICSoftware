@@ -15,8 +15,6 @@ namespace Interfaz_Fixed
     public partial class EvaluacionCustom_Loaded : Form
     {
         private string nombreEvaluacion;
-        private string arregloID;
-        private string[] IDS;
 
         public EvaluacionCustom_Loaded(string path)
         {
@@ -33,6 +31,8 @@ namespace Interfaz_Fixed
 
         private List<int> recuperarIDs(string path)
         {
+            string arregloID;
+            string[] IDS;
             try
             {
                 List<int> idsRecuperadas = new List<int>();
@@ -42,12 +42,18 @@ namespace Interfaz_Fixed
                     while (!readerArchivo.EndOfStream)
                     {
                         nombreEvaluacion = readerArchivo.ReadLine();
-                        MessageBox.Show(nombreEvaluacion);
                         arregloID = readerArchivo.ReadLine();
                         IDS = arregloID.Split(',');
                         foreach (string indice in IDS)
                         {
-                            idsRecuperadas.Add(int.Parse(indice));
+                            if (indice != " ") {
+                                int aux = int.Parse(indice);
+                                idsRecuperadas.Add(aux);
+                            }
+                            else
+                            {
+
+                            }
                         }
                     }
                     readerArchivo.Close();
