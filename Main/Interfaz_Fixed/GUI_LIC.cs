@@ -108,10 +108,8 @@ namespace Interfaz_Fixed
         {
             try
             {
-<<<<<<< HEAD
                 //EvaluacionEnfocada evaluacionReading = new EvaluacionEnfocada("Reading", listaInternal.getPreguntasReading());
-                EvaluacionEnfocada evaluacionReading = new EvaluacionEnfocada("Reading", EvaluacionNOGUI.EvaluacionPorHabilidadTEST(userInternal.getPlanDeEstudio().getDicReading()),userInternal.getNombre());
-=======
+                //EvaluacionEnfocada evaluacionReading = new EvaluacionEnfocada("Reading", EvaluacionNOGUI.EvaluacionPorHabilidadTEST(userInternal.getPlanDeEstudio().getDicReading()),userInternal.getNombre());
                 PlanDeEstudio x = userInternal.getPlanDeEstudio();
 
                 Dictionary<int, Asset> dicc = x.getDicReading();
@@ -123,9 +121,7 @@ namespace Interfaz_Fixed
                 List<Asset> tmp = EvaluacionNOGUI.EvaluacionPorHabilidadTEST(dicc);
 
                 Console.WriteLine("count: " + tmp.Count);
-                EvaluacionEnfocada evaluacionReading = new EvaluacionEnfocada("Reading", tmp);
-
->>>>>>> origin/master
+                EvaluacionEnfocada evaluacionReading = new EvaluacionEnfocada("Reading", tmp,userInternal.getNombre());
                 evaluacionReading.Show();
             }
             catch (Exception)
@@ -137,10 +133,9 @@ namespace Interfaz_Fixed
         private void EntrenarWriting_Click(object sender, EventArgs e)
         {
             try {
-<<<<<<< HEAD
+
                 // EvaluacionEnfocada evaluacionWriting = new EvaluacionEnfocada("Writing", listaInternal.getPreguntasWriting());
-                EvaluacionEnfocada evaluacionWriting = new EvaluacionEnfocada("Writing", EvaluacionNOGUI.EvaluacionPorHabilidadTEST(userInternal.getPlanDeEstudio().getDicWriting()), userInternal.getNombre());
-=======
+                //EvaluacionEnfocada evaluacionWriting = new EvaluacionEnfocada("Writing", EvaluacionNOGUI.EvaluacionPorHabilidadTEST(userInternal.getPlanDeEstudio().getDicWriting()), userInternal.getNombre());
                 PlanDeEstudio x = userInternal.getPlanDeEstudio();
 
                 Dictionary<int, Asset> dicc = x.getDicWriting();
@@ -152,9 +147,8 @@ namespace Interfaz_Fixed
                 List<Asset> tmp = EvaluacionNOGUI.EvaluacionPorHabilidadTEST(dicc);
 
                 Console.WriteLine("count: " + tmp.Count);
-                EvaluacionEnfocada evaluacionWriting = new EvaluacionEnfocada("Writing", tmp);
+                EvaluacionEnfocada evaluacionWriting = new EvaluacionEnfocada("Writing", tmp,userInternal.getNombre());
 
->>>>>>> origin/master
                 evaluacionWriting.Show();
             }
             catch (Exception)

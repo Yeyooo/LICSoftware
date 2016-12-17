@@ -22,7 +22,7 @@ namespace Interfaz_Fixed
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new FormInicioSesion());
-<<<<<<< HEAD
+
             /*PlanDeEstudio PE = new PlanDeEstudio(3, 3, 1);
 =======
 >>>>>>> origin/master
