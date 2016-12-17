@@ -21,7 +21,7 @@ namespace Interfaz_Fixed
 
         private List<Asset> AssetsEscogidos;
 
-        private Usuario userInternal;
+        //private Usuario userInternal;
 
         public EvaluacionEnfocada(string Nombre,List<Asset> Assets)
         {

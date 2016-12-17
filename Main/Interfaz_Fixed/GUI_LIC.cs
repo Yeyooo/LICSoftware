@@ -25,6 +25,7 @@ namespace Interfaz_Fixed
         public LICGUI(Usuario user)
         {
             userInternal = user;
+            listaInternal = new EvaluacionNOGUI(user.getPlanDeEstudio());
             InitializeComponent();
             this.Usuario_Label.Text = this.Usuario_Label.Text + " "+user.getNombre().ToUpper();
             Cargar_Ligas(userInternal);
