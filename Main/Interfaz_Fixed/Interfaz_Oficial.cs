@@ -22,9 +22,11 @@ namespace Interfaz_Fixed
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new FormInicioSesion());
+<<<<<<< HEAD
             /*PlanDeEstudio PE = new PlanDeEstudio(3, 3, 1);
+=======
+>>>>>>> origin/master
 
-            Dictionary<int, Asset> dic = PE.getDicListening();
 
             List<int> IdPreguntasConjunto;
             foreach (KeyValuePair<int, Asset> tmp in dic) // obtienes los id del conjunto de preguntas
@@ -36,6 +38,7 @@ namespace Interfaz_Fixed
                 }
             }
 
+<<<<<<< HEAD
             List<Asset> ev = EvaluacionNOGUI.EvaluacionPorHabilidadTEST(dic);
 
             Usuario user = new Usuario("burro@test.cl");
@@ -43,6 +46,13 @@ namespace Interfaz_Fixed
             Dictionary<int, Asset> dicc = x.getDicListening();
             Console.WriteLine("count: "+dicc.Count);
             List<Asset> tmp2 = EvaluacionNOGUI.EvaluacionPorHabilidadTEST(dicc);
+=======
+            ////Usuario user = new Usuario("burro@test.cl");
+            ////PlanDeEstudio x = user.getPlanDeEstudio();
+            ////Dictionary<int, Asset> dicc = x.getDicListening();
+            ////Console.WriteLine("count: " + dicc.Count);
+            ////List<Asset> tmp = EvaluacionNOGUI.EvaluacionPorHabilidadTEST(dicc);
+>>>>>>> origin/master
 
             if (tmp2 == null)
             {

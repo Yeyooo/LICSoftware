@@ -149,12 +149,14 @@ namespace Datos
         {
             if (PlanDeEstudio.sePuedenGenerarParaUnaHabilidad10Preguntas(diccionarioHabilidad))
             {
+                Console.WriteLine("entre");
                 List<Asset> Evaluacion = new List<Asset>();
 
                 List<int> IdsCjto = new List<int>();
 
                 foreach (KeyValuePair<int,Asset> tmp in diccionarioHabilidad)
                 {
+                    Console.WriteLine("entre foreach");
                     IdsCjto = AssetDAL.TodosLosIdDeLasPreguntasDeUnConjunto(tmp.Key);
                     for (int i = 0; i < IdsCjto.Count; i++)
                     {

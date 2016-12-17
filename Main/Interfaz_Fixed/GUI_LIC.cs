@@ -108,8 +108,24 @@ namespace Interfaz_Fixed
         {
             try
             {
+<<<<<<< HEAD
                 //EvaluacionEnfocada evaluacionReading = new EvaluacionEnfocada("Reading", listaInternal.getPreguntasReading());
                 EvaluacionEnfocada evaluacionReading = new EvaluacionEnfocada("Reading", EvaluacionNOGUI.EvaluacionPorHabilidadTEST(userInternal.getPlanDeEstudio().getDicReading()),userInternal.getNombre());
+=======
+                PlanDeEstudio x = userInternal.getPlanDeEstudio();
+
+                Dictionary<int, Asset> dicc = x.getDicReading();
+                Console.WriteLine("count: " + dicc.Count);
+                foreach (KeyValuePair<int, Asset> asd in dicc)
+                {
+                    Console.WriteLine("valor id : " + asd.Value.getId());
+                }
+                List<Asset> tmp = EvaluacionNOGUI.EvaluacionPorHabilidadTEST(dicc);
+
+                Console.WriteLine("count: " + tmp.Count);
+                EvaluacionEnfocada evaluacionReading = new EvaluacionEnfocada("Reading", tmp);
+
+>>>>>>> origin/master
                 evaluacionReading.Show();
             }
             catch (Exception)
@@ -121,8 +137,24 @@ namespace Interfaz_Fixed
         private void EntrenarWriting_Click(object sender, EventArgs e)
         {
             try {
+<<<<<<< HEAD
                 // EvaluacionEnfocada evaluacionWriting = new EvaluacionEnfocada("Writing", listaInternal.getPreguntasWriting());
                 EvaluacionEnfocada evaluacionWriting = new EvaluacionEnfocada("Writing", EvaluacionNOGUI.EvaluacionPorHabilidadTEST(userInternal.getPlanDeEstudio().getDicWriting()), userInternal.getNombre());
+=======
+                PlanDeEstudio x = userInternal.getPlanDeEstudio();
+
+                Dictionary<int, Asset> dicc = x.getDicWriting();
+                Console.WriteLine("count: " + dicc.Count);
+                foreach (KeyValuePair<int, Asset> asd in dicc)
+                {
+                    Console.WriteLine("valor id : " + asd.Value.getId());
+                }
+                List<Asset> tmp = EvaluacionNOGUI.EvaluacionPorHabilidadTEST(dicc);
+
+                Console.WriteLine("count: " + tmp.Count);
+                EvaluacionEnfocada evaluacionWriting = new EvaluacionEnfocada("Writing", tmp);
+
+>>>>>>> origin/master
                 evaluacionWriting.Show();
             }
             catch (Exception)
