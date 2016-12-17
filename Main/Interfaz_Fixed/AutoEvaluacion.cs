@@ -80,6 +80,10 @@ namespace Interfaz_Fixed
             int NivelReading = determinarNivel(ReadingBronze_check, ReadingSilver_chk, ReadingGold_chk);
             int NivelListening = determinarNivel(ListeningBronze_chk, ListeningSilver_Chk, ListeningGold_chk);
             UsuarioDAL.setNivelesUsuarioEnBD(NivelWriting,NivelReading,NivelListening,Correo);
+            Usuario user = new Usuario(Correo);
+
+            new LICGUI(user).Show();
+            this.Hide();
             
     }
 
