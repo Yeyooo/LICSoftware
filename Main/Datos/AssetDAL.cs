@@ -166,7 +166,7 @@ namespace Datos
                 pAsset.Teoria = AssetDAL.getTeoriaAssetBD(_reader.GetInt32(5));
                 pAsset.UrlArchivo = AssetDAL.BuscarUrlDeUnAsset(pAsset.Id);
                 
-                dicACargar[indice] = pAsset;
+                dicACargar[pAsset.Id] = pAsset;
                 indice++;
                 //_lista.Add(pAsset);
             }

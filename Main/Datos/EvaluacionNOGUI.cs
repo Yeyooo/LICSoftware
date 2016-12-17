@@ -16,11 +16,12 @@ namespace Datos
         {
 
             bool flag = false;
-            while (flag == false) {
-                this.PreguntasWriting = EvaluacionPorHabilidad(PDE.getDicWriting());
-                this.PreguntasReading = EvaluacionPorHabilidad(PDE.getDicReading());
-                this.PreguntasListening = EvaluacionPorHabilidad(PDE.getDicListening());
-                if(this.getPreguntasWriting() == null)
+            while (flag == false)
+            {
+                this.PreguntasWriting = EvaluacionPorHabilidadTEST(PDE.getDicWriting());
+                this.PreguntasReading = EvaluacionPorHabilidadTEST(PDE.getDicReading());
+                this.PreguntasListening = EvaluacionPorHabilidadTEST(PDE.getDicListening());
+                if (this.getPreguntasWriting() == null)
                 {
                     PDE.setDiccionarioCompletoFalse(PDE.getDicWriting());//poner todo el diccionario en false
                 }
@@ -55,7 +56,7 @@ namespace Datos
                 }
                 else
                 {// mantener
-                    this.PreguntasWriting = EvaluacionNOGUI.EvaluacionPorHabilidad(PDE.getDicWriting());
+                    this.PreguntasWriting = EvaluacionNOGUI.EvaluacionPorHabilidadTEST(PDE.getDicWriting());
                 }
 
                 if (estadoReading == "transicion subida")
@@ -68,7 +69,7 @@ namespace Datos
                 }
                 else
                 {// mantener
-                    this.PreguntasReading = EvaluacionNOGUI.EvaluacionPorHabilidad(PDE.getDicReading());
+                    this.PreguntasReading = EvaluacionNOGUI.EvaluacionPorHabilidadTEST(PDE.getDicReading());
                 }
 
                 if (estadoListening == "transicion subida")
@@ -81,7 +82,7 @@ namespace Datos
                 }
                 else
                 {// mantener
-                    this.PreguntasListening = EvaluacionNOGUI.EvaluacionPorHabilidad(PDE.getDicListening());
+                    this.PreguntasListening = EvaluacionNOGUI.EvaluacionPorHabilidadTEST(PDE.getDicListening());
                 }
 
                 if (this.getPreguntasWriting() == null)
@@ -105,37 +106,73 @@ namespace Datos
 
         }
 
-        public static List<Asset> EvaluacionPorHabilidad( Dictionary<int, Asset> diccionarioHabilidad ) // 10 solamente, de una habilidad
+        //public static List<Asset> EvaluacionPorHabilidad( Dictionary<int, Asset> diccionarioHabilidad ) // 10 solamente, de una habilidad
+        //{
+        //    if (PlanDeEstudio.sePuedenGenerarParaUnaHabilidad10Preguntas(diccionarioHabilidad)) {
+        //        List<Asset> Evaluacion = new List<Asset>();
+
+        //        List<int> IdsCjto = new List<int>();
+
+        //        for (int i = 1; i < diccionarioHabilidad.Count; i++) {
+        //            Console.WriteLine("entre :"+i);
+        //            IdsCjto = AssetDAL.TodosLosIdDeLasPreguntasDeUnConjunto(diccionarioHabilidad[i].getId()); // para la pregunta que encuentra, busca todos los assets asociados al mismo conjunto de esa pregunta
+        //            for (int j = 1; j < IdsCjto.Count; j++)
+        //            {
+        //                Console.WriteLine("entre :" + j);
+        //                foreach (KeyValuePair<int, Asset> tmp in diccionarioHabilidad)
+        //                {
+        //                    Console.WriteLine("bucle");
+        //                    if (tmp.Value.salio() == false && !IdsCjto.Contains(tmp.Value.Id)) // no lo hayamos tomado nunca // antes tenia IdsCjto[j] == tmp.Value.getId() && 
+        //                    {
+        //                        Evaluacion.Add(tmp.Value);
+        //                        tmp.Value.setSalio(true); // lo marcamos como que ya salio
+        //                        if (Evaluacion.Count == 10)
+        //                        {
+        //                            return Evaluacion;
+        //                        }
+        //                    }
+        //                }
+
+        //            }
+
+        //        }
+
+        //        return null;
+        //    }else
+        //    {
+        //        return null;
+        //    }
+
+        //}
+
+        public static List<Asset> EvaluacionPorHabilidadTEST(Dictionary<int, Asset> diccionarioHabilidad) // 10 solamente, de una habilidad
         {
-            if (PlanDeEstudio.sePuedenGenerarParaUnaHabilidad10Preguntas(diccionarioHabilidad)) {
+            if (PlanDeEstudio.sePuedenGenerarParaUnaHabilidad10Preguntas(diccionarioHabilidad))
+            {
                 List<Asset> Evaluacion = new List<Asset>();
 
                 List<int> IdsCjto = new List<int>();
 
-                for (int i = 0; i < diccionarioHabilidad.Count; i++) {
-
-                    IdsCjto = AssetDAL.TodosLosIdDeLasPreguntasDeUnConjunto(diccionarioHabilidad[i].getId()); // para la pregunta que encuentra, busca todos los assets asociados al mismo conjunto de esa pregunta
-                    for (int j = 0; j < IdsCjto.Count; j++)
+                foreach (KeyValuePair<int,Asset> tmp in diccionarioHabilidad)
+                {
+                    IdsCjto = AssetDAL.TodosLosIdDeLasPreguntasDeUnConjunto(tmp.Key);
+                    for (int i = 0; i < IdsCjto.Count; i++)
                     {
-                        foreach (KeyValuePair<int, Asset> tmp in diccionarioHabilidad)
+                        if (tmp.Value.salio() == false && !Evaluacion.Contains(tmp.Value))
                         {
-                            if (IdsCjto[j] == tmp.Value.getId() && tmp.Value.salio() == false) // no lo hayamos tomado nunca
+                            Evaluacion.Add(tmp.Value);
+                            tmp.Value.setSalio(true);
+                            if (Evaluacion.Count == 10)
                             {
-                                Evaluacion.Add(tmp.Value);
-                                tmp.Value.setSalio(true); // lo marcamos como que ya salio
-                                if (Evaluacion.Count == 10)
-                                {
-                                    return Evaluacion;
-                                }
+                                return Evaluacion;
                             }
                         }
-
                     }
-
                 }
 
                 return null;
-            }else
+            }
+            else
             {
                 return null;
             }

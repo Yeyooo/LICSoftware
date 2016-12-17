@@ -19,7 +19,7 @@ namespace Datos
 
         public Usuario() { }
 
-        public Usuario( string pCorreoIngresado )
+        public Usuario(string pCorreoIngresado)
         {
             List<string> tmp = UsuarioDAL.datosUsuario(pCorreoIngresado);
 
@@ -33,7 +33,8 @@ namespace Datos
             this.NivelReading = tmpInt[1];
             this.NivelListening = tmpInt[2];
 
-            this.PDE = new PlanDeEstudio(this.NivelWriting, this.NivelReading, this.NivelListening); 
+            this.PDE = new PlanDeEstudio(this.NivelWriting, this.NivelReading, this.NivelListening);
+            Console.WriteLine("el usuario tiene los iguientes niveles: {0} , {1}, {2}", NivelWriting, NivelReading, NivelListening);
         }
 
         public Usuario( string pNombre, string pCorreo, string pPassword ) // inicializamos con los 3 niveles en 0(sin nivel) 

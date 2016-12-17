@@ -775,6 +775,7 @@ namespace Interfaz_Fixed
                 AsignarTexto(layout_Pregunta8, ListaAsset[7], layout_Alternativas8);
                 AsignarTexto(layout_Pregunta9, ListaAsset[8], layout_Alternativas9);
                 AsignarTexto(layout_Pregunta10, ListaAsset[9], layout_Alternativas10);
+                Console.WriteLine("llegue aqui");
             }
             catch (Exception)
             {

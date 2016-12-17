@@ -90,7 +90,10 @@ namespace Interfaz_Fixed
             if (resultado == DialogResult.Yes)
             {
                 //Escribir en Memoria secundaria
-                EscribirEnDisco(userInternal.getNombre(), AssetsEscogidos, tipoEvaluacion_Label.Text);
+
+
+
+                //EscribirEnDisco(userInternal.getNombre(), AssetsEscogidos, tipoEvaluacion_Label.Text);
                 //Enviar al Tutor
                 DialogResult dialog =MessageBox.Show("Guardado Correctamente","Exito",MessageBoxButtons.OK,MessageBoxIcon.Information);
                 if (dialog == DialogResult.OK)

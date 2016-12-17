@@ -88,7 +88,23 @@ namespace Interfaz_Fixed
         {
             try
             {
-                EvaluacionEnfocada evaluacionListening = new EvaluacionEnfocada("Listening",listaInternal.getPreguntasListening());
+
+
+                //EvaluacionEnfocada evaluacionListening = new EvaluacionEnfocada("Listening",listaInternal.getPreguntasListening());
+
+                PlanDeEstudio x = userInternal.getPlanDeEstudio();
+
+                Dictionary<int, Asset> dicc = x.getDicListening();
+                Console.WriteLine("count: " + dicc.Count);
+                foreach (KeyValuePair<int, Asset> asd in dicc)
+                {
+                    Console.WriteLine("valor id : "+asd.Value.getId());
+                }
+                List<Asset> tmp = EvaluacionNOGUI.EvaluacionPorHabilidadTEST(dicc);
+                
+                Console.WriteLine("count: "+tmp.Count);
+                EvaluacionEnfocada evaluacionListening = new EvaluacionEnfocada("Listening", tmp);
+
                 evaluacionListening.Show();
             }
             catch (Exception)
@@ -101,7 +117,8 @@ namespace Interfaz_Fixed
         {
             try
             {
-                EvaluacionEnfocada evaluacionReading = new EvaluacionEnfocada("Reading", listaInternal.getPreguntasReading());
+                //EvaluacionEnfocada evaluacionReading = new EvaluacionEnfocada("Reading", listaInternal.getPreguntasReading());
+                EvaluacionEnfocada evaluacionReading = new EvaluacionEnfocada("Reading", EvaluacionNOGUI.EvaluacionPorHabilidadTEST(userInternal.getPlanDeEstudio().getDicReading()));
                 evaluacionReading.Show();
             }
             catch (Exception)
@@ -113,7 +130,8 @@ namespace Interfaz_Fixed
         private void EntrenarWriting_Click(object sender, EventArgs e)
         {
             try {
-                EvaluacionEnfocada evaluacionWriting = new EvaluacionEnfocada("Writing", listaInternal.getPreguntasWriting());
+                // EvaluacionEnfocada evaluacionWriting = new EvaluacionEnfocada("Writing", listaInternal.getPreguntasWriting());
+                EvaluacionEnfocada evaluacionWriting = new EvaluacionEnfocada("Writing", EvaluacionNOGUI.EvaluacionPorHabilidadTEST(userInternal.getPlanDeEstudio().getDicWriting()));
                 evaluacionWriting.Show();
             }
             catch (Exception)
