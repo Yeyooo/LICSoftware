@@ -22,9 +22,7 @@ namespace Interfaz_Fixed
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new FormInicioSesion());
-            PlanDeEstudio PE = new PlanDeEstudio(3, 3, 1);
 
-            Dictionary<int, Asset> dic = PE.getDicListening();
 
             //List<int> IdPreguntasConjunto;
             //foreach (KeyValuePair<int, Asset> tmp in dic) // obtienes los id del conjunto de preguntas
@@ -36,12 +34,10 @@ namespace Interfaz_Fixed
             //    }
             //}
 
-            ////List<Asset> ev = EvaluacionNOGUI.EvaluacionPorHabilidadTEST(dic);
-
             ////Usuario user = new Usuario("burro@test.cl");
             ////PlanDeEstudio x = user.getPlanDeEstudio();
             ////Dictionary<int, Asset> dicc = x.getDicListening();
-            ////Console.WriteLine("count: "+dicc.Count);
+            ////Console.WriteLine("count: " + dicc.Count);
             ////List<Asset> tmp = EvaluacionNOGUI.EvaluacionPorHabilidadTEST(dicc);
 
             ////if (tmp == null)

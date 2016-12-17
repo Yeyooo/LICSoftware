@@ -25,7 +25,7 @@ namespace Interfaz_Fixed
         public LICGUI(Usuario user)
         {
             userInternal = user;
-            listaInternal = new EvaluacionNOGUI(user.getPlanDeEstudio());
+            //listaInternal = new EvaluacionNOGUI(user.getPlanDeEstudio());
             InitializeComponent();
             this.Usuario_Label.Text = this.Usuario_Label.Text + " "+user.getNombre().ToUpper();
             Cargar_Ligas(userInternal);
@@ -117,8 +117,19 @@ namespace Interfaz_Fixed
         {
             try
             {
-                //EvaluacionEnfocada evaluacionReading = new EvaluacionEnfocada("Reading", listaInternal.getPreguntasReading());
-                EvaluacionEnfocada evaluacionReading = new EvaluacionEnfocada("Reading", EvaluacionNOGUI.EvaluacionPorHabilidadTEST(userInternal.getPlanDeEstudio().getDicReading()));
+                PlanDeEstudio x = userInternal.getPlanDeEstudio();
+
+                Dictionary<int, Asset> dicc = x.getDicReading();
+                Console.WriteLine("count: " + dicc.Count);
+                foreach (KeyValuePair<int, Asset> asd in dicc)
+                {
+                    Console.WriteLine("valor id : " + asd.Value.getId());
+                }
+                List<Asset> tmp = EvaluacionNOGUI.EvaluacionPorHabilidadTEST(dicc);
+
+                Console.WriteLine("count: " + tmp.Count);
+                EvaluacionEnfocada evaluacionReading = new EvaluacionEnfocada("Reading", tmp);
+
                 evaluacionReading.Show();
             }
             catch (Exception)
@@ -130,8 +141,19 @@ namespace Interfaz_Fixed
         private void EntrenarWriting_Click(object sender, EventArgs e)
         {
             try {
-                // EvaluacionEnfocada evaluacionWriting = new EvaluacionEnfocada("Writing", listaInternal.getPreguntasWriting());
-                EvaluacionEnfocada evaluacionWriting = new EvaluacionEnfocada("Writing", EvaluacionNOGUI.EvaluacionPorHabilidadTEST(userInternal.getPlanDeEstudio().getDicWriting()));
+                PlanDeEstudio x = userInternal.getPlanDeEstudio();
+
+                Dictionary<int, Asset> dicc = x.getDicWriting();
+                Console.WriteLine("count: " + dicc.Count);
+                foreach (KeyValuePair<int, Asset> asd in dicc)
+                {
+                    Console.WriteLine("valor id : " + asd.Value.getId());
+                }
+                List<Asset> tmp = EvaluacionNOGUI.EvaluacionPorHabilidadTEST(dicc);
+
+                Console.WriteLine("count: " + tmp.Count);
+                EvaluacionEnfocada evaluacionWriting = new EvaluacionEnfocada("Writing", tmp);
+
                 evaluacionWriting.Show();
             }
             catch (Exception)
