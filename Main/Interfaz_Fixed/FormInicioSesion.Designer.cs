@@ -137,7 +137,9 @@ namespace FormLogin
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "FormInicioSesion";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Inicio de Sesión";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form_Cerrado);
             this.ResumeLayout(false);
             this.PerformLayout();
 

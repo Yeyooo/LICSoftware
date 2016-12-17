@@ -139,7 +139,7 @@ namespace Datos
 
         public void setSalio(bool salio)
         {
-            this.Salio = true;
+            this.Salio = salio;
         }
 
 

@@ -48,5 +48,10 @@ namespace FormRegistro
                 this.Hide();
             }
         }
+
+        private void Form_Cerrado(object sender, FormClosedEventArgs e)
+        {
+            Environment.Exit(1);
+        }
     }
 }

@@ -57,17 +57,35 @@
     <Compile Include="AutoEvaluacion.Designer.cs">
       <DependentUpon>AutoEvaluacion.cs</DependentUpon>
     </Compile>
+    <Compile Include="Error_Report.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Error_Report.Designer.cs">
+      <DependentUpon>Error_Report.cs</DependentUpon>
+    </Compile>
     <Compile Include="Evaluacion.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Evaluacion.Designer.cs">
       <DependentUpon>Evaluacion.cs</DependentUpon>
     </Compile>
+    <Compile Include="EvaluacionCustom_Loaded.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EvaluacionCustom_Loaded.Designer.cs">
+      <DependentUpon>EvaluacionCustom_Loaded.cs</DependentUpon>
+    </Compile>
     <Compile Include="EvaluacionEnfocada.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="EvaluacionEnfocada.Designer.cs">
       <DependentUpon>EvaluacionEnfocada.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EvaluacionGeneral_Loaded.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EvaluacionGeneral_Loaded.Designer.cs">
+      <DependentUpon>EvaluacionGeneral_Loaded.cs</DependentUpon>
     </Compile>
     <Compile Include="FormInicioSesion.cs">
       <SubType>Form</SubType>
@@ -110,11 +128,20 @@
     <EmbeddedResource Include="AutoEvaluacion.resx">
       <DependentUpon>AutoEvaluacion.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Error_Report.resx">
+      <DependentUpon>Error_Report.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Evaluacion.resx">
       <DependentUpon>Evaluacion.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="EvaluacionCustom_Loaded.resx">
+      <DependentUpon>EvaluacionCustom_Loaded.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="EvaluacionEnfocada.resx">
       <DependentUpon>EvaluacionEnfocada.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EvaluacionGeneral_Loaded.resx">
+      <DependentUpon>EvaluacionGeneral_Loaded.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormInicioSesion.resx">
       <DependentUpon>FormInicioSesion.cs</DependentUpon>
@@ -242,6 +269,18 @@
       <Isolated>False</Isolated>
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Silver_leage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Silver_leage_NB.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Gold_Leage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Bronze_Leage.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
