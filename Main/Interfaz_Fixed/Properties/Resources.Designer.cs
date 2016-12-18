@@ -229,5 +229,15 @@ namespace Interfaz_Fixed.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap UI_licsoftware_fixed_3_0 {
+            get {
+                object obj = ResourceManager.GetObject("UI_licsoftware_fixed_3.0", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

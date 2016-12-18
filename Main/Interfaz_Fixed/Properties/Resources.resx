@@ -124,9 +124,6 @@
   <data name="UI_licsoftware_fixed_2.0" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\UI_licsoftware_fixed_2.0.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Liga_oro_ascenso1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Liga_oro_ascenso1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="UI_licsoftware_fixed" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\UI_licsoftware_fixed.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -141,6 +138,12 @@
   </data>
   <data name="botonNormall" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\botonNormall.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Bronze_Leage" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Bronze_Leage.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Silver_leage_NB" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Silver_leage_NB.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="NOLIGA_Warning1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\NOLIGA_Warning1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -157,8 +160,8 @@
   <data name="ui_glues_searchpanel_icon_initializing" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ui_glues_searchpanel_icon_initializing.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Silver_leage_NB" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Silver_leage_NB.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Liga_oro_ascenso1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Liga_oro_ascenso1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Gold_Leage" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Gold_Leage.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -166,7 +169,7 @@
   <data name="ui_battlenet_glues_bluebuttons_largeover" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ui_battlenet_glues_bluebuttons_largeover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Bronze_Leage" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Bronze_Leage.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="UI_licsoftware_fixed_3.0" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\UI_licsoftware_fixed_3.0.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
