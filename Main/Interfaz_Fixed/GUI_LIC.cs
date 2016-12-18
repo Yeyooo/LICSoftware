@@ -21,7 +21,6 @@ namespace Interfaz_Fixed
         private string arregloID;
         private string[] IDS;
 
-
         public LICGUI(Usuario user)
         {
             userInternal = user;
@@ -88,26 +87,18 @@ namespace Interfaz_Fixed
         {
             try
             {
-
-
                 //EvaluacionEnfocada evaluacionListening = new EvaluacionEnfocada("Listening",listaInternal.getPreguntasListening());
 
                 PlanDeEstudio x = userInternal.getPlanDeEstudio();
 
                 Dictionary<int, Asset> dicc = x.getDicListening();
-                Console.WriteLine("count: " + dicc.Count);
-                foreach (KeyValuePair<int, Asset> asd in dicc)
-                {
-                    Console.WriteLine("valor id : "+asd.Value.getId());
-                }
                 List<Asset> tmp = EvaluacionNOGUI.EvaluacionPorHabilidadTEST(dicc);
-                
-                Console.WriteLine("count: "+tmp.Count);
-                EvaluacionEnfocada evaluacionListening = new EvaluacionEnfocada("Listening", tmp);
+
+                EvaluacionEnfocada evaluacionListening = new EvaluacionEnfocada("Listening", tmp, userInternal.getNombre());
 
                 evaluacionListening.Show();
             }
-            catch (Exception)
+            catch (NullReferenceException)
             {
                 MessageBox.Show("No se pudo Crear la Evaluacion, favor enviar un reporte","Error Fatal", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
@@ -117,6 +108,8 @@ namespace Interfaz_Fixed
         {
             try
             {
+                //EvaluacionEnfocada evaluacionReading = new EvaluacionEnfocada("Reading", listaInternal.getPreguntasReading());
+                //EvaluacionEnfocada evaluacionReading = new EvaluacionEnfocada("Reading", EvaluacionNOGUI.EvaluacionPorHabilidadTEST(userInternal.getPlanDeEstudio().getDicReading()),userInternal.getNombre());
                 PlanDeEstudio x = userInternal.getPlanDeEstudio();
 
                 Dictionary<int, Asset> dicc = x.getDicReading();
@@ -128,8 +121,7 @@ namespace Interfaz_Fixed
                 List<Asset> tmp = EvaluacionNOGUI.EvaluacionPorHabilidadTEST(dicc);
 
                 Console.WriteLine("count: " + tmp.Count);
-                EvaluacionEnfocada evaluacionReading = new EvaluacionEnfocada("Reading", tmp);
-
+                EvaluacionEnfocada evaluacionReading = new EvaluacionEnfocada("Reading", tmp,userInternal.getNombre());
                 evaluacionReading.Show();
             }
             catch (Exception)
@@ -141,6 +133,9 @@ namespace Interfaz_Fixed
         private void EntrenarWriting_Click(object sender, EventArgs e)
         {
             try {
+
+                // EvaluacionEnfocada evaluacionWriting = new EvaluacionEnfocada("Writing", listaInternal.getPreguntasWriting());
+                //EvaluacionEnfocada evaluacionWriting = new EvaluacionEnfocada("Writing", EvaluacionNOGUI.EvaluacionPorHabilidadTEST(userInternal.getPlanDeEstudio().getDicWriting()), userInternal.getNombre());
                 PlanDeEstudio x = userInternal.getPlanDeEstudio();
 
                 Dictionary<int, Asset> dicc = x.getDicWriting();
@@ -152,7 +147,7 @@ namespace Interfaz_Fixed
                 List<Asset> tmp = EvaluacionNOGUI.EvaluacionPorHabilidadTEST(dicc);
 
                 Console.WriteLine("count: " + tmp.Count);
-                EvaluacionEnfocada evaluacionWriting = new EvaluacionEnfocada("Writing", tmp);
+                EvaluacionEnfocada evaluacionWriting = new EvaluacionEnfocada("Writing", tmp,userInternal.getNombre());
 
                 evaluacionWriting.Show();
             }
@@ -223,7 +218,7 @@ namespace Interfaz_Fixed
                         new EvaluacionGeneral_Loaded(fileChooser.FileName).Show();
                         //new EvaluacionGeneral_Loaded(currentPath + FileNameInternal).Show();
                     }
-                    else if (auxiliar == "Reading" || auxiliar == "Listening" || auxiliar == "Writing")
+                    if (auxiliar == "Evaluacion de Listening" || auxiliar == "Evaluacion de Reading" || auxiliar == "Evaluacion de Writing")
                     {
                         lector.Close();
                         new EvaluacionCustom_Loaded(fileChooser.FileName).Show();

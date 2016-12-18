@@ -23,38 +23,52 @@ namespace Interfaz_Fixed
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new FormInicioSesion());
 
+            /*PlanDeEstudio PE = new PlanDeEstudio(3, 3, 1);
+=======
+>>>>>>> origin/master
 
-            //List<int> IdPreguntasConjunto;
-            //foreach (KeyValuePair<int, Asset> tmp in dic) // obtienes los id del conjunto de preguntas
-            //{
-            //    IdPreguntasConjunto = AssetDAL.TodosLosIdDeLasPreguntasDeUnConjunto(tmp.Value.Id);
-            //    for (int i = 0; i < IdPreguntasConjunto.Count; i++)
-            //    {
-            //        Console.WriteLine("IdPregunta: " + IdPreguntasConjunto[i]);
-            //    }
-            //}
 
+            List<int> IdPreguntasConjunto;
+            foreach (KeyValuePair<int, Asset> tmp in dic) // obtienes los id del conjunto de preguntas
+            {
+                IdPreguntasConjunto = AssetDAL.TodosLosIdDeLasPreguntasDeUnConjunto(tmp.Value.Id);
+                for (int i = 0; i < IdPreguntasConjunto.Count; i++)
+                {
+                    Console.WriteLine("IdPregunta: " + IdPreguntasConjunto[i]);
+                }
+            }
+
+<<<<<<< HEAD
+            List<Asset> ev = EvaluacionNOGUI.EvaluacionPorHabilidadTEST(dic);
+
+            Usuario user = new Usuario("burro@test.cl");
+            PlanDeEstudio x = user.getPlanDeEstudio();
+            Dictionary<int, Asset> dicc = x.getDicListening();
+            Console.WriteLine("count: "+dicc.Count);
+            List<Asset> tmp2 = EvaluacionNOGUI.EvaluacionPorHabilidadTEST(dicc);
+=======
             ////Usuario user = new Usuario("burro@test.cl");
             ////PlanDeEstudio x = user.getPlanDeEstudio();
             ////Dictionary<int, Asset> dicc = x.getDicListening();
             ////Console.WriteLine("count: " + dicc.Count);
             ////List<Asset> tmp = EvaluacionNOGUI.EvaluacionPorHabilidadTEST(dicc);
+>>>>>>> origin/master
 
-            ////if (tmp == null)
-            ////{
-            ////    Console.WriteLine("null");
-            ////}
-            ////else
-            ////{
-            ////    for (int i = 0; i < tmp.Count; i++)
-            ////    {
-            ////        Console.WriteLine();
-            ////        Console.WriteLine("VALOR : " + tmp[i].Id);
-            ////    }
-            ////}
+            if (tmp2 == null)
+            {
+                Console.WriteLine("null");
+            }
+            else
+            {
+                for (int i = 0; i < tmp2.Count; i++)
+                {
+                    Console.WriteLine();
+                    Console.WriteLine("VALOR : " + tmp2[i].Id);
+                }
+            }
 
-            ////Application.Run(new EvaluacionEnfocada("Listening", tmp));
-
+            Application.Run(new EvaluacionEnfocada("Listening", tmp2));
+            */
 
         }
     }

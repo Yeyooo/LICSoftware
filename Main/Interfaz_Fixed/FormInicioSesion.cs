@@ -29,8 +29,6 @@ namespace FormLogin
                     {
                         MessageBox.Show("Has iniciado sesión!", "Inicio Succesful", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         Usuario user = new Usuario(textBoxCorreo.Text);
-                        //System.Console.WriteLine("nivel writing {0}, nivel reading {1}, nivel listening {2}", user.getNivelWriting(), user.getNivelReading(), user.getNivelListening());
-                        //PlanDeEstudio PE = new PlanDeEstudio(user.getNivelWriting(), user.getNivelReading(), user.getNivelListening());
                         new LICGUI(user).Show();
                         this.Hide();
                     }
