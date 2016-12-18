@@ -11,51 +11,54 @@ namespace CapaLógica
     public class EvaluadorPruebasEspecificas
     {
         //UNA INSTANCIACION DE EVALUADOR POR CADA EVALUACION
-            private List<RadioButton> listaButton;
-            private int RespuestasCorrectas;
-            private int RespuestasIncorrectas;
+        private int RespuestasCorrectas;
+        private int RespuestasIncorrectas;
 
-            public EvaluadorPruebasEspecificas()
-            {
-                listaButton = new List<RadioButton>();
-                RespuestasCorrectas = 0;
-                RespuestasIncorrectas = 0;
-            }
-
-            public void recorrerPreguntas(TableLayoutPanel panel)
-            {
-                for (int i = 0; i < panel.RowCount; i++)
-                {
-                    Slots_Alternativas radioButton = panel.GetControlFromPosition(0, i) as Slots_Alternativas;
-                    if (radioButton != null) {
-                        listaButton.Add(radioButton);
-                    }
-                    else
-                    {
-                        
-                    }
-                }
-
-            }
-
-        public void Evaluar()
+        public EvaluadorPruebasEspecificas()
         {
-             foreach (Slots_Alternativas radioChoice in listaButton)
-             {
-                 if (radioChoice.Checked && radioChoice.esCorrecta())
-                 {
-                      RespuestasCorrectas++;
-                 }
-                 else if (radioChoice.Checked && !radioChoice.esCorrecta())
-                 {
-                      RespuestasIncorrectas++;
-                 }
-              }
+            RespuestasCorrectas = 0;
+            RespuestasIncorrectas = 0;
+        }
+
+        public void recorrerPreguntas(TableLayoutPanel panel)
+        {
+            List<RadioButton> listaButton = listaButton = new List<RadioButton>();
+            for (int i = 0; i < panel.RowCount; i++)
+            {
+                Slots_Alternativas radioButton = panel.GetControlFromPosition(0, i) as Slots_Alternativas;
+                if (radioButton != null) {
+                    listaButton.Add(radioButton);
+                }
+            }
+            Evaluar(listaButton);
+        }
+
+        public void Evaluar(List<RadioButton> listaButton)
+        {
+            bool respondio = false;
+            foreach (Slots_Alternativas radioChoice in listaButton)
+            {
+                if (radioChoice.Checked && radioChoice.esCorrecta())
+                {
+                   RespuestasCorrectas++;
+                    respondio = true;
+                }
+                else if (radioChoice.Checked && !radioChoice.esCorrecta())
+                {
+                    RespuestasIncorrectas++;
+                    respondio = true;
+                }
+            }
+            if (!respondio)
+            {
+                RespuestasIncorrectas++;
+            }
+
         }
 
         public void MostrarResultados()
         {
-             MessageBox.Show("Respuestas correctas :" + RespuestasCorrectas + " y tiene " + RespuestasIncorrectas + " respuestas incorrectas");
+             MessageBox.Show("Respuestas correctas " + RespuestasCorrectas + " y tiene " + RespuestasIncorrectas + " respuestas incorrectas");
         }
 
         public int getRespuestasCorrectas()

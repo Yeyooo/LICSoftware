@@ -101,7 +101,6 @@ namespace Interfaz_Fixed
             evaluadorReading.recorrerPreguntas(this.layout_Alternativas8);
             evaluadorReading.recorrerPreguntas(this.layout_Alternativas9);
             evaluadorReading.recorrerPreguntas(this.layout_Alternativas10);
-            evaluadorReading.Evaluar();
             correctasReading = evaluadorReading.getRespuestasCorrectas();
             incorrectasReading = evaluadorReading.getRespuestasIncorrectas();
 
@@ -116,7 +115,6 @@ namespace Interfaz_Fixed
             evaluadorWriting.recorrerPreguntas(this.layout_Alternativas18);
             evaluadorWriting.recorrerPreguntas(this.layout_Alternativas19);
             evaluadorWriting.recorrerPreguntas(this.layout_Alternativas20);
-            evaluadorWriting.Evaluar();
             correctasWriting = evaluadorWriting.getRespuestasCorrectas();
             incorrectasWriting = evaluadorWriting.getRespuestasIncorrectas();
 
@@ -131,7 +129,6 @@ namespace Interfaz_Fixed
             evaluadorListening.recorrerPreguntas(this.layout_Alternativas28);
             evaluadorListening.recorrerPreguntas(this.layout_Alternativas29);
             evaluadorListening.recorrerPreguntas(this.layout_Alternativas30);
-            evaluadorListening.Evaluar();
             correctasListening = evaluadorListening.getRespuestasCorrectas();
             incorrectasListening = evaluadorListening.getRespuestasIncorrectas();
 

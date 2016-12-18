@@ -87,9 +87,8 @@ namespace Interfaz_Fixed
             evaluador.recorrerPreguntas(this.layout_Alternativas8);
             evaluador.recorrerPreguntas(this.layout_Alternativas9);
             evaluador.recorrerPreguntas(this.layout_Alternativas10);
-            evaluador.Evaluar();
             //ANTES DE ENVIAR AL TUTOR PREGUNTAR SI DESEA GUARDAR LA EVALUACION
-
+            evaluador.MostrarResultados();
             DialogResult resultado = MessageBox.Show("¿Desea guardar esta evaluacion corregida para su posterior revisión?", "Guardar Evaluación", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (resultado == DialogResult.Yes)
             {
@@ -105,6 +104,8 @@ namespace Interfaz_Fixed
             }
             else if (resultado == DialogResult.No)
             {
+
+                this.Close();
                 //Enviar al Tutor
             }
         }
