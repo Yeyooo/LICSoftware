@@ -795,7 +795,7 @@ namespace Interfaz_Fixed
                 if (i == 0)
                 {
                     Label control = panel.GetControlFromPosition(0, i) as Label;
-                    control.Text = asset.getEnunciadoPregunta();
+                    control.Text = asset.getEnunciadoPregunta() + " Nivel: "+asset.getNivelHabilidad();
                 }
                 if (i == 2)
                 {

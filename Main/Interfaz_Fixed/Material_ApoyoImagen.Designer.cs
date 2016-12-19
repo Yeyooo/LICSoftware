@@ -28,53 +28,58 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.Imagen = new System.Windows.Forms.PictureBox();
-            this.PanelImagen = new System.Windows.Forms.FlowLayoutPanel();
+            this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Imagen)).BeginInit();
-            this.PanelImagen.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.AutoScroll = true;
+            this.tableLayoutPanel1.ColumnCount = 1;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.Controls.Add(this.Imagen, 0, 0);
+            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 1;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1081, 868);
+            this.tableLayoutPanel1.TabIndex = 0;
             // 
             // Imagen
             // 
-            this.Imagen.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Imagen.Location = new System.Drawing.Point(4, 4);
-            this.Imagen.Margin = new System.Windows.Forms.Padding(4);
+            this.Imagen.InitialImage = global::Interfaz_Fixed.Properties.Resources.at_the_train_station;
+            this.Imagen.Location = new System.Drawing.Point(3, 3);
             this.Imagen.Name = "Imagen";
-            this.Imagen.Size = new System.Drawing.Size(439, 278);
-            this.Imagen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.Imagen.Size = new System.Drawing.Size(1075, 862);
+            this.Imagen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.Imagen.TabIndex = 0;
             this.Imagen.TabStop = false;
-            // 
-            // PanelImagen
-            // 
-            this.PanelImagen.AutoScroll = true;
-            this.PanelImagen.Controls.Add(this.Imagen);
-            this.PanelImagen.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.PanelImagen.Location = new System.Drawing.Point(0, 0);
-            this.PanelImagen.Name = "PanelImagen";
-            this.PanelImagen.Size = new System.Drawing.Size(1063, 593);
-            this.PanelImagen.TabIndex = 1;
             // 
             // Material_ApoyoImagen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(1063, 593);
-            this.Controls.Add(this.PanelImagen);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ClientSize = new System.Drawing.Size(1081, 868);
+            this.Controls.Add(this.tableLayoutPanel1);
+            this.Margin = new System.Windows.Forms.Padding(4);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Material_ApoyoImagen";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Material_ApoyoImagen";
+            this.tableLayoutPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.Imagen)).EndInit();
-            this.PanelImagen.ResumeLayout(false);
-            this.PanelImagen.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.PictureBox Imagen;
-        private System.Windows.Forms.FlowLayoutPanel PanelImagen;
     }
 }
