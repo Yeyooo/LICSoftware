@@ -15,7 +15,9 @@ namespace Datos
 
         public static bool AssetTieneConjunto(int IdAsset) // dado el asset de un id te dice si tiene un conjunto asociado
         {
-            SqlCommand _comandoC = new SqlCommand(String.Format("SELECT conjunto FROM pregunta WHERE idpregunta = " + IdAsset + ";"), Conexión.obtenerConexion("contenido"));
+
+            SqlConnection Conn = Conexión.obtenerConexion("contenido");
+            SqlCommand _comandoC = new SqlCommand(String.Format("SELECT conjunto FROM pregunta WHERE idpregunta = " + IdAsset + ";"), Conn);
             SqlDataReader _readerC = _comandoC.ExecuteReader();
             int conjunto = 0;
             while (_readerC.Read())
@@ -33,16 +35,24 @@ namespace Datos
                 IdsPreguntas.Add(_reader.GetInt32(0));
             }
             if (IdsPreguntas.Count > 1)
+            {
+                Conn.Close();
                 return true;
+            }
             else
+            {
+                Conn.Close();
                 return false;
+            }
         }
 
         // dada una pregunta, podemos obtener todas las preguntas que esten relacionadas a ella(Conjunto de Assets)
         public static List<int> TodosLosIdDeLasPreguntasDeUnConjunto(int idpregunta) // por ejemplo, un audio que tiene 10 preguntas
         {
 
-            SqlCommand _comandoC = new SqlCommand(String.Format("SELECT conjunto FROM pregunta WHERE idpregunta = " + idpregunta + ";"), Conexión.obtenerConexion("contenido"));
+            SqlConnection Conn = Conexión.obtenerConexion("contenido");
+
+            SqlCommand _comandoC = new SqlCommand(String.Format("SELECT conjunto FROM pregunta WHERE idpregunta = " + idpregunta + ";"), Conn);
             SqlDataReader _readerC = _comandoC.ExecuteReader();
             int conjunto = 0;
             while (_readerC.Read())
@@ -50,7 +60,8 @@ namespace Datos
                 conjunto = _readerC.GetInt32(0);
             }
 
-            SqlCommand _comando = new SqlCommand(String.Format("SELECT idpregunta FROM pregunta WHERE conjunto = "+conjunto+";"), Conexión.obtenerConexion("contenido"));
+            SqlConnection Conn2 = Conexión.obtenerConexion("contenido");
+            SqlCommand _comando = new SqlCommand(String.Format("SELECT idpregunta FROM pregunta WHERE conjunto = "+conjunto+";"), Conn2);
             SqlDataReader _reader = _comando.ExecuteReader();
 
             List<int> IdsPreguntas = new List<int>();
@@ -60,6 +71,8 @@ namespace Datos
                 IdsPreguntas.Add(_reader.GetInt32(0));
             }
 
+            Conn.Close();
+            Conn2.Close();
             return IdsPreguntas;
 
         }
@@ -67,9 +80,10 @@ namespace Datos
         // metodo para cargar desde disco duro evaluaciones
         public static Asset BuscarAssetPorID(int idAsset) // retorna Asset dado un ID
         {
+            SqlConnection Conn = Conexión.obtenerConexion("contenido");
             string consulta = "SELECT DISTINCT pregunta.idpregunta, enunciado, habilidad, nivel, metodologia, alternativa_correcta.idalternativa FROM contenido.dbo.pregunta, contenido.dbo.alternativas, contenido.dbo.alternativa_correcta WHERE alternativa_correcta.idalternativa = alternativas.idalternativa and alternativas.idpregunta = pregunta.idpregunta and pregunta.idpregunta = " + idAsset+" ;";
             // metodologia tiene que ir en la pregunta...BD
-            SqlCommand _comando = new SqlCommand(String.Format(consulta), Conexión.obtenerConexion("contenido"));
+            SqlCommand _comando = new SqlCommand(String.Format(consulta), Conn);
             SqlDataReader _reader = _comando.ExecuteReader();
 
             while (_reader.Read())
@@ -83,10 +97,10 @@ namespace Datos
                 pAsset.EstrategiaEnseñanza = _reader.GetString(4);
                 pAsset.RespuestaCorrecta = _reader.GetInt32(5);
                 pAsset.Teoria = AssetDAL.getTeoriaAssetBD(_reader.GetInt32(5));
-
+                Conn.Close();
                 return pAsset;
             }
-
+            Conn.Close();
             return null;
         }
 
@@ -110,7 +124,8 @@ namespace Datos
         // el metodo funciona correctamente. 100% comprobado
         public static List<Alternativa> BuscarTodasLasAlternativasDeUnAsset(int pIdPregunta) // todas las alternativas asociada a una pregunta
         {
-            SqlCommand _comando = new SqlCommand(String.Format("SELECT alternativa, idalternativa from alternativas, pregunta where alternativas.idpregunta = pregunta.idpregunta and pregunta.idpregunta = "+pIdPregunta+";"), Conexión.obtenerConexion("contenido"));
+            SqlConnection Conn = Conexión.obtenerConexion("contenido");
+            SqlCommand _comando = new SqlCommand(String.Format("SELECT alternativa, idalternativa from alternativas, pregunta where alternativas.idpregunta = pregunta.idpregunta and pregunta.idpregunta = "+pIdPregunta+";"), Conn);
             SqlDataReader _reader = _comando.ExecuteReader();
 
             List<Alternativa> tmp = new List<Alternativa>();
@@ -120,6 +135,7 @@ namespace Datos
                 tmp.Add( new Alternativa( _reader.GetInt32(1), _reader.GetString(0)));
             }
 
+            Conn.Close();
             return tmp;
 
         }
@@ -130,7 +146,8 @@ namespace Datos
         {
             string consulta = "select teoria from alternativa_correcta, alternativas where alternativa_correcta.idalternativa = alternativas.idalternativa and alternativa_correcta.idalternativa = "+idAlternativaCorrecta+";";
             // metodologia tiene que ir en la pregunta...BD
-            SqlCommand _comando = new SqlCommand(String.Format(consulta), Conexión.obtenerConexion("contenido"));
+            SqlConnection Conn = Conexión.obtenerConexion("contenido");
+            SqlCommand _comando = new SqlCommand(String.Format(consulta), Conn);
             SqlDataReader _reader = _comando.ExecuteReader();
 
             string tmp = "";
@@ -140,6 +157,7 @@ namespace Datos
                 tmp = _reader.GetString(0);
             }
 
+            Conn.Close();
             return tmp;
 
         }
@@ -147,9 +165,10 @@ namespace Datos
         public static List<Asset> BuscarPorNivelHabilidad(int pNivelHabilidad, string pHabilidadAsociada) // queremos todos los assets disponibles para el usuario 
         {                                                                                                    // de acuerdo a sus habilidades
             List<Asset> _lista = new List<Asset>();
+            SqlConnection Conn = Conexión.obtenerConexion("contenido");
             string consulta = "SELECT DISTINCT pregunta.idpregunta, enunciado, habilidad, nivel, metodologia, alternativa_correcta.idalternativa FROM pregunta, alternativas, alternativa_correcta WHERE alternativa_correcta.idalternativa = alternativas.idalternativa and alternativas.idpregunta = pregunta.idpregunta and habilidad = '"+pHabilidadAsociada+"' and nivel = "+pNivelHabilidad+";";
             // metodologia tiene que ir en la pregunta...BD
-            SqlCommand _comando = new SqlCommand(String.Format(consulta), Conexión.obtenerConexion("contenido"));
+            SqlCommand _comando = new SqlCommand(String.Format(consulta), Conn);
             SqlDataReader _reader = _comando.ExecuteReader();
 
             while (_reader.Read())
@@ -167,14 +186,16 @@ namespace Datos
                 _lista.Add(pAsset);
             }
 
+            Conn.Close();
             return _lista;
         }
 
         public static void BuscarPorNivelHabilidadOpt(Dictionary<int, Asset> dicACargar, int pNivelHabilidad, string pHabilidadAsociada) // queremos todos los assets disponibles para el usuario 
         {                                                                                                    // de acuerdo a sus habilidades
+            SqlConnection Conn = Conexión.obtenerConexion("contenido");
             string consulta = "SELECT DISTINCT pregunta.idpregunta, enunciado, habilidad, nivel, metodologia, alternativa_correcta.idalternativa, url FROM pregunta, alternativas, alternativa_correcta WHERE alternativa_correcta.idalternativa = alternativas.idalternativa and alternativas.idpregunta = pregunta.idpregunta and habilidad = '" + pHabilidadAsociada + "' and nivel = " + pNivelHabilidad + ";";
             // metodologia tiene que ir en la pregunta...BD
-            SqlCommand _comando = new SqlCommand(String.Format(consulta), Conexión.obtenerConexion("contenido"));
+            SqlCommand _comando = new SqlCommand(String.Format(consulta), Conn);
             SqlDataReader _reader = _comando.ExecuteReader();
 
             int indice = 1;
@@ -195,6 +216,8 @@ namespace Datos
                 indice++;
                 //_lista.Add(pAsset);
             }
+
+            Conn.Close();
 
         }
        
