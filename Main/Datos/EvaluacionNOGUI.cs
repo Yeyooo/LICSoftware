@@ -15,29 +15,29 @@ namespace Datos
         public EvaluacionNOGUI(PlanDeEstudio PDE) // por defecto carga 10, 10 y 10
         {
 
-            bool flag = false;
-            while (flag == false)
-            {
+            //bool flag = false;
+            //while (flag == false)
+            //{
                 this.PreguntasWriting = EvaluacionPorHabilidadTEST(PDE.getDicWriting());
                 this.PreguntasReading = EvaluacionPorHabilidadTEST(PDE.getDicReading());
                 this.PreguntasListening = EvaluacionPorHabilidadTEST(PDE.getDicListening());
-                if (this.getPreguntasWriting() == null)
-                {
-                    PlanDeEstudio.setDiccionarioCompletoFalse(PDE.getDicWriting());//poner todo el diccionario en false
-                }
-                if (this.getPreguntasReading() == null)
-                {
-                    PlanDeEstudio.setDiccionarioCompletoFalse(PDE.getDicReading());//poner todo el diccionario en false
-                }
-                if (this.getPreguntasListening() == null)
-                {
-                    PlanDeEstudio.setDiccionarioCompletoFalse(PDE.getDicListening());//poner todo el diccionario en false
-                }
-                else // si ya no entra a niuna condicion, se puede salir del while
-                {
-                    flag = true;
-                }
-            }
+            //    if (this.getPreguntasWriting() == null)
+            //    {
+            //        PlanDeEstudio.setDiccionarioCompletoFalse(PDE.getDicWriting());//poner todo el diccionario en false
+            //    }
+            //    if (this.getPreguntasReading() == null)
+            //    {
+            //        PlanDeEstudio.setDiccionarioCompletoFalse(PDE.getDicReading());//poner todo el diccionario en false
+            //    }
+            //    if (this.getPreguntasListening() == null)
+            //    {
+            //        PlanDeEstudio.setDiccionarioCompletoFalse(PDE.getDicListening());//poner todo el diccionario en false
+            //    }
+            //    else // si ya no entra a niuna condicion, se puede salir del while
+            //    {
+            //        flag = true;
+            //    }
+            //}
 
         }
 

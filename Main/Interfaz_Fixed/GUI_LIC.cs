@@ -162,8 +162,9 @@ namespace Interfaz_Fixed
         {
             try
             {
-                /*Evaluacion evaluacionGeneral = new Evaluacion("Contenidos Generales", diccionarios, 1);
-                evaluacionGeneral.Show();*/
+                EvaluacionNOGUI ev = new EvaluacionNOGUI(userInternal.getPlanDeEstudio());
+                Evaluacion evaluacionGeneral = new Evaluacion("Contenidos Generales", ev, userInternal);
+                evaluacionGeneral.Show();
             }
             catch (Exception){
                 MessageBox.Show("No se pudo Crear la Evaluacion, favor enviar un reporte", "ERROR FATAL", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
