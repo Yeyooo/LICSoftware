@@ -44,9 +44,10 @@ namespace FormLogin
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(109, 76);
+            this.label1.Location = new System.Drawing.Point(145, 94);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(73, 13);
+            this.label1.Size = new System.Drawing.Size(96, 17);
             this.label1.TabIndex = 0;
             this.label1.Text = "Iniciar Sesión:";
             // 
@@ -54,50 +55,56 @@ namespace FormLogin
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(45, 31);
+            this.label2.Location = new System.Drawing.Point(60, 38);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(220, 20);
+            this.label2.Size = new System.Drawing.Size(276, 25);
             this.label2.TabIndex = 1;
             this.label2.Text = "Bienvenido a LICSOFTWARE";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(46, 135);
+            this.label3.Location = new System.Drawing.Point(61, 166);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(41, 13);
+            this.label3.Size = new System.Drawing.Size(55, 17);
             this.label3.TabIndex = 2;
             this.label3.Text = "Correo:";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(46, 199);
+            this.label4.Location = new System.Drawing.Point(61, 245);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(64, 13);
+            this.label4.Size = new System.Drawing.Size(85, 17);
             this.label4.TabIndex = 3;
             this.label4.Text = "Contraseña:";
             // 
             // textBoxCorreo
             // 
-            this.textBoxCorreo.Location = new System.Drawing.Point(143, 132);
+            this.textBoxCorreo.Location = new System.Drawing.Point(191, 162);
+            this.textBoxCorreo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBoxCorreo.Name = "textBoxCorreo";
-            this.textBoxCorreo.Size = new System.Drawing.Size(122, 20);
+            this.textBoxCorreo.Size = new System.Drawing.Size(161, 22);
             this.textBoxCorreo.TabIndex = 4;
             // 
             // textBoxPw
             // 
-            this.textBoxPw.Location = new System.Drawing.Point(143, 199);
+            this.textBoxPw.Location = new System.Drawing.Point(191, 245);
+            this.textBoxPw.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBoxPw.Name = "textBoxPw";
-            this.textBoxPw.Size = new System.Drawing.Size(120, 20);
+            this.textBoxPw.Size = new System.Drawing.Size(159, 22);
             this.textBoxPw.TabIndex = 5;
             this.textBoxPw.UseSystemPasswordChar = true;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(112, 274);
+            this.button1.Location = new System.Drawing.Point(149, 337);
+            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.Size = new System.Drawing.Size(100, 28);
             this.button1.TabIndex = 6;
             this.button1.Text = "Iniciar!";
             this.button1.UseVisualStyleBackColor = true;
@@ -106,17 +113,19 @@ namespace FormLogin
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(46, 329);
+            this.label5.Location = new System.Drawing.Point(61, 405);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(115, 13);
+            this.label5.Size = new System.Drawing.Size(151, 17);
             this.label5.TabIndex = 7;
             this.label5.Text = "No tienes una cuenta?";
             // 
             // buttonParaRegistro
             // 
-            this.buttonParaRegistro.Location = new System.Drawing.Point(181, 325);
+            this.buttonParaRegistro.Location = new System.Drawing.Point(241, 400);
+            this.buttonParaRegistro.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.buttonParaRegistro.Name = "buttonParaRegistro";
-            this.buttonParaRegistro.Size = new System.Drawing.Size(106, 21);
+            this.buttonParaRegistro.Size = new System.Drawing.Size(141, 26);
             this.buttonParaRegistro.TabIndex = 8;
             this.buttonParaRegistro.Text = "Presiona aqui!";
             this.buttonParaRegistro.UseVisualStyleBackColor = true;
@@ -124,9 +133,9 @@ namespace FormLogin
             // 
             // FormInicioSesion
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(317, 374);
+            this.ClientSize = new System.Drawing.Size(423, 460);
             this.Controls.Add(this.buttonParaRegistro);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.button1);
@@ -136,6 +145,9 @@ namespace FormLogin
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FormInicioSesion";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Inicio de Sesión";
