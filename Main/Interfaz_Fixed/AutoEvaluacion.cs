@@ -76,9 +76,9 @@ namespace Interfaz_Fixed
 
         private void Evaluar_AutoButton_Click(object sender, EventArgs e, string Correo)
         {
-            int NivelWriting = determinarNivel(WritingBronze_chk,WritingSilver_Chk,WritingGold_Chk);
-            int NivelReading = determinarNivel(ReadingBronze_check, ReadingSilver_chk, ReadingGold_chk);
-            int NivelListening = determinarNivel(ListeningBronze_chk, ListeningSilver_Chk, ListeningGold_chk);
+            int NivelWriting = determinarNivel(WritingSilver_Chk,WritingGold_Chk);
+            int NivelReading = determinarNivel(ReadingSilver_chk, ReadingGold_chk);
+            int NivelListening = determinarNivel(ListeningSilver_Chk, ListeningGold_chk);
             UsuarioDAL.setNivelesUsuarioEnBD(NivelWriting,NivelReading,NivelListening,Correo);
             Usuario user = new Usuario(Correo);
 

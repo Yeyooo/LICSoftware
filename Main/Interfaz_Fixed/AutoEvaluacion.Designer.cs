@@ -502,13 +502,12 @@ namespace Interfaz_Fixed
 
         #endregion
 
-        private int determinarNivel(CheckBox checkBronze, CheckBox checkPlata, CheckBox checkGold)
+        private int determinarNivel(CheckBox checkPlata, CheckBox checkGold)
         {
             List<CheckBox> Lista = new List<CheckBox>();
-            Lista.Add(checkBronze);
             Lista.Add(checkPlata);
             Lista.Add(checkGold);
-            int contador = 0;
+            int contador = 1;
             foreach (CheckBox caja in Lista)
             {
                 if (caja.Checked)
