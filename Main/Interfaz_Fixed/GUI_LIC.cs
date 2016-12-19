@@ -210,19 +210,26 @@ namespace Interfaz_Fixed
                 if (fileChooser.ShowDialog() == DialogResult.OK)
                 {
                     //abrir la prueba
-                    StreamReader lector = new StreamReader(File.OpenRead(fileChooser.FileName));
+                    if (fileChooser.FileName.EndsWith(".sav"))
+                    {
+                        StreamReader lector = new StreamReader(File.OpenRead(fileChooser.FileName));
 
-                    string auxiliar = lector.ReadLine();
-                    if (auxiliar == "Contenidos Generales")
-                    {
-                        lector.Close();
-                        new EvaluacionGeneral_Loaded(fileChooser.FileName).Show();
-                        //new EvaluacionGeneral_Loaded(currentPath + FileNameInternal).Show();
+                        string auxiliar = lector.ReadLine();
+                        if (auxiliar == "Contenidos Generales")
+                        {
+                            lector.Close();
+                            new EvaluacionGeneral_Loaded(fileChooser.FileName).Show();
+                            //new EvaluacionGeneral_Loaded(currentPath + FileNameInternal).Show();
+                        }
+                        if (auxiliar == "Evaluacion de Listening" || auxiliar == "Evaluacion de Reading" || auxiliar == "Evaluacion de Writing")
+                        {
+                            lector.Close();
+                            new EvaluacionCustom_Loaded(fileChooser.FileName).Show();
+                        }
                     }
-                    if (auxiliar == "Evaluacion de Listening" || auxiliar == "Evaluacion de Reading" || auxiliar == "Evaluacion de Writing")
+                    else
                     {
-                        lector.Close();
-                        new EvaluacionCustom_Loaded(fileChooser.FileName).Show();
+                        MessageBox.Show("Formato Invalido de prueba", "Error Evaluacion", MessageBoxButtons.OK, MessageBoxIcon.Stop);
                     }
                 }
             }
@@ -237,6 +244,7 @@ namespace Interfaz_Fixed
         {
             this.Dispose();
             new FormInicioSesion().Show();
+
         }
     }
 }

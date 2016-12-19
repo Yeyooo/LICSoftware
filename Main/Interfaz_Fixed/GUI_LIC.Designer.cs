@@ -267,6 +267,7 @@
             this.logout_Label.Name = "logout_Label";
             this.logout_Label.Size = new System.Drawing.Size(55, 46);
             this.logout_Label.TabIndex = 5;
+            this.logout_Label.Click += new System.EventHandler(this.logout_Label_Click);
             // 
             // LICGUI
             // 
