@@ -125,6 +125,12 @@
     <Compile Include="Registro_GUI.Designer.cs">
       <DependentUpon>Registro_GUI.cs</DependentUpon>
     </Compile>
+    <Compile Include="Teoria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Teoria.Designer.cs">
+      <DependentUpon>Teoria.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="AutoEvaluacion.resx">
       <DependentUpon>AutoEvaluacion.cs</DependentUpon>
     </EmbeddedResource>
@@ -170,6 +176,9 @@
     </Compile>
     <EmbeddedResource Include="Registro_GUI.resx">
       <DependentUpon>Registro_GUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Teoria.resx">
+      <DependentUpon>Teoria.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -281,6 +290,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Bronze_Leage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\UI_licsoftware_fixed_3.0.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

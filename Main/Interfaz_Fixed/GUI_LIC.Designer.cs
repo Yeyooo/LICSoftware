@@ -46,6 +46,8 @@
             this.Usuario_Label = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.CargarEvaluaciones_Label = new System.Windows.Forms.Label();
+            this.info_Label = new System.Windows.Forms.Label();
+            this.logout_Label = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.Entrenamiento_Pane.SuspendLayout();
             this.Panel_habilidades.SuspendLayout();
@@ -243,20 +245,38 @@
             // CargarEvaluaciones_Label
             // 
             this.CargarEvaluaciones_Label.BackColor = System.Drawing.Color.Transparent;
-            this.CargarEvaluaciones_Label.Location = new System.Drawing.Point(1187, 20);
+            this.CargarEvaluaciones_Label.Location = new System.Drawing.Point(1184, 28);
             this.CargarEvaluaciones_Label.Name = "CargarEvaluaciones_Label";
             this.CargarEvaluaciones_Label.Size = new System.Drawing.Size(44, 36);
             this.CargarEvaluaciones_Label.TabIndex = 3;
             this.CargarEvaluaciones_Label.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.CargarEvaluaciones_Label.Click += new System.EventHandler(this.CargarEvaluaciones_Label_Click);
             // 
+            // info_Label
+            // 
+            this.info_Label.BackColor = System.Drawing.Color.Transparent;
+            this.info_Label.Location = new System.Drawing.Point(1058, 280);
+            this.info_Label.Name = "info_Label";
+            this.info_Label.Size = new System.Drawing.Size(55, 64);
+            this.info_Label.TabIndex = 4;
+            // 
+            // logout_Label
+            // 
+            this.logout_Label.BackColor = System.Drawing.Color.Transparent;
+            this.logout_Label.Location = new System.Drawing.Point(1058, 390);
+            this.logout_Label.Name = "logout_Label";
+            this.logout_Label.Size = new System.Drawing.Size(55, 46);
+            this.logout_Label.TabIndex = 5;
+            // 
             // LICGUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::Interfaz_Fixed.Properties.Resources.UI_licsoftware_fixed_2_0;
+            this.BackgroundImage = global::Interfaz_Fixed.Properties.Resources.UI_licsoftware_fixed_3_0;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(1283, 686);
+            this.Controls.Add(this.logout_Label);
+            this.Controls.Add(this.info_Label);
             this.Controls.Add(this.CargarEvaluaciones_Label);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.UsurioInfo_Panel);
@@ -303,6 +323,8 @@
         private System.Windows.Forms.PictureBox picture_WritingLiga;
         private System.Windows.Forms.PictureBox picture_ReadingLiga;
         private System.Windows.Forms.Label CargarEvaluaciones_Label;
+        private System.Windows.Forms.Label info_Label;
+        private System.Windows.Forms.Label logout_Label;
     }
 }
 

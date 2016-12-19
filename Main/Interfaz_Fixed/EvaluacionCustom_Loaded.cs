@@ -117,7 +117,7 @@ namespace Interfaz_Fixed
 
         private void Evento_Teoria(object sender, EventArgs e, Asset asset)
         {
-            
+            new Teoria(asset).Show();      
         }
     }
 }
