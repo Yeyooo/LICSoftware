@@ -1,4 +1,5 @@
 ﻿using Datos;
+using FormLogin;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -232,5 +233,10 @@ namespace Interfaz_Fixed
             
         }
 
+        private void logout_Label_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
+            new FormInicioSesion().Show();
+        }
     }
 }
