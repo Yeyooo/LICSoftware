@@ -67,7 +67,7 @@ namespace Datos
         // metodo para cargar desde disco duro evaluaciones
         public static Asset BuscarAssetPorID(int idAsset) // retorna Asset dado un ID
         {
-            string consulta = "SELECT DISTINCT pregunta.idpregunta, enunciado, habilidad, nivel, metodologia, alternativa_correcta.idalternativa FROM pregunta, alternativas, alternativa_correcta WHERE alternativa_correcta.idalternativa = alternativas.idalternativa and alternativas.idpregunta = pregunta.idpregunta and pregunta.idpregunta = "+idAsset+" ;";
+            string consulta = "SELECT DISTINCT pregunta.idpregunta, enunciado, habilidad, nivel, metodologia, alternativa_correcta.idalternativa FROM contenido.dbo.pregunta, contenido.dbo.alternativas, contenido.dbo.alternativa_correcta WHERE alternativa_correcta.idalternativa = alternativas.idalternativa and alternativas.idpregunta = pregunta.idpregunta and pregunta.idpregunta = " + idAsset+" ;";
             // metodologia tiene que ir en la pregunta...BD
             SqlCommand _comando = new SqlCommand(String.Format(consulta), Conexión.obtenerConexion("contenido"));
             SqlDataReader _reader = _comando.ExecuteReader();
