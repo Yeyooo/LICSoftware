@@ -39,7 +39,7 @@ namespace Datos
             }
         }
 
-        public void setDiccionarioCompletoFalse(Dictionary<int, Asset> dic)
+        public static void setDiccionarioCompletoFalse(Dictionary<int, Asset> dic)
         {
             foreach (KeyValuePair<int, Asset> tmp in dic)
             {

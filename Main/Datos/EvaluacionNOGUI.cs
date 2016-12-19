@@ -23,15 +23,15 @@ namespace Datos
                 this.PreguntasListening = EvaluacionPorHabilidadTEST(PDE.getDicListening());
                 if (this.getPreguntasWriting() == null)
                 {
-                    PDE.setDiccionarioCompletoFalse(PDE.getDicWriting());//poner todo el diccionario en false
+                    PlanDeEstudio.setDiccionarioCompletoFalse(PDE.getDicWriting());//poner todo el diccionario en false
                 }
                 if (this.getPreguntasReading() == null)
                 {
-                    PDE.setDiccionarioCompletoFalse(PDE.getDicReading());//poner todo el diccionario en false
+                    PlanDeEstudio.setDiccionarioCompletoFalse(PDE.getDicReading());//poner todo el diccionario en false
                 }
                 if (this.getPreguntasListening() == null)
                 {
-                    PDE.setDiccionarioCompletoFalse(PDE.getDicListening());//poner todo el diccionario en false
+                    PlanDeEstudio.setDiccionarioCompletoFalse(PDE.getDicListening());//poner todo el diccionario en false
                 }
                 else // si ya no entra a niuna condicion, se puede salir del while
                 {
@@ -87,15 +87,15 @@ namespace Datos
 
                 if (this.getPreguntasWriting() == null)
                 {
-                    PDE.setDiccionarioCompletoFalse(PDE.getDicWriting());//poner todo el diccionario en false
+                    PlanDeEstudio.setDiccionarioCompletoFalse(PDE.getDicWriting());//poner todo el diccionario en false
                 }
                 if (this.getPreguntasReading() == null)
                 {
-                    PDE.setDiccionarioCompletoFalse(PDE.getDicReading());//poner todo el diccionario en false
+                    PlanDeEstudio.setDiccionarioCompletoFalse(PDE.getDicReading());//poner todo el diccionario en false
                 }
                 if (this.getPreguntasListening() == null)
                 {
-                    PDE.setDiccionarioCompletoFalse(PDE.getDicListening());//poner todo el diccionario en false
+                    PlanDeEstudio.setDiccionarioCompletoFalse(PDE.getDicListening());//poner todo el diccionario en false
                 }
                 else // si ya no entra a niuna condicion, se puede salir del while
                 {
@@ -147,36 +147,39 @@ namespace Datos
 
         public static List<Asset> EvaluacionPorHabilidadTEST(Dictionary<int, Asset> diccionarioHabilidad) // 10 solamente, de una habilidad
         {
-            if (PlanDeEstudio.sePuedenGenerarParaUnaHabilidad10Preguntas(diccionarioHabilidad))
+            while (true)
             {
-                Console.WriteLine("entre");
-                List<Asset> Evaluacion = new List<Asset>();
-
-                List<int> IdsCjto = new List<int>();
-
-                foreach (KeyValuePair<int,Asset> tmp in diccionarioHabilidad)
+                if (PlanDeEstudio.sePuedenGenerarParaUnaHabilidad10Preguntas(diccionarioHabilidad))
                 {
-                    Console.WriteLine("entre foreach");
-                    IdsCjto = AssetDAL.TodosLosIdDeLasPreguntasDeUnConjunto(tmp.Key);
-                    for (int i = 0; i < IdsCjto.Count; i++)
+                    Console.WriteLine("entre");
+                    List<Asset> Evaluacion = new List<Asset>();
+
+                    List<int> IdsCjto = new List<int>();
+
+                    foreach (KeyValuePair<int, Asset> tmp in diccionarioHabilidad)
                     {
-                        if (tmp.Value.salio() == false && !Evaluacion.Contains(tmp.Value))
+                        Console.WriteLine("entre foreach");
+                        IdsCjto = AssetDAL.TodosLosIdDeLasPreguntasDeUnConjunto(tmp.Key);
+                        for (int i = 0; i < IdsCjto.Count; i++)
                         {
-                            Evaluacion.Add(tmp.Value);
-                            tmp.Value.setSalio(true);
-                            if (Evaluacion.Count == 10)
+                            if (tmp.Value.salio() == false && !Evaluacion.Contains(tmp.Value))
                             {
-                                return Evaluacion;
+                                Evaluacion.Add(tmp.Value);
+                                tmp.Value.setSalio(true);
+                                if (Evaluacion.Count == 10)
+                                {
+                                    return Evaluacion;
+                                }
                             }
                         }
                     }
-                }
 
-                return null;
-            }
-            else
-            {
-                return null;
+                    return null;
+                }
+                else
+                {
+                    PlanDeEstudio.setDiccionarioCompletoFalse(diccionarioHabilidad);
+                }
             }
 
         }
