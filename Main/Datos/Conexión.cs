@@ -23,7 +23,7 @@ namespace Datos
 
                 return conectar;
             }
-            catch (SqlException e)
+            catch (SqlException )
             {
                 //Console.WriteLine(e.StackTrace);
                 MessageBox.Show("Problema con la conexión de la Base de Datos", "Inicio de sesión fallado", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);

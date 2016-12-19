@@ -12,8 +12,6 @@ namespace Interfaz_Fixed
 {
     public partial class Material_ApoyoImagen : Form
     {
-        private string path;
-
         public Material_ApoyoImagen()
         {
             InitializeComponent();
@@ -21,7 +19,8 @@ namespace Interfaz_Fixed
 
         public Material_ApoyoImagen(string path)
         {
-            this.pictureBox.Image = Image.FromFile(@path);
+            this.pictureBox.Image = Image.FromFile(path);
+            this.pictureBox.SizeMode = PictureBoxSizeMode.CenterImage;
         }
     }
 }
