@@ -121,29 +121,32 @@
   <data name="ui_glues_icons_invite" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ui_glues_icons_invite.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Liga_oro_ascenso11" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Liga_oro_ascenso1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Gold_Leage" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Gold_Leage.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="UI_licsoftware_fixed_2.0" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\UI_licsoftware_fixed_2.0.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="UI_licsoftware_fixed_3.0" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\UI_licsoftware_fixed_3.0.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="UI_licsoftware_fixed" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\UI_licsoftware_fixed.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Panel_Habilidades" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Panel_Habilidades.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="HabilidadGeneral" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\HabilidadGeneral.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Liga_oro_ascenso11" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Liga_oro_ascenso1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Panel_Habilidades" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Panel_Habilidades.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="botonNormall" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\botonNormall.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Bronze_Leage" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Bronze_Leage.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Silver_leage_NB" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Silver_leage_NB.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="NOLIGA_Warning1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\NOLIGA_Warning1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -163,13 +166,28 @@
   <data name="Liga_oro_ascenso1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Liga_oro_ascenso1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Gold_Leage" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Gold_Leage.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Silver_leage_NB" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Silver_leage_NB.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="ui_battlenet_glues_bluebuttons_largeover" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ui_battlenet_glues_bluebuttons_largeover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="UI_licsoftware_fixed_3.0" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\UI_licsoftware_fixed_3.0.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="a_lost_dog" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\Recursos\Imagen\a_lost_dog.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="a_restaurant_menu" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\Recursos\Imagen\a_restaurant_menu.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="a_thank_you_email_0" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\Recursos\Imagen\a_thank_you_email_0.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="at_the_restaurant" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\Recursos\Imagen\at_the_restaurant.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="at_the_train_station" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\Recursos\Imagen\at_the_train_station.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="train_ticket_a2_v6" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\Recursos\Imagen\train_ticket_a2_v6.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

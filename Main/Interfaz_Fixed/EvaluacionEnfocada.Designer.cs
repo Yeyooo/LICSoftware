@@ -816,7 +816,7 @@ namespace Interfaz_Fixed
                             control.Text = "Material de Apoyo";
                             control.Click += (s, e) => Evento_MaterialAudio(s, e, asset);
                         }
-                        else
+                        else if(asset.getUrlArchivo().EndsWith("null") || asset.getUrlArchivo().EndsWith("NULL"))
                         {
                             Button control = panel.GetControlFromPosition(0, i) as Button;
                             control.Text = "Material de Apoyo";

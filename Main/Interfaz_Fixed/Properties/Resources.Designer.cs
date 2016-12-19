@@ -63,6 +63,56 @@ namespace Interfaz_Fixed.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap a_lost_dog {
+            get {
+                object obj = ResourceManager.GetObject("a_lost_dog", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap a_restaurant_menu {
+            get {
+                object obj = ResourceManager.GetObject("a_restaurant_menu", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap a_thank_you_email_0 {
+            get {
+                object obj = ResourceManager.GetObject("a_thank_you_email_0", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap at_the_restaurant {
+            get {
+                object obj = ResourceManager.GetObject("at_the_restaurant", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap at_the_train_station {
+            get {
+                object obj = ResourceManager.GetObject("at_the_train_station", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap botonNormall {
             get {
                 object obj = ResourceManager.GetObject("botonNormall", resourceCulture);
@@ -166,6 +216,16 @@ namespace Interfaz_Fixed.Properties {
         internal static System.Drawing.Bitmap Silver_leage_NB {
             get {
                 object obj = ResourceManager.GetObject("Silver_leage_NB", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap train_ticket_a2_v6 {
+            get {
+                object obj = ResourceManager.GetObject("train_ticket_a2_v6", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

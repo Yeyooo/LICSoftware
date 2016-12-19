@@ -90,7 +90,7 @@ namespace Interfaz_Fixed
             this.tableLayoutPanel1.Controls.Add(this.Help_Button, 1, 4);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 5;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 98F));
@@ -109,7 +109,7 @@ namespace Interfaz_Fixed
             this.tableLayoutPanel10.Controls.Add(this.ListeningGold_chk, 0, 1);
             this.tableLayoutPanel10.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel10.Location = new System.Drawing.Point(750, 384);
-            this.tableLayoutPanel10.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableLayoutPanel10.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel10.Name = "tableLayoutPanel10";
             this.tableLayoutPanel10.RowCount = 2;
             this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -138,7 +138,7 @@ namespace Interfaz_Fixed
             this.ListeningGold_chk.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ListeningGold_chk.Enabled = false;
             this.ListeningGold_chk.Location = new System.Drawing.Point(4, 197);
-            this.ListeningGold_chk.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ListeningGold_chk.Margin = new System.Windows.Forms.Padding(4);
             this.ListeningGold_chk.Name = "ListeningGold_chk";
             this.ListeningGold_chk.Size = new System.Drawing.Size(354, 39);
             this.ListeningGold_chk.TabIndex = 6;
@@ -154,7 +154,7 @@ namespace Interfaz_Fixed
             this.tableLayoutPanel9.Controls.Add(this.WritingGold_Chk, 0, 1);
             this.tableLayoutPanel9.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel9.Location = new System.Drawing.Point(378, 384);
-            this.tableLayoutPanel9.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableLayoutPanel9.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel9.Name = "tableLayoutPanel9";
             this.tableLayoutPanel9.RowCount = 2;
             this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -185,7 +185,7 @@ namespace Interfaz_Fixed
             this.WritingGold_Chk.Dock = System.Windows.Forms.DockStyle.Fill;
             this.WritingGold_Chk.Enabled = false;
             this.WritingGold_Chk.Location = new System.Drawing.Point(4, 197);
-            this.WritingGold_Chk.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.WritingGold_Chk.Margin = new System.Windows.Forms.Padding(4);
             this.WritingGold_Chk.Name = "WritingGold_Chk";
             this.WritingGold_Chk.Size = new System.Drawing.Size(353, 39);
             this.WritingGold_Chk.TabIndex = 6;
@@ -201,7 +201,7 @@ namespace Interfaz_Fixed
             this.tableLayoutPanel8.Controls.Add(this.ListeningSilver_Chk, 0, 1);
             this.tableLayoutPanel8.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel8.Location = new System.Drawing.Point(750, 125);
-            this.tableLayoutPanel8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableLayoutPanel8.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel8.Name = "tableLayoutPanel8";
             this.tableLayoutPanel8.RowCount = 2;
             this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -229,7 +229,7 @@ namespace Interfaz_Fixed
             this.ListeningSilver_Chk.AutoSize = true;
             this.ListeningSilver_Chk.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ListeningSilver_Chk.Location = new System.Drawing.Point(4, 205);
-            this.ListeningSilver_Chk.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ListeningSilver_Chk.Margin = new System.Windows.Forms.Padding(4);
             this.ListeningSilver_Chk.Name = "ListeningSilver_Chk";
             this.ListeningSilver_Chk.Size = new System.Drawing.Size(354, 39);
             this.ListeningSilver_Chk.TabIndex = 6;
@@ -245,7 +245,7 @@ namespace Interfaz_Fixed
             this.tableLayoutPanel7.Controls.Add(this.WritingSilver_Chk, 0, 1);
             this.tableLayoutPanel7.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel7.Location = new System.Drawing.Point(378, 125);
-            this.tableLayoutPanel7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableLayoutPanel7.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel7.Name = "tableLayoutPanel7";
             this.tableLayoutPanel7.RowCount = 2;
             this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -275,7 +275,7 @@ namespace Interfaz_Fixed
             this.WritingSilver_Chk.AutoSize = true;
             this.WritingSilver_Chk.Dock = System.Windows.Forms.DockStyle.Fill;
             this.WritingSilver_Chk.Location = new System.Drawing.Point(4, 205);
-            this.WritingSilver_Chk.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.WritingSilver_Chk.Margin = new System.Windows.Forms.Padding(4);
             this.WritingSilver_Chk.Name = "WritingSilver_Chk";
             this.WritingSilver_Chk.Size = new System.Drawing.Size(353, 39);
             this.WritingSilver_Chk.TabIndex = 6;
@@ -325,9 +325,8 @@ namespace Interfaz_Fixed
             // Evaluar_AutoButton
             // 
             this.Evaluar_AutoButton.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Evaluar_AutoButton.Enabled = false;
             this.Evaluar_AutoButton.Location = new System.Drawing.Point(750, 635);
-            this.Evaluar_AutoButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Evaluar_AutoButton.Margin = new System.Windows.Forms.Padding(4);
             this.Evaluar_AutoButton.Name = "Evaluar_AutoButton";
             this.Evaluar_AutoButton.Size = new System.Drawing.Size(362, 56);
             this.Evaluar_AutoButton.TabIndex = 3;
@@ -339,7 +338,7 @@ namespace Interfaz_Fixed
             // 
             this.Cancelar_Button.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Cancelar_Button.Location = new System.Drawing.Point(7, 635);
-            this.Cancelar_Button.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Cancelar_Button.Margin = new System.Windows.Forms.Padding(4);
             this.Cancelar_Button.Name = "Cancelar_Button";
             this.Cancelar_Button.Size = new System.Drawing.Size(360, 56);
             this.Cancelar_Button.TabIndex = 4;
@@ -356,7 +355,7 @@ namespace Interfaz_Fixed
             this.tableLayoutPanel3.Controls.Add(this.ReadingSilver_chk, 0, 1);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel3.Location = new System.Drawing.Point(7, 125);
-            this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 2;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 76.76768F));
@@ -383,7 +382,7 @@ namespace Interfaz_Fixed
             this.ReadingSilver_chk.AutoSize = true;
             this.ReadingSilver_chk.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ReadingSilver_chk.Location = new System.Drawing.Point(4, 194);
-            this.ReadingSilver_chk.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ReadingSilver_chk.Margin = new System.Windows.Forms.Padding(4);
             this.ReadingSilver_chk.Name = "ReadingSilver_chk";
             this.ReadingSilver_chk.Size = new System.Drawing.Size(352, 50);
             this.ReadingSilver_chk.TabIndex = 1;
@@ -400,7 +399,7 @@ namespace Interfaz_Fixed
             this.tableLayoutPanel4.Controls.Add(this.ReadingGold_chk, 0, 1);
             this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel4.Location = new System.Drawing.Point(7, 384);
-            this.tableLayoutPanel4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableLayoutPanel4.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RowCount = 2;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -429,7 +428,7 @@ namespace Interfaz_Fixed
             this.ReadingGold_chk.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ReadingGold_chk.Enabled = false;
             this.ReadingGold_chk.Location = new System.Drawing.Point(4, 198);
-            this.ReadingGold_chk.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ReadingGold_chk.Margin = new System.Windows.Forms.Padding(4);
             this.ReadingGold_chk.Name = "ReadingGold_chk";
             this.ReadingGold_chk.Size = new System.Drawing.Size(352, 38);
             this.ReadingGold_chk.TabIndex = 1;
@@ -441,7 +440,7 @@ namespace Interfaz_Fixed
             // 
             this.Help_Button.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Help_Button.Location = new System.Drawing.Point(378, 635);
-            this.Help_Button.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Help_Button.Margin = new System.Windows.Forms.Padding(4);
             this.Help_Button.Name = "Help_Button";
             this.Help_Button.Size = new System.Drawing.Size(361, 56);
             this.Help_Button.TabIndex = 16;
@@ -456,7 +455,7 @@ namespace Interfaz_Fixed
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(1119, 698);
             this.Controls.Add(this.tableLayoutPanel1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "AutoEvaluacion";
             this.Text = "AutoEvaluacion";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Cerrando);

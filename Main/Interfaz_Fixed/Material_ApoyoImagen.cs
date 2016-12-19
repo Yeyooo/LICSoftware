@@ -12,15 +12,15 @@ namespace Interfaz_Fixed
 {
     public partial class Material_ApoyoImagen : Form
     {
-        public Material_ApoyoImagen()
-        {
-            InitializeComponent();
-        }
-
         public Material_ApoyoImagen(string path)
         {
-            this.pictureBox.Image = Image.FromFile(path);
-            this.pictureBox.SizeMode = PictureBoxSizeMode.CenterImage;
+            InitializeComponent();
+            Material(path);
+        }
+
+        private void Material(string path)
+        {
+            this.Imagen.Image = Image.FromFile(path);
         }
     }
 }

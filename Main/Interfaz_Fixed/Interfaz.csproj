@@ -294,6 +294,24 @@
   <ItemGroup>
     <None Include="Resources\UI_licsoftware_fixed_3.0.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Recursos\Imagen\a_lost_dog.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Recursos\Imagen\a_restaurant_menu.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Recursos\Imagen\a_thank_you_email_0.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Recursos\Imagen\at_the_restaurant.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Recursos\Imagen\at_the_train_station.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Recursos\Imagen\train_ticket_a2_v6.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
