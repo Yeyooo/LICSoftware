@@ -37,7 +37,13 @@ namespace Interfaz_Fixed
                     IDS = arregloID.Split(',');
                     foreach (string indice in IDS)
                     {
-                        idsRecuperadas.Add(int.Parse(indice));
+                        if (indice != " ") { 
+                            idsRecuperadas.Add(int.Parse(indice));
+                        }
+                        else
+                        {
+
+                        }
                     }
                 }
                 readerArchivo.Close();
@@ -114,7 +120,7 @@ namespace Interfaz_Fixed
 
         private void Evento_Teoria(object sender, EventArgs e, Asset asset)
         {
-            //AQUI CREAR FORM DE LA TEORIA PARA QUE SE ESCUCHE CON EL SPEAKER
+            new Teoria(asset).Show();
         }
        
     }
