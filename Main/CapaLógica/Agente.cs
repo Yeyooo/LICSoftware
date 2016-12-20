@@ -20,41 +20,201 @@ namespace CapaLógica
             BaseDeHechos BH = new BaseDeHechos();
             BH.hechos = percepciones;
 
-            if (MotorInferencia.EHD(Agente.KB,BH, "a") && !percepciones.Contains("a")) // el hecho a probar no puede ser parte de las percepciones
-            {                                                                           // ya que seria hecho directamente
-                return "a";
+            if (percepciones[0] == "writing" && percepciones[1] == "1" && percepciones[2] == "correctas menor 30" && percepciones[3] == "mayor o igual 0")
+            {
+                return "mantener";
+            }
+            if (percepciones[0] == "writing" && percepciones[1] == "2" && percepciones[2] == "correctas menor 30" && percepciones[3] == "mayor o igual 0")
+            {
+                return "bajar";
+            }
+            if (percepciones[0] == "writing" && percepciones[1] == "3" && percepciones[2] == "correctas menor 30" && percepciones[3] == "mayor o igual 0")
+            {
+                return "bajar";
             }
 
-            if (MotorInferencia.EHD(Agente.KB, BH, "b") && !percepciones.Contains("b"))
+            if (percepciones[0] == "reading" && percepciones[1] == "1" && percepciones[2] == "correctas menor 30" && percepciones[3] == "mayor o igual 0")
             {
-                return "b";
+                return "mantener";
             }
-            if (MotorInferencia.EHD(Agente.KB, BH, "c") && !percepciones.Contains("c"))
+            if (percepciones[0] == "reading" && percepciones[1] == "2" && percepciones[2] == "correctas menor 30" && percepciones[3] == "mayor o igual 0")
             {
-                return "c";
+                return "bajar";
             }
-            if (MotorInferencia.EHD(Agente.KB, BH, "d") && !percepciones.Contains("d"))
+            if (percepciones[0] == "reading" && percepciones[1] == "3" && percepciones[2] == "correctas menor 30" && percepciones[3] == "mayor o igual 0")
             {
-                return "d";
+                return "bajar";
             }
-            if (MotorInferencia.EHD(Agente.KB, BH, "e") && !percepciones.Contains("e"))
+
+            if (percepciones[0] == "listening" && percepciones[1] == "1" && percepciones[2] == "correctas menor 30" && percepciones[3] == "mayor o igual 0")
             {
-                return "e";
+                return "mantener";
             }
-            if (MotorInferencia.EHD(Agente.KB, BH, "f") && !percepciones.Contains("f"))
+            if (percepciones[0] == "listening" && percepciones[1] == "2" && percepciones[2] == "correctas menor 30" && percepciones[3] == "mayor o igual 0")
             {
-                return "f";
+                return "bajar";
             }
-            if (MotorInferencia.EHD(Agente.KB, BH, "g") && !percepciones.Contains("g"))
+            if (percepciones[0] == "listening" && percepciones[1] == "3" && percepciones[2] == "correctas menor 30" && percepciones[3] == "mayor o igual 0")
             {
-                return "g";
+                return "bajar";
             }
-            if (MotorInferencia.EHD(Agente.KB, BH, "h") && !percepciones.Contains("h"))
+            //--------------------------------------------------------------------------
+            if (percepciones[0] == "writing" && percepciones[1] == "1" && percepciones[2] == "correctas mayor o igual 30" && percepciones[3] == "correctas menor 50")
             {
-                return "h";
+                return "mantener";
+            }
+            if (percepciones[0] == "writing" && percepciones[1] == "2" && percepciones[2] == "correctas mayor o igual 30" && percepciones[3] == "correctas menor 50")
+            {
+                return "transicion bajada";
+            }
+            if (percepciones[0] == "writing" && percepciones[1] == "3" && percepciones[2] == "correctas mayor o igual 30" && percepciones[3] == "correctas menor 50")
+            {
+                return "transicion bajada";
+            }
+
+            if (percepciones[0] == "reading" && percepciones[1] == "1" && percepciones[2] == "correctas mayor o igual 30" && percepciones[3] == "correctas menor 50")
+            {
+                return "mantener";
+            }
+            if (percepciones[0] == "reading" && percepciones[1] == "2" && percepciones[2] == "correctas mayor o igual 30" && percepciones[3] == "correctas menor 50")
+            {
+                return "transicion bajada";
+            }
+            if (percepciones[0] == "reading" && percepciones[1] == "3" && percepciones[2] == "correctas mayor o igual 30" && percepciones[3] == "correctas menor 50")
+            {
+                return "transicion bajada";
+            }
+
+            if (percepciones[0] == "listening" && percepciones[1] == "1" && percepciones[2] == "correctas mayor o igual 30" && percepciones[3] == "correctas menor 50")
+            {
+                return "mantener";
+            }
+            if (percepciones[0] == "listening" && percepciones[1] == "2" && percepciones[2] == "correctas mayor o igual 30" && percepciones[3] == "correctas menor 50")
+            {
+                return "transicion bajada";
+            }
+            if (percepciones[0] == "listening" && percepciones[1] == "3" && percepciones[2] == "correctas mayor o igual 30" && percepciones[3] == "correctas menor 50")
+            {
+                return "transicion bajada";
+            }
+            //-------------------------------------------------------------
+            if (percepciones[0] == "writing" && percepciones[1] == "1" && percepciones[2] == "correctas mayor o igual 50" && percepciones[3] == "correctas menor 70")
+            {
+                return "mantener";
+            }
+            if (percepciones[0] == "writing" && percepciones[1] == "2" && percepciones[2] == "correctas mayor o igual 50" && percepciones[3] == "correctas menor 70")
+            {
+                return "mantener";
+            }
+            if (percepciones[0] == "writing" && percepciones[1] == "3" && percepciones[2] == "correctas mayor o igual 50" && percepciones[3] == "correctas menor 70")
+            {
+                return "mantener";
+            }
+            if (percepciones[0] == "reading" && percepciones[1] == "1" && percepciones[2] == "correctas mayor o igual 50" && percepciones[3] == "correctas menor 70")
+            {
+                return "mantener";
+            }
+            if (percepciones[0] == "reading" && percepciones[1] == "2" && percepciones[2] == "correctas mayor o igual 50" && percepciones[3] == "correctas menor 70")
+            {
+                return "mantener";
+            }
+            if (percepciones[0] == "reading" && percepciones[1] == "3" && percepciones[2] == "correctas mayor o igual 50" && percepciones[3] == "correctas menor 70")
+            {
+                return "mantener";
+            }
+            if (percepciones[0] == "listening" && percepciones[1] == "1" && percepciones[2] == "correctas mayor o igual 50" && percepciones[3] == "correctas menor 70")
+            {
+                return "mantener";
+            }
+            if (percepciones[0] == "listening" && percepciones[1] == "2" && percepciones[2] == "correctas mayor o igual 50" && percepciones[3] == "correctas menor 70")
+            {
+                return "mantener";
+            }
+            if (percepciones[0] == "listening" && percepciones[1] == "3" && percepciones[2] == "correctas mayor o igual 50" && percepciones[3] == "correctas menor 70")
+            {
+                return "mantener";
+            }
+
+            //-----------------------------------------------------------------
+
+            if (percepciones[0] == "writing" && percepciones[1] == "1" && percepciones[2] == "correctas mayor o igual 70" && percepciones[3] == "correctas menor 90")
+            {
+                return "transicion subida";
+            }
+            if (percepciones[0] == "writing" && percepciones[1] == "2" && percepciones[2] == "correctas mayor o igual 70" && percepciones[3] == "correctas menor 90")
+            {
+                return "transicion subida";
+            }
+            if (percepciones[0] == "writing" && percepciones[1] == "3" && percepciones[2] == "correctas mayor o igual 70" && percepciones[3] == "correctas menor 90")
+            {
+                return "transicion subida";
+            }
+            if (percepciones[0] == "reading" && percepciones[1] == "1" && percepciones[2] == "correctas mayor o igual 70" && percepciones[3] == "correctas menor 90")
+            {
+                return "transicion subida";
+            }
+            if (percepciones[0] == "reading" && percepciones[1] == "2" && percepciones[2] == "correctas mayor o igual 70" && percepciones[3] == "correctas menor 90")
+            {
+                return "transicion subida";
+            }
+            if (percepciones[0] == "reading" && percepciones[1] == "3" && percepciones[2] == "correctas mayor o igual 70" && percepciones[3] == "correctas menor 90")
+            {
+                return "transicion subida";
+            }
+            if (percepciones[0] == "listening" && percepciones[1] == "1" && percepciones[2] == "correctas mayor o igual 70" && percepciones[3] == "correctas menor 90")
+            {
+                return "transicion subida";
+            }
+            if (percepciones[0] == "listening" && percepciones[1] == "2" && percepciones[2] == "correctas mayor o igual 70" && percepciones[3] == "correctas menor 90")
+            {
+                return "transicion subida";
+            }
+            if (percepciones[0] == "listening" && percepciones[1] == "3" && percepciones[2] == "correctas mayor o igual 70" && percepciones[3] == "correctas menor 90")
+            {
+                return "transicion subida";
+            }
+
+            //--------------------------------------------------------------------
+
+            if (percepciones[0] == "writing" && percepciones[1] == "1" && percepciones[2] == "correctas mayor o igual 90" && percepciones[3] == "menor o igual 100")
+            {
+                return "subir";
+            }
+            if (percepciones[0] == "writing" && percepciones[1] == "2" && percepciones[2] == "correctas mayor o igual 90" && percepciones[3] == "menor o igual 100")
+            {
+                return "subir";
+            }
+            if (percepciones[0] == "writing" && percepciones[1] == "3" && percepciones[2] == "correctas mayor o igual 90" && percepciones[3] == "menor o igual 100")
+            {
+                return "subir";
+            }
+            if (percepciones[0] == "reading" && percepciones[1] == "1" && percepciones[2] == "correctas mayor o igual 90" && percepciones[3] == "menor o igual 100")
+            {
+                return "subir";
+            }
+            if (percepciones[0] == "reading" && percepciones[1] == "2" && percepciones[2] == "correctas mayor o igual 90" && percepciones[3] == "menor o igual 100")
+            {
+                return "subir";
+            }
+            if (percepciones[0] == "reading" && percepciones[1] == "3" && percepciones[2] == "correctas mayor o igual 90" && percepciones[3] == "menor o igual 100")
+            {
+                return "subir";
+            }
+            if (percepciones[0] == "listening" && percepciones[1] == "1" && percepciones[2] == "correctas mayor o igual 90" && percepciones[3] == "menor o igual 100")
+            {
+                return "subir";
+            }
+            if (percepciones[0] == "listening" && percepciones[1] == "2" && percepciones[2] == "correctas mayor o igual 90" && percepciones[3] == "menor o igual 100")
+            {
+                return "subir";
+            }
+            if (percepciones[0] == "listening" && percepciones[1] == "3" && percepciones[2] == "correctas mayor o igual 90" && percepciones[3] == "menor o igual 100")
+            {
+                return "subir";
             }
 
             return null;
+
         }
     }
 

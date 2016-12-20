@@ -144,6 +144,11 @@ namespace CapaLógica
 
         }
 
+        public void setListaDeHechos( List<string> ListaHechos )
+        {
+            this.hechos = ListaHechos;
+        }
+
         public List<string> getListaDeHechos()
         {
             return this.hechos;
@@ -182,7 +187,7 @@ namespace CapaLógica
                 {
                     cantidad++;
                     inferido[simbolo] = false;
-                    if (BH.getListaDeHechos().Contains(simbolo))
+                    if (BH.getListaDeHechos().Contains(simbolo)) //  && !agenda.Contains(simbolo)
                     {
                         agenda.Enqueue(simbolo);
                     }
@@ -201,26 +206,33 @@ namespace CapaLógica
                 {
                     return true;
                 }
-
-                if (inferido[premisa] == false)
+                try
                 {
-                    inferido[premisa] = true;
-                    int nro_Clausula = 1;
-                    foreach ( Clausula clausula in x )
+                    if (inferido[premisa] == false)
                     {
-                        foreach (string simbolo in clausula.getPremisas()) {
-                            if (premisa.CompareTo(simbolo) == 0)
+                        inferido[premisa] = true;
+                        int nro_Clausula = 1;
+                        foreach (Clausula clausula in x)
+                        {
+                            foreach (string simbolo in clausula.getPremisas())
                             {
-                                cuenta[nro_Clausula] = cuenta[nro_Clausula] - 1;
-                                if( cuenta[nro_Clausula] == 0)
+                                if (premisa.CompareTo(simbolo) == 0)
                                 {
-                                    agenda.Enqueue(clausula.getConsecuente());
+                                    cuenta[nro_Clausula] = cuenta[nro_Clausula] - 1;
+                                    if (cuenta[nro_Clausula] == 0)
+                                    {
+                                        agenda.Enqueue(clausula.getConsecuente());
+                                    }
                                 }
                             }
-                        }
-                        nro_Clausula++;
+                            nro_Clausula++;
 
+                        }
                     }
+                }
+                catch (KeyNotFoundException e)
+                {
+                    return false;
                 }
             } // end of while
 
