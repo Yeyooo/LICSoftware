@@ -103,36 +103,46 @@ namespace Interfaz_Fixed
                 DialogResult dialog =MessageBox.Show("Guardado Correctamente","Exito",MessageBoxButtons.OK,MessageBoxIcon.Information);
                 if (dialog == DialogResult.OK)
                 {
-                    string correo = "";
+                    
                     LICGUI.EstadoWriting = Agente.agente(evaluador.getHechos());
                     LICGUI.EstadoListening = Agente.agente(evaluador.getHechos());
                     LICGUI.EstadoReading = Agente.agente(evaluador.getHechos());
-                    int nivelwriting = 2;
-                    int nivelreading = 2;
-                    int nivellistening = 2;
+                    int nivelwriting = userInternal.getNivelWriting();
+                    int nivelreading = userInternal.getNivelReading();
+                    int nivellistening = userInternal.getNivelListening();
+                    string correo = userInternal.getCorreo();
+
                     if (LICGUI.EstadoWriting == "bajar")
                     {
                         UsuarioDAL.setNivelesUsuarioEnBD(nivelwriting-1, nivelreading, nivellistening, correo);
+                        LICGUI.EstadoWriting = "mantener";
                     }
                     if (LICGUI.EstadoReading == "bajar")
                     {
                         UsuarioDAL.setNivelesUsuarioEnBD(nivelwriting, nivelreading-1, nivellistening, correo);
+                        LICGUI.EstadoReading = "mantener";
                     }
-                    if (LICGUI.EstadoReading == "bajar")
+                    if (LICGUI.EstadoListening == "bajar")
                     {
                         UsuarioDAL.setNivelesUsuarioEnBD(nivelwriting, nivelreading, nivellistening-1, correo);
+                        LICGUI.EstadoListening = "mantener";
                     }
                     if (LICGUI.EstadoWriting == "subir")
                     {
                         UsuarioDAL.setNivelesUsuarioEnBD(nivelwriting + 1, nivelreading, nivellistening, correo);
+                        LICGUI.EstadoWriting = "mantener";
                     }
                     if (LICGUI.EstadoReading == "subir")
                     {
                         UsuarioDAL.setNivelesUsuarioEnBD(nivelwriting, nivelreading + 1, nivellistening, correo);
+                        LICGUI.EstadoReading = "mantener";
+                     
                     }
-                    if (LICGUI.EstadoReading == "subir")
+                    if (LICGUI.EstadoListening == "subir")
                     {
                         UsuarioDAL.setNivelesUsuarioEnBD(nivelwriting, nivelreading, nivellistening + 1, correo);
+                        LICGUI.EstadoListening = "mantener";
+
                     }
                     MessageBox.Show("Directorio del usuario no existe"+LICGUI.EstadoWriting, "ERROR FATAL", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     this.Close();
