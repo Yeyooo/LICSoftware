@@ -43,68 +43,85 @@ namespace Datos
 
         public EvaluacionNOGUI(PlanDeEstudio PDE, string estadoWriting, string estadoReading, string estadoListening)
         {                       // estado de las habilidades : transicion subida, transicion bajada, mantener
-            bool flag = false;
-            while (flag == false)
-            {
-                if (estadoWriting == "transicion subida")
+            //bool flag = false;
+            //while (flag == false)
+            //{
+                if (estadoWriting == "subir")
                 {
-                    this.PreguntasWriting = EvaluacionNOGUI.EvaluacionPorHabilidadTransicionSubida(PDE.getDicWriting());
+                    this.PreguntasWriting = EvaluacionNOGUI.EvaluacionPorHabilidadTransicionSubidaTEST(PDE.getDicWriting());
                 }
-                else if (estadoWriting == "transicion bajada")
+                else if (estadoWriting == "bajar")
                 {
-                    this.PreguntasWriting = EvaluacionNOGUI.EvaluacionPorHabilidadTransicionBajada(PDE.getDicWriting());
+                    this.PreguntasWriting = EvaluacionNOGUI.EvaluacionPorHabilidadTransicionBajadaTEST(PDE.getDicWriting());
                 }
                 else
                 {// mantener
                     this.PreguntasWriting = EvaluacionNOGUI.EvaluacionPorHabilidadTEST(PDE.getDicWriting());
                 }
 
-                if (estadoReading == "transicion subida")
+                if (estadoReading == "subir")
                 {
-                    this.PreguntasReading = EvaluacionNOGUI.EvaluacionPorHabilidadTransicionSubida(PDE.getDicReading());
+                    this.PreguntasReading = EvaluacionNOGUI.EvaluacionPorHabilidadTransicionSubidaTEST(PDE.getDicReading());
                 }
-                else if (estadoReading == "transicion bajada")
+                else if (estadoReading == "bajar")
                 {
-                    this.PreguntasReading = EvaluacionNOGUI.EvaluacionPorHabilidadTransicionBajada(PDE.getDicReading());
+                    this.PreguntasReading = EvaluacionNOGUI.EvaluacionPorHabilidadTransicionBajadaTEST(PDE.getDicReading());
                 }
                 else
                 {// mantener
                     this.PreguntasReading = EvaluacionNOGUI.EvaluacionPorHabilidadTEST(PDE.getDicReading());
                 }
 
-                if (estadoListening == "transicion subida")
+                if (estadoListening == "subir")
                 {
-                    this.PreguntasListening = EvaluacionNOGUI.EvaluacionPorHabilidadTransicionSubida(PDE.getDicListening());
+                    this.PreguntasListening = EvaluacionNOGUI.EvaluacionPorHabilidadTransicionSubidaTEST(PDE.getDicListening());
                 }
-                else if (estadoListening == "transicion bajada")
+                else if (estadoListening == "bajar")
                 {
-                    this.PreguntasListening = EvaluacionNOGUI.EvaluacionPorHabilidadTransicionBajada(PDE.getDicListening());
+                    this.PreguntasListening = EvaluacionNOGUI.EvaluacionPorHabilidadTransicionBajadaTEST(PDE.getDicListening());
                 }
                 else
                 {// mantener
                     this.PreguntasListening = EvaluacionNOGUI.EvaluacionPorHabilidadTEST(PDE.getDicListening());
                 }
 
-                if (this.getPreguntasWriting() == null)
-                {
-                    PlanDeEstudio.setDiccionarioCompletoFalse(PDE.getDicWriting());//poner todo el diccionario en false
-                }
-                if (this.getPreguntasReading() == null)
-                {
-                    PlanDeEstudio.setDiccionarioCompletoFalse(PDE.getDicReading());//poner todo el diccionario en false
-                }
-                if (this.getPreguntasListening() == null)
-                {
-                    PlanDeEstudio.setDiccionarioCompletoFalse(PDE.getDicListening());//poner todo el diccionario en false
-                }
-                else // si ya no entra a niuna condicion, se puede salir del while
-                {
-                    flag = true;
-                } // si se cae, es porque los assets que sacamos directo de la BD, vienen con false ya
+                //if (this.getPreguntasWriting() == null)
+                //{
+                //    PlanDeEstudio.setDiccionarioCompletoFalse(PDE.getDicWriting());//poner todo el diccionario en false
+                //}
+                //if (this.getPreguntasReading() == null)
+                //{
+                //    PlanDeEstudio.setDiccionarioCompletoFalse(PDE.getDicReading());//poner todo el diccionario en false
+                //}
+                //if (this.getPreguntasListening() == null)
+                //{
+                //    PlanDeEstudio.setDiccionarioCompletoFalse(PDE.getDicListening());//poner todo el diccionario en false
+                //}
+                //else // si ya no entra a niuna condicion, se puede salir del while
+                //{
+                //    flag = true;
+                //} // si se cae, es porque los assets que sacamos directo de la BD, vienen con false ya
 
+            //}
+
+        }
+
+        public static List<Asset> generarEvaluacionPorHabilidadConEstado(string estadoHabilidad, Dictionary<int, Asset> diccionario)
+        {
+
+            if (estadoHabilidad == "mantener")
+            {
+                return EvaluacionNOGUI.EvaluacionPorHabilidadTEST(diccionario);
+            }else if (estadoHabilidad == "bajar")
+            {
+                return EvaluacionNOGUI.EvaluacionPorHabilidadTransicionBajadaTEST(diccionario);
+            }else
+            { // subir
+                return EvaluacionNOGUI.EvaluacionPorHabilidadTransicionSubidaTEST(diccionario);
             }
 
         }
+
 
         //public static List<Asset> EvaluacionPorHabilidad( Dictionary<int, Asset> diccionarioHabilidad ) // 10 solamente, de una habilidad
         //{
@@ -168,6 +185,100 @@ namespace Datos
                                 tmp.Value.setSalio(true);
                                 if (Evaluacion.Count == 10)
                                 {
+                                    return Evaluacion;
+                                }
+                            }
+                        }
+                    }
+
+                    return null;
+                }
+                else
+                {
+                    PlanDeEstudio.setDiccionarioCompletoFalse(diccionarioHabilidad);
+                }
+            }
+
+        }
+
+        public static List<Asset> EvaluacionPorHabilidadTransicionBajadaTEST(Dictionary<int, Asset> diccionarioHabilidad) // 10 solamente, de una habilidad
+        {
+            while (true)
+            {
+                if (PlanDeEstudio.sePuedenGenerarParaUnaHabilidad10Preguntas(diccionarioHabilidad))
+                {
+                    Console.WriteLine("entre");
+                    List<Asset> Evaluacion = new List<Asset>();
+
+                    List<int> IdsCjto = new List<int>();
+
+                    foreach (KeyValuePair<int, Asset> tmp in diccionarioHabilidad)
+                    {
+                        Console.WriteLine("entre foreach");
+                        IdsCjto = AssetDAL.TodosLosIdDeLasPreguntasDeUnConjunto(tmp.Key);
+                        for (int i = 0; i < IdsCjto.Count; i++)
+                        {
+                            if (tmp.Value.salio() == false && !Evaluacion.Contains(tmp.Value))
+                            {
+                                Evaluacion.Add(tmp.Value);
+                                tmp.Value.setSalio(true);
+                                if (Evaluacion.Count == 7)
+                                {
+                                    int nivel = (tmp.Value.getNivelHabilidad()) - 1;//Obtenemos el nivel de asset que estamos tratando
+                                    string habilidad = tmp.Value.getHabilidadAsociada();
+                                    List<Asset> AssetsTransicion = AssetDAL.BuscarPorNivelHabilidad(nivel, habilidad);// añadir 3 mas del siguiente nivel
+                                    for (int z = 0; z < 3; z++)
+                                    {
+                                        Evaluacion.Add(AssetsTransicion[z]);
+                                        string x = AssetsTransicion[z].getUrlArchivo();
+                                    }
+                                    return Evaluacion;
+                                }
+                            }
+                        }
+                    }
+
+                    return null;
+                }
+                else
+                {
+                    PlanDeEstudio.setDiccionarioCompletoFalse(diccionarioHabilidad);
+                }
+            }
+
+        }
+
+        public static List<Asset> EvaluacionPorHabilidadTransicionSubidaTEST(Dictionary<int, Asset> diccionarioHabilidad) // 10 solamente, de una habilidad
+        {
+            while (true)
+            {
+                if (PlanDeEstudio.sePuedenGenerarParaUnaHabilidad10Preguntas(diccionarioHabilidad))
+                {
+                    Console.WriteLine("entre");
+                    List<Asset> Evaluacion = new List<Asset>();
+
+                    List<int> IdsCjto = new List<int>();
+
+                    foreach (KeyValuePair<int, Asset> tmp in diccionarioHabilidad)
+                    {
+                        Console.WriteLine("entre foreach");
+                        IdsCjto = AssetDAL.TodosLosIdDeLasPreguntasDeUnConjunto(tmp.Key);
+                        for (int i = 0; i < IdsCjto.Count; i++)
+                        {
+                            if (tmp.Value.salio() == false && !Evaluacion.Contains(tmp.Value))
+                            {
+                                Evaluacion.Add(tmp.Value);
+                                tmp.Value.setSalio(true);
+                                if (Evaluacion.Count == 7)
+                                {
+                                    int nivel = (tmp.Value.getNivelHabilidad()) + 1;//Obtenemos el nivel de asset que estamos tratando
+                                    string habilidad = tmp.Value.getHabilidadAsociada();
+                                    List<Asset> AssetsTransicion = AssetDAL.BuscarPorNivelHabilidad(nivel, habilidad);// añadir 3 mas del siguiente nivel
+                                    for (int z = 0; z < 3; z++)
+                                    {
+                                        Evaluacion.Add(AssetsTransicion[z]);
+                                        string x = AssetsTransicion[z].getUrlArchivo();
+                                    }
                                     return Evaluacion;
                                 }
                             }

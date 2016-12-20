@@ -93,7 +93,7 @@ namespace Interfaz_Fixed
                 PlanDeEstudio x = userInternal.getPlanDeEstudio();
 
                 Dictionary<int, Asset> dicc = x.getDicListening();
-                List<Asset> tmp = EvaluacionNOGUI.EvaluacionPorHabilidadTEST(dicc);
+                List<Asset> tmp = EvaluacionNOGUI.generarEvaluacionPorHabilidadConEstado("mantener",dicc);
 
                 EvaluacionEnfocada evaluacionListening = new EvaluacionEnfocada("Listening", tmp, userInternal.getNombre());
 
@@ -119,7 +119,7 @@ namespace Interfaz_Fixed
                 {
                     Console.WriteLine("valor id : " + asd.Value.getId());
                 }
-                List<Asset> tmp = EvaluacionNOGUI.EvaluacionPorHabilidadTEST(dicc);
+                List<Asset> tmp = EvaluacionNOGUI.generarEvaluacionPorHabilidadConEstado("subir", dicc);
 
                 Console.WriteLine("count: " + tmp.Count);
                 EvaluacionEnfocada evaluacionReading = new EvaluacionEnfocada("Reading", tmp,userInternal.getNombre());
@@ -145,7 +145,7 @@ namespace Interfaz_Fixed
                 {
                     Console.WriteLine("valor id : " + asd.Value.getId());
                 }
-                List<Asset> tmp = EvaluacionNOGUI.EvaluacionPorHabilidadTEST(dicc);
+                List<Asset> tmp = EvaluacionNOGUI.generarEvaluacionPorHabilidadConEstado("bajar", dicc);
 
                 Console.WriteLine("count: " + tmp.Count);
                 EvaluacionEnfocada evaluacionWriting = new EvaluacionEnfocada("Writing", tmp,userInternal.getNombre());
