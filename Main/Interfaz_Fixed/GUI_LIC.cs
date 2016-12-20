@@ -162,7 +162,7 @@ namespace Interfaz_Fixed
         {
             try
             {
-                EvaluacionNOGUI ev = new EvaluacionNOGUI(userInternal.getPlanDeEstudio());
+                EvaluacionNOGUI ev = new EvaluacionNOGUI(userInternal.getPlanDeEstudio(),"mantener", "subir", "bajar");
                 Evaluacion evaluacionGeneral = new Evaluacion("Contenidos Generales", ev, userInternal);
                 evaluacionGeneral.Show();
             }
