@@ -216,7 +216,7 @@ namespace Interfaz_Fixed
                         StreamReader lector = new StreamReader(File.OpenRead(fileChooser.FileName));
 
                         string auxiliar = lector.ReadLine();
-                        if (auxiliar == "Contenidos Generales")
+                        if (auxiliar == "Evaluacion de Contenidos Generales")
                         {
                             lector.Close();
                             new EvaluacionGeneral_Loaded(fileChooser.FileName).Show();

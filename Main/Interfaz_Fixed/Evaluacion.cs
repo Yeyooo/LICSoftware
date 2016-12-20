@@ -16,6 +16,7 @@ namespace Interfaz_Fixed
     public partial class Evaluacion : Form
     {
         //Tiempo Restante representado en segundos
+        
         #region Variables
         private int TiempoRestante = 1800;
         private int MinutosRestante = 0;
@@ -36,6 +37,7 @@ namespace Interfaz_Fixed
         private List<Asset> listaReading, listaWriting, listaListening;
 
         #endregion
+        ToolTip tooltip;
 
         public Evaluacion(string EvaluacionNombre,EvaluacionNOGUI Assets, Usuario user)
         {
@@ -75,12 +77,6 @@ namespace Interfaz_Fixed
         private void Cancelar_boton_Click(object sender, EventArgs e)
         {
             this.Close();
-        }
-
-        private void EventoClick_Asset(object sender, EventArgs e, Asset asset)
-        {
-            Form material_Apoyo = new Material_Apoyo(asset);
-            material_Apoyo.Show();
         }
 
         private void SinMaterial_Click(object sender, EventArgs e)
@@ -150,15 +146,23 @@ namespace Interfaz_Fixed
 
         private void Evento_MaterialAudio(object sender, EventArgs e, Asset asset)
         {
-            string path = Environment.CurrentDirectory + "/Recursos/Audios/" + asset.getUrlArchivo();
+            string path = Environment.CurrentDirectory + "\\Recursos\\Audio\\" + asset.getUrlArchivo();
             new Material_ApoyoAudio(path).Show();
         }
 
         private void Evento_MaterialImagen(object sender, EventArgs e, Asset asset)
         {
-            string path = Environment.CurrentDirectory + "/Recursos/Imagen/" + asset.getUrlArchivo();
+            string path = Environment.CurrentDirectory + "\\Recursos\\Imagen\\" + asset.getUrlArchivo();
             new Material_ApoyoImagen(path).Show();
         }
+
+        private void mouseOver_ButtonConjunto(object sender, EventArgs e)
+        {
+            Button boton = sender as Button;
+            tooltip = new ToolTip();
+            tooltip.Show("Este material forma parte de un conjunto, es decir, sirve para realizar mas de 1 pregunta",boton);
+        }
+
 
         private void Evento_SinMaterial(object sender, EventArgs e)
         {

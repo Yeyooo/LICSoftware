@@ -2151,17 +2151,23 @@ namespace Interfaz_Fixed
                     //preguntar si tiene material
                     if (asset.getUrlArchivo() != null) {
                         //SI EL ARCHIVO ES UNA IMAGEN
-                        if (asset.getUrlArchivo().EndsWith(".jpg")) {
+                        if (asset.getUrlArchivo().EndsWith(".jpg") || asset.getUrlArchivo().EndsWith(".JPG")) {
                             Button control = layoutPanel.GetControlFromPosition(0, i) as Button;
                             control.Text = "Material de Apoyo";
                             control.Click += (s, e) => Evento_MaterialImagen(s, e, asset);
                         }
                         //SI EL ARCHIVO ES UN AUDIO
-                        else
+                        if(asset.getUrlArchivo().EndsWith(".mp3") || asset.getUrlArchivo().EndsWith(".MP3"))
                         {
                             Button control = layoutPanel.GetControlFromPosition(0, i) as Button;
                             control.Text = "Material de Apoyo";
                             control.Click += (s, e) => Evento_MaterialAudio(s, e, asset);
+                        }
+                        else if (asset.getUrlArchivo().EndsWith("NULL") || asset.getUrlArchivo().EndsWith("null"))
+                        {
+                            Button control = layoutPanel.GetControlFromPosition(0, i) as Button;
+                            control.Text = "Material de Apoyo";
+                            control.Click += (s, e) => Evento_SinMaterial(s, e);
                         }
                     }
                     else
