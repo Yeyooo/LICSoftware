@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.IO;
 using System.Linq;
@@ -247,5 +248,12 @@ namespace Interfaz_Fixed
             new FormInicioSesion().Show();
 
         }
+
+        private void manualUsuario_label_Click(object sender, EventArgs e)
+        {
+            string path = Environment.CurrentDirectory + "\\Recursos\\Documentacion\\Manual de Usuario.docx";
+            Process.Start(path); 
+        }
+
     }
 }

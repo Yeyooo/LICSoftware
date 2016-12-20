@@ -22,6 +22,7 @@ namespace Interfaz_Fixed
         private List<Asset> AssetsEscogidos;
 
         private string nombreUsuario;
+        private string tipoEvaluacion;
 
         //private Usuario userInternal;
 
@@ -31,6 +32,7 @@ namespace Interfaz_Fixed
             nombreUsuario = nombreUser;
             AssetsEscogidos = Assets;
             Asignar_Loop(AssetsEscogidos);
+            tipoEvaluacion = Nombre.ToLower();
             tipoEvaluacion_Label.Text = tipoEvaluacion_Label.Text +" "+ Nombre;
         }
 
@@ -76,7 +78,7 @@ namespace Interfaz_Fixed
 
         private void Entregar_EvaluacionCustom(object sender, EventArgs e)
         {
-            EvaluadorPruebasEspecificas evaluador = new EvaluadorPruebasEspecificas();
+            EvaluadorPruebasEspecificas evaluador = new EvaluadorPruebasEspecificas(tipoEvaluacion);
             evaluador.recorrerPreguntas(this.layout_Alternativas1);
             evaluador.recorrerPreguntas(this.layout_Alternativas2);
             evaluador.recorrerPreguntas(this.layout_Alternativas3);

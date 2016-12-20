@@ -166,7 +166,7 @@ namespace Datos
         {                                                                                                    // de acuerdo a sus habilidades
             List<Asset> _lista = new List<Asset>();
             SqlConnection Conn = Conexión.obtenerConexion("contenido");
-            string consulta = "SELECT DISTINCT pregunta.idpregunta, enunciado, habilidad, nivel, metodologia, alternativa_correcta.idalternativa, url FROM pregunta, alternativas, alternativa_correcta WHERE alternativa_correcta.idalternativa = alternativas.idalternativa and alternativas.idpregunta = pregunta.idpregunta and habilidad = '"+pHabilidadAsociada+"' and nivel = "+pNivelHabilidad+";";
+            string consulta = "SELECT DISTINCT pregunta.idpregunta, enunciado, habilidad, nivel, metodologia, alternativa_correcta.idalternativa FROM pregunta, alternativas, alternativa_correcta WHERE alternativa_correcta.idalternativa = alternativas.idalternativa and alternativas.idpregunta = pregunta.idpregunta and habilidad = '"+pHabilidadAsociada+"' and nivel = "+pNivelHabilidad+";";
             // metodologia tiene que ir en la pregunta...BD
             SqlCommand _comando = new SqlCommand(String.Format(consulta), Conn);
             SqlDataReader _reader = _comando.ExecuteReader();
@@ -182,7 +182,6 @@ namespace Datos
                 pAsset.EstrategiaEnseñanza = _reader.GetString(4);
                 pAsset.RespuestaCorrecta = _reader.GetInt32(5);
                 pAsset.Teoria = AssetDAL.getTeoriaAssetBD(_reader.GetInt32(5));
-                pAsset.UrlArchivo = _reader.GetString(6);
 
                 _lista.Add(pAsset);
             }

@@ -13,11 +13,26 @@ namespace CapaLógica
         //UNA INSTANCIACION DE EVALUADOR POR CADA EVALUACION
         private int RespuestasCorrectas;
         private int RespuestasIncorrectas;
+        private string tipoEvaluacion;
 
-        public EvaluadorPruebasEspecificas()
+        #region Strings Reservados para el Motor de Inferencia
+
+        private string descenso = "correctas menor 30";
+        private string transicionDescenso_uno = "correctas mayor o igual 30";
+        private string transicionDescenso_dos = "correctas menor 50";
+        private string mantenimiento_uno = "correctas mayor o igual 50";
+        private string mantenimiento_dos = "correctas menor 70";
+        private string transicionAscenso_uno = "correctas mayor o igual 70";
+        private string transicionAscenso_dos = "correctas menor a 90";
+        private string ascenso = "mayor o igual 90";
+
+        #endregion
+
+        public EvaluadorPruebasEspecificas(string tipoEvaluacion)
         {
             RespuestasCorrectas = 0;
             RespuestasIncorrectas = 0;
+            this.tipoEvaluacion = tipoEvaluacion;
         }
 
         public void recorrerPreguntas(TableLayoutPanel panel)
@@ -70,6 +85,48 @@ namespace CapaLógica
         {
             return this.RespuestasIncorrectas;
         }
+
+        //Calculos para los hechos
+        public List<string> getHechos()
+        {
+            List<string> hechos = new List<string>();
+            if (RespuestasCorrectas < 3)
+            {
+                hechos.Add(descenso);
+                return hechos;
+            }
+            if (RespuestasCorrectas >= 3 && RespuestasCorrectas < 5)
+            {
+                hechos.Add(transicionDescenso_uno);
+                hechos.Add(transicionDescenso_dos);
+                return hechos;
+            }
+            if (RespuestasCorrectas >= 5 && RespuestasCorrectas < 7)
+            {
+                hechos.Add(mantenimiento_uno);
+                hechos.Add(mantenimiento_dos);
+                return hechos;
+            }
+            if (RespuestasCorrectas>= 7 && RespuestasCorrectas < 9)
+            {
+                hechos.Add(transicionAscenso_uno);
+                hechos.Add(transicionAscenso_dos);
+                return hechos;
+            }
+            if (RespuestasCorrectas>=9)
+            {
+                hechos.Add(ascenso);
+                return hechos;
+            }
+
+            return null;
+        }
+
+        public string GetTipoEvaluacion()
+        {
+            return this.tipoEvaluacion;
+        }
+
 
     }
 
