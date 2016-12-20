@@ -102,9 +102,37 @@ namespace Interfaz_Fixed
                 DialogResult dialog =MessageBox.Show("Guardado Correctamente","Exito",MessageBoxButtons.OK,MessageBoxIcon.Information);
                 if (dialog == DialogResult.OK)
                 {
+                    string correo = "";
                     LICGUI.EstadoWriting = Agente.agente(evaluador.getHechos());
                     LICGUI.EstadoListening = Agente.agente(evaluador.getHechos());
                     LICGUI.EstadoReading = Agente.agente(evaluador.getHechos());
+                    int nivelwriting = ;
+                    int nivelreading = ;
+                    int nivellistening = ;
+                    if (LICGUI.EstadoWriting == "bajar")
+                    {
+                        UsuarioDAL.setNivelesUsuarioEnBD(nivelwriting-1, nivelreading, nivellistening, correo);
+                    }
+                    if (LICGUI.EstadoReading == "bajar")
+                    {
+                        UsuarioDAL.setNivelesUsuarioEnBD(nivelwriting, nivelreading-1, nivellistening, correo);
+                    }
+                    if (LICGUI.EstadoReading == "bajar")
+                    {
+                        UsuarioDAL.setNivelesUsuarioEnBD(nivelwriting, nivelreading, nivellistening-1, correo);
+                    }
+                    if (LICGUI.EstadoWriting == "subir")
+                    {
+                        UsuarioDAL.setNivelesUsuarioEnBD(nivelwriting + 1, nivelreading, nivellistening, correo);
+                    }
+                    if (LICGUI.EstadoReading == "subir")
+                    {
+                        UsuarioDAL.setNivelesUsuarioEnBD(nivelwriting, nivelreading + 1, nivellistening, correo);
+                    }
+                    if (LICGUI.EstadoReading == "subir")
+                    {
+                        UsuarioDAL.setNivelesUsuarioEnBD(nivelwriting, nivelreading, nivellistening + 1, correo);
+                    }
                     MessageBox.Show("Directorio del usuario no existe"+LICGUI.EstadoWriting, "ERROR FATAL", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     this.Close();
                 }
