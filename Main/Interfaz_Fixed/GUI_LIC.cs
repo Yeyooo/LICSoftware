@@ -23,6 +23,22 @@ namespace Interfaz_Fixed
         private string arregloID;
         private string[] IDS;
 
+        public static string EstadoWriting = "mantener";
+        public static string EstadoReading = "mantener";
+        public static string EstadoListening = "mantener";
+
+        //public static void setEstadoWriting(string estado)
+        //{
+        //    this.EstadoWriting = estado;
+        //}
+        //public void setEstadoReading(string estado)
+        //{
+        //    this.EstadoReading = estado;
+        //}
+        //public void setEstadoListening(string estado)
+        //{
+        //    this.EstadoListening = estado;
+        //}
         public LICGUI(Usuario user)
         {
             userInternal = user;
@@ -94,7 +110,7 @@ namespace Interfaz_Fixed
                 PlanDeEstudio x = userInternal.getPlanDeEstudio();
 
                 Dictionary<int, Asset> dicc = x.getDicListening();
-                List<Asset> tmp = EvaluacionNOGUI.generarEvaluacionPorHabilidadConEstado("mantener",dicc);
+                List<Asset> tmp = EvaluacionNOGUI.generarEvaluacionPorHabilidadConEstado(EstadoListening,dicc);
 
                 EvaluacionEnfocada evaluacionListening = new EvaluacionEnfocada("Listening", tmp, userInternal.getNombre(),userInternal.getNivelListening());
 
@@ -120,7 +136,7 @@ namespace Interfaz_Fixed
                 {
                     Console.WriteLine("valor id : " + asd.Value.getId());
                 }
-                List<Asset> tmp = EvaluacionNOGUI.generarEvaluacionPorHabilidadConEstado("transicion subida", dicc);
+                List<Asset> tmp = EvaluacionNOGUI.generarEvaluacionPorHabilidadConEstado(EstadoReading, dicc);
 
                 Console.WriteLine("count: " + tmp.Count);
                 EvaluacionEnfocada evaluacionReading = new EvaluacionEnfocada("Reading", tmp,userInternal.getNombre(),userInternal.getNivelReading());
@@ -146,7 +162,7 @@ namespace Interfaz_Fixed
                 {
                     Console.WriteLine("valor id : " + asd.Value.getId());
                 }
-                List<Asset> tmp = EvaluacionNOGUI.generarEvaluacionPorHabilidadConEstado("transicion bajada", dicc);
+                List<Asset> tmp = EvaluacionNOGUI.generarEvaluacionPorHabilidadConEstado(EstadoWriting, dicc);
 
                 Console.WriteLine("count: " + tmp.Count);
                 EvaluacionEnfocada evaluacionWriting = new EvaluacionEnfocada("Writing", tmp,userInternal.getNombre(),userInternal.getNivelWriting());
@@ -163,7 +179,7 @@ namespace Interfaz_Fixed
         {
             try
             {
-                EvaluacionNOGUI ev = new EvaluacionNOGUI(userInternal.getPlanDeEstudio(),"mantener", "transicion subida", "transicion bajada");
+                EvaluacionNOGUI ev = new EvaluacionNOGUI(userInternal.getPlanDeEstudio(),EstadoWriting, EstadoReading, EstadoListening);
                 Evaluacion evaluacionGeneral = new Evaluacion("Contenidos Generales", ev, userInternal);
                 evaluacionGeneral.Show();
             }

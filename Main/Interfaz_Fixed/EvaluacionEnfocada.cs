@@ -102,7 +102,10 @@ namespace Interfaz_Fixed
                 DialogResult dialog =MessageBox.Show("Guardado Correctamente","Exito",MessageBoxButtons.OK,MessageBoxIcon.Information);
                 if (dialog == DialogResult.OK)
                 {
-
+                    LICGUI.EstadoWriting = Agente.agente(evaluador.getHechos());
+                    LICGUI.EstadoListening = Agente.agente(evaluador.getHechos());
+                    LICGUI.EstadoReading = Agente.agente(evaluador.getHechos());
+                    MessageBox.Show("Directorio del usuario no existe"+LICGUI.EstadoWriting, "ERROR FATAL", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     this.Close();
                 }
             }

@@ -4,7 +4,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Percepciones = System.Collections.Generic.List<string>;
-using Accion = System.Object;
 
 namespace CapaLógica
 {
@@ -15,7 +14,7 @@ namespace CapaLógica
 
         public Agente() { }
 
-        public static Accion agente(Percepciones percepciones)
+        public static string agente(Percepciones percepciones)
         {
             BaseDeHechos BH = new BaseDeHechos();
             BH.hechos = percepciones;
