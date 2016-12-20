@@ -46,11 +46,11 @@ namespace Datos
             //bool flag = false;
             //while (flag == false)
             //{
-                if (estadoWriting == "subir")
+                if (estadoWriting == "transicion subida")
                 {
                     this.PreguntasWriting = EvaluacionNOGUI.EvaluacionPorHabilidadTransicionSubidaTEST(PDE.getDicWriting());
                 }
-                else if (estadoWriting == "bajar")
+                else if (estadoWriting == "transicion bajada")
                 {
                     this.PreguntasWriting = EvaluacionNOGUI.EvaluacionPorHabilidadTransicionBajadaTEST(PDE.getDicWriting());
                 }
@@ -59,11 +59,11 @@ namespace Datos
                     this.PreguntasWriting = EvaluacionNOGUI.EvaluacionPorHabilidadTEST(PDE.getDicWriting());
                 }
 
-                if (estadoReading == "subir")
+                if (estadoReading == "transicion subida")
                 {
                     this.PreguntasReading = EvaluacionNOGUI.EvaluacionPorHabilidadTransicionSubidaTEST(PDE.getDicReading());
                 }
-                else if (estadoReading == "bajar")
+                else if (estadoReading == "transicion bajada")
                 {
                     this.PreguntasReading = EvaluacionNOGUI.EvaluacionPorHabilidadTransicionBajadaTEST(PDE.getDicReading());
                 }
@@ -72,11 +72,11 @@ namespace Datos
                     this.PreguntasReading = EvaluacionNOGUI.EvaluacionPorHabilidadTEST(PDE.getDicReading());
                 }
 
-                if (estadoListening == "subir")
+                if (estadoListening == "transicion subida")
                 {
                     this.PreguntasListening = EvaluacionNOGUI.EvaluacionPorHabilidadTransicionSubidaTEST(PDE.getDicListening());
                 }
-                else if (estadoListening == "bajar")
+                else if (estadoListening == "transicion bajada")
                 {
                     this.PreguntasListening = EvaluacionNOGUI.EvaluacionPorHabilidadTransicionBajadaTEST(PDE.getDicListening());
                 }
@@ -112,7 +112,7 @@ namespace Datos
             if (estadoHabilidad == "mantener")
             {
                 return EvaluacionNOGUI.EvaluacionPorHabilidadTEST(diccionario);
-            }else if (estadoHabilidad == "bajar")
+            }else if (estadoHabilidad == "transicion bajada")
             {
                 return EvaluacionNOGUI.EvaluacionPorHabilidadTransicionBajadaTEST(diccionario);
             }else

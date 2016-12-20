@@ -20,31 +20,31 @@ namespace Interfaz_Fixed
         static void Main()
         {
 
-            BaseDeConocimientos KB = new BaseDeConocimientos("kb.csv", "kb_consec.csv");
-            BaseDeHechos BH = new BaseDeHechos();
-            List<string> ComportamientosEstudiante = new List<string>();
-            ComportamientosEstudiante.Add("reading");
-            ComportamientosEstudiante.Add("1");
-            //ComportamientosEstudiante.Add("no 3");
-            //ComportamientosEstudiante.Add("no 2");
-            ComportamientosEstudiante.Add("correctas mayor o igual 30");
-            ComportamientosEstudiante.Add("correctas menor 50");
-            BH.setListaDeHechos(ComportamientosEstudiante);
-            // funciona para correctar menor 30
-            string h1= "descenso";
-            string h2 = "ascenso";
-            string h3 = "transicion sin descenso";
-            string h4 = "transicion sin ascenso";
-            string h5 = "mantener";
-            Console.WriteLine("Se puede probar {0}?: {1}",h1,MotorInferencia.EHD(KB, BH, h1));
-            Console.WriteLine("Se puede probar {0}?: {1}", h2, MotorInferencia.EHD(KB, BH, h2));
-            Console.WriteLine("Se puede probar {0}?: {1}", h3, MotorInferencia.EHD(KB, BH, h3));
-            Console.WriteLine("Se puede probar {0}?: {1}", h4, MotorInferencia.EHD(KB, BH, h4));
-            Console.WriteLine("Se puede probar {0}?: {1}", h5, MotorInferencia.EHD(KB, BH, h5));
+            //BaseDeConocimientos KB = new BaseDeConocimientos("kb.csv", "kb_consec.csv");
+            //BaseDeHechos BH = new BaseDeHechos();
+            //List<string> ComportamientosEstudiante = new List<string>();
+            //ComportamientosEstudiante.Add("reading");
+            //ComportamientosEstudiante.Add("1");
+            ////ComportamientosEstudiante.Add("no 3");
+            ////ComportamientosEstudiante.Add("no 2");
+            //ComportamientosEstudiante.Add("correctas mayor o igual 30");
+            //ComportamientosEstudiante.Add("correctas menor 50");
+            //BH.setListaDeHechos(ComportamientosEstudiante);
+            //// funciona para correctar menor 30
+            //string h1= "descenso";
+            //string h2 = "ascenso";
+            //string h3 = "transicion sin descenso";
+            //string h4 = "transicion sin ascenso";
+            //string h5 = "mantener";
+            //Console.WriteLine("Se puede probar {0}?: {1}",h1,MotorInferencia.EHD(KB, BH, h1));
+            //Console.WriteLine("Se puede probar {0}?: {1}", h2, MotorInferencia.EHD(KB, BH, h2));
+            //Console.WriteLine("Se puede probar {0}?: {1}", h3, MotorInferencia.EHD(KB, BH, h3));
+            //Console.WriteLine("Se puede probar {0}?: {1}", h4, MotorInferencia.EHD(KB, BH, h4));
+            //Console.WriteLine("Se puede probar {0}?: {1}", h5, MotorInferencia.EHD(KB, BH, h5));
 
-            //Application.EnableVisualStyles();
-            //Application.SetCompatibleTextRenderingDefault(false);
-            //Application.Run(new FormInicioSesion());
+            Application.EnableVisualStyles();
+            Application.SetCompatibleTextRenderingDefault(false);
+            Application.Run(new FormInicioSesion());
 
             /*PlanDeEstudio PE = new PlanDeEstudio(3, 3, 1);
 =======

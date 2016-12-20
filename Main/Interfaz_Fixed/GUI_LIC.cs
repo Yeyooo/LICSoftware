@@ -120,7 +120,7 @@ namespace Interfaz_Fixed
                 {
                     Console.WriteLine("valor id : " + asd.Value.getId());
                 }
-                List<Asset> tmp = EvaluacionNOGUI.generarEvaluacionPorHabilidadConEstado("subir", dicc);
+                List<Asset> tmp = EvaluacionNOGUI.generarEvaluacionPorHabilidadConEstado("transicion subida", dicc);
 
                 Console.WriteLine("count: " + tmp.Count);
                 EvaluacionEnfocada evaluacionReading = new EvaluacionEnfocada("Reading", tmp,userInternal.getNombre());
@@ -146,7 +146,7 @@ namespace Interfaz_Fixed
                 {
                     Console.WriteLine("valor id : " + asd.Value.getId());
                 }
-                List<Asset> tmp = EvaluacionNOGUI.generarEvaluacionPorHabilidadConEstado("bajar", dicc);
+                List<Asset> tmp = EvaluacionNOGUI.generarEvaluacionPorHabilidadConEstado("transicion bajada", dicc);
 
                 Console.WriteLine("count: " + tmp.Count);
                 EvaluacionEnfocada evaluacionWriting = new EvaluacionEnfocada("Writing", tmp,userInternal.getNombre());
@@ -163,7 +163,7 @@ namespace Interfaz_Fixed
         {
             try
             {
-                EvaluacionNOGUI ev = new EvaluacionNOGUI(userInternal.getPlanDeEstudio(),"mantener", "subir", "bajar");
+                EvaluacionNOGUI ev = new EvaluacionNOGUI(userInternal.getPlanDeEstudio(),"mantener", "transicion subida", "transicion bajada");
                 Evaluacion evaluacionGeneral = new Evaluacion("Contenidos Generales", ev, userInternal);
                 evaluacionGeneral.Show();
             }
