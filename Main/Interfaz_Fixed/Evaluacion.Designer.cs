@@ -2176,6 +2176,11 @@ namespace Interfaz_Fixed
                         control.Text = "Material de Apoyo";
                         control.Click += (s, e) => Evento_SinMaterial(s,e);
                     }
+                    if (AssetDAL.AssetTieneConjunto(asset.getId()))
+                    {
+                        Button control = layoutPanel.GetControlFromPosition(0, i) as Button;
+                        control.MouseHover += (s, e) => mouseOver_ButtonConjunto(s,e);
+                    }
                 }
                 if (i == 1)
                 {
