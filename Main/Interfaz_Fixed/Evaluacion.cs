@@ -136,12 +136,14 @@ namespace Interfaz_Fixed
             {
                 //Escribir en Memoria secundaria
                 EscribirEnDisco(userInternal.getNombre(),listaReading,listaWriting,listaListening,EvaluacionDe_Label.Text);
+                new LICGUI(userInternal).Show();
                 this.Close();
 
                 //Enviar al Tutor
             }
             else if (resultado == DialogResult.No)
             {
+                new LICGUI(userInternal).Show();
                 this.Close();
                 //Enviar al Tutor
             }

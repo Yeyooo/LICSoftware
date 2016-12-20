@@ -45,7 +45,7 @@ namespace Interfaz_Fixed
             //listaInternal = new EvaluacionNOGUI(user.getPlanDeEstudio());
             InitializeComponent();
             this.Usuario_Label.Text = this.Usuario_Label.Text + " "+user.getNombre().ToUpper();
-            Cargar_Ligas(userInternal);
+
         }
 
         private void Cargar_Ligas(Usuario userLiga)
@@ -115,6 +115,7 @@ namespace Interfaz_Fixed
                 EvaluacionEnfocada evaluacionListening = new EvaluacionEnfocada("Listening", tmp, userInternal.getNombre(),userInternal.getNivelListening(),userInternal);
 
                 evaluacionListening.Show();
+                this.Dispose();
             }
             catch (NullReferenceException)
             {
@@ -131,16 +132,12 @@ namespace Interfaz_Fixed
                 PlanDeEstudio x = userInternal.getPlanDeEstudio();
 
                 Dictionary<int, Asset> dicc = x.getDicReading();
-                Console.WriteLine("count: " + dicc.Count);
-                foreach (KeyValuePair<int, Asset> asd in dicc)
-                {
-                    Console.WriteLine("valor id : " + asd.Value.getId());
-                }
+                
                 List<Asset> tmp = EvaluacionNOGUI.generarEvaluacionPorHabilidadConEstado(EstadoReading, dicc);
-
-                Console.WriteLine("count: " + tmp.Count);
+                
                 EvaluacionEnfocada evaluacionReading = new EvaluacionEnfocada("Reading", tmp,userInternal.getNombre(),userInternal.getNivelReading(),userInternal);
                 evaluacionReading.Show();
+                this.Hide();
             }
             catch (Exception)
             {
@@ -157,17 +154,13 @@ namespace Interfaz_Fixed
                 PlanDeEstudio x = userInternal.getPlanDeEstudio();
 
                 Dictionary<int, Asset> dicc = x.getDicWriting();
-                Console.WriteLine("count: " + dicc.Count);
-                foreach (KeyValuePair<int, Asset> asd in dicc)
-                {
-                    Console.WriteLine("valor id : " + asd.Value.getId());
-                }
+
                 List<Asset> tmp = EvaluacionNOGUI.generarEvaluacionPorHabilidadConEstado(EstadoWriting, dicc);
 
-                Console.WriteLine("count: " + tmp.Count);
                 EvaluacionEnfocada evaluacionWriting = new EvaluacionEnfocada("Writing", tmp,userInternal.getNombre(),userInternal.getNivelWriting(),userInternal);
 
                 evaluacionWriting.Show();
+                this.Hide();
             }
             catch (Exception)
             {
@@ -182,6 +175,7 @@ namespace Interfaz_Fixed
                 EvaluacionNOGUI ev = new EvaluacionNOGUI(userInternal.getPlanDeEstudio(),EstadoWriting, EstadoReading, EstadoListening);
                 Evaluacion evaluacionGeneral = new Evaluacion("Contenidos Generales", ev, userInternal);
                 evaluacionGeneral.Show();
+                this.Hide();
             }
             catch (Exception){
                 MessageBox.Show("No se pudo Crear la Evaluacion, favor enviar un reporte", "ERROR FATAL", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
@@ -208,6 +202,7 @@ namespace Interfaz_Fixed
                     MessageBox.Show("Error al crear la carpeta para el Usuario, por favor ponganse en contacto con los Desarrolladores","FATAL ERROR",MessageBoxButtons.OK,MessageBoxIcon.Error);
                 }
             }
+            Cargar_Ligas(userInternal);
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -271,5 +266,9 @@ namespace Interfaz_Fixed
             Process.Start(path); 
         }
 
+        private void onShow(object sender, EventArgs e)
+        {
+            Cargar_Ligas(userInternal);
+        }
     }
 }

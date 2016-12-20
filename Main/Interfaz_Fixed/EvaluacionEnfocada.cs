@@ -135,6 +135,7 @@ namespace Interfaz_Fixed
                         UsuarioDAL.setNivelesUsuarioEnBD(nivelwriting, nivelreading, nivellistening + 1, correo);
                     }
                     MessageBox.Show("Directorio del usuario no existe"+LICGUI.EstadoWriting, "ERROR FATAL", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    new LICGUI(userInternal).Show();
                     this.Close();
                 }
             }
