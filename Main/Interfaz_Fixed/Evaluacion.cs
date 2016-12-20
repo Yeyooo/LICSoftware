@@ -86,7 +86,7 @@ namespace Interfaz_Fixed
 
         private void Entregar_Boton_Click(object sender, EventArgs e)
         {
-            EvaluadorPruebasEspecificas evaluadorReading = new EvaluadorPruebasEspecificas();
+            EvaluadorPruebasEspecificas evaluadorReading = new EvaluadorPruebasEspecificas("reading");
             evaluadorReading.recorrerPreguntas(this.Layout_Alternativas1);
             evaluadorReading.recorrerPreguntas(this.layout_Alternativas2);
             evaluadorReading.recorrerPreguntas(this.layout_Alternativas3);
@@ -100,7 +100,7 @@ namespace Interfaz_Fixed
             correctasReading = evaluadorReading.getRespuestasCorrectas();
             incorrectasReading = evaluadorReading.getRespuestasIncorrectas();
 
-            EvaluadorPruebasEspecificas evaluadorWriting = new EvaluadorPruebasEspecificas();
+            EvaluadorPruebasEspecificas evaluadorWriting = new EvaluadorPruebasEspecificas("writing");
             evaluadorWriting.recorrerPreguntas(this.layout_Alternativas11);
             evaluadorWriting.recorrerPreguntas(this.layout_Alternativas12);
             evaluadorWriting.recorrerPreguntas(this.layout_Alternativas13);
@@ -114,7 +114,7 @@ namespace Interfaz_Fixed
             correctasWriting = evaluadorWriting.getRespuestasCorrectas();
             incorrectasWriting = evaluadorWriting.getRespuestasIncorrectas();
 
-            EvaluadorPruebasEspecificas evaluadorListening = new EvaluadorPruebasEspecificas();
+            EvaluadorPruebasEspecificas evaluadorListening = new EvaluadorPruebasEspecificas("listening");
             evaluadorListening.recorrerPreguntas(this.layout_Alternativas21);
             evaluadorListening.recorrerPreguntas(this.layout_Alternativas22);
             evaluadorListening.recorrerPreguntas(this.layout_Alternativas23);
@@ -128,6 +128,7 @@ namespace Interfaz_Fixed
             correctasListening = evaluadorListening.getRespuestasCorrectas();
             incorrectasListening = evaluadorListening.getRespuestasIncorrectas();
 
+            //MessageBox.Show("Aqui va Listening en lower "+evaluadorListening.GetTipoEvaluacion()+" Aqui va Reading en lower "+evaluadorReading.GetTipoEvaluacion());
             //ANTES DE ENVIAR AL TUTOR PREGUNTAR SI DESEA GUARDAR LA EVALUACION
 
             DialogResult resultado = MessageBox.Show("¿Desea guardar esta evaluacion corregida para su posterior revisión?","Guardar Evaluación",MessageBoxButtons.YesNo,MessageBoxIcon.Question);
@@ -135,10 +136,13 @@ namespace Interfaz_Fixed
             {
                 //Escribir en Memoria secundaria
                 EscribirEnDisco(userInternal.getNombre(),listaReading,listaWriting,listaListening,EvaluacionDe_Label.Text);
+                this.Close();
+
                 //Enviar al Tutor
             }
             else if (resultado == DialogResult.No)
             {
+                this.Close();
                 //Enviar al Tutor
             }
 
