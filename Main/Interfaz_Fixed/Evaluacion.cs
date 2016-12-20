@@ -86,7 +86,7 @@ namespace Interfaz_Fixed
 
         private void Entregar_Boton_Click(object sender, EventArgs e)
         {
-            EvaluadorPruebasEspecificas evaluadorReading = new EvaluadorPruebasEspecificas("reading");
+            EvaluadorPruebasEspecificas evaluadorReading = new EvaluadorPruebasEspecificas("reading",userInternal.getNivelReading());
             evaluadorReading.recorrerPreguntas(this.Layout_Alternativas1);
             evaluadorReading.recorrerPreguntas(this.layout_Alternativas2);
             evaluadorReading.recorrerPreguntas(this.layout_Alternativas3);
@@ -100,7 +100,7 @@ namespace Interfaz_Fixed
             correctasReading = evaluadorReading.getRespuestasCorrectas();
             incorrectasReading = evaluadorReading.getRespuestasIncorrectas();
 
-            EvaluadorPruebasEspecificas evaluadorWriting = new EvaluadorPruebasEspecificas("writing");
+            EvaluadorPruebasEspecificas evaluadorWriting = new EvaluadorPruebasEspecificas("writing",userInternal.getNivelWriting());
             evaluadorWriting.recorrerPreguntas(this.layout_Alternativas11);
             evaluadorWriting.recorrerPreguntas(this.layout_Alternativas12);
             evaluadorWriting.recorrerPreguntas(this.layout_Alternativas13);
@@ -114,7 +114,7 @@ namespace Interfaz_Fixed
             correctasWriting = evaluadorWriting.getRespuestasCorrectas();
             incorrectasWriting = evaluadorWriting.getRespuestasIncorrectas();
 
-            EvaluadorPruebasEspecificas evaluadorListening = new EvaluadorPruebasEspecificas("listening");
+            EvaluadorPruebasEspecificas evaluadorListening = new EvaluadorPruebasEspecificas("listening",userInternal.getNivelListening());
             evaluadorListening.recorrerPreguntas(this.layout_Alternativas21);
             evaluadorListening.recorrerPreguntas(this.layout_Alternativas22);
             evaluadorListening.recorrerPreguntas(this.layout_Alternativas23);
