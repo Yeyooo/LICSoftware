@@ -13,11 +13,13 @@ namespace CapaLógica
         //UNA INSTANCIACION DE EVALUADOR POR CADA EVALUACION
         private int RespuestasCorrectas;
         private int RespuestasIncorrectas;
+        private int nivelActual;
         private string tipoEvaluacion;
 
         #region Strings Reservados para el Motor de Inferencia
 
         private string descenso = "correctas menor 30";
+        private string descensouno = "mayor o igual 0";
         private string transicionDescenso_uno = "correctas mayor o igual 30";
         private string transicionDescenso_dos = "correctas menor 50";
         private string mantenimiento_uno = "correctas mayor o igual 50";
@@ -25,14 +27,16 @@ namespace CapaLógica
         private string transicionAscenso_uno = "correctas mayor o igual 70";
         private string transicionAscenso_dos = "correctas menor a 90";
         private string ascenso = "mayor o igual 90";
+        private string ascensodos = "menor o igual 100";
 
         #endregion
 
-        public EvaluadorPruebasEspecificas(string tipoEvaluacion)
+        public EvaluadorPruebasEspecificas(string tipoEvaluacion,int nivelActual)
         {
             RespuestasCorrectas = 0;
             RespuestasIncorrectas = 0;
             this.tipoEvaluacion = tipoEvaluacion;
+            this.nivelActual = nivelActual;
         }
 
         public void recorrerPreguntas(TableLayoutPanel panel)
@@ -90,9 +94,12 @@ namespace CapaLógica
         public List<string> getHechos()
         {
             List<string> hechos = new List<string>();
+            hechos.Add(tipoEvaluacion.ToLower());
+            hechos.Add(nivelActual.ToString());
             if (RespuestasCorrectas < 3)
             {
                 hechos.Add(descenso);
+                hechos.Add(descensouno);
                 return hechos;
             }
             if (RespuestasCorrectas >= 3 && RespuestasCorrectas < 5)
@@ -116,6 +123,7 @@ namespace CapaLógica
             if (RespuestasCorrectas>=9)
             {
                 hechos.Add(ascenso);
+                hechos.Add(ascensodos);
                 return hechos;
             }
 
