@@ -23,12 +23,13 @@ namespace Interfaz_Fixed
 
         private string nombreUsuario;
         private string tipoEvaluacion;
-
+        private int NivelUsuario;
         //private Usuario userInternal;
 
-        public EvaluacionEnfocada(string Nombre,List<Asset> Assets,string nombreUser)
+        public EvaluacionEnfocada(string Nombre,List<Asset> Assets,string nombreUser, int nivelUsuario)
         {
             InitializeComponent();
+            this.NivelUsuario = nivelUsuario;
             nombreUsuario = nombreUser;
             AssetsEscogidos = Assets;
             Asignar_Loop(AssetsEscogidos);
@@ -78,7 +79,7 @@ namespace Interfaz_Fixed
 
         private void Entregar_EvaluacionCustom(object sender, EventArgs e)
         {
-            EvaluadorPruebasEspecificas evaluador = new EvaluadorPruebasEspecificas(tipoEvaluacion);
+            EvaluadorPruebasEspecificas evaluador = new EvaluadorPruebasEspecificas(tipoEvaluacion,NivelUsuario);
             evaluador.recorrerPreguntas(this.layout_Alternativas1);
             evaluador.recorrerPreguntas(this.layout_Alternativas2);
             evaluador.recorrerPreguntas(this.layout_Alternativas3);
@@ -101,6 +102,7 @@ namespace Interfaz_Fixed
                 DialogResult dialog =MessageBox.Show("Guardado Correctamente","Exito",MessageBoxButtons.OK,MessageBoxIcon.Information);
                 if (dialog == DialogResult.OK)
                 {
+
                     this.Close();
                 }
             }
