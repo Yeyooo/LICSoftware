@@ -112,7 +112,7 @@ namespace Interfaz_Fixed
                 Dictionary<int, Asset> dicc = x.getDicListening();
                 List<Asset> tmp = EvaluacionNOGUI.generarEvaluacionPorHabilidadConEstado(EstadoListening,dicc);
 
-                EvaluacionEnfocada evaluacionListening = new EvaluacionEnfocada("Listening", tmp, userInternal.getNombre(),userInternal.getNivelListening());
+                EvaluacionEnfocada evaluacionListening = new EvaluacionEnfocada("Listening", tmp, userInternal.getNombre(),userInternal.getNivelListening(),userInternal);
 
                 evaluacionListening.Show();
             }
@@ -139,7 +139,7 @@ namespace Interfaz_Fixed
                 List<Asset> tmp = EvaluacionNOGUI.generarEvaluacionPorHabilidadConEstado(EstadoReading, dicc);
 
                 Console.WriteLine("count: " + tmp.Count);
-                EvaluacionEnfocada evaluacionReading = new EvaluacionEnfocada("Reading", tmp,userInternal.getNombre(),userInternal.getNivelReading());
+                EvaluacionEnfocada evaluacionReading = new EvaluacionEnfocada("Reading", tmp,userInternal.getNombre(),userInternal.getNivelReading(),userInternal);
                 evaluacionReading.Show();
             }
             catch (Exception)
@@ -165,7 +165,7 @@ namespace Interfaz_Fixed
                 List<Asset> tmp = EvaluacionNOGUI.generarEvaluacionPorHabilidadConEstado(EstadoWriting, dicc);
 
                 Console.WriteLine("count: " + tmp.Count);
-                EvaluacionEnfocada evaluacionWriting = new EvaluacionEnfocada("Writing", tmp,userInternal.getNombre(),userInternal.getNivelWriting());
+                EvaluacionEnfocada evaluacionWriting = new EvaluacionEnfocada("Writing", tmp,userInternal.getNombre(),userInternal.getNivelWriting(),userInternal);
 
                 evaluacionWriting.Show();
             }

@@ -24,13 +24,14 @@ namespace Interfaz_Fixed
         private string nombreUsuario;
         private string tipoEvaluacion;
         private int NivelUsuario;
-        //private Usuario userInternal;
+        private Usuario userInternal;
 
-        public EvaluacionEnfocada(string Nombre,List<Asset> Assets,string nombreUser, int nivelUsuario)
+        public EvaluacionEnfocada(string Nombre,List<Asset> Assets,string nombreUser, int nivelUsuario,Usuario user)
         {
             InitializeComponent();
             this.NivelUsuario = nivelUsuario;
             nombreUsuario = nombreUser;
+            userInternal = user;
             AssetsEscogidos = Assets;
             Asignar_Loop(AssetsEscogidos);
             tipoEvaluacion = Nombre.ToLower();
@@ -106,9 +107,9 @@ namespace Interfaz_Fixed
                     LICGUI.EstadoWriting = Agente.agente(evaluador.getHechos());
                     LICGUI.EstadoListening = Agente.agente(evaluador.getHechos());
                     LICGUI.EstadoReading = Agente.agente(evaluador.getHechos());
-                    int nivelwriting = ;
-                    int nivelreading = ;
-                    int nivellistening = ;
+                    int nivelwriting = 2;
+                    int nivelreading = 2;
+                    int nivellistening = 2;
                     if (LICGUI.EstadoWriting == "bajar")
                     {
                         UsuarioDAL.setNivelesUsuarioEnBD(nivelwriting-1, nivelreading, nivellistening, correo);
